@@ -1,0 +1,58 @@
+{
+  "wattsUpEnergyApp": {
+    "onsLinhasTransmissaoRedeOperacao": {
+      "home": {
+        "title": "Ons Linhas Transmissao Rede Operacaos",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Ons Linhas Transmissao Rede Operacao",
+        "createOrEditLabel": "Create or edit a Ons Linhas Transmissao Rede Operacao",
+        "search": "Search for Ons Linhas Transmissao Rede Operacao",
+        "notFound": "No Ons Linhas Transmissao Rede Operacaos found"
+      },
+      "created": "A new Ons Linhas Transmissao Rede Operacao is created with identifier {{ param }}",
+      "updated": "A Ons Linhas Transmissao Rede Operacao is updated with identifier {{ param }}",
+      "deleted": "A Ons Linhas Transmissao Rede Operacao is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Ons Linhas Transmissao Rede Operacao {{ id }}?"
+      },
+      "detail": {
+        "title": "Ons Linhas Transmissao Rede Operacao"
+      },
+      "id": "ID",
+      "idSubsistemaTerminalde": "Id Subsistema Terminalde",
+      "nomSubsistemaTerminalde": "Nom Subsistema Terminalde",
+      "idSubsistemaTerminalpara": "Id Subsistema Terminalpara",
+      "nomSubsistemaTerminalpara": "Nom Subsistema Terminalpara",
+      "idEstadoTerminalde": "Id Estado Terminalde",
+      "nomEstadoDe": "Nom Estado De",
+      "idEstadoTerminalpara": "Id Estado Terminalpara",
+      "nomEstadoPara": "Nom Estado Para",
+      "nomSubestacaoDe": "Nom Subestacao De",
+      "nomSubestacaoPara": "Nom Subestacao Para",
+      "valNiveltensaoKv": "Val Niveltensao Kv",
+      "nomTipoderede": "Nom Tipoderede",
+      "nomTipolinha": "Nom Tipolinha",
+      "nomAgenteproprietario": "Nom Agenteproprietario",
+      "nomLinhadetransmissao": "Nom Linhadetransmissao",
+      "codEquipamento": "Cod Equipamento",
+      "datEntradaoperacao": "Dat Entradaoperacao",
+      "datDesativacao": "Dat Desativacao",
+      "datPrevista": "Dat Prevista",
+      "valComprimento": "Val Comprimento",
+      "valResistencia": "Val Resistencia",
+      "valReatancia": "Val Reatancia",
+      "valShunt": "Val Shunt",
+      "valCapacoperlongasemlimit": "Val Capacoperlongasemlimit",
+      "valCapacoperlongacomlimit": "Val Capacoperlongacomlimit",
+      "valCapacopercurtasemlimit": "Val Capacopercurtasemlimit",
+      "valCapacopercurtacomlimit": "Val Capacopercurtacomlimit",
+      "valCapacidadeoperveraodialonga": "Val Capacidadeoperveraodialonga",
+      "valCapacoperinvernodialonga": "Val Capacoperinvernodialonga",
+      "valCapacoperinvernonoitelonga": "Val Capacoperinvernonoitelonga",
+      "valCapacoperveradiacurta": "Val Capacoperveradiacurta",
+      "valCapacoperveraonoitecurta": "Val Capacoperveraonoitecurta",
+      "valCapacoperinvernodiacurta": "Val Capacoperinvernodiacurta",
+      "valCapacoperinvernonoitecurta": "Val Capacoperinvernonoitecurta"
+    }
+  }
+}

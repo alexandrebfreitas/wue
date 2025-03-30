@@ -1,0 +1,182 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <form name="editForm" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+      <h2
+        id="jhi-ons-geracao-usina-em-base-horaria-heading"
+        data-cy="OnsGeracaoUsinaEmBaseHorariaCreateUpdateHeading"
+        jhiTranslate="wattsUpEnergyApp.onsGeracaoUsinaEmBaseHoraria.home.createOrEditLabel"
+      >
+        Criar ou editar Ons Geracao Usina Em Base Horaria
+      </h2>
+
+      <div>
+        <jhi-alert-error></jhi-alert-error>
+
+        @if (editForm.controls.id.value !== null) {
+          <div class="mb-3">
+            <label class="form-label" for="field_id" jhiTranslate="wattsUpEnergyApp.onsGeracaoUsinaEmBaseHoraria.id">ID</label>
+            <input type="number" class="form-control" name="id" id="field_id" data-cy="id" formControlName="id" [readonly]="true" />
+          </div>
+        }
+
+        <div class="mb-3">
+          <label class="form-label" for="field_dinInstante" jhiTranslate="wattsUpEnergyApp.onsGeracaoUsinaEmBaseHoraria.dinInstante"
+            >Din Instante</label
+          >
+          <div class="input-group">
+            <input
+              id="field_dinInstante"
+              data-cy="dinInstante"
+              type="text"
+              class="form-control"
+              name="dinInstante"
+              ngbDatepicker
+              #dinInstanteDp="ngbDatepicker"
+              formControlName="dinInstante"
+            />
+            <button type="button" class="btn btn-secondary" (click)="dinInstanteDp.toggle()">
+              <fa-icon icon="calendar-alt"></fa-icon>
+            </button>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_idSubsistema" jhiTranslate="wattsUpEnergyApp.onsGeracaoUsinaEmBaseHoraria.idSubsistema"
+            >Id Subsistema</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="idSubsistema"
+            id="field_idSubsistema"
+            data-cy="idSubsistema"
+            formControlName="idSubsistema"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_nomSubsistema" jhiTranslate="wattsUpEnergyApp.onsGeracaoUsinaEmBaseHoraria.nomSubsistema"
+            >Nom Subsistema</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="nomSubsistema"
+            id="field_nomSubsistema"
+            data-cy="nomSubsistema"
+            formControlName="nomSubsistema"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_idEstado" jhiTranslate="wattsUpEnergyApp.onsGeracaoUsinaEmBaseHoraria.idEstado"
+            >Id Estado</label
+          >
+          <input type="text" class="form-control" name="idEstado" id="field_idEstado" data-cy="idEstado" formControlName="idEstado" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_nomEstado" jhiTranslate="wattsUpEnergyApp.onsGeracaoUsinaEmBaseHoraria.nomEstado"
+            >Nom Estado</label
+          >
+          <input type="text" class="form-control" name="nomEstado" id="field_nomEstado" data-cy="nomEstado" formControlName="nomEstado" />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_codModalidadeoperacao"
+            jhiTranslate="wattsUpEnergyApp.onsGeracaoUsinaEmBaseHoraria.codModalidadeoperacao"
+            >Cod Modalidadeoperacao</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="codModalidadeoperacao"
+            id="field_codModalidadeoperacao"
+            data-cy="codModalidadeoperacao"
+            formControlName="codModalidadeoperacao"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_nomTipousina" jhiTranslate="wattsUpEnergyApp.onsGeracaoUsinaEmBaseHoraria.nomTipousina"
+            >Nom Tipousina</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="nomTipousina"
+            id="field_nomTipousina"
+            data-cy="nomTipousina"
+            formControlName="nomTipousina"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_nomTipocombustivel"
+            jhiTranslate="wattsUpEnergyApp.onsGeracaoUsinaEmBaseHoraria.nomTipocombustivel"
+            >Nom Tipocombustivel</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="nomTipocombustivel"
+            id="field_nomTipocombustivel"
+            data-cy="nomTipocombustivel"
+            formControlName="nomTipocombustivel"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_nomUsina" jhiTranslate="wattsUpEnergyApp.onsGeracaoUsinaEmBaseHoraria.nomUsina"
+            >Nom Usina</label
+          >
+          <input type="text" class="form-control" name="nomUsina" id="field_nomUsina" data-cy="nomUsina" formControlName="nomUsina" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_idOns" jhiTranslate="wattsUpEnergyApp.onsGeracaoUsinaEmBaseHoraria.idOns">Id Ons</label>
+          <input type="text" class="form-control" name="idOns" id="field_idOns" data-cy="idOns" formControlName="idOns" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_ceg" jhiTranslate="wattsUpEnergyApp.onsGeracaoUsinaEmBaseHoraria.ceg">Ceg</label>
+          <input type="text" class="form-control" name="ceg" id="field_ceg" data-cy="ceg" formControlName="ceg" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_valGeracao" jhiTranslate="wattsUpEnergyApp.onsGeracaoUsinaEmBaseHoraria.valGeracao"
+            >Val Geracao</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="valGeracao"
+            id="field_valGeracao"
+            data-cy="valGeracao"
+            formControlName="valGeracao"
+          />
+        </div>
+      </div>
+
+      <div>
+        <button type="button" id="cancel-save" data-cy="entityCreateCancelButton" class="btn btn-secondary" (click)="previousState()">
+          <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancelar</span>
+        </button>
+
+        <button
+          type="submit"
+          id="save-entity"
+          data-cy="entityCreateSaveButton"
+          [disabled]="editForm.invalid || isSaving"
+          class="btn btn-primary"
+        >
+          <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Salvar</span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

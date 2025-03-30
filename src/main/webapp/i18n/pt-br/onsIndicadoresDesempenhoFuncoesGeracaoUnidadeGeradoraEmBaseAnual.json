@@ -1,0 +1,45 @@
+{
+  "wattsUpEnergyApp": {
+    "onsIndicadoresDesempenhoFuncoesGeracaoUnidadeGeradoraEmBaseAnual": {
+      "home": {
+        "title": "Ons Indicadores Desempenho Funcoes Geracao Unidade Geradora Em Base Anuals",
+        "refreshListLabel": "Atualizar lista",
+        "createLabel": "Criar novo Ons Indicadores Desempenho Funcoes Geracao Unidade Geradora Em Base Anual",
+        "createOrEditLabel": "Criar ou editar Ons Indicadores Desempenho Funcoes Geracao Unidade Geradora Em Base Anual",
+        "search": "Pesquisar por Ons Indicadores Desempenho Funcoes Geracao Unidade Geradora Em Base Anual",
+        "notFound": "Nenhum Ons Indicadores Desempenho Funcoes Geracao Unidade Geradora Em Base Anual encontrado"
+      },
+      "created": "Um novo Ons Indicadores Desempenho Funcoes Geracao Unidade Geradora Em Base Anual foi criado com o identificador {{ param }}",
+      "updated": "Um Ons Indicadores Desempenho Funcoes Geracao Unidade Geradora Em Base Anual foi atualizado com o identificador {{ param }}",
+      "deleted": "Um Ons Indicadores Desempenho Funcoes Geracao Unidade Geradora Em Base Anual foi excluído com o identificador {{ param }}",
+      "delete": {
+        "question": "Tem certeza de que deseja excluir Ons Indicadores Desempenho Funcoes Geracao Unidade Geradora Em Base Anual {{ id }}?"
+      },
+      "detail": {
+        "title": "Ons Indicadores Desempenho Funcoes Geracao Unidade Geradora Em Base Anual"
+      },
+      "id": "ID",
+      "idSubsistema": "Id Subsistema",
+      "nomSubsistema": "Nom Subsistema",
+      "idEstado": "Id Estado",
+      "nomEstado": "Nom Estado",
+      "nomModalidadeoperacao": "Nom Modalidadeoperacao",
+      "nomAgenteproprietario": "Nom Agenteproprietario",
+      "idTipousina": "Id Tipousina",
+      "idUsina": "Id Usina",
+      "nomUsina": "Nom Usina",
+      "ceg": "Ceg",
+      "codEquipamento": "Cod Equipamento",
+      "numUnidadegeradora": "Num Unidadegeradora",
+      "nomUnidadegeradora": "Nom Unidadegeradora",
+      "valPotencia": "Val Potencia",
+      "dinAno": "Din Ano",
+      "valDispf": "Val Dispf",
+      "valIndisppf": "Val Indisppf",
+      "valIndispff": "Val Indispff",
+      "valDmdff": "Val Dmdff",
+      "valFdff": "Val Fdff",
+      "valTdff": "Val Tdff"
+    }
+  }
+}

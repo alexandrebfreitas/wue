@@ -1,0 +1,78 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    @if (onsCargaEnergiaVerificada(); as onsCargaEnergiaVerificadaRef) {
+      <div>
+        <h2 data-cy="onsCargaEnergiaVerificadaDetailsHeading">
+          <span jhiTranslate="wattsUpEnergyApp.onsCargaEnergiaVerificada.detail.title">Ons Carga Energia Verificada</span>
+        </h2>
+
+        <hr />
+
+        <jhi-alert-error></jhi-alert-error>
+
+        <jhi-alert></jhi-alert>
+
+        <dl class="row-md jh-entity-details">
+          <dt><span jhiTranslate="global.field.id">Código</span></dt>
+          <dd>
+            <span>{{ onsCargaEnergiaVerificadaRef.id }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsCargaEnergiaVerificada.codAreacarga">Cod Areacarga</span></dt>
+          <dd>
+            <span>{{ onsCargaEnergiaVerificadaRef.codAreacarga }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsCargaEnergiaVerificada.datReferencia">Dat Referencia</span></dt>
+          <dd>
+            <span>{{ onsCargaEnergiaVerificadaRef.datReferencia | formatMediumDate }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsCargaEnergiaVerificada.dinReferenciautc">Din Referenciautc</span></dt>
+          <dd>
+            <span>{{ onsCargaEnergiaVerificadaRef.dinReferenciautc | formatMediumDate }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsCargaEnergiaVerificada.valCargaglobal">Val Cargaglobal</span></dt>
+          <dd>
+            <span>{{ onsCargaEnergiaVerificadaRef.valCargaglobal }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsCargaEnergiaVerificada.valCargaglobalsmmg">Val Cargaglobalsmmg</span></dt>
+          <dd>
+            <span>{{ onsCargaEnergiaVerificadaRef.valCargaglobalsmmg }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsCargaEnergiaVerificada.valCargammgd">Val Cargammgd</span></dt>
+          <dd>
+            <span>{{ onsCargaEnergiaVerificadaRef.valCargammgd }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsCargaEnergiaVerificada.valCargaglobalcons">Val Cargaglobalcons</span></dt>
+          <dd>
+            <span>{{ onsCargaEnergiaVerificadaRef.valCargaglobalcons }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsCargaEnergiaVerificada.valConsistencia">Val Consistencia</span></dt>
+          <dd>
+            <span>{{ onsCargaEnergiaVerificadaRef.valConsistencia }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsCargaEnergiaVerificada.valCargasupervisionada">Val Cargasupervisionada</span></dt>
+          <dd>
+            <span>{{ onsCargaEnergiaVerificadaRef.valCargasupervisionada }}</span>
+          </dd>
+          <dt>
+            <span jhiTranslate="wattsUpEnergyApp.onsCargaEnergiaVerificada.valCarganaosupervisionada">Val Carganaosupervisionada</span>
+          </dt>
+          <dd>
+            <span>{{ onsCargaEnergiaVerificadaRef.valCarganaosupervisionada }}</span>
+          </dd>
+        </dl>
+
+        <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+          <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Voltar</span>
+        </button>
+
+        <button
+          type="button"
+          [routerLink]="['/ons-carga-energia-verificada', onsCargaEnergiaVerificadaRef.id, 'edit']"
+          class="btn btn-primary"
+        >
+          <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Editar</span>
+        </button>
+      </div>
+    }
+  </div>
+</div>

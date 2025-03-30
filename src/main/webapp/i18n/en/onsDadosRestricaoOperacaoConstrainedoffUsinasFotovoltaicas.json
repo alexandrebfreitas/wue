@@ -1,0 +1,39 @@
+{
+  "wattsUpEnergyApp": {
+    "onsDadosRestricaoOperacaoConstrainedoffUsinasFotovoltaicas": {
+      "home": {
+        "title": "Ons Dados Restricao Operacao Constrainedoff Usinas Fotovoltaicas",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Ons Dados Restricao Operacao Constrainedoff Usinas Fotovoltaicas",
+        "createOrEditLabel": "Create or edit a Ons Dados Restricao Operacao Constrainedoff Usinas Fotovoltaicas",
+        "search": "Search for Ons Dados Restricao Operacao Constrainedoff Usinas Fotovoltaicas",
+        "notFound": "No Ons Dados Restricao Operacao Constrainedoff Usinas Fotovoltaicas found"
+      },
+      "created": "A new Ons Dados Restricao Operacao Constrainedoff Usinas Fotovoltaicas is created with identifier {{ param }}",
+      "updated": "A Ons Dados Restricao Operacao Constrainedoff Usinas Fotovoltaicas is updated with identifier {{ param }}",
+      "deleted": "A Ons Dados Restricao Operacao Constrainedoff Usinas Fotovoltaicas is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Ons Dados Restricao Operacao Constrainedoff Usinas Fotovoltaicas {{ id }}?"
+      },
+      "detail": {
+        "title": "Ons Dados Restricao Operacao Constrainedoff Usinas Fotovoltaicas"
+      },
+      "id": "ID",
+      "idSubsistema": "Id Subsistema",
+      "nomSubsistema": "Nom Subsistema",
+      "idEstado": "Id Estado",
+      "nomEstado": "Nom Estado",
+      "nomUsina": "Nom Usina",
+      "idOns": "Id Ons",
+      "ceg": "Ceg",
+      "dinInstante": "Din Instante",
+      "valGeracao": "Val Geracao",
+      "valGeracaolimitada": "Val Geracaolimitada",
+      "valDisponibilidade": "Val Disponibilidade",
+      "valGeracaoreferencia": "Val Geracaoreferencia",
+      "valGeracaoreferenciafinal": "Val Geracaoreferenciafinal",
+      "codRazaorestricao": "Cod Razaorestricao",
+      "codOrigemrestricao": "Cod Origemrestricao"
+    }
+  }
+}

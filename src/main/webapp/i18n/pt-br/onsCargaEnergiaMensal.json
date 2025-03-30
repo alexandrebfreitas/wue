@@ -1,0 +1,28 @@
+{
+  "wattsUpEnergyApp": {
+    "onsCargaEnergiaMensal": {
+      "home": {
+        "title": "Ons Carga Energia Mensals",
+        "refreshListLabel": "Atualizar lista",
+        "createLabel": "Criar novo Ons Carga Energia Mensal",
+        "createOrEditLabel": "Criar ou editar Ons Carga Energia Mensal",
+        "search": "Pesquisar por Ons Carga Energia Mensal",
+        "notFound": "Nenhum Ons Carga Energia Mensal encontrado"
+      },
+      "created": "Um novo Ons Carga Energia Mensal foi criado com o identificador {{ param }}",
+      "updated": "Um Ons Carga Energia Mensal foi atualizado com o identificador {{ param }}",
+      "deleted": "Um Ons Carga Energia Mensal foi excluído com o identificador {{ param }}",
+      "delete": {
+        "question": "Tem certeza de que deseja excluir Ons Carga Energia Mensal {{ id }}?"
+      },
+      "detail": {
+        "title": "Ons Carga Energia Mensal"
+      },
+      "id": "ID",
+      "idSubsistema": "Id Subsistema",
+      "nomSubsistema": "Nom Subsistema",
+      "dinInstante": "Din Instante",
+      "valCargaenergiamwmed": "Val Cargaenergiamwmed"
+    }
+  }
+}

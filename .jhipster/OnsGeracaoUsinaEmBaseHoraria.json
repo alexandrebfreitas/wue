@@ -1,0 +1,59 @@
+{
+  "annotations": {
+    "changelogDate": "20250330013729"
+  },
+  "applications": "*",
+  "entityTableName": "OnsTable52",
+  "fields": [
+    {
+      "fieldName": "dinInstante",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "idSubsistema",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nomSubsistema",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "idEstado",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nomEstado",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "codModalidadeoperacao",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nomTipousina",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nomTipocombustivel",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nomUsina",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "idOns",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "ceg",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "valGeracao",
+      "fieldType": "Double"
+    }
+  ],
+  "name": "OnsGeracaoUsinaEmBaseHoraria",
+  "relationships": []
+}

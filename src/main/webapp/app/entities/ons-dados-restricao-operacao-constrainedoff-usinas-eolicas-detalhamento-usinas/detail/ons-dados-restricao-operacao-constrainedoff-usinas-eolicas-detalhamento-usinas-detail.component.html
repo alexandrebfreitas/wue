@@ -1,0 +1,140 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    @if (
+      onsDadosRestricaoOperacaoConstrainedoffUsinasEolicasDetalhamentoUsinas();
+      as onsDadosRestricaoOperacaoConstrainedoffUsinasEolicasDetalhamentoUsinasRef
+    ) {
+      <div>
+        <h2 data-cy="onsDadosRestricaoOperacaoConstrainedoffUsinasEolicasDetalhamentoUsinasDetailsHeading">
+          <span jhiTranslate="wattsUpEnergyApp.onsDadosRestricaoOperacaoConstrainedoffUsinasEolicasDetalhamentoUsinas.detail.title"
+            >Ons Dados Restricao Operacao Constrainedoff Usinas Eolicas Detalhamento Usinas</span
+          >
+        </h2>
+
+        <hr />
+
+        <jhi-alert-error></jhi-alert-error>
+
+        <jhi-alert></jhi-alert>
+
+        <dl class="row-md jh-entity-details">
+          <dt><span jhiTranslate="global.field.id">Código</span></dt>
+          <dd>
+            <span>{{ onsDadosRestricaoOperacaoConstrainedoffUsinasEolicasDetalhamentoUsinasRef.id }}</span>
+          </dd>
+          <dt>
+            <span jhiTranslate="wattsUpEnergyApp.onsDadosRestricaoOperacaoConstrainedoffUsinasEolicasDetalhamentoUsinas.idSubsistema"
+              >Id Subsistema</span
+            >
+          </dt>
+          <dd>
+            <span>{{ onsDadosRestricaoOperacaoConstrainedoffUsinasEolicasDetalhamentoUsinasRef.idSubsistema }}</span>
+          </dd>
+          <dt>
+            <span
+              jhiTranslate="wattsUpEnergyApp.onsDadosRestricaoOperacaoConstrainedoffUsinasEolicasDetalhamentoUsinas.nomModalidadeoperacao"
+              >Nom Modalidadeoperacao</span
+            >
+          </dt>
+          <dd>
+            <span>{{ onsDadosRestricaoOperacaoConstrainedoffUsinasEolicasDetalhamentoUsinasRef.nomModalidadeoperacao }}</span>
+          </dd>
+          <dt>
+            <span jhiTranslate="wattsUpEnergyApp.onsDadosRestricaoOperacaoConstrainedoffUsinasEolicasDetalhamentoUsinas.idEstado"
+              >Id Estado</span
+            >
+          </dt>
+          <dd>
+            <span>{{ onsDadosRestricaoOperacaoConstrainedoffUsinasEolicasDetalhamentoUsinasRef.idEstado }}</span>
+          </dd>
+          <dt>
+            <span jhiTranslate="wattsUpEnergyApp.onsDadosRestricaoOperacaoConstrainedoffUsinasEolicasDetalhamentoUsinas.nomConjuntousina"
+              >Nom Conjuntousina</span
+            >
+          </dt>
+          <dd>
+            <span>{{ onsDadosRestricaoOperacaoConstrainedoffUsinasEolicasDetalhamentoUsinasRef.nomConjuntousina }}</span>
+          </dd>
+          <dt>
+            <span jhiTranslate="wattsUpEnergyApp.onsDadosRestricaoOperacaoConstrainedoffUsinasEolicasDetalhamentoUsinas.nomUsina"
+              >Nom Usina</span
+            >
+          </dt>
+          <dd>
+            <span>{{ onsDadosRestricaoOperacaoConstrainedoffUsinasEolicasDetalhamentoUsinasRef.nomUsina }}</span>
+          </dd>
+          <dt>
+            <span jhiTranslate="wattsUpEnergyApp.onsDadosRestricaoOperacaoConstrainedoffUsinasEolicasDetalhamentoUsinas.dinInstante"
+              >Din Instante</span
+            >
+          </dt>
+          <dd>
+            <span>{{ onsDadosRestricaoOperacaoConstrainedoffUsinasEolicasDetalhamentoUsinasRef.dinInstante | formatMediumDate }}</span>
+          </dd>
+          <dt>
+            <span jhiTranslate="wattsUpEnergyApp.onsDadosRestricaoOperacaoConstrainedoffUsinasEolicasDetalhamentoUsinas.idOns">Id Ons</span>
+          </dt>
+          <dd>
+            <span>{{ onsDadosRestricaoOperacaoConstrainedoffUsinasEolicasDetalhamentoUsinasRef.idOns }}</span>
+          </dd>
+          <dt>
+            <span jhiTranslate="wattsUpEnergyApp.onsDadosRestricaoOperacaoConstrainedoffUsinasEolicasDetalhamentoUsinas.ceg">Ceg</span>
+          </dt>
+          <dd>
+            <span>{{ onsDadosRestricaoOperacaoConstrainedoffUsinasEolicasDetalhamentoUsinasRef.ceg }}</span>
+          </dd>
+          <dt>
+            <span jhiTranslate="wattsUpEnergyApp.onsDadosRestricaoOperacaoConstrainedoffUsinasEolicasDetalhamentoUsinas.valVentoverificado"
+              >Val Ventoverificado</span
+            >
+          </dt>
+          <dd>
+            <span>{{ onsDadosRestricaoOperacaoConstrainedoffUsinasEolicasDetalhamentoUsinasRef.valVentoverificado }}</span>
+          </dd>
+          <dt>
+            <span
+              jhiTranslate="wattsUpEnergyApp.onsDadosRestricaoOperacaoConstrainedoffUsinasEolicasDetalhamentoUsinas.flgDadoventoinvalido"
+              >Flg Dadoventoinvalido</span
+            >
+          </dt>
+          <dd>
+            <span>{{ onsDadosRestricaoOperacaoConstrainedoffUsinasEolicasDetalhamentoUsinasRef.flgDadoventoinvalido }}</span>
+          </dd>
+          <dt>
+            <span jhiTranslate="wattsUpEnergyApp.onsDadosRestricaoOperacaoConstrainedoffUsinasEolicasDetalhamentoUsinas.valGeracaoestimada"
+              >Val Geracaoestimada</span
+            >
+          </dt>
+          <dd>
+            <span>{{ onsDadosRestricaoOperacaoConstrainedoffUsinasEolicasDetalhamentoUsinasRef.valGeracaoestimada }}</span>
+          </dd>
+          <dt>
+            <span
+              jhiTranslate="wattsUpEnergyApp.onsDadosRestricaoOperacaoConstrainedoffUsinasEolicasDetalhamentoUsinas.valGeracaoverificada"
+              >Val Geracaoverificada</span
+            >
+          </dt>
+          <dd>
+            <span>{{ onsDadosRestricaoOperacaoConstrainedoffUsinasEolicasDetalhamentoUsinasRef.valGeracaoverificada }}</span>
+          </dd>
+        </dl>
+
+        <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+          <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Voltar</span>
+        </button>
+
+        <button
+          type="button"
+          [routerLink]="[
+            '/ons-dados-restricao-operacao-constrainedoff-usinas-eolicas-detalhamento-usinas',
+            onsDadosRestricaoOperacaoConstrainedoffUsinasEolicasDetalhamentoUsinasRef.id,
+            'edit',
+          ]"
+          class="btn btn-primary"
+        >
+          <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Editar</span>
+        </button>
+      </div>
+    }
+  </div>
+</div>

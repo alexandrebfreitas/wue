@@ -1,0 +1,27 @@
+{
+  "wattsUpEnergyApp": {
+    "onsIntercambioSinComOutrosPaises": {
+      "home": {
+        "title": "Ons Intercambio Sin Com Outros Paises",
+        "refreshListLabel": "Atualizar lista",
+        "createLabel": "Criar novo Ons Intercambio Sin Com Outros Paises",
+        "createOrEditLabel": "Criar ou editar Ons Intercambio Sin Com Outros Paises",
+        "search": "Pesquisar por Ons Intercambio Sin Com Outros Paises",
+        "notFound": "Nenhum Ons Intercambio Sin Com Outros Paises encontrado"
+      },
+      "created": "Um novo Ons Intercambio Sin Com Outros Paises foi criado com o identificador {{ param }}",
+      "updated": "Um Ons Intercambio Sin Com Outros Paises foi atualizado com o identificador {{ param }}",
+      "deleted": "Um Ons Intercambio Sin Com Outros Paises foi excluído com o identificador {{ param }}",
+      "delete": {
+        "question": "Tem certeza de que deseja excluir Ons Intercambio Sin Com Outros Paises {{ id }}?"
+      },
+      "detail": {
+        "title": "Ons Intercambio Sin Com Outros Paises"
+      },
+      "id": "ID",
+      "dinInstante": "Din Instante",
+      "nomPaisdestino": "Nom Paisdestino",
+      "valIntercambiomwmed": "Val Intercambiomwmed"
+    }
+  }
+}

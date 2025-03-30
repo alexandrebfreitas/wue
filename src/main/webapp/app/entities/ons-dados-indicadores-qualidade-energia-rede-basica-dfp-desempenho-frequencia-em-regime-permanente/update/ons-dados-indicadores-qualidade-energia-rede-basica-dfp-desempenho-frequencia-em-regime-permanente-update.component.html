@@ -1,0 +1,215 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <form name="editForm" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+      <h2
+        id="jhi-ons-dados-indicadores-qualidade-energia-rede-basica-dfp-desempenho-frequencia-em-regime-permanente-heading"
+        data-cy="OnsDadosIndicadoresQualidadeEnergiaRedeBasicaDfpDesempenhoFrequenciaEmRegimePermanenteCreateUpdateHeading"
+        jhiTranslate="wattsUpEnergyApp.onsDadosIndicadoresQualidadeEnergiaRedeBasicaDfpDesempenhoFrequenciaEmRegimePermanente.home.createOrEditLabel"
+      >
+        Criar ou editar Ons Dados Indicadores Qualidade Energia Rede Basica Dfp Desempenho Frequencia Em Regime Permanente
+      </h2>
+
+      <div>
+        <jhi-alert-error></jhi-alert-error>
+
+        @if (editForm.controls.id.value !== null) {
+          <div class="mb-3">
+            <label
+              class="form-label"
+              for="field_id"
+              jhiTranslate="wattsUpEnergyApp.onsDadosIndicadoresQualidadeEnergiaRedeBasicaDfpDesempenhoFrequenciaEmRegimePermanente.id"
+              >ID</label
+            >
+            <input type="number" class="form-control" name="id" id="field_id" data-cy="id" formControlName="id" [readonly]="true" />
+          </div>
+        }
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_idPeriodicidade"
+            jhiTranslate="wattsUpEnergyApp.onsDadosIndicadoresQualidadeEnergiaRedeBasicaDfpDesempenhoFrequenciaEmRegimePermanente.idPeriodicidade"
+            >Id Periodicidade</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="idPeriodicidade"
+            id="field_idPeriodicidade"
+            data-cy="idPeriodicidade"
+            formControlName="idPeriodicidade"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_dinReferencia"
+            jhiTranslate="wattsUpEnergyApp.onsDadosIndicadoresQualidadeEnergiaRedeBasicaDfpDesempenhoFrequenciaEmRegimePermanente.dinReferencia"
+            >Din Referencia</label
+          >
+          <div class="input-group">
+            <input
+              id="field_dinReferencia"
+              data-cy="dinReferencia"
+              type="text"
+              class="form-control"
+              name="dinReferencia"
+              ngbDatepicker
+              #dinReferenciaDp="ngbDatepicker"
+              formControlName="dinReferencia"
+            />
+            <button type="button" class="btn btn-secondary" (click)="dinReferenciaDp.toggle()">
+              <fa-icon icon="calendar-alt"></fa-icon>
+            </button>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_numDesvioPermSobre"
+            jhiTranslate="wattsUpEnergyApp.onsDadosIndicadoresQualidadeEnergiaRedeBasicaDfpDesempenhoFrequenciaEmRegimePermanente.numDesvioPermSobre"
+            >Num Desvio Perm Sobre</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="numDesvioPermSobre"
+            id="field_numDesvioPermSobre"
+            data-cy="numDesvioPermSobre"
+            formControlName="numDesvioPermSobre"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_numDesvioPermSub"
+            jhiTranslate="wattsUpEnergyApp.onsDadosIndicadoresQualidadeEnergiaRedeBasicaDfpDesempenhoFrequenciaEmRegimePermanente.numDesvioPermSub"
+            >Num Desvio Perm Sub</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="numDesvioPermSub"
+            id="field_numDesvioPermSub"
+            data-cy="numDesvioPermSub"
+            formControlName="numDesvioPermSub"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_numDesvioDistSobre"
+            jhiTranslate="wattsUpEnergyApp.onsDadosIndicadoresQualidadeEnergiaRedeBasicaDfpDesempenhoFrequenciaEmRegimePermanente.numDesvioDistSobre"
+            >Num Desvio Dist Sobre</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="numDesvioDistSobre"
+            id="field_numDesvioDistSobre"
+            data-cy="numDesvioDistSobre"
+            formControlName="numDesvioDistSobre"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_numDesvioDistSub"
+            jhiTranslate="wattsUpEnergyApp.onsDadosIndicadoresQualidadeEnergiaRedeBasicaDfpDesempenhoFrequenciaEmRegimePermanente.numDesvioDistSub"
+            >Num Desvio Dist Sub</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="numDesvioDistSub"
+            id="field_numDesvioDistSub"
+            data-cy="numDesvioDistSub"
+            formControlName="numDesvioDistSub"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_numMinutos"
+            jhiTranslate="wattsUpEnergyApp.onsDadosIndicadoresQualidadeEnergiaRedeBasicaDfpDesempenhoFrequenciaEmRegimePermanente.numMinutos"
+            >Num Minutos</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="numMinutos"
+            id="field_numMinutos"
+            data-cy="numMinutos"
+            formControlName="numMinutos"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_numVioladodis"
+            jhiTranslate="wattsUpEnergyApp.onsDadosIndicadoresQualidadeEnergiaRedeBasicaDfpDesempenhoFrequenciaEmRegimePermanente.numVioladodis"
+            >Num Violadodis</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="numVioladodis"
+            id="field_numVioladodis"
+            data-cy="numVioladodis"
+            formControlName="numVioladodis"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_numVioladoperm"
+            jhiTranslate="wattsUpEnergyApp.onsDadosIndicadoresQualidadeEnergiaRedeBasicaDfpDesempenhoFrequenciaEmRegimePermanente.numVioladoperm"
+            >Num Violadoperm</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="numVioladoperm"
+            id="field_numVioladoperm"
+            data-cy="numVioladoperm"
+            formControlName="numVioladoperm"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_valDfp"
+            jhiTranslate="wattsUpEnergyApp.onsDadosIndicadoresQualidadeEnergiaRedeBasicaDfpDesempenhoFrequenciaEmRegimePermanente.valDfp"
+            >Val Dfp</label
+          >
+          <input type="number" class="form-control" name="valDfp" id="field_valDfp" data-cy="valDfp" formControlName="valDfp" />
+        </div>
+      </div>
+
+      <div>
+        <button type="button" id="cancel-save" data-cy="entityCreateCancelButton" class="btn btn-secondary" (click)="previousState()">
+          <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancelar</span>
+        </button>
+
+        <button
+          type="submit"
+          id="save-entity"
+          data-cy="entityCreateSaveButton"
+          [disabled]="editForm.invalid || isSaving"
+          class="btn btn-primary"
+        >
+          <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Salvar</span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,64 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    @if (onsTaxasTeifaETeip(); as onsTaxasTeifaETeipRef) {
+      <div>
+        <h2 data-cy="onsTaxasTeifaETeipDetailsHeading">
+          <span jhiTranslate="wattsUpEnergyApp.onsTaxasTeifaETeip.detail.title">Ons Taxas Teifa E Teip</span>
+        </h2>
+
+        <hr />
+
+        <jhi-alert-error></jhi-alert-error>
+
+        <jhi-alert></jhi-alert>
+
+        <dl class="row-md jh-entity-details">
+          <dt><span jhiTranslate="global.field.id">Código</span></dt>
+          <dd>
+            <span>{{ onsTaxasTeifaETeipRef.id }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsTaxasTeifaETeip.nomUsina">Nom Usina</span></dt>
+          <dd>
+            <span>{{ onsTaxasTeifaETeipRef.nomUsina }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsTaxasTeifaETeip.codCeg">Cod Ceg</span></dt>
+          <dd>
+            <span>{{ onsTaxasTeifaETeipRef.codCeg }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsTaxasTeifaETeip.idTipousina">Id Tipousina</span></dt>
+          <dd>
+            <span>{{ onsTaxasTeifaETeipRef.idTipousina }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsTaxasTeifaETeip.dinMes">Din Mes</span></dt>
+          <dd>
+            <span>{{ onsTaxasTeifaETeipRef.dinMes | formatMediumDate }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsTaxasTeifaETeip.nomTaxa">Nom Taxa</span></dt>
+          <dd>
+            <span>{{ onsTaxasTeifaETeipRef.nomTaxa }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsTaxasTeifaETeip.valTaxa">Val Taxa</span></dt>
+          <dd>
+            <span>{{ onsTaxasTeifaETeipRef.valTaxa }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsTaxasTeifaETeip.numVersao">Num Versao</span></dt>
+          <dd>
+            <span>{{ onsTaxasTeifaETeipRef.numVersao }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsTaxasTeifaETeip.dinInstante">Din Instante</span></dt>
+          <dd>
+            <span>{{ onsTaxasTeifaETeipRef.dinInstante | formatMediumDate }}</span>
+          </dd>
+        </dl>
+
+        <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+          <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Voltar</span>
+        </button>
+
+        <button type="button" [routerLink]="['/ons-taxas-teifa-e-teip', onsTaxasTeifaETeipRef.id, 'edit']" class="btn btn-primary">
+          <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Editar</span>
+        </button>
+      </div>
+    }
+  </div>
+</div>

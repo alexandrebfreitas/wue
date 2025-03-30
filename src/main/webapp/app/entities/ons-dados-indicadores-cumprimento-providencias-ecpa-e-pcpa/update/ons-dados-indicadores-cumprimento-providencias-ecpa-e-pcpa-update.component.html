@@ -1,0 +1,205 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <form name="editForm" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+      <h2
+        id="jhi-ons-dados-indicadores-cumprimento-providencias-ecpa-e-pcpa-heading"
+        data-cy="OnsDadosIndicadoresCumprimentoProvidenciasEcpaEPcpaCreateUpdateHeading"
+        jhiTranslate="wattsUpEnergyApp.onsDadosIndicadoresCumprimentoProvidenciasEcpaEPcpa.home.createOrEditLabel"
+      >
+        Criar ou editar Ons Dados Indicadores Cumprimento Providencias Ecpa E Pcpa
+      </h2>
+
+      <div>
+        <jhi-alert-error></jhi-alert-error>
+
+        @if (editForm.controls.id.value !== null) {
+          <div class="mb-3">
+            <label class="form-label" for="field_id" jhiTranslate="wattsUpEnergyApp.onsDadosIndicadoresCumprimentoProvidenciasEcpaEPcpa.id"
+              >ID</label
+            >
+            <input type="number" class="form-control" name="id" id="field_id" data-cy="id" formControlName="id" [readonly]="true" />
+          </div>
+        }
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_dscAgregacao"
+            jhiTranslate="wattsUpEnergyApp.onsDadosIndicadoresCumprimentoProvidenciasEcpaEPcpa.dscAgregacao"
+            >Dsc Agregacao</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="dscAgregacao"
+            id="field_dscAgregacao"
+            data-cy="dscAgregacao"
+            formControlName="dscAgregacao"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_dscCaracteristica"
+            jhiTranslate="wattsUpEnergyApp.onsDadosIndicadoresCumprimentoProvidenciasEcpaEPcpa.dscCaracteristica"
+            >Dsc Caracteristica</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="dscCaracteristica"
+            id="field_dscCaracteristica"
+            data-cy="dscCaracteristica"
+            formControlName="dscCaracteristica"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_dinReferencia"
+            jhiTranslate="wattsUpEnergyApp.onsDadosIndicadoresCumprimentoProvidenciasEcpaEPcpa.dinReferencia"
+            >Din Referencia</label
+          >
+          <div class="input-group">
+            <input
+              id="field_dinReferencia"
+              data-cy="dinReferencia"
+              type="text"
+              class="form-control"
+              name="dinReferencia"
+              ngbDatepicker
+              #dinReferenciaDp="ngbDatepicker"
+              formControlName="dinReferencia"
+            />
+            <button type="button" class="btn btn-secondary" (click)="dinReferenciaDp.toggle()">
+              <fa-icon icon="calendar-alt"></fa-icon>
+            </button>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_numNprcConcluidas"
+            jhiTranslate="wattsUpEnergyApp.onsDadosIndicadoresCumprimentoProvidenciasEcpaEPcpa.numNprcConcluidas"
+            >Num Nprc Concluidas</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="numNprcConcluidas"
+            id="field_numNprcConcluidas"
+            data-cy="numNprcConcluidas"
+            formControlName="numNprcConcluidas"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_numNprpProgramadas"
+            jhiTranslate="wattsUpEnergyApp.onsDadosIndicadoresCumprimentoProvidenciasEcpaEPcpa.numNprpProgramadas"
+            >Num Nprp Programadas</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="numNprpProgramadas"
+            id="field_numNprpProgramadas"
+            data-cy="numNprpProgramadas"
+            formControlName="numNprpProgramadas"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_numNpratAtrasadas"
+            jhiTranslate="wattsUpEnergyApp.onsDadosIndicadoresCumprimentoProvidenciasEcpaEPcpa.numNpratAtrasadas"
+            >Num Nprat Atrasadas</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="numNpratAtrasadas"
+            id="field_numNpratAtrasadas"
+            data-cy="numNpratAtrasadas"
+            formControlName="numNpratAtrasadas"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_numNpraAntecipadas"
+            jhiTranslate="wattsUpEnergyApp.onsDadosIndicadoresCumprimentoProvidenciasEcpaEPcpa.numNpraAntecipadas"
+            >Num Npra Antecipadas</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="numNpraAntecipadas"
+            id="field_numNpraAntecipadas"
+            data-cy="numNpraAntecipadas"
+            formControlName="numNpraAntecipadas"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_numNprcpConcluidasPrazo"
+            jhiTranslate="wattsUpEnergyApp.onsDadosIndicadoresCumprimentoProvidenciasEcpaEPcpa.numNprcpConcluidasPrazo"
+            >Num Nprcp Concluidas Prazo</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="numNprcpConcluidasPrazo"
+            id="field_numNprcpConcluidasPrazo"
+            data-cy="numNprcpConcluidasPrazo"
+            formControlName="numNprcpConcluidasPrazo"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_valEcpa"
+            jhiTranslate="wattsUpEnergyApp.onsDadosIndicadoresCumprimentoProvidenciasEcpaEPcpa.valEcpa"
+            >Val Ecpa</label
+          >
+          <input type="number" class="form-control" name="valEcpa" id="field_valEcpa" data-cy="valEcpa" formControlName="valEcpa" />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_valPcpa"
+            jhiTranslate="wattsUpEnergyApp.onsDadosIndicadoresCumprimentoProvidenciasEcpaEPcpa.valPcpa"
+            >Val Pcpa</label
+          >
+          <input type="number" class="form-control" name="valPcpa" id="field_valPcpa" data-cy="valPcpa" formControlName="valPcpa" />
+        </div>
+      </div>
+
+      <div>
+        <button type="button" id="cancel-save" data-cy="entityCreateCancelButton" class="btn btn-secondary" (click)="previousState()">
+          <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancelar</span>
+        </button>
+
+        <button
+          type="submit"
+          id="save-entity"
+          data-cy="entityCreateSaveButton"
+          [disabled]="editForm.invalid || isSaving"
+          class="btn btn-primary"
+        >
+          <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Salvar</span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

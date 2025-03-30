@@ -1,0 +1,39 @@
+{
+  "wattsUpEnergyApp": {
+    "onsDadosRestricaoOperacaoConstrainedoffUsinasEolicas": {
+      "home": {
+        "title": "Ons Dados Restricao Operacao Constrainedoff Usinas Eolicas",
+        "refreshListLabel": "Atualizar lista",
+        "createLabel": "Criar novo Ons Dados Restricao Operacao Constrainedoff Usinas Eolicas",
+        "createOrEditLabel": "Criar ou editar Ons Dados Restricao Operacao Constrainedoff Usinas Eolicas",
+        "search": "Pesquisar por Ons Dados Restricao Operacao Constrainedoff Usinas Eolicas",
+        "notFound": "Nenhum Ons Dados Restricao Operacao Constrainedoff Usinas Eolicas encontrado"
+      },
+      "created": "Um novo Ons Dados Restricao Operacao Constrainedoff Usinas Eolicas foi criado com o identificador {{ param }}",
+      "updated": "Um Ons Dados Restricao Operacao Constrainedoff Usinas Eolicas foi atualizado com o identificador {{ param }}",
+      "deleted": "Um Ons Dados Restricao Operacao Constrainedoff Usinas Eolicas foi excluído com o identificador {{ param }}",
+      "delete": {
+        "question": "Tem certeza de que deseja excluir Ons Dados Restricao Operacao Constrainedoff Usinas Eolicas {{ id }}?"
+      },
+      "detail": {
+        "title": "Ons Dados Restricao Operacao Constrainedoff Usinas Eolicas"
+      },
+      "id": "ID",
+      "idSubsistema": "Id Subsistema",
+      "nomSubsistema": "Nom Subsistema",
+      "idEstado": "Id Estado",
+      "nomEstado": "Nom Estado",
+      "nomUsina": "Nom Usina",
+      "idOns": "Id Ons",
+      "ceg": "Ceg",
+      "dinInstante": "Din Instante",
+      "valGeracao": "Val Geracao",
+      "valGeracaolimitada": "Val Geracaolimitada",
+      "valDisponibilidade": "Val Disponibilidade",
+      "valGeracaoreferencia": "Val Geracaoreferencia",
+      "valGeracaoreferenciafinal": "Val Geracaoreferenciafinal",
+      "codRazaorestricao": "Cod Razaorestricao",
+      "codOrigemrestricao": "Cod Origemrestricao"
+    }
+  }
+}

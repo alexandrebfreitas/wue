@@ -1,0 +1,27 @@
+{
+  "annotations": {
+    "changelogDate": "20250330013700"
+  },
+  "applications": "*",
+  "entityTableName": "OnsTable23",
+  "fields": [
+    {
+      "fieldName": "codAreacarga",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "datReferencia",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "dinReferenciautc",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "valCargaglobalprogramada",
+      "fieldType": "Double"
+    }
+  ],
+  "name": "OnsCargaEnergiaProgramada",
+  "relationships": []
+}

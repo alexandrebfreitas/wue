@@ -1,0 +1,15 @@
+{
+  "annotations": {
+    "changelogDate": "20250330013712"
+  },
+  "applications": "*",
+  "entityTableName": "OnsTable35",
+  "fields": [
+    {
+      "fieldName": "enaArmazenavelBaciaPercentualmlt",
+      "fieldType": "Double"
+    }
+  ],
+  "name": "OnsEnaDiarioBacia",
+  "relationships": []
+}

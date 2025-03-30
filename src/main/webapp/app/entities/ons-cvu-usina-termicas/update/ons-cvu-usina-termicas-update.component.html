@@ -1,0 +1,190 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <form name="editForm" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+      <h2
+        id="jhi-ons-cvu-usina-termicas-heading"
+        data-cy="OnsCvuUsinaTermicasCreateUpdateHeading"
+        jhiTranslate="wattsUpEnergyApp.onsCvuUsinaTermicas.home.createOrEditLabel"
+      >
+        Criar ou editar Ons Cvu Usina Termicas
+      </h2>
+
+      <div>
+        <jhi-alert-error></jhi-alert-error>
+
+        @if (editForm.controls.id.value !== null) {
+          <div class="mb-3">
+            <label class="form-label" for="field_id" jhiTranslate="wattsUpEnergyApp.onsCvuUsinaTermicas.id">ID</label>
+            <input type="number" class="form-control" name="id" id="field_id" data-cy="id" formControlName="id" [readonly]="true" />
+          </div>
+        }
+
+        <div class="mb-3">
+          <label class="form-label" for="field_datIniciosemana" jhiTranslate="wattsUpEnergyApp.onsCvuUsinaTermicas.datIniciosemana"
+            >Dat Iniciosemana</label
+          >
+          <div class="input-group">
+            <input
+              id="field_datIniciosemana"
+              data-cy="datIniciosemana"
+              type="text"
+              class="form-control"
+              name="datIniciosemana"
+              ngbDatepicker
+              #datIniciosemanaDp="ngbDatepicker"
+              formControlName="datIniciosemana"
+            />
+            <button type="button" class="btn btn-secondary" (click)="datIniciosemanaDp.toggle()">
+              <fa-icon icon="calendar-alt"></fa-icon>
+            </button>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_datFimsemana" jhiTranslate="wattsUpEnergyApp.onsCvuUsinaTermicas.datFimsemana"
+            >Dat Fimsemana</label
+          >
+          <div class="input-group">
+            <input
+              id="field_datFimsemana"
+              data-cy="datFimsemana"
+              type="text"
+              class="form-control"
+              name="datFimsemana"
+              ngbDatepicker
+              #datFimsemanaDp="ngbDatepicker"
+              formControlName="datFimsemana"
+            />
+            <button type="button" class="btn btn-secondary" (click)="datFimsemanaDp.toggle()">
+              <fa-icon icon="calendar-alt"></fa-icon>
+            </button>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_anoReferencia" jhiTranslate="wattsUpEnergyApp.onsCvuUsinaTermicas.anoReferencia"
+            >Ano Referencia</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="anoReferencia"
+            id="field_anoReferencia"
+            data-cy="anoReferencia"
+            formControlName="anoReferencia"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_mesReferencia" jhiTranslate="wattsUpEnergyApp.onsCvuUsinaTermicas.mesReferencia"
+            >Mes Referencia</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="mesReferencia"
+            id="field_mesReferencia"
+            data-cy="mesReferencia"
+            formControlName="mesReferencia"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_numRevisao" jhiTranslate="wattsUpEnergyApp.onsCvuUsinaTermicas.numRevisao"
+            >Num Revisao</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="numRevisao"
+            id="field_numRevisao"
+            data-cy="numRevisao"
+            formControlName="numRevisao"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_nomSemanaoperativa" jhiTranslate="wattsUpEnergyApp.onsCvuUsinaTermicas.nomSemanaoperativa"
+            >Nom Semanaoperativa</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="nomSemanaoperativa"
+            id="field_nomSemanaoperativa"
+            data-cy="nomSemanaoperativa"
+            formControlName="nomSemanaoperativa"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_codModelos" jhiTranslate="wattsUpEnergyApp.onsCvuUsinaTermicas.codModelos"
+            >Cod Modelos</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="codModelos"
+            id="field_codModelos"
+            data-cy="codModelos"
+            formControlName="codModelos"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_idSubsistema" jhiTranslate="wattsUpEnergyApp.onsCvuUsinaTermicas.idSubsistema"
+            >Id Subsistema</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="idSubsistema"
+            id="field_idSubsistema"
+            data-cy="idSubsistema"
+            formControlName="idSubsistema"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_nomSubsistema" jhiTranslate="wattsUpEnergyApp.onsCvuUsinaTermicas.nomSubsistema"
+            >Nom Subsistema</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="nomSubsistema"
+            id="field_nomSubsistema"
+            data-cy="nomSubsistema"
+            formControlName="nomSubsistema"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_nomUsina" jhiTranslate="wattsUpEnergyApp.onsCvuUsinaTermicas.nomUsina">Nom Usina</label>
+          <input type="text" class="form-control" name="nomUsina" id="field_nomUsina" data-cy="nomUsina" formControlName="nomUsina" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_valCvu" jhiTranslate="wattsUpEnergyApp.onsCvuUsinaTermicas.valCvu">Val Cvu</label>
+          <input type="number" class="form-control" name="valCvu" id="field_valCvu" data-cy="valCvu" formControlName="valCvu" />
+        </div>
+      </div>
+
+      <div>
+        <button type="button" id="cancel-save" data-cy="entityCreateCancelButton" class="btn btn-secondary" (click)="previousState()">
+          <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancelar</span>
+        </button>
+
+        <button
+          type="submit"
+          id="save-entity"
+          data-cy="entityCreateSaveButton"
+          [disabled]="editForm.invalid || isSaving"
+          class="btn btn-primary"
+        >
+          <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Salvar</span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

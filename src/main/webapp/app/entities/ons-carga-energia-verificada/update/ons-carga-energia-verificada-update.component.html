@@ -1,0 +1,206 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <form name="editForm" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+      <h2
+        id="jhi-ons-carga-energia-verificada-heading"
+        data-cy="OnsCargaEnergiaVerificadaCreateUpdateHeading"
+        jhiTranslate="wattsUpEnergyApp.onsCargaEnergiaVerificada.home.createOrEditLabel"
+      >
+        Criar ou editar Ons Carga Energia Verificada
+      </h2>
+
+      <div>
+        <jhi-alert-error></jhi-alert-error>
+
+        @if (editForm.controls.id.value !== null) {
+          <div class="mb-3">
+            <label class="form-label" for="field_id" jhiTranslate="wattsUpEnergyApp.onsCargaEnergiaVerificada.id">ID</label>
+            <input type="number" class="form-control" name="id" id="field_id" data-cy="id" formControlName="id" [readonly]="true" />
+          </div>
+        }
+
+        <div class="mb-3">
+          <label class="form-label" for="field_codAreacarga" jhiTranslate="wattsUpEnergyApp.onsCargaEnergiaVerificada.codAreacarga"
+            >Cod Areacarga</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="codAreacarga"
+            id="field_codAreacarga"
+            data-cy="codAreacarga"
+            formControlName="codAreacarga"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_datReferencia" jhiTranslate="wattsUpEnergyApp.onsCargaEnergiaVerificada.datReferencia"
+            >Dat Referencia</label
+          >
+          <div class="input-group">
+            <input
+              id="field_datReferencia"
+              data-cy="datReferencia"
+              type="text"
+              class="form-control"
+              name="datReferencia"
+              ngbDatepicker
+              #datReferenciaDp="ngbDatepicker"
+              formControlName="datReferencia"
+            />
+            <button type="button" class="btn btn-secondary" (click)="datReferenciaDp.toggle()">
+              <fa-icon icon="calendar-alt"></fa-icon>
+            </button>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_dinReferenciautc" jhiTranslate="wattsUpEnergyApp.onsCargaEnergiaVerificada.dinReferenciautc"
+            >Din Referenciautc</label
+          >
+          <div class="input-group">
+            <input
+              id="field_dinReferenciautc"
+              data-cy="dinReferenciautc"
+              type="text"
+              class="form-control"
+              name="dinReferenciautc"
+              ngbDatepicker
+              #dinReferenciautcDp="ngbDatepicker"
+              formControlName="dinReferenciautc"
+            />
+            <button type="button" class="btn btn-secondary" (click)="dinReferenciautcDp.toggle()">
+              <fa-icon icon="calendar-alt"></fa-icon>
+            </button>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_valCargaglobal" jhiTranslate="wattsUpEnergyApp.onsCargaEnergiaVerificada.valCargaglobal"
+            >Val Cargaglobal</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="valCargaglobal"
+            id="field_valCargaglobal"
+            data-cy="valCargaglobal"
+            formControlName="valCargaglobal"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_valCargaglobalsmmg"
+            jhiTranslate="wattsUpEnergyApp.onsCargaEnergiaVerificada.valCargaglobalsmmg"
+            >Val Cargaglobalsmmg</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="valCargaglobalsmmg"
+            id="field_valCargaglobalsmmg"
+            data-cy="valCargaglobalsmmg"
+            formControlName="valCargaglobalsmmg"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_valCargammgd" jhiTranslate="wattsUpEnergyApp.onsCargaEnergiaVerificada.valCargammgd"
+            >Val Cargammgd</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="valCargammgd"
+            id="field_valCargammgd"
+            data-cy="valCargammgd"
+            formControlName="valCargammgd"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_valCargaglobalcons"
+            jhiTranslate="wattsUpEnergyApp.onsCargaEnergiaVerificada.valCargaglobalcons"
+            >Val Cargaglobalcons</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="valCargaglobalcons"
+            id="field_valCargaglobalcons"
+            data-cy="valCargaglobalcons"
+            formControlName="valCargaglobalcons"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_valConsistencia" jhiTranslate="wattsUpEnergyApp.onsCargaEnergiaVerificada.valConsistencia"
+            >Val Consistencia</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="valConsistencia"
+            id="field_valConsistencia"
+            data-cy="valConsistencia"
+            formControlName="valConsistencia"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_valCargasupervisionada"
+            jhiTranslate="wattsUpEnergyApp.onsCargaEnergiaVerificada.valCargasupervisionada"
+            >Val Cargasupervisionada</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="valCargasupervisionada"
+            id="field_valCargasupervisionada"
+            data-cy="valCargasupervisionada"
+            formControlName="valCargasupervisionada"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_valCarganaosupervisionada"
+            jhiTranslate="wattsUpEnergyApp.onsCargaEnergiaVerificada.valCarganaosupervisionada"
+            >Val Carganaosupervisionada</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="valCarganaosupervisionada"
+            id="field_valCarganaosupervisionada"
+            data-cy="valCarganaosupervisionada"
+            formControlName="valCarganaosupervisionada"
+          />
+        </div>
+      </div>
+
+      <div>
+        <button type="button" id="cancel-save" data-cy="entityCreateCancelButton" class="btn btn-secondary" (click)="previousState()">
+          <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancelar</span>
+        </button>
+
+        <button
+          type="submit"
+          id="save-entity"
+          data-cy="entityCreateSaveButton"
+          [disabled]="editForm.invalid || isSaving"
+          class="btn btn-primary"
+        >
+          <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Salvar</span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

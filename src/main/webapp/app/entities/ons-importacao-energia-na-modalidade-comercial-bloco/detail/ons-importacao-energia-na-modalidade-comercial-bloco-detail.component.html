@@ -1,0 +1,90 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    @if (onsImportacaoEnergiaNaModalidadeComercialBloco(); as onsImportacaoEnergiaNaModalidadeComercialBlocoRef) {
+      <div>
+        <h2 data-cy="onsImportacaoEnergiaNaModalidadeComercialBlocoDetailsHeading">
+          <span jhiTranslate="wattsUpEnergyApp.onsImportacaoEnergiaNaModalidadeComercialBloco.detail.title"
+            >Ons Importacao Energia Na Modalidade Comercial Bloco</span
+          >
+        </h2>
+
+        <hr />
+
+        <jhi-alert-error></jhi-alert-error>
+
+        <jhi-alert></jhi-alert>
+
+        <dl class="row-md jh-entity-details">
+          <dt><span jhiTranslate="global.field.id">Código</span></dt>
+          <dd>
+            <span>{{ onsImportacaoEnergiaNaModalidadeComercialBlocoRef.id }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsImportacaoEnergiaNaModalidadeComercialBloco.nomPais">Nom Pais</span></dt>
+          <dd>
+            <span>{{ onsImportacaoEnergiaNaModalidadeComercialBlocoRef.nomPais }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsImportacaoEnergiaNaModalidadeComercialBloco.nomAgente">Nom Agente</span></dt>
+          <dd>
+            <span>{{ onsImportacaoEnergiaNaModalidadeComercialBlocoRef.nomAgente }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsImportacaoEnergiaNaModalidadeComercialBloco.nomBloco">Nom Bloco</span></dt>
+          <dd>
+            <span>{{ onsImportacaoEnergiaNaModalidadeComercialBlocoRef.nomBloco }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsImportacaoEnergiaNaModalidadeComercialBloco.codBloco">Cod Bloco</span></dt>
+          <dd>
+            <span>{{ onsImportacaoEnergiaNaModalidadeComercialBlocoRef.codBloco }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsImportacaoEnergiaNaModalidadeComercialBloco.dinInstante">Din Instante</span></dt>
+          <dd>
+            <span>{{ onsImportacaoEnergiaNaModalidadeComercialBlocoRef.dinInstante | formatMediumDate }}</span>
+          </dd>
+          <dt>
+            <span jhiTranslate="wattsUpEnergyApp.onsImportacaoEnergiaNaModalidadeComercialBloco.valImportacaoprogramada"
+              >Val Importacaoprogramada</span
+            >
+          </dt>
+          <dd>
+            <span>{{ onsImportacaoEnergiaNaModalidadeComercialBlocoRef.valImportacaoprogramada }}</span>
+          </dd>
+          <dt>
+            <span jhiTranslate="wattsUpEnergyApp.onsImportacaoEnergiaNaModalidadeComercialBloco.valImportacaodespachada"
+              >Val Importacaodespachada</span
+            >
+          </dt>
+          <dd>
+            <span>{{ onsImportacaoEnergiaNaModalidadeComercialBlocoRef.valImportacaodespachada }}</span>
+          </dd>
+          <dt>
+            <span jhiTranslate="wattsUpEnergyApp.onsImportacaoEnergiaNaModalidadeComercialBloco.valImportacaoverificada"
+              >Val Importacaoverificada</span
+            >
+          </dt>
+          <dd>
+            <span>{{ onsImportacaoEnergiaNaModalidadeComercialBlocoRef.valImportacaoverificada }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsImportacaoEnergiaNaModalidadeComercialBloco.valPreco">Val Preco</span></dt>
+          <dd>
+            <span>{{ onsImportacaoEnergiaNaModalidadeComercialBlocoRef.valPreco }}</span>
+          </dd>
+        </dl>
+
+        <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+          <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Voltar</span>
+        </button>
+
+        <button
+          type="button"
+          [routerLink]="[
+            '/ons-importacao-energia-na-modalidade-comercial-bloco',
+            onsImportacaoEnergiaNaModalidadeComercialBlocoRef.id,
+            'edit',
+          ]"
+          class="btn btn-primary"
+        >
+          <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Editar</span>
+        </button>
+      </div>
+    }
+  </div>
+</div>

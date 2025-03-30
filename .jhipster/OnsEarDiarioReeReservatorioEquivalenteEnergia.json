@@ -1,0 +1,31 @@
+{
+  "annotations": {
+    "changelogDate": "20250330013644"
+  },
+  "applications": "*",
+  "entityTableName": "OnsTable7",
+  "fields": [
+    {
+      "fieldName": "nomRee",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "earData",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "earMaxRee",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "earVerifReeMwmes",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "earVerifReePercentual",
+      "fieldType": "Double"
+    }
+  ],
+  "name": "OnsEarDiarioReeReservatorioEquivalenteEnergia",
+  "relationships": []
+}

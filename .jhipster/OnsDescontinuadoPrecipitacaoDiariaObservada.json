@@ -1,0 +1,31 @@
+{
+  "annotations": {
+    "changelogDate": "20250330013740"
+  },
+  "applications": "*",
+  "entityTableName": "OnsTable63",
+  "fields": [
+    {
+      "fieldName": "codEstacao",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "valLatitude",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "valLongitude",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "valMedida",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "datObservada",
+      "fieldType": "LocalDate"
+    }
+  ],
+  "name": "OnsDescontinuadoPrecipitacaoDiariaObservada",
+  "relationships": []
+}

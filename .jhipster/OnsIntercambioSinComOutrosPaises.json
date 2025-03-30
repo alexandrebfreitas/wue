@@ -1,0 +1,23 @@
+{
+  "annotations": {
+    "changelogDate": "20250330013731"
+  },
+  "applications": "*",
+  "entityTableName": "OnsTable54",
+  "fields": [
+    {
+      "fieldName": "dinInstante",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "nomPaisdestino",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "valIntercambiomwmed",
+      "fieldType": "Double"
+    }
+  ],
+  "name": "OnsIntercambioSinComOutrosPaises",
+  "relationships": []
+}

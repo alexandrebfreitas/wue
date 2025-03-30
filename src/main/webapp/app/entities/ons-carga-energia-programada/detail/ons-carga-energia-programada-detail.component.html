@@ -1,0 +1,52 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    @if (onsCargaEnergiaProgramada(); as onsCargaEnergiaProgramadaRef) {
+      <div>
+        <h2 data-cy="onsCargaEnergiaProgramadaDetailsHeading">
+          <span jhiTranslate="wattsUpEnergyApp.onsCargaEnergiaProgramada.detail.title">Ons Carga Energia Programada</span>
+        </h2>
+
+        <hr />
+
+        <jhi-alert-error></jhi-alert-error>
+
+        <jhi-alert></jhi-alert>
+
+        <dl class="row-md jh-entity-details">
+          <dt><span jhiTranslate="global.field.id">Código</span></dt>
+          <dd>
+            <span>{{ onsCargaEnergiaProgramadaRef.id }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsCargaEnergiaProgramada.codAreacarga">Cod Areacarga</span></dt>
+          <dd>
+            <span>{{ onsCargaEnergiaProgramadaRef.codAreacarga }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsCargaEnergiaProgramada.datReferencia">Dat Referencia</span></dt>
+          <dd>
+            <span>{{ onsCargaEnergiaProgramadaRef.datReferencia | formatMediumDate }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsCargaEnergiaProgramada.dinReferenciautc">Din Referenciautc</span></dt>
+          <dd>
+            <span>{{ onsCargaEnergiaProgramadaRef.dinReferenciautc | formatMediumDate }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsCargaEnergiaProgramada.valCargaglobalprogramada">Val Cargaglobalprogramada</span></dt>
+          <dd>
+            <span>{{ onsCargaEnergiaProgramadaRef.valCargaglobalprogramada }}</span>
+          </dd>
+        </dl>
+
+        <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+          <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Voltar</span>
+        </button>
+
+        <button
+          type="button"
+          [routerLink]="['/ons-carga-energia-programada', onsCargaEnergiaProgramadaRef.id, 'edit']"
+          class="btn btn-primary"
+        >
+          <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Editar</span>
+        </button>
+      </div>
+    }
+  </div>
+</div>

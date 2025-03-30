@@ -1,0 +1,203 @@
+<div>
+  <h2 id="page-heading" data-cy="OnsBalancoEnergiaDessemHeading">
+    <span jhiTranslate="wattsUpEnergyApp.onsBalancoEnergiaDessem.home.title">Ons Balanco Energia Dessems</span>
+
+    <div class="d-flex justify-content-end">
+      <button class="btn btn-info me-2" (click)="load()" [disabled]="isLoading">
+        <fa-icon icon="sync" [animation]="isLoading ? 'spin' : undefined"></fa-icon>
+        <span jhiTranslate="wattsUpEnergyApp.onsBalancoEnergiaDessem.home.refreshListLabel">Atualizar lista</span>
+      </button>
+
+      <button
+        id="jh-create-entity"
+        data-cy="entityCreateButton"
+        class="btn btn-primary jh-create-entity create-ons-balanco-energia-dessem"
+        [routerLink]="['/ons-balanco-energia-dessem/new']"
+      >
+        <fa-icon icon="plus"></fa-icon>
+        <span class="hidden-sm-down" jhiTranslate="wattsUpEnergyApp.onsBalancoEnergiaDessem.home.createLabel"
+          >Criar novo Ons Balanco Energia Dessem</span
+        >
+      </button>
+    </div>
+  </h2>
+
+  <jhi-alert-error></jhi-alert-error>
+
+  <jhi-alert></jhi-alert>
+
+  <form name="searchForm" class="row row-cols-sm-auto align-items-center">
+    <div class="col-sm-12">
+      <div class="input-group w-100 mt-3">
+        <label class="visually-hidden" for="currentSearch" jhiTranslate="wattsUpEnergyApp.onsBalancoEnergiaDessem.home.search"
+          >Pesquisar por Ons Balanco Energia Dessem</label
+        >
+        <input
+          type="text"
+          class="form-control"
+          [(ngModel)]="currentSearch"
+          id="currentSearch"
+          name="currentSearch"
+          placeholder="{{ 'wattsUpEnergyApp.onsBalancoEnergiaDessem.home.search' | translate }}"
+        />
+
+        <button class="btn btn-info" (click)="search(currentSearch)">
+          <fa-icon icon="search"></fa-icon>
+        </button>
+
+        @if (currentSearch) {
+          <button class="btn btn-danger" (click)="search('')">
+            <fa-icon icon="trash-alt"></fa-icon>
+          </button>
+        }
+      </div>
+    </div>
+  </form>
+
+  @if (onsBalancoEnergiaDessems().length === 0) {
+    <div class="alert alert-warning" id="no-result">
+      <span jhiTranslate="wattsUpEnergyApp.onsBalancoEnergiaDessem.home.notFound">Nenhum Ons Balanco Energia Dessem encontrado</span>
+    </div>
+  } @else {
+    <div class="table-responsive table-entities" id="entities">
+      <table class="table table-striped" aria-describedby="page-heading">
+        <thead>
+          <tr jhiSort [(sortState)]="sortState" (sortChange)="navigateToWithComponentValues($event)">
+            <th scope="col" jhiSortBy="id">
+              <div class="d-flex">
+                <span jhiTranslate="global.field.id">Código</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="idSubsistema">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsBalancoEnergiaDessem.idSubsistema">Id Subsistema</span>
+                @if (!currentSearch) {
+                  <fa-icon class="p-1" icon="sort"></fa-icon>
+                }
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="nomSubsistema">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsBalancoEnergiaDessem.nomSubsistema">Nom Subsistema</span>
+                @if (!currentSearch) {
+                  <fa-icon class="p-1" icon="sort"></fa-icon>
+                }
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="dinInstante">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsBalancoEnergiaDessem.dinInstante">Din Instante</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="valDemanda">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsBalancoEnergiaDessem.valDemanda">Val Demanda</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="valGeracaohidraulicamwmed">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsBalancoEnergiaDessem.valGeracaohidraulicamwmed">Val Geracaohidraulicamwmed</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="valGeracaopchmwmed">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsBalancoEnergiaDessem.valGeracaopchmwmed">Val Geracaopchmwmed</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="valGeracaotermicamwed">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsBalancoEnergiaDessem.valGeracaotermicamwed">Val Geracaotermicamwed</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="valGeracaopctmwmed">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsBalancoEnergiaDessem.valGeracaopctmwmed">Val Geracaopctmwmed</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="valGeracaoeolicamwmed">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsBalancoEnergiaDessem.valGeracaoeolicamwmed">Val Geracaoeolicamwmed</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="valGeracaofotovoltaicamwmed">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsBalancoEnergiaDessem.valGeracaofotovoltaicamwmed"
+                  >Val Geracaofotovoltaicamwmed</span
+                >
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (onsBalancoEnergiaDessem of onsBalancoEnergiaDessems(); track trackId(onsBalancoEnergiaDessem)) {
+            <tr data-cy="entityTable">
+              <td>
+                <a [routerLink]="['/ons-balanco-energia-dessem', onsBalancoEnergiaDessem.id, 'view']">{{ onsBalancoEnergiaDessem.id }}</a>
+              </td>
+              <td>{{ onsBalancoEnergiaDessem.idSubsistema }}</td>
+              <td>{{ onsBalancoEnergiaDessem.nomSubsistema }}</td>
+              <td>{{ onsBalancoEnergiaDessem.dinInstante | formatMediumDate }}</td>
+              <td>{{ onsBalancoEnergiaDessem.valDemanda }}</td>
+              <td>{{ onsBalancoEnergiaDessem.valGeracaohidraulicamwmed }}</td>
+              <td>{{ onsBalancoEnergiaDessem.valGeracaopchmwmed }}</td>
+              <td>{{ onsBalancoEnergiaDessem.valGeracaotermicamwed }}</td>
+              <td>{{ onsBalancoEnergiaDessem.valGeracaopctmwmed }}</td>
+              <td>{{ onsBalancoEnergiaDessem.valGeracaoeolicamwmed }}</td>
+              <td>{{ onsBalancoEnergiaDessem.valGeracaofotovoltaicamwmed }}</td>
+              <td class="text-end">
+                <div class="btn-group">
+                  <a
+                    [routerLink]="['/ons-balanco-energia-dessem', onsBalancoEnergiaDessem.id, 'view']"
+                    class="btn btn-info btn-sm"
+                    data-cy="entityDetailsButton"
+                  >
+                    <fa-icon icon="eye"></fa-icon>
+                    <span class="d-none d-md-inline" jhiTranslate="entity.action.view">Visualizar</span>
+                  </a>
+
+                  <a
+                    [routerLink]="['/ons-balanco-energia-dessem', onsBalancoEnergiaDessem.id, 'edit']"
+                    class="btn btn-primary btn-sm"
+                    data-cy="entityEditButton"
+                  >
+                    <fa-icon icon="pencil-alt"></fa-icon>
+                    <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Editar</span>
+                  </a>
+
+                  <button
+                    type="submit"
+                    (click)="delete(onsBalancoEnergiaDessem)"
+                    class="btn btn-danger btn-sm"
+                    data-cy="entityDeleteButton"
+                  >
+                    <fa-icon icon="times"></fa-icon>
+                    <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Excluir</span>
+                  </button>
+                </div>
+              </td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+  }
+</div>

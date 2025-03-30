@@ -1,0 +1,28 @@
+{
+  "wattsUpEnergyApp": {
+    "onsCmoSemihorario": {
+      "home": {
+        "title": "Ons Cmo Semihorarios",
+        "refreshListLabel": "Atualizar lista",
+        "createLabel": "Criar novo Ons Cmo Semihorario",
+        "createOrEditLabel": "Criar ou editar Ons Cmo Semihorario",
+        "search": "Pesquisar por Ons Cmo Semihorario",
+        "notFound": "Nenhum Ons Cmo Semihorario encontrado"
+      },
+      "created": "Um novo Ons Cmo Semihorario foi criado com o identificador {{ param }}",
+      "updated": "Um Ons Cmo Semihorario foi atualizado com o identificador {{ param }}",
+      "deleted": "Um Ons Cmo Semihorario foi excluído com o identificador {{ param }}",
+      "delete": {
+        "question": "Tem certeza de que deseja excluir Ons Cmo Semihorario {{ id }}?"
+      },
+      "detail": {
+        "title": "Ons Cmo Semihorario"
+      },
+      "id": "ID",
+      "idSubsistema": "Id Subsistema",
+      "nomSubsistema": "Nom Subsistema",
+      "dinInstante": "Din Instante",
+      "valCmo": "Val Cmo"
+    }
+  }
+}

@@ -1,0 +1,60 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    @if (onsOfertasPrecoParaImportacao(); as onsOfertasPrecoParaImportacaoRef) {
+      <div>
+        <h2 data-cy="onsOfertasPrecoParaImportacaoDetailsHeading">
+          <span jhiTranslate="wattsUpEnergyApp.onsOfertasPrecoParaImportacao.detail.title">Ons Ofertas Preco Para Importacao</span>
+        </h2>
+
+        <hr />
+
+        <jhi-alert-error></jhi-alert-error>
+
+        <jhi-alert></jhi-alert>
+
+        <dl class="row-md jh-entity-details">
+          <dt><span jhiTranslate="global.field.id">Código</span></dt>
+          <dd>
+            <span>{{ onsOfertasPrecoParaImportacaoRef.id }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsOfertasPrecoParaImportacao.nomPais">Nom Pais</span></dt>
+          <dd>
+            <span>{{ onsOfertasPrecoParaImportacaoRef.nomPais }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsOfertasPrecoParaImportacao.nomAgente">Nom Agente</span></dt>
+          <dd>
+            <span>{{ onsOfertasPrecoParaImportacaoRef.nomAgente }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsOfertasPrecoParaImportacao.nomBloco">Nom Bloco</span></dt>
+          <dd>
+            <span>{{ onsOfertasPrecoParaImportacaoRef.nomBloco }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsOfertasPrecoParaImportacao.datIniciovalidade">Dat Iniciovalidade</span></dt>
+          <dd>
+            <span>{{ onsOfertasPrecoParaImportacaoRef.datIniciovalidade | formatMediumDate }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsOfertasPrecoParaImportacao.datFimvalidade">Dat Fimvalidade</span></dt>
+          <dd>
+            <span>{{ onsOfertasPrecoParaImportacaoRef.datFimvalidade | formatMediumDate }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsOfertasPrecoParaImportacao.valPreco">Val Preco</span></dt>
+          <dd>
+            <span>{{ onsOfertasPrecoParaImportacaoRef.valPreco }}</span>
+          </dd>
+        </dl>
+
+        <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+          <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Voltar</span>
+        </button>
+
+        <button
+          type="button"
+          [routerLink]="['/ons-ofertas-preco-para-importacao', onsOfertasPrecoParaImportacaoRef.id, 'edit']"
+          class="btn btn-primary"
+        >
+          <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Editar</span>
+        </button>
+      </div>
+    }
+  </div>
+</div>

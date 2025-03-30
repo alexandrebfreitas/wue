@@ -1,0 +1,206 @@
+<div>
+  <h2 id="page-heading" data-cy="OnsCvuUsinaTermicasHeading">
+    <span jhiTranslate="wattsUpEnergyApp.onsCvuUsinaTermicas.home.title">Ons Cvu Usina Termicas</span>
+
+    <div class="d-flex justify-content-end">
+      <button class="btn btn-info me-2" (click)="load()" [disabled]="isLoading">
+        <fa-icon icon="sync" [animation]="isLoading ? 'spin' : undefined"></fa-icon>
+        <span jhiTranslate="wattsUpEnergyApp.onsCvuUsinaTermicas.home.refreshListLabel">Atualizar lista</span>
+      </button>
+
+      <button
+        id="jh-create-entity"
+        data-cy="entityCreateButton"
+        class="btn btn-primary jh-create-entity create-ons-cvu-usina-termicas"
+        [routerLink]="['/ons-cvu-usina-termicas/new']"
+      >
+        <fa-icon icon="plus"></fa-icon>
+        <span class="hidden-sm-down" jhiTranslate="wattsUpEnergyApp.onsCvuUsinaTermicas.home.createLabel"
+          >Criar novo Ons Cvu Usina Termicas</span
+        >
+      </button>
+    </div>
+  </h2>
+
+  <jhi-alert-error></jhi-alert-error>
+
+  <jhi-alert></jhi-alert>
+
+  <form name="searchForm" class="row row-cols-sm-auto align-items-center">
+    <div class="col-sm-12">
+      <div class="input-group w-100 mt-3">
+        <label class="visually-hidden" for="currentSearch" jhiTranslate="wattsUpEnergyApp.onsCvuUsinaTermicas.home.search"
+          >Pesquisar por Ons Cvu Usina Termicas</label
+        >
+        <input
+          type="text"
+          class="form-control"
+          [(ngModel)]="currentSearch"
+          id="currentSearch"
+          name="currentSearch"
+          placeholder="{{ 'wattsUpEnergyApp.onsCvuUsinaTermicas.home.search' | translate }}"
+        />
+
+        <button class="btn btn-info" (click)="search(currentSearch)">
+          <fa-icon icon="search"></fa-icon>
+        </button>
+
+        @if (currentSearch) {
+          <button class="btn btn-danger" (click)="search('')">
+            <fa-icon icon="trash-alt"></fa-icon>
+          </button>
+        }
+      </div>
+    </div>
+  </form>
+
+  @if (onsCvuUsinaTermicas().length === 0) {
+    <div class="alert alert-warning" id="no-result">
+      <span jhiTranslate="wattsUpEnergyApp.onsCvuUsinaTermicas.home.notFound">Nenhum Ons Cvu Usina Termicas encontrado</span>
+    </div>
+  } @else {
+    <div class="table-responsive table-entities" id="entities">
+      <table class="table table-striped" aria-describedby="page-heading">
+        <thead>
+          <tr jhiSort [(sortState)]="sortState" (sortChange)="navigateToWithComponentValues($event)">
+            <th scope="col" jhiSortBy="id">
+              <div class="d-flex">
+                <span jhiTranslate="global.field.id">Código</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="datIniciosemana">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsCvuUsinaTermicas.datIniciosemana">Dat Iniciosemana</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="datFimsemana">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsCvuUsinaTermicas.datFimsemana">Dat Fimsemana</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="anoReferencia">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsCvuUsinaTermicas.anoReferencia">Ano Referencia</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="mesReferencia">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsCvuUsinaTermicas.mesReferencia">Mes Referencia</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="numRevisao">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsCvuUsinaTermicas.numRevisao">Num Revisao</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="nomSemanaoperativa">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsCvuUsinaTermicas.nomSemanaoperativa">Nom Semanaoperativa</span>
+                @if (!currentSearch) {
+                  <fa-icon class="p-1" icon="sort"></fa-icon>
+                }
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="codModelos">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsCvuUsinaTermicas.codModelos">Cod Modelos</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="idSubsistema">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsCvuUsinaTermicas.idSubsistema">Id Subsistema</span>
+                @if (!currentSearch) {
+                  <fa-icon class="p-1" icon="sort"></fa-icon>
+                }
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="nomSubsistema">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsCvuUsinaTermicas.nomSubsistema">Nom Subsistema</span>
+                @if (!currentSearch) {
+                  <fa-icon class="p-1" icon="sort"></fa-icon>
+                }
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="nomUsina">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsCvuUsinaTermicas.nomUsina">Nom Usina</span>
+                @if (!currentSearch) {
+                  <fa-icon class="p-1" icon="sort"></fa-icon>
+                }
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="valCvu">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsCvuUsinaTermicas.valCvu">Val Cvu</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (onsCvuUsinaTermicas of onsCvuUsinaTermicas(); track trackId(onsCvuUsinaTermicas)) {
+            <tr data-cy="entityTable">
+              <td>
+                <a [routerLink]="['/ons-cvu-usina-termicas', onsCvuUsinaTermicas.id, 'view']">{{ onsCvuUsinaTermicas.id }}</a>
+              </td>
+              <td>{{ onsCvuUsinaTermicas.datIniciosemana | formatMediumDate }}</td>
+              <td>{{ onsCvuUsinaTermicas.datFimsemana | formatMediumDate }}</td>
+              <td>{{ onsCvuUsinaTermicas.anoReferencia }}</td>
+              <td>{{ onsCvuUsinaTermicas.mesReferencia }}</td>
+              <td>{{ onsCvuUsinaTermicas.numRevisao }}</td>
+              <td>{{ onsCvuUsinaTermicas.nomSemanaoperativa }}</td>
+              <td>{{ onsCvuUsinaTermicas.codModelos }}</td>
+              <td>{{ onsCvuUsinaTermicas.idSubsistema }}</td>
+              <td>{{ onsCvuUsinaTermicas.nomSubsistema }}</td>
+              <td>{{ onsCvuUsinaTermicas.nomUsina }}</td>
+              <td>{{ onsCvuUsinaTermicas.valCvu }}</td>
+              <td class="text-end">
+                <div class="btn-group">
+                  <a
+                    [routerLink]="['/ons-cvu-usina-termicas', onsCvuUsinaTermicas.id, 'view']"
+                    class="btn btn-info btn-sm"
+                    data-cy="entityDetailsButton"
+                  >
+                    <fa-icon icon="eye"></fa-icon>
+                    <span class="d-none d-md-inline" jhiTranslate="entity.action.view">Visualizar</span>
+                  </a>
+
+                  <a
+                    [routerLink]="['/ons-cvu-usina-termicas', onsCvuUsinaTermicas.id, 'edit']"
+                    class="btn btn-primary btn-sm"
+                    data-cy="entityEditButton"
+                  >
+                    <fa-icon icon="pencil-alt"></fa-icon>
+                    <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Editar</span>
+                  </a>
+
+                  <button type="submit" (click)="delete(onsCvuUsinaTermicas)" class="btn btn-danger btn-sm" data-cy="entityDeleteButton">
+                    <fa-icon icon="times"></fa-icon>
+                    <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Excluir</span>
+                  </button>
+                </div>
+              </td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+  }
+</div>

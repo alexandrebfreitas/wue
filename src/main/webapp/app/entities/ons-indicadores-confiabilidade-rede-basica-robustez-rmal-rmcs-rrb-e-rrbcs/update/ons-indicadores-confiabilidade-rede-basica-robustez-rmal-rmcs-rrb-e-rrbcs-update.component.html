@@ -1,0 +1,256 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <form name="editForm" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+      <h2
+        id="jhi-ons-indicadores-confiabilidade-rede-basica-robustez-rmal-rmcs-rrb-e-rrbcs-heading"
+        data-cy="OnsIndicadoresConfiabilidadeRedeBasicaRobustezRmalRmcsRrbERrbcsCreateUpdateHeading"
+        jhiTranslate="wattsUpEnergyApp.onsIndicadoresConfiabilidadeRedeBasicaRobustezRmalRmcsRrbERrbcs.home.createOrEditLabel"
+      >
+        Criar ou editar Ons Indicadores Confiabilidade Rede Basica Robustez Rmal Rmcs Rrb E Rrbcs
+      </h2>
+
+      <div>
+        <jhi-alert-error></jhi-alert-error>
+
+        @if (editForm.controls.id.value !== null) {
+          <div class="mb-3">
+            <label
+              class="form-label"
+              for="field_id"
+              jhiTranslate="wattsUpEnergyApp.onsIndicadoresConfiabilidadeRedeBasicaRobustezRmalRmcsRrbERrbcs.id"
+              >ID</label
+            >
+            <input type="number" class="form-control" name="id" id="field_id" data-cy="id" formControlName="id" [readonly]="true" />
+          </div>
+        }
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_codIndicador"
+            jhiTranslate="wattsUpEnergyApp.onsIndicadoresConfiabilidadeRedeBasicaRobustezRmalRmcsRrbERrbcs.codIndicador"
+            >Cod Indicador</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="codIndicador"
+            id="field_codIndicador"
+            data-cy="codIndicador"
+            formControlName="codIndicador"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_dscAgregacao"
+            jhiTranslate="wattsUpEnergyApp.onsIndicadoresConfiabilidadeRedeBasicaRobustezRmalRmcsRrbERrbcs.dscAgregacao"
+            >Dsc Agregacao</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="dscAgregacao"
+            id="field_dscAgregacao"
+            data-cy="dscAgregacao"
+            formControlName="dscAgregacao"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_codCaracteristica"
+            jhiTranslate="wattsUpEnergyApp.onsIndicadoresConfiabilidadeRedeBasicaRobustezRmalRmcsRrbERrbcs.codCaracteristica"
+            >Cod Caracteristica</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="codCaracteristica"
+            id="field_codCaracteristica"
+            data-cy="codCaracteristica"
+            formControlName="codCaracteristica"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_dscCaracteristica"
+            jhiTranslate="wattsUpEnergyApp.onsIndicadoresConfiabilidadeRedeBasicaRobustezRmalRmcsRrbERrbcs.dscCaracteristica"
+            >Dsc Caracteristica</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="dscCaracteristica"
+            id="field_dscCaracteristica"
+            data-cy="dscCaracteristica"
+            formControlName="dscCaracteristica"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_idPeriodicidade"
+            jhiTranslate="wattsUpEnergyApp.onsIndicadoresConfiabilidadeRedeBasicaRobustezRmalRmcsRrbERrbcs.idPeriodicidade"
+            >Id Periodicidade</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="idPeriodicidade"
+            id="field_idPeriodicidade"
+            data-cy="idPeriodicidade"
+            formControlName="idPeriodicidade"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_dinReferencia"
+            jhiTranslate="wattsUpEnergyApp.onsIndicadoresConfiabilidadeRedeBasicaRobustezRmalRmcsRrbERrbcs.dinReferencia"
+            >Din Referencia</label
+          >
+          <div class="input-group">
+            <input
+              id="field_dinReferencia"
+              data-cy="dinReferencia"
+              type="text"
+              class="form-control"
+              name="dinReferencia"
+              ngbDatepicker
+              #dinReferenciaDp="ngbDatepicker"
+              formControlName="dinReferencia"
+            />
+            <button type="button" class="btn btn-secondary" (click)="dinReferenciaDp.toggle()">
+              <fa-icon icon="calendar-alt"></fa-icon>
+            </button>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_valIndicador"
+            jhiTranslate="wattsUpEnergyApp.onsIndicadoresConfiabilidadeRedeBasicaRobustezRmalRmcsRrbERrbcs.valIndicador"
+            >Val Indicador</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="valIndicador"
+            id="field_valIndicador"
+            data-cy="valIndicador"
+            formControlName="valIndicador"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_numPerturbacoes"
+            jhiTranslate="wattsUpEnergyApp.onsIndicadoresConfiabilidadeRedeBasicaRobustezRmalRmcsRrbERrbcs.numPerturbacoes"
+            >Num Perturbacoes</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="numPerturbacoes"
+            id="field_numPerturbacoes"
+            data-cy="numPerturbacoes"
+            formControlName="numPerturbacoes"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_numPerturbacoescortecarga"
+            jhiTranslate="wattsUpEnergyApp.onsIndicadoresConfiabilidadeRedeBasicaRobustezRmalRmcsRrbERrbcs.numPerturbacoescortecarga"
+            >Num Perturbacoescortecarga</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="numPerturbacoescortecarga"
+            id="field_numPerturbacoescortecarga"
+            data-cy="numPerturbacoescortecarga"
+            formControlName="numPerturbacoescortecarga"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_numPerturbacoescortecarga0a50mw"
+            jhiTranslate="wattsUpEnergyApp.onsIndicadoresConfiabilidadeRedeBasicaRobustezRmalRmcsRrbERrbcs.numPerturbacoescortecarga0a50mw"
+            >Num Perturbacoescortecarga 0 A 50 Mw</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="numPerturbacoescortecarga0a50mw"
+            id="field_numPerturbacoescortecarga0a50mw"
+            data-cy="numPerturbacoescortecarga0a50mw"
+            formControlName="numPerturbacoescortecarga0a50mw"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_numPerturbacoescortecarga50a100mw"
+            jhiTranslate="wattsUpEnergyApp.onsIndicadoresConfiabilidadeRedeBasicaRobustezRmalRmcsRrbERrbcs.numPerturbacoescortecarga50a100mw"
+            >Num Perturbacoescortecarga 50 A 100 Mw</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="numPerturbacoescortecarga50a100mw"
+            id="field_numPerturbacoescortecarga50a100mw"
+            data-cy="numPerturbacoescortecarga50a100mw"
+            formControlName="numPerturbacoescortecarga50a100mw"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_numPerturbacoescortecargaMaior100mw"
+            jhiTranslate="wattsUpEnergyApp.onsIndicadoresConfiabilidadeRedeBasicaRobustezRmalRmcsRrbERrbcs.numPerturbacoescortecargaMaior100mw"
+            >Num Perturbacoescortecarga Maior 100 Mw</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="numPerturbacoescortecargaMaior100mw"
+            id="field_numPerturbacoescortecargaMaior100mw"
+            data-cy="numPerturbacoescortecargaMaior100mw"
+            formControlName="numPerturbacoescortecargaMaior100mw"
+          />
+        </div>
+      </div>
+
+      <div>
+        <button type="button" id="cancel-save" data-cy="entityCreateCancelButton" class="btn btn-secondary" (click)="previousState()">
+          <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancelar</span>
+        </button>
+
+        <button
+          type="submit"
+          id="save-entity"
+          data-cy="entityCreateSaveButton"
+          [disabled]="editForm.invalid || isSaving"
+          class="btn btn-primary"
+        >
+          <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Salvar</span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

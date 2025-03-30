@@ -1,0 +1,172 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <form name="editForm" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+      <h2
+        id="jhi-ons-balanco-energia-nos-subsistemas-heading"
+        data-cy="OnsBalancoEnergiaNosSubsistemasCreateUpdateHeading"
+        jhiTranslate="wattsUpEnergyApp.onsBalancoEnergiaNosSubsistemas.home.createOrEditLabel"
+      >
+        Criar ou editar Ons Balanco Energia Nos Subsistemas
+      </h2>
+
+      <div>
+        <jhi-alert-error></jhi-alert-error>
+
+        @if (editForm.controls.id.value !== null) {
+          <div class="mb-3">
+            <label class="form-label" for="field_id" jhiTranslate="wattsUpEnergyApp.onsBalancoEnergiaNosSubsistemas.id">ID</label>
+            <input type="number" class="form-control" name="id" id="field_id" data-cy="id" formControlName="id" [readonly]="true" />
+          </div>
+        }
+
+        <div class="mb-3">
+          <label class="form-label" for="field_idSubsistema" jhiTranslate="wattsUpEnergyApp.onsBalancoEnergiaNosSubsistemas.idSubsistema"
+            >Id Subsistema</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="idSubsistema"
+            id="field_idSubsistema"
+            data-cy="idSubsistema"
+            formControlName="idSubsistema"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_nomSubsistema" jhiTranslate="wattsUpEnergyApp.onsBalancoEnergiaNosSubsistemas.nomSubsistema"
+            >Nom Subsistema</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="nomSubsistema"
+            id="field_nomSubsistema"
+            data-cy="nomSubsistema"
+            formControlName="nomSubsistema"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_dinInstante" jhiTranslate="wattsUpEnergyApp.onsBalancoEnergiaNosSubsistemas.dinInstante"
+            >Din Instante</label
+          >
+          <div class="input-group">
+            <input
+              id="field_dinInstante"
+              data-cy="dinInstante"
+              type="text"
+              class="form-control"
+              name="dinInstante"
+              ngbDatepicker
+              #dinInstanteDp="ngbDatepicker"
+              formControlName="dinInstante"
+            />
+            <button type="button" class="btn btn-secondary" (click)="dinInstanteDp.toggle()">
+              <fa-icon icon="calendar-alt"></fa-icon>
+            </button>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_valGerhidraulica"
+            jhiTranslate="wattsUpEnergyApp.onsBalancoEnergiaNosSubsistemas.valGerhidraulica"
+            >Val Gerhidraulica</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="valGerhidraulica"
+            id="field_valGerhidraulica"
+            data-cy="valGerhidraulica"
+            formControlName="valGerhidraulica"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_valGertermica" jhiTranslate="wattsUpEnergyApp.onsBalancoEnergiaNosSubsistemas.valGertermica"
+            >Val Gertermica</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="valGertermica"
+            id="field_valGertermica"
+            data-cy="valGertermica"
+            formControlName="valGertermica"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_valGereolica" jhiTranslate="wattsUpEnergyApp.onsBalancoEnergiaNosSubsistemas.valGereolica"
+            >Val Gereolica</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="valGereolica"
+            id="field_valGereolica"
+            data-cy="valGereolica"
+            formControlName="valGereolica"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_valGersolar" jhiTranslate="wattsUpEnergyApp.onsBalancoEnergiaNosSubsistemas.valGersolar"
+            >Val Gersolar</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="valGersolar"
+            id="field_valGersolar"
+            data-cy="valGersolar"
+            formControlName="valGersolar"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_valCarga" jhiTranslate="wattsUpEnergyApp.onsBalancoEnergiaNosSubsistemas.valCarga"
+            >Val Carga</label
+          >
+          <input type="number" class="form-control" name="valCarga" id="field_valCarga" data-cy="valCarga" formControlName="valCarga" />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_valIntercambio"
+            jhiTranslate="wattsUpEnergyApp.onsBalancoEnergiaNosSubsistemas.valIntercambio"
+            >Val Intercambio</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="valIntercambio"
+            id="field_valIntercambio"
+            data-cy="valIntercambio"
+            formControlName="valIntercambio"
+          />
+        </div>
+      </div>
+
+      <div>
+        <button type="button" id="cancel-save" data-cy="entityCreateCancelButton" class="btn btn-secondary" (click)="previousState()">
+          <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancelar</span>
+        </button>
+
+        <button
+          type="submit"
+          id="save-entity"
+          data-cy="entityCreateSaveButton"
+          [disabled]="editForm.invalid || isSaving"
+          class="btn btn-primary"
+        >
+          <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Salvar</span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

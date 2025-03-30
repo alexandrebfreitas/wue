@@ -1,0 +1,72 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    @if (onsBalancoEnergiaNosSubsistemas(); as onsBalancoEnergiaNosSubsistemasRef) {
+      <div>
+        <h2 data-cy="onsBalancoEnergiaNosSubsistemasDetailsHeading">
+          <span jhiTranslate="wattsUpEnergyApp.onsBalancoEnergiaNosSubsistemas.detail.title">Ons Balanco Energia Nos Subsistemas</span>
+        </h2>
+
+        <hr />
+
+        <jhi-alert-error></jhi-alert-error>
+
+        <jhi-alert></jhi-alert>
+
+        <dl class="row-md jh-entity-details">
+          <dt><span jhiTranslate="global.field.id">Código</span></dt>
+          <dd>
+            <span>{{ onsBalancoEnergiaNosSubsistemasRef.id }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsBalancoEnergiaNosSubsistemas.idSubsistema">Id Subsistema</span></dt>
+          <dd>
+            <span>{{ onsBalancoEnergiaNosSubsistemasRef.idSubsistema }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsBalancoEnergiaNosSubsistemas.nomSubsistema">Nom Subsistema</span></dt>
+          <dd>
+            <span>{{ onsBalancoEnergiaNosSubsistemasRef.nomSubsistema }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsBalancoEnergiaNosSubsistemas.dinInstante">Din Instante</span></dt>
+          <dd>
+            <span>{{ onsBalancoEnergiaNosSubsistemasRef.dinInstante | formatMediumDate }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsBalancoEnergiaNosSubsistemas.valGerhidraulica">Val Gerhidraulica</span></dt>
+          <dd>
+            <span>{{ onsBalancoEnergiaNosSubsistemasRef.valGerhidraulica }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsBalancoEnergiaNosSubsistemas.valGertermica">Val Gertermica</span></dt>
+          <dd>
+            <span>{{ onsBalancoEnergiaNosSubsistemasRef.valGertermica }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsBalancoEnergiaNosSubsistemas.valGereolica">Val Gereolica</span></dt>
+          <dd>
+            <span>{{ onsBalancoEnergiaNosSubsistemasRef.valGereolica }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsBalancoEnergiaNosSubsistemas.valGersolar">Val Gersolar</span></dt>
+          <dd>
+            <span>{{ onsBalancoEnergiaNosSubsistemasRef.valGersolar }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsBalancoEnergiaNosSubsistemas.valCarga">Val Carga</span></dt>
+          <dd>
+            <span>{{ onsBalancoEnergiaNosSubsistemasRef.valCarga }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsBalancoEnergiaNosSubsistemas.valIntercambio">Val Intercambio</span></dt>
+          <dd>
+            <span>{{ onsBalancoEnergiaNosSubsistemasRef.valIntercambio }}</span>
+          </dd>
+        </dl>
+
+        <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+          <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Voltar</span>
+        </button>
+
+        <button
+          type="button"
+          [routerLink]="['/ons-balanco-energia-nos-subsistemas', onsBalancoEnergiaNosSubsistemasRef.id, 'edit']"
+          class="btn btn-primary"
+        >
+          <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Editar</span>
+        </button>
+      </div>
+    }
+  </div>
+</div>

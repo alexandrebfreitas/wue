@@ -1,0 +1,39 @@
+{
+  "annotations": {
+    "changelogDate": "20250330013734"
+  },
+  "applications": "*",
+  "entityTableName": "OnsTable57",
+  "fields": [
+    {
+      "fieldName": "datPdp",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "codSubmercado",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "sglTipousina",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "codUsinapdp",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nomUsinapdp",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "numIntdespa",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "valDespasup",
+      "fieldType": "Integer"
+    }
+  ],
+  "name": "OnsDadosHistoricoDespachoEnergiaJaneiro2021ASetembro2024",
+  "relationships": []
+}

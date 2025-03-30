@@ -1,0 +1,67 @@
+{
+  "annotations": {
+    "changelogDate": "20250330013709"
+  },
+  "applications": "*",
+  "entityTableName": "OnsTable32",
+  "fields": [
+    {
+      "fieldName": "valNivelmontante",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "valNiveljusante",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "valVolumeutilcon",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "valVazaoafluente",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "valVazaoturbinada",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "valVazaovertida",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "valVazaooutrasestruturas",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "valVazaodefluente",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "valVazaotransferida",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "valVazaonatural",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "valVazaoartificial",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "valVazaoincremental",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "valVazaoevaporacaoliquida",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "valVazaousoconsuntivo",
+      "fieldType": "Double"
+    }
+  ],
+  "name": "OnsDadosHidraulicosReservatorioBaseDiaria",
+  "relationships": []
+}

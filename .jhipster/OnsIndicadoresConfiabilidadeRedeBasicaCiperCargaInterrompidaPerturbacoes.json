@@ -1,0 +1,51 @@
+{
+  "annotations": {
+    "changelogDate": "20250330013718"
+  },
+  "applications": "*",
+  "entityTableName": "OnsTable41",
+  "fields": [
+    {
+      "fieldName": "dscAgregacao",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "codCaracteristica",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "dscCaracteristica",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "idPeriodicidade",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "dinReferencia",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "valCiper1",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "valCiper2",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "valCiper3",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "valCiper4",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "valCiper5",
+      "fieldType": "Double"
+    }
+  ],
+  "name": "OnsIndicadoresConfiabilidadeRedeBasicaCiperCargaInterrompidaPerturbacoes",
+  "relationships": []
+}

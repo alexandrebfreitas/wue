@@ -1,0 +1,28 @@
+{
+  "wattsUpEnergyApp": {
+    "onsCargaEnergiaDiaria": {
+      "home": {
+        "title": "Ons Carga Energia Diarias",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Ons Carga Energia Diaria",
+        "createOrEditLabel": "Create or edit a Ons Carga Energia Diaria",
+        "search": "Search for Ons Carga Energia Diaria",
+        "notFound": "No Ons Carga Energia Diarias found"
+      },
+      "created": "A new Ons Carga Energia Diaria is created with identifier {{ param }}",
+      "updated": "A Ons Carga Energia Diaria is updated with identifier {{ param }}",
+      "deleted": "A Ons Carga Energia Diaria is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Ons Carga Energia Diaria {{ id }}?"
+      },
+      "detail": {
+        "title": "Ons Carga Energia Diaria"
+      },
+      "id": "ID",
+      "idSubsistema": "Id Subsistema",
+      "nomSubsistema": "Nom Subsistema",
+      "dinInstante": "Din Instante",
+      "valCargaenergiamwmed": "Val Cargaenergiamwmed"
+    }
+  }
+}

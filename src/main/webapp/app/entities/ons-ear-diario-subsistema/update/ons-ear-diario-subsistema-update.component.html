@@ -1,0 +1,133 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <form name="editForm" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+      <h2
+        id="jhi-ons-ear-diario-subsistema-heading"
+        data-cy="OnsEarDiarioSubsistemaCreateUpdateHeading"
+        jhiTranslate="wattsUpEnergyApp.onsEarDiarioSubsistema.home.createOrEditLabel"
+      >
+        Criar ou editar Ons Ear Diario Subsistema
+      </h2>
+
+      <div>
+        <jhi-alert-error></jhi-alert-error>
+
+        @if (editForm.controls.id.value !== null) {
+          <div class="mb-3">
+            <label class="form-label" for="field_id" jhiTranslate="wattsUpEnergyApp.onsEarDiarioSubsistema.id">ID</label>
+            <input type="number" class="form-control" name="id" id="field_id" data-cy="id" formControlName="id" [readonly]="true" />
+          </div>
+        }
+
+        <div class="mb-3">
+          <label class="form-label" for="field_idSubsistema" jhiTranslate="wattsUpEnergyApp.onsEarDiarioSubsistema.idSubsistema"
+            >Id Subsistema</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="idSubsistema"
+            id="field_idSubsistema"
+            data-cy="idSubsistema"
+            formControlName="idSubsistema"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_nomSubsistema" jhiTranslate="wattsUpEnergyApp.onsEarDiarioSubsistema.nomSubsistema"
+            >Nom Subsistema</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="nomSubsistema"
+            id="field_nomSubsistema"
+            data-cy="nomSubsistema"
+            formControlName="nomSubsistema"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_earData" jhiTranslate="wattsUpEnergyApp.onsEarDiarioSubsistema.earData">Ear Data</label>
+          <div class="input-group">
+            <input
+              id="field_earData"
+              data-cy="earData"
+              type="text"
+              class="form-control"
+              name="earData"
+              ngbDatepicker
+              #earDataDp="ngbDatepicker"
+              formControlName="earData"
+            />
+            <button type="button" class="btn btn-secondary" (click)="earDataDp.toggle()"><fa-icon icon="calendar-alt"></fa-icon></button>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_earMaxSubsistema" jhiTranslate="wattsUpEnergyApp.onsEarDiarioSubsistema.earMaxSubsistema"
+            >Ear Max Subsistema</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="earMaxSubsistema"
+            id="field_earMaxSubsistema"
+            data-cy="earMaxSubsistema"
+            formControlName="earMaxSubsistema"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_earVerifSubsistemaMwmes"
+            jhiTranslate="wattsUpEnergyApp.onsEarDiarioSubsistema.earVerifSubsistemaMwmes"
+            >Ear Verif Subsistema Mwmes</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="earVerifSubsistemaMwmes"
+            id="field_earVerifSubsistemaMwmes"
+            data-cy="earVerifSubsistemaMwmes"
+            formControlName="earVerifSubsistemaMwmes"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_earVerifSubsistemaPercentual"
+            jhiTranslate="wattsUpEnergyApp.onsEarDiarioSubsistema.earVerifSubsistemaPercentual"
+            >Ear Verif Subsistema Percentual</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="earVerifSubsistemaPercentual"
+            id="field_earVerifSubsistemaPercentual"
+            data-cy="earVerifSubsistemaPercentual"
+            formControlName="earVerifSubsistemaPercentual"
+          />
+        </div>
+      </div>
+
+      <div>
+        <button type="button" id="cancel-save" data-cy="entityCreateCancelButton" class="btn btn-secondary" (click)="previousState()">
+          <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancelar</span>
+        </button>
+
+        <button
+          type="submit"
+          id="save-entity"
+          data-cy="entityCreateSaveButton"
+          [disabled]="editForm.invalid || isSaving"
+          class="btn btn-primary"
+        >
+          <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Salvar</span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

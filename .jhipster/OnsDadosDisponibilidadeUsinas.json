@@ -1,0 +1,63 @@
+{
+  "annotations": {
+    "changelogDate": "20250330013650"
+  },
+  "applications": "*",
+  "entityTableName": "OnsTable13",
+  "fields": [
+    {
+      "fieldName": "idSubsistema",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nomSubsistema",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "idEstado",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nomEstado",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nomUsina",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "idTipousina",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nomTipocombustivel",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "idOns",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "ceg",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "dinInstante",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "valPotenciainstalada",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "valDispoperacional",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "valDispsincronizada",
+      "fieldType": "Double"
+    }
+  ],
+  "name": "OnsDadosDisponibilidadeUsinas",
+  "relationships": []
+}

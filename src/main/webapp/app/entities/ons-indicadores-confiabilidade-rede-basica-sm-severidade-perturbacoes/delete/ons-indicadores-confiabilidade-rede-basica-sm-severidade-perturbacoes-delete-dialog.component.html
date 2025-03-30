@@ -1,0 +1,40 @@
+@if (onsIndicadoresConfiabilidadeRedeBasicaSmSeveridadePerturbacoes) {
+  <form name="deleteForm" (ngSubmit)="confirmDelete(onsIndicadoresConfiabilidadeRedeBasicaSmSeveridadePerturbacoes.id!)">
+    <div class="modal-header">
+      <h4
+        class="modal-title"
+        data-cy="onsIndicadoresConfiabilidadeRedeBasicaSmSeveridadePerturbacoesDeleteDialogHeading"
+        jhiTranslate="entity.delete.title"
+      >
+        Confirme a exclusão
+      </h4>
+    </div>
+
+    <div class="modal-body">
+      <jhi-alert-error></jhi-alert-error>
+      <p
+        id="jhi-delete-onsIndicadoresConfiabilidadeRedeBasicaSmSeveridadePerturbacoes-heading"
+        jhiTranslate="wattsUpEnergyApp.onsIndicadoresConfiabilidadeRedeBasicaSmSeveridadePerturbacoes.delete.question"
+        [translateValues]="{ id: onsIndicadoresConfiabilidadeRedeBasicaSmSeveridadePerturbacoes.id }"
+      >
+        Tem certeza de que deseja excluir Ons Indicadores Confiabilidade Rede Basica Sm Severidade Perturbacoes
+        {{ onsIndicadoresConfiabilidadeRedeBasicaSmSeveridadePerturbacoes.id }}?
+      </p>
+    </div>
+
+    <div class="modal-footer">
+      <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="cancel()">
+        <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancelar</span>
+      </button>
+
+      <button
+        id="jhi-confirm-delete-onsIndicadoresConfiabilidadeRedeBasicaSmSeveridadePerturbacoes"
+        data-cy="entityConfirmDeleteButton"
+        type="submit"
+        class="btn btn-danger"
+      >
+        <fa-icon icon="times"></fa-icon>&nbsp;<span jhiTranslate="entity.action.delete">Excluir</span>
+      </button>
+    </div>
+  </form>
+}

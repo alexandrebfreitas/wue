@@ -1,0 +1,122 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    @if (onsCapacidadeTransformacaoRedeBasica(); as onsCapacidadeTransformacaoRedeBasicaRef) {
+      <div>
+        <h2 data-cy="onsCapacidadeTransformacaoRedeBasicaDetailsHeading">
+          <span jhiTranslate="wattsUpEnergyApp.onsCapacidadeTransformacaoRedeBasica.detail.title"
+            >Ons Capacidade Transformacao Rede Basica</span
+          >
+        </h2>
+
+        <hr />
+
+        <jhi-alert-error></jhi-alert-error>
+
+        <jhi-alert></jhi-alert>
+
+        <dl class="row-md jh-entity-details">
+          <dt><span jhiTranslate="global.field.id">Código</span></dt>
+          <dd>
+            <span>{{ onsCapacidadeTransformacaoRedeBasicaRef.id }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsCapacidadeTransformacaoRedeBasica.idSubsistema">Id Subsistema</span></dt>
+          <dd>
+            <span>{{ onsCapacidadeTransformacaoRedeBasicaRef.idSubsistema }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsCapacidadeTransformacaoRedeBasica.nomSubsistema">Nom Subsistema</span></dt>
+          <dd>
+            <span>{{ onsCapacidadeTransformacaoRedeBasicaRef.nomSubsistema }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsCapacidadeTransformacaoRedeBasica.idEstado">Id Estado</span></dt>
+          <dd>
+            <span>{{ onsCapacidadeTransformacaoRedeBasicaRef.idEstado }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsCapacidadeTransformacaoRedeBasica.nomEstado">Nom Estado</span></dt>
+          <dd>
+            <span>{{ onsCapacidadeTransformacaoRedeBasicaRef.nomEstado }}</span>
+          </dd>
+          <dt>
+            <span jhiTranslate="wattsUpEnergyApp.onsCapacidadeTransformacaoRedeBasica.nomTipotransformador">Nom Tipotransformador</span>
+          </dt>
+          <dd>
+            <span>{{ onsCapacidadeTransformacaoRedeBasicaRef.nomTipotransformador }}</span>
+          </dd>
+          <dt>
+            <span jhiTranslate="wattsUpEnergyApp.onsCapacidadeTransformacaoRedeBasica.nomAgenteproprietario">Nom Agenteproprietario</span>
+          </dt>
+          <dd>
+            <span>{{ onsCapacidadeTransformacaoRedeBasicaRef.nomAgenteproprietario }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsCapacidadeTransformacaoRedeBasica.nomSubestacao">Nom Subestacao</span></dt>
+          <dd>
+            <span>{{ onsCapacidadeTransformacaoRedeBasicaRef.nomSubestacao }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsCapacidadeTransformacaoRedeBasica.nomTransformador">Nom Transformador</span></dt>
+          <dd>
+            <span>{{ onsCapacidadeTransformacaoRedeBasicaRef.nomTransformador }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsCapacidadeTransformacaoRedeBasica.codEquipamento">Cod Equipamento</span></dt>
+          <dd>
+            <span>{{ onsCapacidadeTransformacaoRedeBasicaRef.codEquipamento }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsCapacidadeTransformacaoRedeBasica.datEntradaoperacao">Dat Entradaoperacao</span></dt>
+          <dd>
+            <span>{{ onsCapacidadeTransformacaoRedeBasicaRef.datEntradaoperacao | formatMediumDate }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsCapacidadeTransformacaoRedeBasica.datDesativacao">Dat Desativacao</span></dt>
+          <dd>
+            <span>{{ onsCapacidadeTransformacaoRedeBasicaRef.datDesativacao | formatMediumDate }}</span>
+          </dd>
+          <dt>
+            <span jhiTranslate="wattsUpEnergyApp.onsCapacidadeTransformacaoRedeBasica.valTensaoprimarioKv">Val Tensaoprimario Kv</span>
+          </dt>
+          <dd>
+            <span>{{ onsCapacidadeTransformacaoRedeBasicaRef.valTensaoprimarioKv }}</span>
+          </dd>
+          <dt>
+            <span jhiTranslate="wattsUpEnergyApp.onsCapacidadeTransformacaoRedeBasica.valTensaosecundarioKv">Val Tensaosecundario Kv</span>
+          </dt>
+          <dd>
+            <span>{{ onsCapacidadeTransformacaoRedeBasicaRef.valTensaosecundarioKv }}</span>
+          </dd>
+          <dt>
+            <span jhiTranslate="wattsUpEnergyApp.onsCapacidadeTransformacaoRedeBasica.valTensaoterciarioKv">Val Tensaoterciario Kv</span>
+          </dt>
+          <dd>
+            <span>{{ onsCapacidadeTransformacaoRedeBasicaRef.valTensaoterciarioKv }}</span>
+          </dd>
+          <dt>
+            <span jhiTranslate="wattsUpEnergyApp.onsCapacidadeTransformacaoRedeBasica.valPotencianominalMva">Val Potencianominal Mva</span>
+          </dt>
+          <dd>
+            <span>{{ onsCapacidadeTransformacaoRedeBasicaRef.valPotencianominalMva }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsCapacidadeTransformacaoRedeBasica.nomTipoderede">Nom Tipoderede</span></dt>
+          <dd>
+            <span>{{ onsCapacidadeTransformacaoRedeBasicaRef.nomTipoderede }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsCapacidadeTransformacaoRedeBasica.numBarraPrimario">Num Barra Primario</span></dt>
+          <dd>
+            <span>{{ onsCapacidadeTransformacaoRedeBasicaRef.numBarraPrimario }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsCapacidadeTransformacaoRedeBasica.numBarraSecundario">Num Barra Secundario</span></dt>
+          <dd>
+            <span>{{ onsCapacidadeTransformacaoRedeBasicaRef.numBarraSecundario }}</span>
+          </dd>
+        </dl>
+
+        <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+          <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Voltar</span>
+        </button>
+
+        <button
+          type="button"
+          [routerLink]="['/ons-capacidade-transformacao-rede-basica', onsCapacidadeTransformacaoRedeBasicaRef.id, 'edit']"
+          class="btn btn-primary"
+        >
+          <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Editar</span>
+        </button>
+      </div>
+    }
+  </div>
+</div>

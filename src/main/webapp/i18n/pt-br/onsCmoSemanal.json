@@ -1,0 +1,31 @@
+{
+  "wattsUpEnergyApp": {
+    "onsCmoSemanal": {
+      "home": {
+        "title": "Ons Cmo Semanals",
+        "refreshListLabel": "Atualizar lista",
+        "createLabel": "Criar novo Ons Cmo Semanal",
+        "createOrEditLabel": "Criar ou editar Ons Cmo Semanal",
+        "search": "Pesquisar por Ons Cmo Semanal",
+        "notFound": "Nenhum Ons Cmo Semanal encontrado"
+      },
+      "created": "Um novo Ons Cmo Semanal foi criado com o identificador {{ param }}",
+      "updated": "Um Ons Cmo Semanal foi atualizado com o identificador {{ param }}",
+      "deleted": "Um Ons Cmo Semanal foi excluído com o identificador {{ param }}",
+      "delete": {
+        "question": "Tem certeza de que deseja excluir Ons Cmo Semanal {{ id }}?"
+      },
+      "detail": {
+        "title": "Ons Cmo Semanal"
+      },
+      "id": "ID",
+      "idSubsistema": "Id Subsistema",
+      "nomSubsistema": "Nom Subsistema",
+      "dinInstante": "Din Instante",
+      "valCmomediasemanal": "Val Cmomediasemanal",
+      "valCmoleve": "Val Cmoleve",
+      "valCmomedia": "Val Cmomedia",
+      "valCmopesada": "Val Cmopesada"
+    }
+  }
+}

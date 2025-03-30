@@ -1,0 +1,35 @@
+{
+  "annotations": {
+    "changelogDate": "20250330013737"
+  },
+  "applications": "*",
+  "entityTableName": "OnsTable60",
+  "fields": [
+    {
+      "fieldName": "nomPais",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nomAgente",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nomBloco",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "datIniciovalidade",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "datFimvalidade",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "valPreco",
+      "fieldType": "Double"
+    }
+  ],
+  "name": "OnsOfertasPrecoParaImportacao",
+  "relationships": []
+}

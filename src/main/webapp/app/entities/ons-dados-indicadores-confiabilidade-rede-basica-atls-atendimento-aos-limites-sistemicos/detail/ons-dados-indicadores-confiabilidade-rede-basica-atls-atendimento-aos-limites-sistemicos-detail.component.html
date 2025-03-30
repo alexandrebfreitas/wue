@@ -1,0 +1,90 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    @if (
+      onsDadosIndicadoresConfiabilidadeRedeBasicaAtlsAtendimentoAosLimitesSistemicos();
+      as onsDadosIndicadoresConfiabilidadeRedeBasicaAtlsAtendimentoAosLimitesSistemicosRef
+    ) {
+      <div>
+        <h2 data-cy="onsDadosIndicadoresConfiabilidadeRedeBasicaAtlsAtendimentoAosLimitesSistemicosDetailsHeading">
+          <span jhiTranslate="wattsUpEnergyApp.onsDadosIndicadoresConfiabilidadeRedeBasicaAtlsAtendimentoAosLimitesSistemicos.detail.title"
+            >Ons Dados Indicadores Confiabilidade Rede Basica Atls Atendimento Aos Limites Sistemicos</span
+          >
+        </h2>
+
+        <hr />
+
+        <jhi-alert-error></jhi-alert-error>
+
+        <jhi-alert></jhi-alert>
+
+        <dl class="row-md jh-entity-details">
+          <dt><span jhiTranslate="global.field.id">Código</span></dt>
+          <dd>
+            <span>{{ onsDadosIndicadoresConfiabilidadeRedeBasicaAtlsAtendimentoAosLimitesSistemicosRef.id }}</span>
+          </dd>
+          <dt>
+            <span jhiTranslate="wattsUpEnergyApp.onsDadosIndicadoresConfiabilidadeRedeBasicaAtlsAtendimentoAosLimitesSistemicos.nomFluxo"
+              >Nom Fluxo</span
+            >
+          </dt>
+          <dd>
+            <span>{{ onsDadosIndicadoresConfiabilidadeRedeBasicaAtlsAtendimentoAosLimitesSistemicosRef.nomFluxo }}</span>
+          </dd>
+          <dt>
+            <span
+              jhiTranslate="wattsUpEnergyApp.onsDadosIndicadoresConfiabilidadeRedeBasicaAtlsAtendimentoAosLimitesSistemicos.idPeriodicidade"
+              >Id Periodicidade</span
+            >
+          </dt>
+          <dd>
+            <span>{{ onsDadosIndicadoresConfiabilidadeRedeBasicaAtlsAtendimentoAosLimitesSistemicosRef.idPeriodicidade }}</span>
+          </dd>
+          <dt>
+            <span
+              jhiTranslate="wattsUpEnergyApp.onsDadosIndicadoresConfiabilidadeRedeBasicaAtlsAtendimentoAosLimitesSistemicos.dinReferencia"
+              >Din Referencia</span
+            >
+          </dt>
+          <dd>
+            <span>{{
+              onsDadosIndicadoresConfiabilidadeRedeBasicaAtlsAtendimentoAosLimitesSistemicosRef.dinReferencia | formatMediumDate
+            }}</span>
+          </dd>
+          <dt>
+            <span jhiTranslate="wattsUpEnergyApp.onsDadosIndicadoresConfiabilidadeRedeBasicaAtlsAtendimentoAosLimitesSistemicos.valAtls"
+              >Val Atls</span
+            >
+          </dt>
+          <dd>
+            <span>{{ onsDadosIndicadoresConfiabilidadeRedeBasicaAtlsAtendimentoAosLimitesSistemicosRef.valAtls }}</span>
+          </dd>
+          <dt>
+            <span
+              jhiTranslate="wattsUpEnergyApp.onsDadosIndicadoresConfiabilidadeRedeBasicaAtlsAtendimentoAosLimitesSistemicos.numHorasviolacao"
+              >Num Horasviolacao</span
+            >
+          </dt>
+          <dd>
+            <span>{{ onsDadosIndicadoresConfiabilidadeRedeBasicaAtlsAtendimentoAosLimitesSistemicosRef.numHorasviolacao }}</span>
+          </dd>
+        </dl>
+
+        <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+          <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Voltar</span>
+        </button>
+
+        <button
+          type="button"
+          [routerLink]="[
+            '/ons-dados-indicadores-confiabilidade-rede-basica-atls-atendimento-aos-limites-sistemicos',
+            onsDadosIndicadoresConfiabilidadeRedeBasicaAtlsAtendimentoAosLimitesSistemicosRef.id,
+            'edit',
+          ]"
+          class="btn btn-primary"
+        >
+          <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Editar</span>
+        </button>
+      </div>
+    }
+  </div>
+</div>

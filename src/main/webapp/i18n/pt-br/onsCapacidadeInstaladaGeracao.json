@@ -1,0 +1,41 @@
+{
+  "wattsUpEnergyApp": {
+    "onsCapacidadeInstaladaGeracao": {
+      "home": {
+        "title": "Ons Capacidade Instalada Geracaos",
+        "refreshListLabel": "Atualizar lista",
+        "createLabel": "Criar novo Ons Capacidade Instalada Geracao",
+        "createOrEditLabel": "Criar ou editar Ons Capacidade Instalada Geracao",
+        "search": "Pesquisar por Ons Capacidade Instalada Geracao",
+        "notFound": "Nenhum Ons Capacidade Instalada Geracao encontrado"
+      },
+      "created": "Um novo Ons Capacidade Instalada Geracao foi criado com o identificador {{ param }}",
+      "updated": "Um Ons Capacidade Instalada Geracao foi atualizado com o identificador {{ param }}",
+      "deleted": "Um Ons Capacidade Instalada Geracao foi excluído com o identificador {{ param }}",
+      "delete": {
+        "question": "Tem certeza de que deseja excluir Ons Capacidade Instalada Geracao {{ id }}?"
+      },
+      "detail": {
+        "title": "Ons Capacidade Instalada Geracao"
+      },
+      "id": "ID",
+      "idSubsistema": "Id Subsistema",
+      "nomSubsistema": "Nom Subsistema",
+      "idEstado": "Id Estado",
+      "nomEstado": "Nom Estado",
+      "nomModalidadeoperacao": "Nom Modalidadeoperacao",
+      "nomAgenteproprietario": "Nom Agenteproprietario",
+      "nomTipousina": "Nom Tipousina",
+      "nomUsina": "Nom Usina",
+      "ceg": "Ceg",
+      "nomUnidadegeradora": "Nom Unidadegeradora",
+      "codEquipamento": "Cod Equipamento",
+      "numUnidadegeradora": "Num Unidadegeradora",
+      "nomCombustivel": "Nom Combustivel",
+      "datEntradateste": "Dat Entradateste",
+      "datEntradaoperacao": "Dat Entradaoperacao",
+      "datDesativacao": "Dat Desativacao",
+      "valPotenciaefetiva": "Val Potenciaefetiva"
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "wattsUpEnergyApp": {
+    "onsEnaDiarioBacia": {
+      "home": {
+        "title": "Ons Ena Diario Bacias",
+        "refreshListLabel": "Atualizar lista",
+        "createLabel": "Criar novo Ons Ena Diario Bacia",
+        "createOrEditLabel": "Criar ou editar Ons Ena Diario Bacia",
+        "search": "Pesquisar por Ons Ena Diario Bacia",
+        "notFound": "Nenhum Ons Ena Diario Bacia encontrado"
+      },
+      "created": "Um novo Ons Ena Diario Bacia foi criado com o identificador {{ param }}",
+      "updated": "Um Ons Ena Diario Bacia foi atualizado com o identificador {{ param }}",
+      "deleted": "Um Ons Ena Diario Bacia foi excluído com o identificador {{ param }}",
+      "delete": {
+        "question": "Tem certeza de que deseja excluir Ons Ena Diario Bacia {{ id }}?"
+      },
+      "detail": {
+        "title": "Ons Ena Diario Bacia"
+      },
+      "id": "ID",
+      "enaArmazenavelBaciaPercentualmlt": "Ena Armazenavel Bacia Percentualmlt"
+    }
+  }
+}

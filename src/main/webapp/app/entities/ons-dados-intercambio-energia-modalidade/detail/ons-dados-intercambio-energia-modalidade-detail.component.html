@@ -1,0 +1,82 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    @if (onsDadosIntercambioEnergiaModalidade(); as onsDadosIntercambioEnergiaModalidadeRef) {
+      <div>
+        <h2 data-cy="onsDadosIntercambioEnergiaModalidadeDetailsHeading">
+          <span jhiTranslate="wattsUpEnergyApp.onsDadosIntercambioEnergiaModalidade.detail.title"
+            >Ons Dados Intercambio Energia Modalidade</span
+          >
+        </h2>
+
+        <hr />
+
+        <jhi-alert-error></jhi-alert-error>
+
+        <jhi-alert></jhi-alert>
+
+        <dl class="row-md jh-entity-details">
+          <dt><span jhiTranslate="global.field.id">Código</span></dt>
+          <dd>
+            <span>{{ onsDadosIntercambioEnergiaModalidadeRef.id }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsDadosIntercambioEnergiaModalidade.nomConversora">Nom Conversora</span></dt>
+          <dd>
+            <span>{{ onsDadosIntercambioEnergiaModalidadeRef.nomConversora }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsDadosIntercambioEnergiaModalidade.dinInstante">Din Instante</span></dt>
+          <dd>
+            <span>{{ onsDadosIntercambioEnergiaModalidadeRef.dinInstante | formatMediumDate }}</span>
+          </dd>
+          <dt>
+            <span jhiTranslate="wattsUpEnergyApp.onsDadosIntercambioEnergiaModalidade.valModalidadecontratual"
+              >Val Modalidadecontratual</span
+            >
+          </dt>
+          <dd>
+            <span>{{ onsDadosIntercambioEnergiaModalidadeRef.valModalidadecontratual }}</span>
+          </dd>
+          <dt>
+            <span jhiTranslate="wattsUpEnergyApp.onsDadosIntercambioEnergiaModalidade.valModalidadeemergencial"
+              >Val Modalidadeemergencial</span
+            >
+          </dt>
+          <dd>
+            <span>{{ onsDadosIntercambioEnergiaModalidadeRef.valModalidadeemergencial }}</span>
+          </dd>
+          <dt>
+            <span jhiTranslate="wattsUpEnergyApp.onsDadosIntercambioEnergiaModalidade.valModalidadeoportunidade"
+              >Val Modalidadeoportunidade</span
+            >
+          </dt>
+          <dd>
+            <span>{{ onsDadosIntercambioEnergiaModalidadeRef.valModalidadeoportunidade }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsDadosIntercambioEnergiaModalidade.valModalidadeteste">Val Modalidadeteste</span></dt>
+          <dd>
+            <span>{{ onsDadosIntercambioEnergiaModalidadeRef.valModalidadeteste }}</span>
+          </dd>
+          <dt>
+            <span jhiTranslate="wattsUpEnergyApp.onsDadosIntercambioEnergiaModalidade.valModalidadeexcepcional"
+              >Val Modalidadeexcepcional</span
+            >
+          </dt>
+          <dd>
+            <span>{{ onsDadosIntercambioEnergiaModalidadeRef.valModalidadeexcepcional }}</span>
+          </dd>
+        </dl>
+
+        <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+          <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Voltar</span>
+        </button>
+
+        <button
+          type="button"
+          [routerLink]="['/ons-dados-intercambio-energia-modalidade', onsDadosIntercambioEnergiaModalidadeRef.id, 'edit']"
+          class="btn btn-primary"
+        >
+          <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Editar</span>
+        </button>
+      </div>
+    }
+  </div>
+</div>

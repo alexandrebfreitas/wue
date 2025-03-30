@@ -1,0 +1,31 @@
+{
+  "wattsUpEnergyApp": {
+    "onsDadosIndicadoresConfiabilidadeRedeBasicaCcalControleCarregamentoLinhasTransmissao": {
+      "home": {
+        "title": "Ons Dados Indicadores Confiabilidade Rede Basica Ccal Controle Carregamento Linhas Transmissaos",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Ons Dados Indicadores Confiabilidade Rede Basica Ccal Controle Carregamento Linhas Transmissao",
+        "createOrEditLabel": "Create or edit a Ons Dados Indicadores Confiabilidade Rede Basica Ccal Controle Carregamento Linhas Transmissao",
+        "search": "Search for Ons Dados Indicadores Confiabilidade Rede Basica Ccal Controle Carregamento Linhas Transmissao",
+        "notFound": "No Ons Dados Indicadores Confiabilidade Rede Basica Ccal Controle Carregamento Linhas Transmissaos found"
+      },
+      "created": "A new Ons Dados Indicadores Confiabilidade Rede Basica Ccal Controle Carregamento Linhas Transmissao is created with identifier {{ param }}",
+      "updated": "A Ons Dados Indicadores Confiabilidade Rede Basica Ccal Controle Carregamento Linhas Transmissao is updated with identifier {{ param }}",
+      "deleted": "A Ons Dados Indicadores Confiabilidade Rede Basica Ccal Controle Carregamento Linhas Transmissao is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Ons Dados Indicadores Confiabilidade Rede Basica Ccal Controle Carregamento Linhas Transmissao {{ id }}?"
+      },
+      "detail": {
+        "title": "Ons Dados Indicadores Confiabilidade Rede Basica Ccal Controle Carregamento Linhas Transmissao"
+      },
+      "id": "ID",
+      "codTipoagregacao": "Cod Tipoagregacao",
+      "idPeriodicidade": "Id Periodicidade",
+      "nomAgregacao": "Nom Agregacao",
+      "dinReferencia": "Din Referencia",
+      "numLinhasoperacao": "Num Linhasoperacao",
+      "numLinhasvioladas": "Num Linhasvioladas",
+      "valCcal": "Val Ccal"
+    }
+  }
+}

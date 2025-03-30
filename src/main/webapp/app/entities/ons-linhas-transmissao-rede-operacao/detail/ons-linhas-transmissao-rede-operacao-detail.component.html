@@ -1,0 +1,230 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    @if (onsLinhasTransmissaoRedeOperacao(); as onsLinhasTransmissaoRedeOperacaoRef) {
+      <div>
+        <h2 data-cy="onsLinhasTransmissaoRedeOperacaoDetailsHeading">
+          <span jhiTranslate="wattsUpEnergyApp.onsLinhasTransmissaoRedeOperacao.detail.title">Ons Linhas Transmissao Rede Operacao</span>
+        </h2>
+
+        <hr />
+
+        <jhi-alert-error></jhi-alert-error>
+
+        <jhi-alert></jhi-alert>
+
+        <dl class="row-md jh-entity-details">
+          <dt><span jhiTranslate="global.field.id">Código</span></dt>
+          <dd>
+            <span>{{ onsLinhasTransmissaoRedeOperacaoRef.id }}</span>
+          </dd>
+          <dt>
+            <span jhiTranslate="wattsUpEnergyApp.onsLinhasTransmissaoRedeOperacao.idSubsistemaTerminalde">Id Subsistema Terminalde</span>
+          </dt>
+          <dd>
+            <span>{{ onsLinhasTransmissaoRedeOperacaoRef.idSubsistemaTerminalde }}</span>
+          </dd>
+          <dt>
+            <span jhiTranslate="wattsUpEnergyApp.onsLinhasTransmissaoRedeOperacao.nomSubsistemaTerminalde">Nom Subsistema Terminalde</span>
+          </dt>
+          <dd>
+            <span>{{ onsLinhasTransmissaoRedeOperacaoRef.nomSubsistemaTerminalde }}</span>
+          </dd>
+          <dt>
+            <span jhiTranslate="wattsUpEnergyApp.onsLinhasTransmissaoRedeOperacao.idSubsistemaTerminalpara"
+              >Id Subsistema Terminalpara</span
+            >
+          </dt>
+          <dd>
+            <span>{{ onsLinhasTransmissaoRedeOperacaoRef.idSubsistemaTerminalpara }}</span>
+          </dd>
+          <dt>
+            <span jhiTranslate="wattsUpEnergyApp.onsLinhasTransmissaoRedeOperacao.nomSubsistemaTerminalpara"
+              >Nom Subsistema Terminalpara</span
+            >
+          </dt>
+          <dd>
+            <span>{{ onsLinhasTransmissaoRedeOperacaoRef.nomSubsistemaTerminalpara }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsLinhasTransmissaoRedeOperacao.idEstadoTerminalde">Id Estado Terminalde</span></dt>
+          <dd>
+            <span>{{ onsLinhasTransmissaoRedeOperacaoRef.idEstadoTerminalde }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsLinhasTransmissaoRedeOperacao.nomEstadoDe">Nom Estado De</span></dt>
+          <dd>
+            <span>{{ onsLinhasTransmissaoRedeOperacaoRef.nomEstadoDe }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsLinhasTransmissaoRedeOperacao.idEstadoTerminalpara">Id Estado Terminalpara</span></dt>
+          <dd>
+            <span>{{ onsLinhasTransmissaoRedeOperacaoRef.idEstadoTerminalpara }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsLinhasTransmissaoRedeOperacao.nomEstadoPara">Nom Estado Para</span></dt>
+          <dd>
+            <span>{{ onsLinhasTransmissaoRedeOperacaoRef.nomEstadoPara }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsLinhasTransmissaoRedeOperacao.nomSubestacaoDe">Nom Subestacao De</span></dt>
+          <dd>
+            <span>{{ onsLinhasTransmissaoRedeOperacaoRef.nomSubestacaoDe }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsLinhasTransmissaoRedeOperacao.nomSubestacaoPara">Nom Subestacao Para</span></dt>
+          <dd>
+            <span>{{ onsLinhasTransmissaoRedeOperacaoRef.nomSubestacaoPara }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsLinhasTransmissaoRedeOperacao.valNiveltensaoKv">Val Niveltensao Kv</span></dt>
+          <dd>
+            <span>{{ onsLinhasTransmissaoRedeOperacaoRef.valNiveltensaoKv }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsLinhasTransmissaoRedeOperacao.nomTipoderede">Nom Tipoderede</span></dt>
+          <dd>
+            <span>{{ onsLinhasTransmissaoRedeOperacaoRef.nomTipoderede }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsLinhasTransmissaoRedeOperacao.nomTipolinha">Nom Tipolinha</span></dt>
+          <dd>
+            <span>{{ onsLinhasTransmissaoRedeOperacaoRef.nomTipolinha }}</span>
+          </dd>
+          <dt>
+            <span jhiTranslate="wattsUpEnergyApp.onsLinhasTransmissaoRedeOperacao.nomAgenteproprietario">Nom Agenteproprietario</span>
+          </dt>
+          <dd>
+            <span>{{ onsLinhasTransmissaoRedeOperacaoRef.nomAgenteproprietario }}</span>
+          </dd>
+          <dt>
+            <span jhiTranslate="wattsUpEnergyApp.onsLinhasTransmissaoRedeOperacao.nomLinhadetransmissao">Nom Linhadetransmissao</span>
+          </dt>
+          <dd>
+            <span>{{ onsLinhasTransmissaoRedeOperacaoRef.nomLinhadetransmissao }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsLinhasTransmissaoRedeOperacao.codEquipamento">Cod Equipamento</span></dt>
+          <dd>
+            <span>{{ onsLinhasTransmissaoRedeOperacaoRef.codEquipamento }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsLinhasTransmissaoRedeOperacao.datEntradaoperacao">Dat Entradaoperacao</span></dt>
+          <dd>
+            <span>{{ onsLinhasTransmissaoRedeOperacaoRef.datEntradaoperacao | formatMediumDate }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsLinhasTransmissaoRedeOperacao.datDesativacao">Dat Desativacao</span></dt>
+          <dd>
+            <span>{{ onsLinhasTransmissaoRedeOperacaoRef.datDesativacao | formatMediumDate }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsLinhasTransmissaoRedeOperacao.datPrevista">Dat Prevista</span></dt>
+          <dd>
+            <span>{{ onsLinhasTransmissaoRedeOperacaoRef.datPrevista | formatMediumDate }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsLinhasTransmissaoRedeOperacao.valComprimento">Val Comprimento</span></dt>
+          <dd>
+            <span>{{ onsLinhasTransmissaoRedeOperacaoRef.valComprimento }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsLinhasTransmissaoRedeOperacao.valResistencia">Val Resistencia</span></dt>
+          <dd>
+            <span>{{ onsLinhasTransmissaoRedeOperacaoRef.valResistencia }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsLinhasTransmissaoRedeOperacao.valReatancia">Val Reatancia</span></dt>
+          <dd>
+            <span>{{ onsLinhasTransmissaoRedeOperacaoRef.valReatancia }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsLinhasTransmissaoRedeOperacao.valShunt">Val Shunt</span></dt>
+          <dd>
+            <span>{{ onsLinhasTransmissaoRedeOperacaoRef.valShunt }}</span>
+          </dd>
+          <dt>
+            <span jhiTranslate="wattsUpEnergyApp.onsLinhasTransmissaoRedeOperacao.valCapacoperlongasemlimit"
+              >Val Capacoperlongasemlimit</span
+            >
+          </dt>
+          <dd>
+            <span>{{ onsLinhasTransmissaoRedeOperacaoRef.valCapacoperlongasemlimit }}</span>
+          </dd>
+          <dt>
+            <span jhiTranslate="wattsUpEnergyApp.onsLinhasTransmissaoRedeOperacao.valCapacoperlongacomlimit"
+              >Val Capacoperlongacomlimit</span
+            >
+          </dt>
+          <dd>
+            <span>{{ onsLinhasTransmissaoRedeOperacaoRef.valCapacoperlongacomlimit }}</span>
+          </dd>
+          <dt>
+            <span jhiTranslate="wattsUpEnergyApp.onsLinhasTransmissaoRedeOperacao.valCapacopercurtasemlimit"
+              >Val Capacopercurtasemlimit</span
+            >
+          </dt>
+          <dd>
+            <span>{{ onsLinhasTransmissaoRedeOperacaoRef.valCapacopercurtasemlimit }}</span>
+          </dd>
+          <dt>
+            <span jhiTranslate="wattsUpEnergyApp.onsLinhasTransmissaoRedeOperacao.valCapacopercurtacomlimit"
+              >Val Capacopercurtacomlimit</span
+            >
+          </dt>
+          <dd>
+            <span>{{ onsLinhasTransmissaoRedeOperacaoRef.valCapacopercurtacomlimit }}</span>
+          </dd>
+          <dt>
+            <span jhiTranslate="wattsUpEnergyApp.onsLinhasTransmissaoRedeOperacao.valCapacidadeoperveraodialonga"
+              >Val Capacidadeoperveraodialonga</span
+            >
+          </dt>
+          <dd>
+            <span>{{ onsLinhasTransmissaoRedeOperacaoRef.valCapacidadeoperveraodialonga }}</span>
+          </dd>
+          <dt>
+            <span jhiTranslate="wattsUpEnergyApp.onsLinhasTransmissaoRedeOperacao.valCapacoperinvernodialonga"
+              >Val Capacoperinvernodialonga</span
+            >
+          </dt>
+          <dd>
+            <span>{{ onsLinhasTransmissaoRedeOperacaoRef.valCapacoperinvernodialonga }}</span>
+          </dd>
+          <dt>
+            <span jhiTranslate="wattsUpEnergyApp.onsLinhasTransmissaoRedeOperacao.valCapacoperinvernonoitelonga"
+              >Val Capacoperinvernonoitelonga</span
+            >
+          </dt>
+          <dd>
+            <span>{{ onsLinhasTransmissaoRedeOperacaoRef.valCapacoperinvernonoitelonga }}</span>
+          </dd>
+          <dt>
+            <span jhiTranslate="wattsUpEnergyApp.onsLinhasTransmissaoRedeOperacao.valCapacoperveradiacurta">Val Capacoperveradiacurta</span>
+          </dt>
+          <dd>
+            <span>{{ onsLinhasTransmissaoRedeOperacaoRef.valCapacoperveradiacurta }}</span>
+          </dd>
+          <dt>
+            <span jhiTranslate="wattsUpEnergyApp.onsLinhasTransmissaoRedeOperacao.valCapacoperveraonoitecurta"
+              >Val Capacoperveraonoitecurta</span
+            >
+          </dt>
+          <dd>
+            <span>{{ onsLinhasTransmissaoRedeOperacaoRef.valCapacoperveraonoitecurta }}</span>
+          </dd>
+          <dt>
+            <span jhiTranslate="wattsUpEnergyApp.onsLinhasTransmissaoRedeOperacao.valCapacoperinvernodiacurta"
+              >Val Capacoperinvernodiacurta</span
+            >
+          </dt>
+          <dd>
+            <span>{{ onsLinhasTransmissaoRedeOperacaoRef.valCapacoperinvernodiacurta }}</span>
+          </dd>
+          <dt>
+            <span jhiTranslate="wattsUpEnergyApp.onsLinhasTransmissaoRedeOperacao.valCapacoperinvernonoitecurta"
+              >Val Capacoperinvernonoitecurta</span
+            >
+          </dt>
+          <dd>
+            <span>{{ onsLinhasTransmissaoRedeOperacaoRef.valCapacoperinvernonoitecurta }}</span>
+          </dd>
+        </dl>
+
+        <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+          <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Voltar</span>
+        </button>
+
+        <button
+          type="button"
+          [routerLink]="['/ons-linhas-transmissao-rede-operacao', onsLinhasTransmissaoRedeOperacaoRef.id, 'edit']"
+          class="btn btn-primary"
+        >
+          <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Editar</span>
+        </button>
+      </div>
+    }
+  </div>
+</div>

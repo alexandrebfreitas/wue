@@ -1,0 +1,31 @@
+{
+  "annotations": {
+    "changelogDate": "20250330013649"
+  },
+  "applications": "*",
+  "entityTableName": "OnsTable12",
+  "fields": [
+    {
+      "fieldName": "nomFluxo",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "idPeriodicidade",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "dinReferencia",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "valAtls",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "numHorasviolacao",
+      "fieldType": "Integer"
+    }
+  ],
+  "name": "OnsDadosIndicadoresConfiabilidadeRedeBasicaAtlsAtendimentoAosLimitesSistemicos",
+  "relationships": []
+}

@@ -1,0 +1,236 @@
+<div>
+  <h2 id="page-heading" data-cy="OnsDadosDisponibilidadeUsinasHeading">
+    <span jhiTranslate="wattsUpEnergyApp.onsDadosDisponibilidadeUsinas.home.title">Ons Dados Disponibilidade Usinas</span>
+
+    <div class="d-flex justify-content-end">
+      <button class="btn btn-info me-2" (click)="load()" [disabled]="isLoading">
+        <fa-icon icon="sync" [animation]="isLoading ? 'spin' : undefined"></fa-icon>
+        <span jhiTranslate="wattsUpEnergyApp.onsDadosDisponibilidadeUsinas.home.refreshListLabel">Atualizar lista</span>
+      </button>
+
+      <button
+        id="jh-create-entity"
+        data-cy="entityCreateButton"
+        class="btn btn-primary jh-create-entity create-ons-dados-disponibilidade-usinas"
+        [routerLink]="['/ons-dados-disponibilidade-usinas/new']"
+      >
+        <fa-icon icon="plus"></fa-icon>
+        <span class="hidden-sm-down" jhiTranslate="wattsUpEnergyApp.onsDadosDisponibilidadeUsinas.home.createLabel"
+          >Criar novo Ons Dados Disponibilidade Usinas</span
+        >
+      </button>
+    </div>
+  </h2>
+
+  <jhi-alert-error></jhi-alert-error>
+
+  <jhi-alert></jhi-alert>
+
+  <form name="searchForm" class="row row-cols-sm-auto align-items-center">
+    <div class="col-sm-12">
+      <div class="input-group w-100 mt-3">
+        <label class="visually-hidden" for="currentSearch" jhiTranslate="wattsUpEnergyApp.onsDadosDisponibilidadeUsinas.home.search"
+          >Pesquisar por Ons Dados Disponibilidade Usinas</label
+        >
+        <input
+          type="text"
+          class="form-control"
+          [(ngModel)]="currentSearch"
+          id="currentSearch"
+          name="currentSearch"
+          placeholder="{{ 'wattsUpEnergyApp.onsDadosDisponibilidadeUsinas.home.search' | translate }}"
+        />
+
+        <button class="btn btn-info" (click)="search(currentSearch)">
+          <fa-icon icon="search"></fa-icon>
+        </button>
+
+        @if (currentSearch) {
+          <button class="btn btn-danger" (click)="search('')">
+            <fa-icon icon="trash-alt"></fa-icon>
+          </button>
+        }
+      </div>
+    </div>
+  </form>
+
+  @if (onsDadosDisponibilidadeUsinas().length === 0) {
+    <div class="alert alert-warning" id="no-result">
+      <span jhiTranslate="wattsUpEnergyApp.onsDadosDisponibilidadeUsinas.home.notFound"
+        >Nenhum Ons Dados Disponibilidade Usinas encontrado</span
+      >
+    </div>
+  } @else {
+    <div class="table-responsive table-entities" id="entities">
+      <table class="table table-striped" aria-describedby="page-heading">
+        <thead>
+          <tr jhiSort [(sortState)]="sortState" (sortChange)="navigateToWithComponentValues($event)">
+            <th scope="col" jhiSortBy="id">
+              <div class="d-flex">
+                <span jhiTranslate="global.field.id">Código</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="idSubsistema">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsDadosDisponibilidadeUsinas.idSubsistema">Id Subsistema</span>
+                @if (!currentSearch) {
+                  <fa-icon class="p-1" icon="sort"></fa-icon>
+                }
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="nomSubsistema">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsDadosDisponibilidadeUsinas.nomSubsistema">Nom Subsistema</span>
+                @if (!currentSearch) {
+                  <fa-icon class="p-1" icon="sort"></fa-icon>
+                }
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="idEstado">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsDadosDisponibilidadeUsinas.idEstado">Id Estado</span>
+                @if (!currentSearch) {
+                  <fa-icon class="p-1" icon="sort"></fa-icon>
+                }
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="nomEstado">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsDadosDisponibilidadeUsinas.nomEstado">Nom Estado</span>
+                @if (!currentSearch) {
+                  <fa-icon class="p-1" icon="sort"></fa-icon>
+                }
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="nomUsina">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsDadosDisponibilidadeUsinas.nomUsina">Nom Usina</span>
+                @if (!currentSearch) {
+                  <fa-icon class="p-1" icon="sort"></fa-icon>
+                }
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="idTipousina">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsDadosDisponibilidadeUsinas.idTipousina">Id Tipousina</span>
+                @if (!currentSearch) {
+                  <fa-icon class="p-1" icon="sort"></fa-icon>
+                }
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="nomTipocombustivel">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsDadosDisponibilidadeUsinas.nomTipocombustivel">Nom Tipocombustivel</span>
+                @if (!currentSearch) {
+                  <fa-icon class="p-1" icon="sort"></fa-icon>
+                }
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="idOns">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsDadosDisponibilidadeUsinas.idOns">Id Ons</span>
+                @if (!currentSearch) {
+                  <fa-icon class="p-1" icon="sort"></fa-icon>
+                }
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="ceg">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsDadosDisponibilidadeUsinas.ceg">Ceg</span>
+                @if (!currentSearch) {
+                  <fa-icon class="p-1" icon="sort"></fa-icon>
+                }
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="dinInstante">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsDadosDisponibilidadeUsinas.dinInstante">Din Instante</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="valPotenciainstalada">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsDadosDisponibilidadeUsinas.valPotenciainstalada">Val Potenciainstalada</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="valDispoperacional">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsDadosDisponibilidadeUsinas.valDispoperacional">Val Dispoperacional</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="valDispsincronizada">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsDadosDisponibilidadeUsinas.valDispsincronizada">Val Dispsincronizada</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (onsDadosDisponibilidadeUsinas of onsDadosDisponibilidadeUsinas(); track trackId(onsDadosDisponibilidadeUsinas)) {
+            <tr data-cy="entityTable">
+              <td>
+                <a [routerLink]="['/ons-dados-disponibilidade-usinas', onsDadosDisponibilidadeUsinas.id, 'view']">{{
+                  onsDadosDisponibilidadeUsinas.id
+                }}</a>
+              </td>
+              <td>{{ onsDadosDisponibilidadeUsinas.idSubsistema }}</td>
+              <td>{{ onsDadosDisponibilidadeUsinas.nomSubsistema }}</td>
+              <td>{{ onsDadosDisponibilidadeUsinas.idEstado }}</td>
+              <td>{{ onsDadosDisponibilidadeUsinas.nomEstado }}</td>
+              <td>{{ onsDadosDisponibilidadeUsinas.nomUsina }}</td>
+              <td>{{ onsDadosDisponibilidadeUsinas.idTipousina }}</td>
+              <td>{{ onsDadosDisponibilidadeUsinas.nomTipocombustivel }}</td>
+              <td>{{ onsDadosDisponibilidadeUsinas.idOns }}</td>
+              <td>{{ onsDadosDisponibilidadeUsinas.ceg }}</td>
+              <td>{{ onsDadosDisponibilidadeUsinas.dinInstante | formatMediumDate }}</td>
+              <td>{{ onsDadosDisponibilidadeUsinas.valPotenciainstalada }}</td>
+              <td>{{ onsDadosDisponibilidadeUsinas.valDispoperacional }}</td>
+              <td>{{ onsDadosDisponibilidadeUsinas.valDispsincronizada }}</td>
+              <td class="text-end">
+                <div class="btn-group">
+                  <a
+                    [routerLink]="['/ons-dados-disponibilidade-usinas', onsDadosDisponibilidadeUsinas.id, 'view']"
+                    class="btn btn-info btn-sm"
+                    data-cy="entityDetailsButton"
+                  >
+                    <fa-icon icon="eye"></fa-icon>
+                    <span class="d-none d-md-inline" jhiTranslate="entity.action.view">Visualizar</span>
+                  </a>
+
+                  <a
+                    [routerLink]="['/ons-dados-disponibilidade-usinas', onsDadosDisponibilidadeUsinas.id, 'edit']"
+                    class="btn btn-primary btn-sm"
+                    data-cy="entityEditButton"
+                  >
+                    <fa-icon icon="pencil-alt"></fa-icon>
+                    <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Editar</span>
+                  </a>
+
+                  <button
+                    type="submit"
+                    (click)="delete(onsDadosDisponibilidadeUsinas)"
+                    class="btn btn-danger btn-sm"
+                    data-cy="entityDeleteButton"
+                  >
+                    <fa-icon icon="times"></fa-icon>
+                    <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Excluir</span>
+                  </button>
+                </div>
+              </td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+  }
+</div>

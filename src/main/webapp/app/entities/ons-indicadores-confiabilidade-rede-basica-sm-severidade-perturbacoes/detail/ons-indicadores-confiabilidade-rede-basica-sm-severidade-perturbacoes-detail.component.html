@@ -1,0 +1,115 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    @if (
+      onsIndicadoresConfiabilidadeRedeBasicaSmSeveridadePerturbacoes();
+      as onsIndicadoresConfiabilidadeRedeBasicaSmSeveridadePerturbacoesRef
+    ) {
+      <div>
+        <h2 data-cy="onsIndicadoresConfiabilidadeRedeBasicaSmSeveridadePerturbacoesDetailsHeading">
+          <span jhiTranslate="wattsUpEnergyApp.onsIndicadoresConfiabilidadeRedeBasicaSmSeveridadePerturbacoes.detail.title"
+            >Ons Indicadores Confiabilidade Rede Basica Sm Severidade Perturbacoes</span
+          >
+        </h2>
+
+        <hr />
+
+        <jhi-alert-error></jhi-alert-error>
+
+        <jhi-alert></jhi-alert>
+
+        <dl class="row-md jh-entity-details">
+          <dt><span jhiTranslate="global.field.id">Código</span></dt>
+          <dd>
+            <span>{{ onsIndicadoresConfiabilidadeRedeBasicaSmSeveridadePerturbacoesRef.id }}</span>
+          </dd>
+          <dt>
+            <span jhiTranslate="wattsUpEnergyApp.onsIndicadoresConfiabilidadeRedeBasicaSmSeveridadePerturbacoes.dscAgregacao"
+              >Dsc Agregacao</span
+            >
+          </dt>
+          <dd>
+            <span>{{ onsIndicadoresConfiabilidadeRedeBasicaSmSeveridadePerturbacoesRef.dscAgregacao }}</span>
+          </dd>
+          <dt>
+            <span jhiTranslate="wattsUpEnergyApp.onsIndicadoresConfiabilidadeRedeBasicaSmSeveridadePerturbacoes.codCaracteristica"
+              >Cod Caracteristica</span
+            >
+          </dt>
+          <dd>
+            <span>{{ onsIndicadoresConfiabilidadeRedeBasicaSmSeveridadePerturbacoesRef.codCaracteristica }}</span>
+          </dd>
+          <dt>
+            <span jhiTranslate="wattsUpEnergyApp.onsIndicadoresConfiabilidadeRedeBasicaSmSeveridadePerturbacoes.dscCaracteristica"
+              >Dsc Caracteristica</span
+            >
+          </dt>
+          <dd>
+            <span>{{ onsIndicadoresConfiabilidadeRedeBasicaSmSeveridadePerturbacoesRef.dscCaracteristica }}</span>
+          </dd>
+          <dt>
+            <span jhiTranslate="wattsUpEnergyApp.onsIndicadoresConfiabilidadeRedeBasicaSmSeveridadePerturbacoes.idPeriodicidade"
+              >Id Periodicidade</span
+            >
+          </dt>
+          <dd>
+            <span>{{ onsIndicadoresConfiabilidadeRedeBasicaSmSeveridadePerturbacoesRef.idPeriodicidade }}</span>
+          </dd>
+          <dt>
+            <span jhiTranslate="wattsUpEnergyApp.onsIndicadoresConfiabilidadeRedeBasicaSmSeveridadePerturbacoes.dinReferencia"
+              >Din Referencia</span
+            >
+          </dt>
+          <dd>
+            <span>{{ onsIndicadoresConfiabilidadeRedeBasicaSmSeveridadePerturbacoesRef.dinReferencia | formatMediumDate }}</span>
+          </dd>
+          <dt>
+            <span jhiTranslate="wattsUpEnergyApp.onsIndicadoresConfiabilidadeRedeBasicaSmSeveridadePerturbacoes.valSm1">Val Sm 1</span>
+          </dt>
+          <dd>
+            <span>{{ onsIndicadoresConfiabilidadeRedeBasicaSmSeveridadePerturbacoesRef.valSm1 }}</span>
+          </dd>
+          <dt>
+            <span jhiTranslate="wattsUpEnergyApp.onsIndicadoresConfiabilidadeRedeBasicaSmSeveridadePerturbacoes.valSm2">Val Sm 2</span>
+          </dt>
+          <dd>
+            <span>{{ onsIndicadoresConfiabilidadeRedeBasicaSmSeveridadePerturbacoesRef.valSm2 }}</span>
+          </dd>
+          <dt>
+            <span jhiTranslate="wattsUpEnergyApp.onsIndicadoresConfiabilidadeRedeBasicaSmSeveridadePerturbacoes.valSm3">Val Sm 3</span>
+          </dt>
+          <dd>
+            <span>{{ onsIndicadoresConfiabilidadeRedeBasicaSmSeveridadePerturbacoesRef.valSm3 }}</span>
+          </dd>
+          <dt>
+            <span jhiTranslate="wattsUpEnergyApp.onsIndicadoresConfiabilidadeRedeBasicaSmSeveridadePerturbacoes.valSm4">Val Sm 4</span>
+          </dt>
+          <dd>
+            <span>{{ onsIndicadoresConfiabilidadeRedeBasicaSmSeveridadePerturbacoesRef.valSm4 }}</span>
+          </dd>
+          <dt>
+            <span jhiTranslate="wattsUpEnergyApp.onsIndicadoresConfiabilidadeRedeBasicaSmSeveridadePerturbacoes.valSm5">Val Sm 5</span>
+          </dt>
+          <dd>
+            <span>{{ onsIndicadoresConfiabilidadeRedeBasicaSmSeveridadePerturbacoesRef.valSm5 }}</span>
+          </dd>
+        </dl>
+
+        <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+          <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Voltar</span>
+        </button>
+
+        <button
+          type="button"
+          [routerLink]="[
+            '/ons-indicadores-confiabilidade-rede-basica-sm-severidade-perturbacoes',
+            onsIndicadoresConfiabilidadeRedeBasicaSmSeveridadePerturbacoesRef.id,
+            'edit',
+          ]"
+          class="btn btn-primary"
+        >
+          <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Editar</span>
+        </button>
+      </div>
+    }
+  </div>
+</div>

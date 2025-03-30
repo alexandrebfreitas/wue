@@ -1,0 +1,115 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <form name="editForm" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+      <h2
+        id="jhi-ons-ear-diario-ree-reservatorio-equivalente-energia-heading"
+        data-cy="OnsEarDiarioReeReservatorioEquivalenteEnergiaCreateUpdateHeading"
+        jhiTranslate="wattsUpEnergyApp.onsEarDiarioReeReservatorioEquivalenteEnergia.home.createOrEditLabel"
+      >
+        Criar ou editar Ons Ear Diario Ree Reservatorio Equivalente Energia
+      </h2>
+
+      <div>
+        <jhi-alert-error></jhi-alert-error>
+
+        @if (editForm.controls.id.value !== null) {
+          <div class="mb-3">
+            <label class="form-label" for="field_id" jhiTranslate="wattsUpEnergyApp.onsEarDiarioReeReservatorioEquivalenteEnergia.id"
+              >ID</label
+            >
+            <input type="number" class="form-control" name="id" id="field_id" data-cy="id" formControlName="id" [readonly]="true" />
+          </div>
+        }
+
+        <div class="mb-3">
+          <label class="form-label" for="field_nomRee" jhiTranslate="wattsUpEnergyApp.onsEarDiarioReeReservatorioEquivalenteEnergia.nomRee"
+            >Nom Ree</label
+          >
+          <input type="text" class="form-control" name="nomRee" id="field_nomRee" data-cy="nomRee" formControlName="nomRee" />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_earData"
+            jhiTranslate="wattsUpEnergyApp.onsEarDiarioReeReservatorioEquivalenteEnergia.earData"
+            >Ear Data</label
+          >
+          <div class="input-group">
+            <input
+              id="field_earData"
+              data-cy="earData"
+              type="text"
+              class="form-control"
+              name="earData"
+              ngbDatepicker
+              #earDataDp="ngbDatepicker"
+              formControlName="earData"
+            />
+            <button type="button" class="btn btn-secondary" (click)="earDataDp.toggle()"><fa-icon icon="calendar-alt"></fa-icon></button>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_earMaxRee"
+            jhiTranslate="wattsUpEnergyApp.onsEarDiarioReeReservatorioEquivalenteEnergia.earMaxRee"
+            >Ear Max Ree</label
+          >
+          <input type="number" class="form-control" name="earMaxRee" id="field_earMaxRee" data-cy="earMaxRee" formControlName="earMaxRee" />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_earVerifReeMwmes"
+            jhiTranslate="wattsUpEnergyApp.onsEarDiarioReeReservatorioEquivalenteEnergia.earVerifReeMwmes"
+            >Ear Verif Ree Mwmes</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="earVerifReeMwmes"
+            id="field_earVerifReeMwmes"
+            data-cy="earVerifReeMwmes"
+            formControlName="earVerifReeMwmes"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_earVerifReePercentual"
+            jhiTranslate="wattsUpEnergyApp.onsEarDiarioReeReservatorioEquivalenteEnergia.earVerifReePercentual"
+            >Ear Verif Ree Percentual</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="earVerifReePercentual"
+            id="field_earVerifReePercentual"
+            data-cy="earVerifReePercentual"
+            formControlName="earVerifReePercentual"
+          />
+        </div>
+      </div>
+
+      <div>
+        <button type="button" id="cancel-save" data-cy="entityCreateCancelButton" class="btn btn-secondary" (click)="previousState()">
+          <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancelar</span>
+        </button>
+
+        <button
+          type="submit"
+          id="save-entity"
+          data-cy="entityCreateSaveButton"
+          [disabled]="editForm.invalid || isSaving"
+          class="btn btn-primary"
+        >
+          <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Salvar</span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

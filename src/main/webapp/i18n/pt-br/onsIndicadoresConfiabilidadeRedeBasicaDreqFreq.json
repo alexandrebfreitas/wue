@@ -1,0 +1,31 @@
+{
+  "wattsUpEnergyApp": {
+    "onsIndicadoresConfiabilidadeRedeBasicaDreqFreq": {
+      "home": {
+        "title": "Ons Indicadores Confiabilidade Rede Basica Dreq Freqs",
+        "refreshListLabel": "Atualizar lista",
+        "createLabel": "Criar novo Ons Indicadores Confiabilidade Rede Basica Dreq Freq",
+        "createOrEditLabel": "Criar ou editar Ons Indicadores Confiabilidade Rede Basica Dreq Freq",
+        "search": "Pesquisar por Ons Indicadores Confiabilidade Rede Basica Dreq Freq",
+        "notFound": "Nenhum Ons Indicadores Confiabilidade Rede Basica Dreq Freq encontrado"
+      },
+      "created": "Um novo Ons Indicadores Confiabilidade Rede Basica Dreq Freq foi criado com o identificador {{ param }}",
+      "updated": "Um Ons Indicadores Confiabilidade Rede Basica Dreq Freq foi atualizado com o identificador {{ param }}",
+      "deleted": "Um Ons Indicadores Confiabilidade Rede Basica Dreq Freq foi excluído com o identificador {{ param }}",
+      "delete": {
+        "question": "Tem certeza de que deseja excluir Ons Indicadores Confiabilidade Rede Basica Dreq Freq {{ id }}?"
+      },
+      "detail": {
+        "title": "Ons Indicadores Confiabilidade Rede Basica Dreq Freq"
+      },
+      "id": "ID",
+      "dscAgregacao": "Dsc Agregacao",
+      "codCaracteristica": "Cod Caracteristica",
+      "dscCaracteristica": "Dsc Caracteristica",
+      "idPeriodicidade": "Id Periodicidade",
+      "dinReferencia": "Din Referencia",
+      "valDreq": "Val Dreq",
+      "valFreq": "Val Freq"
+    }
+  }
+}

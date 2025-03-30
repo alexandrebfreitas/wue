@@ -1,0 +1,30 @@
+{
+  "wattsUpEnergyApp": {
+    "onsOfertasPrecoParaImportacao": {
+      "home": {
+        "title": "Ons Ofertas Preco Para Importacaos",
+        "refreshListLabel": "Atualizar lista",
+        "createLabel": "Criar novo Ons Ofertas Preco Para Importacao",
+        "createOrEditLabel": "Criar ou editar Ons Ofertas Preco Para Importacao",
+        "search": "Pesquisar por Ons Ofertas Preco Para Importacao",
+        "notFound": "Nenhum Ons Ofertas Preco Para Importacao encontrado"
+      },
+      "created": "Um novo Ons Ofertas Preco Para Importacao foi criado com o identificador {{ param }}",
+      "updated": "Um Ons Ofertas Preco Para Importacao foi atualizado com o identificador {{ param }}",
+      "deleted": "Um Ons Ofertas Preco Para Importacao foi excluído com o identificador {{ param }}",
+      "delete": {
+        "question": "Tem certeza de que deseja excluir Ons Ofertas Preco Para Importacao {{ id }}?"
+      },
+      "detail": {
+        "title": "Ons Ofertas Preco Para Importacao"
+      },
+      "id": "ID",
+      "nomPais": "Nom Pais",
+      "nomAgente": "Nom Agente",
+      "nomBloco": "Nom Bloco",
+      "datIniciovalidade": "Dat Iniciovalidade",
+      "datFimvalidade": "Dat Fimvalidade",
+      "valPreco": "Val Preco"
+    }
+  }
+}

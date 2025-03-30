@@ -1,0 +1,178 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <form name="editForm" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+      <h2
+        id="jhi-ons-dados-indicadores-qualidade-energia-rede-basica-dfd-desempenho-frequencia-em-disturbios-evento-heading"
+        data-cy="OnsDadosIndicadoresQualidadeEnergiaRedeBasicaDfdDesempenhoFrequenciaEmDisturbiosEventoCreateUpdateHeading"
+        jhiTranslate="wattsUpEnergyApp.onsDadosIndicadoresQualidadeEnergiaRedeBasicaDfdDesempenhoFrequenciaEmDisturbiosEvento.home.createOrEditLabel"
+      >
+        Criar ou editar Ons Dados Indicadores Qualidade Energia Rede Basica Dfd Desempenho Frequencia Em Disturbios Evento
+      </h2>
+
+      <div>
+        <jhi-alert-error></jhi-alert-error>
+
+        @if (editForm.controls.id.value !== null) {
+          <div class="mb-3">
+            <label
+              class="form-label"
+              for="field_id"
+              jhiTranslate="wattsUpEnergyApp.onsDadosIndicadoresQualidadeEnergiaRedeBasicaDfdDesempenhoFrequenciaEmDisturbiosEvento.id"
+              >ID</label
+            >
+            <input type="number" class="form-control" name="id" id="field_id" data-cy="id" formControlName="id" [readonly]="true" />
+          </div>
+        }
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_dinReferencia"
+            jhiTranslate="wattsUpEnergyApp.onsDadosIndicadoresQualidadeEnergiaRedeBasicaDfdDesempenhoFrequenciaEmDisturbiosEvento.dinReferencia"
+            >Din Referencia</label
+          >
+          <div class="input-group">
+            <input
+              id="field_dinReferencia"
+              data-cy="dinReferencia"
+              type="text"
+              class="form-control"
+              name="dinReferencia"
+              ngbDatepicker
+              #dinReferenciaDp="ngbDatepicker"
+              formControlName="dinReferencia"
+            />
+            <button type="button" class="btn btn-secondary" (click)="dinReferenciaDp.toggle()">
+              <fa-icon icon="calendar-alt"></fa-icon>
+            </button>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_dinIniciodesviofreq"
+            jhiTranslate="wattsUpEnergyApp.onsDadosIndicadoresQualidadeEnergiaRedeBasicaDfdDesempenhoFrequenciaEmDisturbiosEvento.dinIniciodesviofreq"
+            >Din Iniciodesviofreq</label
+          >
+          <div class="input-group">
+            <input
+              id="field_dinIniciodesviofreq"
+              data-cy="dinIniciodesviofreq"
+              type="text"
+              class="form-control"
+              name="dinIniciodesviofreq"
+              ngbDatepicker
+              #dinIniciodesviofreqDp="ngbDatepicker"
+              formControlName="dinIniciodesviofreq"
+            />
+            <button type="button" class="btn btn-secondary" (click)="dinIniciodesviofreqDp.toggle()">
+              <fa-icon icon="calendar-alt"></fa-icon>
+            </button>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_dinFimdesviofreq"
+            jhiTranslate="wattsUpEnergyApp.onsDadosIndicadoresQualidadeEnergiaRedeBasicaDfdDesempenhoFrequenciaEmDisturbiosEvento.dinFimdesviofreq"
+            >Din Fimdesviofreq</label
+          >
+          <div class="input-group">
+            <input
+              id="field_dinFimdesviofreq"
+              data-cy="dinFimdesviofreq"
+              type="text"
+              class="form-control"
+              name="dinFimdesviofreq"
+              ngbDatepicker
+              #dinFimdesviofreqDp="ngbDatepicker"
+              formControlName="dinFimdesviofreq"
+            />
+            <button type="button" class="btn btn-secondary" (click)="dinFimdesviofreqDp.toggle()">
+              <fa-icon icon="calendar-alt"></fa-icon>
+            </button>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_idFaixafrequencia"
+            jhiTranslate="wattsUpEnergyApp.onsDadosIndicadoresQualidadeEnergiaRedeBasicaDfdDesempenhoFrequenciaEmDisturbiosEvento.idFaixafrequencia"
+            >Id Faixafrequencia</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="idFaixafrequencia"
+            id="field_idFaixafrequencia"
+            data-cy="idFaixafrequencia"
+            formControlName="idFaixafrequencia"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_nomFaixafrequencia"
+            jhiTranslate="wattsUpEnergyApp.onsDadosIndicadoresQualidadeEnergiaRedeBasicaDfdDesempenhoFrequenciaEmDisturbiosEvento.nomFaixafrequencia"
+            >Nom Faixafrequencia</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="nomFaixafrequencia"
+            id="field_nomFaixafrequencia"
+            data-cy="nomFaixafrequencia"
+            formControlName="nomFaixafrequencia"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_valDfd"
+            jhiTranslate="wattsUpEnergyApp.onsDadosIndicadoresQualidadeEnergiaRedeBasicaDfdDesempenhoFrequenciaEmDisturbiosEvento.valDfd"
+            >Val Dfd</label
+          >
+          <input type="number" class="form-control" name="valDfd" id="field_valDfd" data-cy="valDfd" formControlName="valDfd" />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_valFreqmaxmin"
+            jhiTranslate="wattsUpEnergyApp.onsDadosIndicadoresQualidadeEnergiaRedeBasicaDfdDesempenhoFrequenciaEmDisturbiosEvento.valFreqmaxmin"
+            >Val Freqmaxmin</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="valFreqmaxmin"
+            id="field_valFreqmaxmin"
+            data-cy="valFreqmaxmin"
+            formControlName="valFreqmaxmin"
+          />
+        </div>
+      </div>
+
+      <div>
+        <button type="button" id="cancel-save" data-cy="entityCreateCancelButton" class="btn btn-secondary" (click)="previousState()">
+          <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancelar</span>
+        </button>
+
+        <button
+          type="submit"
+          id="save-entity"
+          data-cy="entityCreateSaveButton"
+          [disabled]="editForm.invalid || isSaving"
+          class="btn btn-primary"
+        >
+          <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Salvar</span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

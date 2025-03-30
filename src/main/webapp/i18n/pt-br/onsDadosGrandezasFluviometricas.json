@@ -1,0 +1,33 @@
+{
+  "wattsUpEnergyApp": {
+    "onsDadosGrandezasFluviometricas": {
+      "home": {
+        "title": "Ons Dados Grandezas Fluviometricas",
+        "refreshListLabel": "Atualizar lista",
+        "createLabel": "Criar novo Ons Dados Grandezas Fluviometricas",
+        "createOrEditLabel": "Criar ou editar Ons Dados Grandezas Fluviometricas",
+        "search": "Pesquisar por Ons Dados Grandezas Fluviometricas",
+        "notFound": "Nenhum Ons Dados Grandezas Fluviometricas encontrado"
+      },
+      "created": "Um novo Ons Dados Grandezas Fluviometricas foi criado com o identificador {{ param }}",
+      "updated": "Um Ons Dados Grandezas Fluviometricas foi atualizado com o identificador {{ param }}",
+      "deleted": "Um Ons Dados Grandezas Fluviometricas foi excluído com o identificador {{ param }}",
+      "delete": {
+        "question": "Tem certeza de que deseja excluir Ons Dados Grandezas Fluviometricas {{ id }}?"
+      },
+      "detail": {
+        "title": "Ons Dados Grandezas Fluviometricas"
+      },
+      "id": "ID",
+      "idPostofluv": "Id Postofluv",
+      "nomPostofluviometrico": "Nom Postofluviometrico",
+      "valLatitude": "Val Latitude",
+      "valLongitude": "Val Longitude",
+      "nomRio": "Nom Rio",
+      "nomBacia": "Nom Bacia",
+      "dinMedicao": "Din Medicao",
+      "valVazaomedia": "Val Vazaomedia",
+      "valVazaomediaincr": "Val Vazaomediaincr"
+    }
+  }
+}

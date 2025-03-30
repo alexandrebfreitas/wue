@@ -1,0 +1,67 @@
+{
+  "annotations": {
+    "changelogDate": "20250330013648"
+  },
+  "applications": "*",
+  "entityTableName": "OnsTable11",
+  "fields": [
+    {
+      "fieldName": "nomRee",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "datEntrada",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "valCotamaxima",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "valCotaminima",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "valVolmax",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "valVolmin",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "valVolutiltot",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "valProdutibilidadeespecifica",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "valProdutividade65volutil",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "valTipoperda",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "valPerda",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "valLatitude",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "valLongitude",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "idReservatorio",
+      "fieldType": "String"
+    }
+  ],
+  "name": "OnsReservatorios",
+  "relationships": []
+}

@@ -1,0 +1,187 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <form name="editForm" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+      <h2
+        id="jhi-ons-indicadores-confiabilidade-rede-basica-ciper-carga-interrompida-perturbacoes-heading"
+        data-cy="OnsIndicadoresConfiabilidadeRedeBasicaCiperCargaInterrompidaPerturbacoesCreateUpdateHeading"
+        jhiTranslate="wattsUpEnergyApp.onsIndicadoresConfiabilidadeRedeBasicaCiperCargaInterrompidaPerturbacoes.home.createOrEditLabel"
+      >
+        Criar ou editar Ons Indicadores Confiabilidade Rede Basica Ciper Carga Interrompida Perturbacoes
+      </h2>
+
+      <div>
+        <jhi-alert-error></jhi-alert-error>
+
+        @if (editForm.controls.id.value !== null) {
+          <div class="mb-3">
+            <label
+              class="form-label"
+              for="field_id"
+              jhiTranslate="wattsUpEnergyApp.onsIndicadoresConfiabilidadeRedeBasicaCiperCargaInterrompidaPerturbacoes.id"
+              >ID</label
+            >
+            <input type="number" class="form-control" name="id" id="field_id" data-cy="id" formControlName="id" [readonly]="true" />
+          </div>
+        }
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_dscAgregacao"
+            jhiTranslate="wattsUpEnergyApp.onsIndicadoresConfiabilidadeRedeBasicaCiperCargaInterrompidaPerturbacoes.dscAgregacao"
+            >Dsc Agregacao</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="dscAgregacao"
+            id="field_dscAgregacao"
+            data-cy="dscAgregacao"
+            formControlName="dscAgregacao"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_codCaracteristica"
+            jhiTranslate="wattsUpEnergyApp.onsIndicadoresConfiabilidadeRedeBasicaCiperCargaInterrompidaPerturbacoes.codCaracteristica"
+            >Cod Caracteristica</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="codCaracteristica"
+            id="field_codCaracteristica"
+            data-cy="codCaracteristica"
+            formControlName="codCaracteristica"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_dscCaracteristica"
+            jhiTranslate="wattsUpEnergyApp.onsIndicadoresConfiabilidadeRedeBasicaCiperCargaInterrompidaPerturbacoes.dscCaracteristica"
+            >Dsc Caracteristica</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="dscCaracteristica"
+            id="field_dscCaracteristica"
+            data-cy="dscCaracteristica"
+            formControlName="dscCaracteristica"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_idPeriodicidade"
+            jhiTranslate="wattsUpEnergyApp.onsIndicadoresConfiabilidadeRedeBasicaCiperCargaInterrompidaPerturbacoes.idPeriodicidade"
+            >Id Periodicidade</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="idPeriodicidade"
+            id="field_idPeriodicidade"
+            data-cy="idPeriodicidade"
+            formControlName="idPeriodicidade"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_dinReferencia"
+            jhiTranslate="wattsUpEnergyApp.onsIndicadoresConfiabilidadeRedeBasicaCiperCargaInterrompidaPerturbacoes.dinReferencia"
+            >Din Referencia</label
+          >
+          <div class="input-group">
+            <input
+              id="field_dinReferencia"
+              data-cy="dinReferencia"
+              type="text"
+              class="form-control"
+              name="dinReferencia"
+              ngbDatepicker
+              #dinReferenciaDp="ngbDatepicker"
+              formControlName="dinReferencia"
+            />
+            <button type="button" class="btn btn-secondary" (click)="dinReferenciaDp.toggle()">
+              <fa-icon icon="calendar-alt"></fa-icon>
+            </button>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_valCiper1"
+            jhiTranslate="wattsUpEnergyApp.onsIndicadoresConfiabilidadeRedeBasicaCiperCargaInterrompidaPerturbacoes.valCiper1"
+            >Val Ciper 1</label
+          >
+          <input type="number" class="form-control" name="valCiper1" id="field_valCiper1" data-cy="valCiper1" formControlName="valCiper1" />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_valCiper2"
+            jhiTranslate="wattsUpEnergyApp.onsIndicadoresConfiabilidadeRedeBasicaCiperCargaInterrompidaPerturbacoes.valCiper2"
+            >Val Ciper 2</label
+          >
+          <input type="number" class="form-control" name="valCiper2" id="field_valCiper2" data-cy="valCiper2" formControlName="valCiper2" />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_valCiper3"
+            jhiTranslate="wattsUpEnergyApp.onsIndicadoresConfiabilidadeRedeBasicaCiperCargaInterrompidaPerturbacoes.valCiper3"
+            >Val Ciper 3</label
+          >
+          <input type="number" class="form-control" name="valCiper3" id="field_valCiper3" data-cy="valCiper3" formControlName="valCiper3" />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_valCiper4"
+            jhiTranslate="wattsUpEnergyApp.onsIndicadoresConfiabilidadeRedeBasicaCiperCargaInterrompidaPerturbacoes.valCiper4"
+            >Val Ciper 4</label
+          >
+          <input type="number" class="form-control" name="valCiper4" id="field_valCiper4" data-cy="valCiper4" formControlName="valCiper4" />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_valCiper5"
+            jhiTranslate="wattsUpEnergyApp.onsIndicadoresConfiabilidadeRedeBasicaCiperCargaInterrompidaPerturbacoes.valCiper5"
+            >Val Ciper 5</label
+          >
+          <input type="number" class="form-control" name="valCiper5" id="field_valCiper5" data-cy="valCiper5" formControlName="valCiper5" />
+        </div>
+      </div>
+
+      <div>
+        <button type="button" id="cancel-save" data-cy="entityCreateCancelButton" class="btn btn-secondary" (click)="previousState()">
+          <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancelar</span>
+        </button>
+
+        <button
+          type="submit"
+          id="save-entity"
+          data-cy="entityCreateSaveButton"
+          [disabled]="editForm.invalid || isSaving"
+          class="btn btn-primary"
+        >
+          <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Salvar</span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

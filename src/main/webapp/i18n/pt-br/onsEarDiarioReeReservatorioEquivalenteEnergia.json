@@ -1,0 +1,29 @@
+{
+  "wattsUpEnergyApp": {
+    "onsEarDiarioReeReservatorioEquivalenteEnergia": {
+      "home": {
+        "title": "Ons Ear Diario Ree Reservatorio Equivalente Energias",
+        "refreshListLabel": "Atualizar lista",
+        "createLabel": "Criar novo Ons Ear Diario Ree Reservatorio Equivalente Energia",
+        "createOrEditLabel": "Criar ou editar Ons Ear Diario Ree Reservatorio Equivalente Energia",
+        "search": "Pesquisar por Ons Ear Diario Ree Reservatorio Equivalente Energia",
+        "notFound": "Nenhum Ons Ear Diario Ree Reservatorio Equivalente Energia encontrado"
+      },
+      "created": "Um novo Ons Ear Diario Ree Reservatorio Equivalente Energia foi criado com o identificador {{ param }}",
+      "updated": "Um Ons Ear Diario Ree Reservatorio Equivalente Energia foi atualizado com o identificador {{ param }}",
+      "deleted": "Um Ons Ear Diario Ree Reservatorio Equivalente Energia foi excluído com o identificador {{ param }}",
+      "delete": {
+        "question": "Tem certeza de que deseja excluir Ons Ear Diario Ree Reservatorio Equivalente Energia {{ id }}?"
+      },
+      "detail": {
+        "title": "Ons Ear Diario Ree Reservatorio Equivalente Energia"
+      },
+      "id": "ID",
+      "nomRee": "Nom Ree",
+      "earData": "Ear Data",
+      "earMaxRee": "Ear Max Ree",
+      "earVerifReeMwmes": "Ear Verif Ree Mwmes",
+      "earVerifReePercentual": "Ear Verif Ree Percentual"
+    }
+  }
+}

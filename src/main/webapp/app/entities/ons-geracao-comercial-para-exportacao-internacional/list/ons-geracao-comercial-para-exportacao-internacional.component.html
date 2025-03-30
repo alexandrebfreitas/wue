@@ -1,0 +1,211 @@
+<div>
+  <h2 id="page-heading" data-cy="OnsGeracaoComercialParaExportacaoInternacionalHeading">
+    <span jhiTranslate="wattsUpEnergyApp.onsGeracaoComercialParaExportacaoInternacional.home.title"
+      >Ons Geracao Comercial Para Exportacao Internacionals</span
+    >
+
+    <div class="d-flex justify-content-end">
+      <button class="btn btn-info me-2" (click)="load()" [disabled]="isLoading">
+        <fa-icon icon="sync" [animation]="isLoading ? 'spin' : undefined"></fa-icon>
+        <span jhiTranslate="wattsUpEnergyApp.onsGeracaoComercialParaExportacaoInternacional.home.refreshListLabel">Atualizar lista</span>
+      </button>
+
+      <button
+        id="jh-create-entity"
+        data-cy="entityCreateButton"
+        class="btn btn-primary jh-create-entity create-ons-geracao-comercial-para-exportacao-internacional"
+        [routerLink]="['/ons-geracao-comercial-para-exportacao-internacional/new']"
+      >
+        <fa-icon icon="plus"></fa-icon>
+        <span class="hidden-sm-down" jhiTranslate="wattsUpEnergyApp.onsGeracaoComercialParaExportacaoInternacional.home.createLabel"
+          >Criar novo Ons Geracao Comercial Para Exportacao Internacional</span
+        >
+      </button>
+    </div>
+  </h2>
+
+  <jhi-alert-error></jhi-alert-error>
+
+  <jhi-alert></jhi-alert>
+
+  <form name="searchForm" class="row row-cols-sm-auto align-items-center">
+    <div class="col-sm-12">
+      <div class="input-group w-100 mt-3">
+        <label
+          class="visually-hidden"
+          for="currentSearch"
+          jhiTranslate="wattsUpEnergyApp.onsGeracaoComercialParaExportacaoInternacional.home.search"
+          >Pesquisar por Ons Geracao Comercial Para Exportacao Internacional</label
+        >
+        <input
+          type="text"
+          class="form-control"
+          [(ngModel)]="currentSearch"
+          id="currentSearch"
+          name="currentSearch"
+          placeholder="{{ 'wattsUpEnergyApp.onsGeracaoComercialParaExportacaoInternacional.home.search' | translate }}"
+        />
+
+        <button class="btn btn-info" (click)="search(currentSearch)">
+          <fa-icon icon="search"></fa-icon>
+        </button>
+
+        @if (currentSearch) {
+          <button class="btn btn-danger" (click)="search('')">
+            <fa-icon icon="trash-alt"></fa-icon>
+          </button>
+        }
+      </div>
+    </div>
+  </form>
+
+  @if (onsGeracaoComercialParaExportacaoInternacionals().length === 0) {
+    <div class="alert alert-warning" id="no-result">
+      <span jhiTranslate="wattsUpEnergyApp.onsGeracaoComercialParaExportacaoInternacional.home.notFound"
+        >Nenhum Ons Geracao Comercial Para Exportacao Internacional encontrado</span
+      >
+    </div>
+  } @else {
+    <div class="table-responsive table-entities" id="entities">
+      <table class="table table-striped" aria-describedby="page-heading">
+        <thead>
+          <tr jhiSort [(sortState)]="sortState" (sortChange)="navigateToWithComponentValues($event)">
+            <th scope="col" jhiSortBy="id">
+              <div class="d-flex">
+                <span jhiTranslate="global.field.id">Código</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="nomConversora">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsGeracaoComercialParaExportacaoInternacional.nomConversora">Nom Conversora</span>
+                @if (!currentSearch) {
+                  <fa-icon class="p-1" icon="sort"></fa-icon>
+                }
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="dinInstante">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsGeracaoComercialParaExportacaoInternacional.dinInstante">Din Instante</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="valModalidadecontratual">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsGeracaoComercialParaExportacaoInternacional.valModalidadecontratual"
+                  >Val Modalidadecontratual</span
+                >
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="valModalidadeemergencial">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsGeracaoComercialParaExportacaoInternacional.valModalidadeemergencial"
+                  >Val Modalidadeemergencial</span
+                >
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="valModalidadeoportunidade">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsGeracaoComercialParaExportacaoInternacional.valModalidadeoportunidade"
+                  >Val Modalidadeoportunidade</span
+                >
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="valModalidadeteste">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsGeracaoComercialParaExportacaoInternacional.valModalidadeteste"
+                  >Val Modalidadeteste</span
+                >
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="valModalidadeexcepcional">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsGeracaoComercialParaExportacaoInternacional.valModalidadeexcepcional"
+                  >Val Modalidadeexcepcional</span
+                >
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (
+            onsGeracaoComercialParaExportacaoInternacional of onsGeracaoComercialParaExportacaoInternacionals();
+            track trackId(onsGeracaoComercialParaExportacaoInternacional)
+          ) {
+            <tr data-cy="entityTable">
+              <td>
+                <a
+                  [routerLink]="[
+                    '/ons-geracao-comercial-para-exportacao-internacional',
+                    onsGeracaoComercialParaExportacaoInternacional.id,
+                    'view',
+                  ]"
+                  >{{ onsGeracaoComercialParaExportacaoInternacional.id }}</a
+                >
+              </td>
+              <td>{{ onsGeracaoComercialParaExportacaoInternacional.nomConversora }}</td>
+              <td>{{ onsGeracaoComercialParaExportacaoInternacional.dinInstante | formatMediumDate }}</td>
+              <td>{{ onsGeracaoComercialParaExportacaoInternacional.valModalidadecontratual }}</td>
+              <td>{{ onsGeracaoComercialParaExportacaoInternacional.valModalidadeemergencial }}</td>
+              <td>{{ onsGeracaoComercialParaExportacaoInternacional.valModalidadeoportunidade }}</td>
+              <td>{{ onsGeracaoComercialParaExportacaoInternacional.valModalidadeteste }}</td>
+              <td>{{ onsGeracaoComercialParaExportacaoInternacional.valModalidadeexcepcional }}</td>
+              <td class="text-end">
+                <div class="btn-group">
+                  <a
+                    [routerLink]="[
+                      '/ons-geracao-comercial-para-exportacao-internacional',
+                      onsGeracaoComercialParaExportacaoInternacional.id,
+                      'view',
+                    ]"
+                    class="btn btn-info btn-sm"
+                    data-cy="entityDetailsButton"
+                  >
+                    <fa-icon icon="eye"></fa-icon>
+                    <span class="d-none d-md-inline" jhiTranslate="entity.action.view">Visualizar</span>
+                  </a>
+
+                  <a
+                    [routerLink]="[
+                      '/ons-geracao-comercial-para-exportacao-internacional',
+                      onsGeracaoComercialParaExportacaoInternacional.id,
+                      'edit',
+                    ]"
+                    class="btn btn-primary btn-sm"
+                    data-cy="entityEditButton"
+                  >
+                    <fa-icon icon="pencil-alt"></fa-icon>
+                    <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Editar</span>
+                  </a>
+
+                  <button
+                    type="submit"
+                    (click)="delete(onsGeracaoComercialParaExportacaoInternacional)"
+                    class="btn btn-danger btn-sm"
+                    data-cy="entityDeleteButton"
+                  >
+                    <fa-icon icon="times"></fa-icon>
+                    <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Excluir</span>
+                  </button>
+                </div>
+              </td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+  }
+</div>

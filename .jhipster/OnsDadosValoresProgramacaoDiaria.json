@@ -1,0 +1,95 @@
+{
+  "annotations": {
+    "changelogDate": "20250330013704"
+  },
+  "applications": "*",
+  "entityTableName": "OnsTable27",
+  "fields": [
+    {
+      "fieldName": "dinProgramacaodia",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "numPatamar",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "codExibicaousina",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nomUsina",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "tipGeracao",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nomModalidadeoperacao",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "idSubsistema",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nomSubsistema",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "idEstado",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nomEstado",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "valGeracaoprogramada",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "valDisponibilidade",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "valOrdemmerito",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "valInflexibilidade",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "valUc",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "valRazaoeletrica",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "valGeracaoenergetica",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "valGesubgsub",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "valExportacao",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "valReposicaoexportacao",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "valFaltacombustivel",
+      "fieldType": "Double"
+    }
+  ],
+  "name": "OnsDadosValoresProgramacaoDiaria",
+  "relationships": []
+}

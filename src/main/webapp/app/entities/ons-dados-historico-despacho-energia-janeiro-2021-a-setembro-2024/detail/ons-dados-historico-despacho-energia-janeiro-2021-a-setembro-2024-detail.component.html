@@ -1,0 +1,84 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    @if (onsDadosHistoricoDespachoEnergiaJaneiro2021ASetembro2024(); as onsDadosHistoricoDespachoEnergiaJaneiro2021ASetembro2024Ref) {
+      <div>
+        <h2 data-cy="onsDadosHistoricoDespachoEnergiaJaneiro2021ASetembro2024DetailsHeading">
+          <span jhiTranslate="wattsUpEnergyApp.onsDadosHistoricoDespachoEnergiaJaneiro2021ASetembro2024.detail.title"
+            >Ons Dados Historico Despacho Energia Janeiro 2021 A Setembro 2024</span
+          >
+        </h2>
+
+        <hr />
+
+        <jhi-alert-error></jhi-alert-error>
+
+        <jhi-alert></jhi-alert>
+
+        <dl class="row-md jh-entity-details">
+          <dt><span jhiTranslate="global.field.id">Código</span></dt>
+          <dd>
+            <span>{{ onsDadosHistoricoDespachoEnergiaJaneiro2021ASetembro2024Ref.id }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsDadosHistoricoDespachoEnergiaJaneiro2021ASetembro2024.datPdp">Dat Pdp</span></dt>
+          <dd>
+            <span>{{ onsDadosHistoricoDespachoEnergiaJaneiro2021ASetembro2024Ref.datPdp }}</span>
+          </dd>
+          <dt>
+            <span jhiTranslate="wattsUpEnergyApp.onsDadosHistoricoDespachoEnergiaJaneiro2021ASetembro2024.codSubmercado"
+              >Cod Submercado</span
+            >
+          </dt>
+          <dd>
+            <span>{{ onsDadosHistoricoDespachoEnergiaJaneiro2021ASetembro2024Ref.codSubmercado }}</span>
+          </dd>
+          <dt>
+            <span jhiTranslate="wattsUpEnergyApp.onsDadosHistoricoDespachoEnergiaJaneiro2021ASetembro2024.sglTipousina">Sgl Tipousina</span>
+          </dt>
+          <dd>
+            <span>{{ onsDadosHistoricoDespachoEnergiaJaneiro2021ASetembro2024Ref.sglTipousina }}</span>
+          </dd>
+          <dt>
+            <span jhiTranslate="wattsUpEnergyApp.onsDadosHistoricoDespachoEnergiaJaneiro2021ASetembro2024.codUsinapdp">Cod Usinapdp</span>
+          </dt>
+          <dd>
+            <span>{{ onsDadosHistoricoDespachoEnergiaJaneiro2021ASetembro2024Ref.codUsinapdp }}</span>
+          </dd>
+          <dt>
+            <span jhiTranslate="wattsUpEnergyApp.onsDadosHistoricoDespachoEnergiaJaneiro2021ASetembro2024.nomUsinapdp">Nom Usinapdp</span>
+          </dt>
+          <dd>
+            <span>{{ onsDadosHistoricoDespachoEnergiaJaneiro2021ASetembro2024Ref.nomUsinapdp }}</span>
+          </dd>
+          <dt>
+            <span jhiTranslate="wattsUpEnergyApp.onsDadosHistoricoDespachoEnergiaJaneiro2021ASetembro2024.numIntdespa">Num Intdespa</span>
+          </dt>
+          <dd>
+            <span>{{ onsDadosHistoricoDespachoEnergiaJaneiro2021ASetembro2024Ref.numIntdespa }}</span>
+          </dd>
+          <dt>
+            <span jhiTranslate="wattsUpEnergyApp.onsDadosHistoricoDespachoEnergiaJaneiro2021ASetembro2024.valDespasup">Val Despasup</span>
+          </dt>
+          <dd>
+            <span>{{ onsDadosHistoricoDespachoEnergiaJaneiro2021ASetembro2024Ref.valDespasup }}</span>
+          </dd>
+        </dl>
+
+        <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+          <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Voltar</span>
+        </button>
+
+        <button
+          type="button"
+          [routerLink]="[
+            '/ons-dados-historico-despacho-energia-janeiro-2021-a-setembro-2024',
+            onsDadosHistoricoDespachoEnergiaJaneiro2021ASetembro2024Ref.id,
+            'edit',
+          ]"
+          class="btn btn-primary"
+        >
+          <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Editar</span>
+        </button>
+      </div>
+    }
+  </div>
+</div>

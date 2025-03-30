@@ -1,0 +1,147 @@
+{
+  "annotations": {
+    "changelogDate": "20250330013702"
+  },
+  "applications": "*",
+  "entityTableName": "OnsTable25",
+  "fields": [
+    {
+      "fieldName": "idSubsistemaTerminalde",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nomSubsistemaTerminalde",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "idSubsistemaTerminalpara",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nomSubsistemaTerminalpara",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "idEstadoTerminalde",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nomEstadoDe",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "idEstadoTerminalpara",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nomEstadoPara",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nomSubestacaoDe",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nomSubestacaoPara",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "valNiveltensaoKv",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "nomTipoderede",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nomTipolinha",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nomAgenteproprietario",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nomLinhadetransmissao",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "codEquipamento",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "datEntradaoperacao",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "datDesativacao",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "datPrevista",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "valComprimento",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "valResistencia",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "valReatancia",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "valShunt",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "valCapacoperlongasemlimit",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "valCapacoperlongacomlimit",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "valCapacopercurtasemlimit",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "valCapacopercurtacomlimit",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "valCapacidadeoperveraodialonga",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "valCapacoperinvernodialonga",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "valCapacoperinvernonoitelonga",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "valCapacoperveradiacurta",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "valCapacoperveraonoitecurta",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "valCapacoperinvernodiacurta",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "valCapacoperinvernonoitecurta",
+      "fieldType": "Double"
+    }
+  ],
+  "name": "OnsLinhasTransmissaoRedeOperacao",
+  "relationships": []
+}

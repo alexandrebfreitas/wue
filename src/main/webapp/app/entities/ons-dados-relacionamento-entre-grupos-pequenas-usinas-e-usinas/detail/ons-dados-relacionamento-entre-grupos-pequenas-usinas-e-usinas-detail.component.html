@@ -1,0 +1,98 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    @if (onsDadosRelacionamentoEntreGruposPequenasUsinasEUsinas(); as onsDadosRelacionamentoEntreGruposPequenasUsinasEUsinasRef) {
+      <div>
+        <h2 data-cy="onsDadosRelacionamentoEntreGruposPequenasUsinasEUsinasDetailsHeading">
+          <span jhiTranslate="wattsUpEnergyApp.onsDadosRelacionamentoEntreGruposPequenasUsinasEUsinas.detail.title"
+            >Ons Dados Relacionamento Entre Grupos Pequenas Usinas E Usinas</span
+          >
+        </h2>
+
+        <hr />
+
+        <jhi-alert-error></jhi-alert-error>
+
+        <jhi-alert></jhi-alert>
+
+        <dl class="row-md jh-entity-details">
+          <dt><span jhiTranslate="global.field.id">Código</span></dt>
+          <dd>
+            <span>{{ onsDadosRelacionamentoEntreGruposPequenasUsinasEUsinasRef.id }}</span>
+          </dd>
+          <dt>
+            <span jhiTranslate="wattsUpEnergyApp.onsDadosRelacionamentoEntreGruposPequenasUsinasEUsinas.idSubsistema">Id Subsistema</span>
+          </dt>
+          <dd>
+            <span>{{ onsDadosRelacionamentoEntreGruposPequenasUsinasEUsinasRef.idSubsistema }}</span>
+          </dd>
+          <dt>
+            <span jhiTranslate="wattsUpEnergyApp.onsDadosRelacionamentoEntreGruposPequenasUsinasEUsinas.nomSubsistema">Nom Subsistema</span>
+          </dt>
+          <dd>
+            <span>{{ onsDadosRelacionamentoEntreGruposPequenasUsinasEUsinasRef.nomSubsistema }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsDadosRelacionamentoEntreGruposPequenasUsinasEUsinas.estadId">Estad Id</span></dt>
+          <dd>
+            <span>{{ onsDadosRelacionamentoEntreGruposPequenasUsinasEUsinasRef.estadId }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsDadosRelacionamentoEntreGruposPequenasUsinasEUsinas.nomEstado">Nom Estado</span></dt>
+          <dd>
+            <span>{{ onsDadosRelacionamentoEntreGruposPequenasUsinasEUsinasRef.nomEstado }}</span>
+          </dd>
+          <dt>
+            <span jhiTranslate="wattsUpEnergyApp.onsDadosRelacionamentoEntreGruposPequenasUsinasEUsinas.idTipousina">Id Tipousina</span>
+          </dt>
+          <dd>
+            <span>{{ onsDadosRelacionamentoEntreGruposPequenasUsinasEUsinasRef.idTipousina }}</span>
+          </dd>
+          <dt>
+            <span jhiTranslate="wattsUpEnergyApp.onsDadosRelacionamentoEntreGruposPequenasUsinasEUsinas.idOnsPequenasusinas"
+              >Id Ons Pequenasusinas</span
+            >
+          </dt>
+          <dd>
+            <span>{{ onsDadosRelacionamentoEntreGruposPequenasUsinasEUsinasRef.idOnsPequenasusinas }}</span>
+          </dd>
+          <dt>
+            <span jhiTranslate="wattsUpEnergyApp.onsDadosRelacionamentoEntreGruposPequenasUsinasEUsinas.idOnsUsina">Id Ons Usina</span>
+          </dt>
+          <dd>
+            <span>{{ onsDadosRelacionamentoEntreGruposPequenasUsinasEUsinasRef.idOnsUsina }}</span>
+          </dd>
+          <dt>
+            <span jhiTranslate="wattsUpEnergyApp.onsDadosRelacionamentoEntreGruposPequenasUsinasEUsinas.nomPequenasusinas"
+              >Nom Pequenasusinas</span
+            >
+          </dt>
+          <dd>
+            <span>{{ onsDadosRelacionamentoEntreGruposPequenasUsinasEUsinasRef.nomPequenasusinas }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsDadosRelacionamentoEntreGruposPequenasUsinasEUsinas.nomUsina">Nom Usina</span></dt>
+          <dd>
+            <span>{{ onsDadosRelacionamentoEntreGruposPequenasUsinasEUsinasRef.nomUsina }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsDadosRelacionamentoEntreGruposPequenasUsinasEUsinas.ceg">Ceg</span></dt>
+          <dd>
+            <span>{{ onsDadosRelacionamentoEntreGruposPequenasUsinasEUsinasRef.ceg }}</span>
+          </dd>
+        </dl>
+
+        <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+          <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Voltar</span>
+        </button>
+
+        <button
+          type="button"
+          [routerLink]="[
+            '/ons-dados-relacionamento-entre-grupos-pequenas-usinas-e-usinas',
+            onsDadosRelacionamentoEntreGruposPequenasUsinasEUsinasRef.id,
+            'edit',
+          ]"
+          class="btn btn-primary"
+        >
+          <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Editar</span>
+        </button>
+      </div>
+    }
+  </div>
+</div>

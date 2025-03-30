@@ -1,0 +1,59 @@
+{
+  "annotations": {
+    "changelogDate": "20250330013642"
+  },
+  "applications": "*",
+  "entityTableName": "OnsTable5",
+  "fields": [
+    {
+      "fieldName": "idSubsistema",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nomModalidadeoperacao",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "idEstado",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nomConjuntousina",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nomUsina",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "dinInstante",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "idOns",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "ceg",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "valIrradianciaverificado",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "flgDadoirradianciainvalido",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "valGeracaoestimada",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "valGeracaoverificada",
+      "fieldType": "Double"
+    }
+  ],
+  "name": "OnsDadosRestricaoOperacaoConstrainedoffUsinasFotovoltaicasDetalhamentoUsinas",
+  "relationships": []
+}

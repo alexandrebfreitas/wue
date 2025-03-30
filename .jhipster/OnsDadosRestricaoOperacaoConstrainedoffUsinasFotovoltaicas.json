@@ -1,0 +1,71 @@
+{
+  "annotations": {
+    "changelogDate": "20250330013654"
+  },
+  "applications": "*",
+  "entityTableName": "OnsTable17",
+  "fields": [
+    {
+      "fieldName": "idSubsistema",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nomSubsistema",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "idEstado",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nomEstado",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nomUsina",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "idOns",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "ceg",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "dinInstante",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "valGeracao",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "valGeracaolimitada",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "valDisponibilidade",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "valGeracaoreferencia",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "valGeracaoreferenciafinal",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "codRazaorestricao",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "codOrigemrestricao",
+      "fieldType": "String"
+    }
+  ],
+  "name": "OnsDadosRestricaoOperacaoConstrainedoffUsinasFotovoltaicas",
+  "relationships": []
+}

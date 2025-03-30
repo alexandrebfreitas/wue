@@ -1,0 +1,28 @@
+{
+  "wattsUpEnergyApp": {
+    "onsCargaEnergiaProgramada": {
+      "home": {
+        "title": "Ons Carga Energia Programadas",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Ons Carga Energia Programada",
+        "createOrEditLabel": "Create or edit a Ons Carga Energia Programada",
+        "search": "Search for Ons Carga Energia Programada",
+        "notFound": "No Ons Carga Energia Programadas found"
+      },
+      "created": "A new Ons Carga Energia Programada is created with identifier {{ param }}",
+      "updated": "A Ons Carga Energia Programada is updated with identifier {{ param }}",
+      "deleted": "A Ons Carga Energia Programada is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Ons Carga Energia Programada {{ id }}?"
+      },
+      "detail": {
+        "title": "Ons Carga Energia Programada"
+      },
+      "id": "ID",
+      "codAreacarga": "Cod Areacarga",
+      "datReferencia": "Dat Referencia",
+      "dinReferenciautc": "Din Referenciautc",
+      "valCargaglobalprogramada": "Val Cargaglobalprogramada"
+    }
+  }
+}

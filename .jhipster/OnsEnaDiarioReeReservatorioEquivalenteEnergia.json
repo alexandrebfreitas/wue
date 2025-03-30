@@ -1,0 +1,15 @@
+{
+  "annotations": {
+    "changelogDate": "20250330013715"
+  },
+  "applications": "*",
+  "entityTableName": "OnsTable38",
+  "fields": [
+    {
+      "fieldName": "enaArmazenavelReePercentualmlt",
+      "fieldType": "Double"
+    }
+  ],
+  "name": "OnsEnaDiarioReeReservatorioEquivalenteEnergia",
+  "relationships": []
+}

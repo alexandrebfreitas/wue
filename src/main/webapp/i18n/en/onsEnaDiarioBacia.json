@@ -1,0 +1,25 @@
+{
+  "wattsUpEnergyApp": {
+    "onsEnaDiarioBacia": {
+      "home": {
+        "title": "Ons Ena Diario Bacias",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Ons Ena Diario Bacia",
+        "createOrEditLabel": "Create or edit a Ons Ena Diario Bacia",
+        "search": "Search for Ons Ena Diario Bacia",
+        "notFound": "No Ons Ena Diario Bacias found"
+      },
+      "created": "A new Ons Ena Diario Bacia is created with identifier {{ param }}",
+      "updated": "A Ons Ena Diario Bacia is updated with identifier {{ param }}",
+      "deleted": "A Ons Ena Diario Bacia is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Ons Ena Diario Bacia {{ id }}?"
+      },
+      "detail": {
+        "title": "Ons Ena Diario Bacia"
+      },
+      "id": "ID",
+      "enaArmazenavelBaciaPercentualmlt": "Ena Armazenavel Bacia Percentualmlt"
+    }
+  }
+}

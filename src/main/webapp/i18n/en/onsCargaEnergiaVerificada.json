@@ -1,0 +1,34 @@
+{
+  "wattsUpEnergyApp": {
+    "onsCargaEnergiaVerificada": {
+      "home": {
+        "title": "Ons Carga Energia Verificadas",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Ons Carga Energia Verificada",
+        "createOrEditLabel": "Create or edit a Ons Carga Energia Verificada",
+        "search": "Search for Ons Carga Energia Verificada",
+        "notFound": "No Ons Carga Energia Verificadas found"
+      },
+      "created": "A new Ons Carga Energia Verificada is created with identifier {{ param }}",
+      "updated": "A Ons Carga Energia Verificada is updated with identifier {{ param }}",
+      "deleted": "A Ons Carga Energia Verificada is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Ons Carga Energia Verificada {{ id }}?"
+      },
+      "detail": {
+        "title": "Ons Carga Energia Verificada"
+      },
+      "id": "ID",
+      "codAreacarga": "Cod Areacarga",
+      "datReferencia": "Dat Referencia",
+      "dinReferenciautc": "Din Referenciautc",
+      "valCargaglobal": "Val Cargaglobal",
+      "valCargaglobalsmmg": "Val Cargaglobalsmmg",
+      "valCargammgd": "Val Cargammgd",
+      "valCargaglobalcons": "Val Cargaglobalcons",
+      "valConsistencia": "Val Consistencia",
+      "valCargasupervisionada": "Val Cargasupervisionada",
+      "valCarganaosupervisionada": "Val Carganaosupervisionada"
+    }
+  }
+}

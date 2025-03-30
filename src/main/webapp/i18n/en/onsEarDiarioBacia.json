@@ -1,0 +1,29 @@
+{
+  "wattsUpEnergyApp": {
+    "onsEarDiarioBacia": {
+      "home": {
+        "title": "Ons Ear Diario Bacias",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Ons Ear Diario Bacia",
+        "createOrEditLabel": "Create or edit a Ons Ear Diario Bacia",
+        "search": "Search for Ons Ear Diario Bacia",
+        "notFound": "No Ons Ear Diario Bacias found"
+      },
+      "created": "A new Ons Ear Diario Bacia is created with identifier {{ param }}",
+      "updated": "A Ons Ear Diario Bacia is updated with identifier {{ param }}",
+      "deleted": "A Ons Ear Diario Bacia is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Ons Ear Diario Bacia {{ id }}?"
+      },
+      "detail": {
+        "title": "Ons Ear Diario Bacia"
+      },
+      "id": "ID",
+      "nomCurto": "Nom Curto",
+      "earData": "Ear Data",
+      "earMaxBacia": "Ear Max Bacia",
+      "earVerifBaciaMwmes": "Ear Verif Bacia Mwmes",
+      "earVerifBaciaPercentual": "Ear Verif Bacia Percentual"
+    }
+  }
+}

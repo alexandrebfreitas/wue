@@ -1,0 +1,59 @@
+{
+  "annotations": {
+    "changelogDate": "20250330013727"
+  },
+  "applications": "*",
+  "entityTableName": "OnsTable50",
+  "fields": [
+    {
+      "fieldName": "codIndicador",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "dscAgregacao",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "codCaracteristica",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "dscCaracteristica",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "idPeriodicidade",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "dinReferencia",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "valIndicador",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "numPerturbacoes",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "numPerturbacoescortecarga",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "numPerturbacoescortecarga0a50mw",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "numPerturbacoescortecarga50a100mw",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "numPerturbacoescortecargaMaior100mw",
+      "fieldType": "Double"
+    }
+  ],
+  "name": "OnsIndicadoresConfiabilidadeRedeBasicaRobustezRmalRmcsRrbERrbcs",
+  "relationships": []
+}

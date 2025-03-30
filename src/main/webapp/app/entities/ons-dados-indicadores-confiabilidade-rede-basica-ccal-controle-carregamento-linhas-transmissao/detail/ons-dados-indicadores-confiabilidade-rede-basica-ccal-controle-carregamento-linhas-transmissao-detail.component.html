@@ -1,0 +1,111 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    @if (
+      onsDadosIndicadoresConfiabilidadeRedeBasicaCcalControleCarregamentoLinhasTransmissao();
+      as onsDadosIndicadoresConfiabilidadeRedeBasicaCcalControleCarregamentoLinhasTransmissaoRef
+    ) {
+      <div>
+        <h2 data-cy="onsDadosIndicadoresConfiabilidadeRedeBasicaCcalControleCarregamentoLinhasTransmissaoDetailsHeading">
+          <span
+            jhiTranslate="wattsUpEnergyApp.onsDadosIndicadoresConfiabilidadeRedeBasicaCcalControleCarregamentoLinhasTransmissao.detail.title"
+            >Ons Dados Indicadores Confiabilidade Rede Basica Ccal Controle Carregamento Linhas Transmissao</span
+          >
+        </h2>
+
+        <hr />
+
+        <jhi-alert-error></jhi-alert-error>
+
+        <jhi-alert></jhi-alert>
+
+        <dl class="row-md jh-entity-details">
+          <dt><span jhiTranslate="global.field.id">Código</span></dt>
+          <dd>
+            <span>{{ onsDadosIndicadoresConfiabilidadeRedeBasicaCcalControleCarregamentoLinhasTransmissaoRef.id }}</span>
+          </dd>
+          <dt>
+            <span
+              jhiTranslate="wattsUpEnergyApp.onsDadosIndicadoresConfiabilidadeRedeBasicaCcalControleCarregamentoLinhasTransmissao.codTipoagregacao"
+              >Cod Tipoagregacao</span
+            >
+          </dt>
+          <dd>
+            <span>{{ onsDadosIndicadoresConfiabilidadeRedeBasicaCcalControleCarregamentoLinhasTransmissaoRef.codTipoagregacao }}</span>
+          </dd>
+          <dt>
+            <span
+              jhiTranslate="wattsUpEnergyApp.onsDadosIndicadoresConfiabilidadeRedeBasicaCcalControleCarregamentoLinhasTransmissao.idPeriodicidade"
+              >Id Periodicidade</span
+            >
+          </dt>
+          <dd>
+            <span>{{ onsDadosIndicadoresConfiabilidadeRedeBasicaCcalControleCarregamentoLinhasTransmissaoRef.idPeriodicidade }}</span>
+          </dd>
+          <dt>
+            <span
+              jhiTranslate="wattsUpEnergyApp.onsDadosIndicadoresConfiabilidadeRedeBasicaCcalControleCarregamentoLinhasTransmissao.nomAgregacao"
+              >Nom Agregacao</span
+            >
+          </dt>
+          <dd>
+            <span>{{ onsDadosIndicadoresConfiabilidadeRedeBasicaCcalControleCarregamentoLinhasTransmissaoRef.nomAgregacao }}</span>
+          </dd>
+          <dt>
+            <span
+              jhiTranslate="wattsUpEnergyApp.onsDadosIndicadoresConfiabilidadeRedeBasicaCcalControleCarregamentoLinhasTransmissao.dinReferencia"
+              >Din Referencia</span
+            >
+          </dt>
+          <dd>
+            <span>{{
+              onsDadosIndicadoresConfiabilidadeRedeBasicaCcalControleCarregamentoLinhasTransmissaoRef.dinReferencia | formatMediumDate
+            }}</span>
+          </dd>
+          <dt>
+            <span
+              jhiTranslate="wattsUpEnergyApp.onsDadosIndicadoresConfiabilidadeRedeBasicaCcalControleCarregamentoLinhasTransmissao.numLinhasoperacao"
+              >Num Linhasoperacao</span
+            >
+          </dt>
+          <dd>
+            <span>{{ onsDadosIndicadoresConfiabilidadeRedeBasicaCcalControleCarregamentoLinhasTransmissaoRef.numLinhasoperacao }}</span>
+          </dd>
+          <dt>
+            <span
+              jhiTranslate="wattsUpEnergyApp.onsDadosIndicadoresConfiabilidadeRedeBasicaCcalControleCarregamentoLinhasTransmissao.numLinhasvioladas"
+              >Num Linhasvioladas</span
+            >
+          </dt>
+          <dd>
+            <span>{{ onsDadosIndicadoresConfiabilidadeRedeBasicaCcalControleCarregamentoLinhasTransmissaoRef.numLinhasvioladas }}</span>
+          </dd>
+          <dt>
+            <span
+              jhiTranslate="wattsUpEnergyApp.onsDadosIndicadoresConfiabilidadeRedeBasicaCcalControleCarregamentoLinhasTransmissao.valCcal"
+              >Val Ccal</span
+            >
+          </dt>
+          <dd>
+            <span>{{ onsDadosIndicadoresConfiabilidadeRedeBasicaCcalControleCarregamentoLinhasTransmissaoRef.valCcal }}</span>
+          </dd>
+        </dl>
+
+        <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+          <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Voltar</span>
+        </button>
+
+        <button
+          type="button"
+          [routerLink]="[
+            '/ons-dados-indicadores-confiabilidade-rede-basica-ccal-controle-carregamento-linhas-transmissao',
+            onsDadosIndicadoresConfiabilidadeRedeBasicaCcalControleCarregamentoLinhasTransmissaoRef.id,
+            'edit',
+          ]"
+          class="btn btn-primary"
+        >
+          <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Editar</span>
+        </button>
+      </div>
+    }
+  </div>
+</div>

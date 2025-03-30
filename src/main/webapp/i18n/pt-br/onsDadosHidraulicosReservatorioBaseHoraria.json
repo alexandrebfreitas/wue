@@ -1,0 +1,32 @@
+{
+  "wattsUpEnergyApp": {
+    "onsDadosHidraulicosReservatorioBaseHoraria": {
+      "home": {
+        "title": "Ons Dados Hidraulicos Reservatorio Base Horarias",
+        "refreshListLabel": "Atualizar lista",
+        "createLabel": "Criar novo Ons Dados Hidraulicos Reservatorio Base Horaria",
+        "createOrEditLabel": "Criar ou editar Ons Dados Hidraulicos Reservatorio Base Horaria",
+        "search": "Pesquisar por Ons Dados Hidraulicos Reservatorio Base Horaria",
+        "notFound": "Nenhum Ons Dados Hidraulicos Reservatorio Base Horaria encontrado"
+      },
+      "created": "Um novo Ons Dados Hidraulicos Reservatorio Base Horaria foi criado com o identificador {{ param }}",
+      "updated": "Um Ons Dados Hidraulicos Reservatorio Base Horaria foi atualizado com o identificador {{ param }}",
+      "deleted": "Um Ons Dados Hidraulicos Reservatorio Base Horaria foi excluído com o identificador {{ param }}",
+      "delete": {
+        "question": "Tem certeza de que deseja excluir Ons Dados Hidraulicos Reservatorio Base Horaria {{ id }}?"
+      },
+      "detail": {
+        "title": "Ons Dados Hidraulicos Reservatorio Base Horaria"
+      },
+      "id": "ID",
+      "valVolumeutil": "Val Volumeutil",
+      "valVazaoafluente": "Val Vazaoafluente",
+      "valVazaodefluente": "Val Vazaodefluente",
+      "valVazaoturbinada": "Val Vazaoturbinada",
+      "valVazaovertida": "Val Vazaovertida",
+      "valVazaooutrasestruturas": "Val Vazaooutrasestruturas",
+      "valVazaotransferida": "Val Vazaotransferida",
+      "valVazaovertidanaoturbinavel": "Val Vazaovertidanaoturbinavel"
+    }
+  }
+}

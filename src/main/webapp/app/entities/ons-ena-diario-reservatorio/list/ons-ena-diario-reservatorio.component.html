@@ -1,0 +1,171 @@
+<div>
+  <h2 id="page-heading" data-cy="OnsEnaDiarioReservatorioHeading">
+    <span jhiTranslate="wattsUpEnergyApp.onsEnaDiarioReservatorio.home.title">Ons Ena Diario Reservatorios</span>
+
+    <div class="d-flex justify-content-end">
+      <button class="btn btn-info me-2" (click)="load()" [disabled]="isLoading">
+        <fa-icon icon="sync" [animation]="isLoading ? 'spin' : undefined"></fa-icon>
+        <span jhiTranslate="wattsUpEnergyApp.onsEnaDiarioReservatorio.home.refreshListLabel">Atualizar lista</span>
+      </button>
+
+      <button
+        id="jh-create-entity"
+        data-cy="entityCreateButton"
+        class="btn btn-primary jh-create-entity create-ons-ena-diario-reservatorio"
+        [routerLink]="['/ons-ena-diario-reservatorio/new']"
+      >
+        <fa-icon icon="plus"></fa-icon>
+        <span class="hidden-sm-down" jhiTranslate="wattsUpEnergyApp.onsEnaDiarioReservatorio.home.createLabel"
+          >Criar novo Ons Ena Diario Reservatorio</span
+        >
+      </button>
+    </div>
+  </h2>
+
+  <jhi-alert-error></jhi-alert-error>
+
+  <jhi-alert></jhi-alert>
+
+  <form name="searchForm" class="row row-cols-sm-auto align-items-center">
+    <div class="col-sm-12">
+      <div class="input-group w-100 mt-3">
+        <label class="visually-hidden" for="currentSearch" jhiTranslate="wattsUpEnergyApp.onsEnaDiarioReservatorio.home.search"
+          >Pesquisar por Ons Ena Diario Reservatorio</label
+        >
+        <input
+          type="text"
+          class="form-control"
+          [(ngModel)]="currentSearch"
+          id="currentSearch"
+          name="currentSearch"
+          placeholder="{{ 'wattsUpEnergyApp.onsEnaDiarioReservatorio.home.search' | translate }}"
+        />
+
+        <button class="btn btn-info" (click)="search(currentSearch)">
+          <fa-icon icon="search"></fa-icon>
+        </button>
+
+        @if (currentSearch) {
+          <button class="btn btn-danger" (click)="search('')">
+            <fa-icon icon="trash-alt"></fa-icon>
+          </button>
+        }
+      </div>
+    </div>
+  </form>
+
+  @if (onsEnaDiarioReservatorios().length === 0) {
+    <div class="alert alert-warning" id="no-result">
+      <span jhiTranslate="wattsUpEnergyApp.onsEnaDiarioReservatorio.home.notFound">Nenhum Ons Ena Diario Reservatorio encontrado</span>
+    </div>
+  } @else {
+    <div class="table-responsive table-entities" id="entities">
+      <table class="table table-striped" aria-describedby="page-heading">
+        <thead>
+          <tr jhiSort [(sortState)]="sortState" (sortChange)="navigateToWithComponentValues($event)">
+            <th scope="col" jhiSortBy="id">
+              <div class="d-flex">
+                <span jhiTranslate="global.field.id">Código</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="enaBrutaResMwmed">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsEnaDiarioReservatorio.enaBrutaResMwmed">Ena Bruta Res Mwmed</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="enaBrutaResPercentualmlt">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsEnaDiarioReservatorio.enaBrutaResPercentualmlt">Ena Bruta Res Percentualmlt</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="enaArmazenavelResMwmed">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsEnaDiarioReservatorio.enaArmazenavelResMwmed">Ena Armazenavel Res Mwmed</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="enaArmazenavelResPercentualmlt">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsEnaDiarioReservatorio.enaArmazenavelResPercentualmlt"
+                  >Ena Armazenavel Res Percentualmlt</span
+                >
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="enaQuedaBruta">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsEnaDiarioReservatorio.enaQuedaBruta">Ena Queda Bruta</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="mltEna">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsEnaDiarioReservatorio.mltEna">Mlt Ena</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (onsEnaDiarioReservatorio of onsEnaDiarioReservatorios(); track trackId(onsEnaDiarioReservatorio)) {
+            <tr data-cy="entityTable">
+              <td>
+                <a [routerLink]="['/ons-ena-diario-reservatorio', onsEnaDiarioReservatorio.id, 'view']">{{
+                  onsEnaDiarioReservatorio.id
+                }}</a>
+              </td>
+              <td>{{ onsEnaDiarioReservatorio.enaBrutaResMwmed }}</td>
+              <td>{{ onsEnaDiarioReservatorio.enaBrutaResPercentualmlt }}</td>
+              <td>{{ onsEnaDiarioReservatorio.enaArmazenavelResMwmed }}</td>
+              <td>{{ onsEnaDiarioReservatorio.enaArmazenavelResPercentualmlt }}</td>
+              <td>{{ onsEnaDiarioReservatorio.enaQuedaBruta }}</td>
+              <td>{{ onsEnaDiarioReservatorio.mltEna }}</td>
+              <td class="text-end">
+                <div class="btn-group">
+                  <a
+                    [routerLink]="['/ons-ena-diario-reservatorio', onsEnaDiarioReservatorio.id, 'view']"
+                    class="btn btn-info btn-sm"
+                    data-cy="entityDetailsButton"
+                  >
+                    <fa-icon icon="eye"></fa-icon>
+                    <span class="d-none d-md-inline" jhiTranslate="entity.action.view">Visualizar</span>
+                  </a>
+
+                  <a
+                    [routerLink]="['/ons-ena-diario-reservatorio', onsEnaDiarioReservatorio.id, 'edit']"
+                    class="btn btn-primary btn-sm"
+                    data-cy="entityEditButton"
+                  >
+                    <fa-icon icon="pencil-alt"></fa-icon>
+                    <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Editar</span>
+                  </a>
+
+                  <button
+                    type="submit"
+                    (click)="delete(onsEnaDiarioReservatorio)"
+                    class="btn btn-danger btn-sm"
+                    data-cy="entityDeleteButton"
+                  >
+                    <fa-icon icon="times"></fa-icon>
+                    <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Excluir</span>
+                  </button>
+                </div>
+              </td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+  }
+</div>

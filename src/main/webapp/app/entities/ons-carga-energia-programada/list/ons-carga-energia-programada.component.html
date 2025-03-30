@@ -1,0 +1,154 @@
+<div>
+  <h2 id="page-heading" data-cy="OnsCargaEnergiaProgramadaHeading">
+    <span jhiTranslate="wattsUpEnergyApp.onsCargaEnergiaProgramada.home.title">Ons Carga Energia Programadas</span>
+
+    <div class="d-flex justify-content-end">
+      <button class="btn btn-info me-2" (click)="load()" [disabled]="isLoading">
+        <fa-icon icon="sync" [animation]="isLoading ? 'spin' : undefined"></fa-icon>
+        <span jhiTranslate="wattsUpEnergyApp.onsCargaEnergiaProgramada.home.refreshListLabel">Atualizar lista</span>
+      </button>
+
+      <button
+        id="jh-create-entity"
+        data-cy="entityCreateButton"
+        class="btn btn-primary jh-create-entity create-ons-carga-energia-programada"
+        [routerLink]="['/ons-carga-energia-programada/new']"
+      >
+        <fa-icon icon="plus"></fa-icon>
+        <span class="hidden-sm-down" jhiTranslate="wattsUpEnergyApp.onsCargaEnergiaProgramada.home.createLabel"
+          >Criar novo Ons Carga Energia Programada</span
+        >
+      </button>
+    </div>
+  </h2>
+
+  <jhi-alert-error></jhi-alert-error>
+
+  <jhi-alert></jhi-alert>
+
+  <form name="searchForm" class="row row-cols-sm-auto align-items-center">
+    <div class="col-sm-12">
+      <div class="input-group w-100 mt-3">
+        <label class="visually-hidden" for="currentSearch" jhiTranslate="wattsUpEnergyApp.onsCargaEnergiaProgramada.home.search"
+          >Pesquisar por Ons Carga Energia Programada</label
+        >
+        <input
+          type="text"
+          class="form-control"
+          [(ngModel)]="currentSearch"
+          id="currentSearch"
+          name="currentSearch"
+          placeholder="{{ 'wattsUpEnergyApp.onsCargaEnergiaProgramada.home.search' | translate }}"
+        />
+
+        <button class="btn btn-info" (click)="search(currentSearch)">
+          <fa-icon icon="search"></fa-icon>
+        </button>
+
+        @if (currentSearch) {
+          <button class="btn btn-danger" (click)="search('')">
+            <fa-icon icon="trash-alt"></fa-icon>
+          </button>
+        }
+      </div>
+    </div>
+  </form>
+
+  @if (onsCargaEnergiaProgramadas().length === 0) {
+    <div class="alert alert-warning" id="no-result">
+      <span jhiTranslate="wattsUpEnergyApp.onsCargaEnergiaProgramada.home.notFound">Nenhum Ons Carga Energia Programada encontrado</span>
+    </div>
+  } @else {
+    <div class="table-responsive table-entities" id="entities">
+      <table class="table table-striped" aria-describedby="page-heading">
+        <thead>
+          <tr jhiSort [(sortState)]="sortState" (sortChange)="navigateToWithComponentValues($event)">
+            <th scope="col" jhiSortBy="id">
+              <div class="d-flex">
+                <span jhiTranslate="global.field.id">Código</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="codAreacarga">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsCargaEnergiaProgramada.codAreacarga">Cod Areacarga</span>
+                @if (!currentSearch) {
+                  <fa-icon class="p-1" icon="sort"></fa-icon>
+                }
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="datReferencia">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsCargaEnergiaProgramada.datReferencia">Dat Referencia</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="dinReferenciautc">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsCargaEnergiaProgramada.dinReferenciautc">Din Referenciautc</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="valCargaglobalprogramada">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsCargaEnergiaProgramada.valCargaglobalprogramada">Val Cargaglobalprogramada</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (onsCargaEnergiaProgramada of onsCargaEnergiaProgramadas(); track trackId(onsCargaEnergiaProgramada)) {
+            <tr data-cy="entityTable">
+              <td>
+                <a [routerLink]="['/ons-carga-energia-programada', onsCargaEnergiaProgramada.id, 'view']">{{
+                  onsCargaEnergiaProgramada.id
+                }}</a>
+              </td>
+              <td>{{ onsCargaEnergiaProgramada.codAreacarga }}</td>
+              <td>{{ onsCargaEnergiaProgramada.datReferencia | formatMediumDate }}</td>
+              <td>{{ onsCargaEnergiaProgramada.dinReferenciautc | formatMediumDate }}</td>
+              <td>{{ onsCargaEnergiaProgramada.valCargaglobalprogramada }}</td>
+              <td class="text-end">
+                <div class="btn-group">
+                  <a
+                    [routerLink]="['/ons-carga-energia-programada', onsCargaEnergiaProgramada.id, 'view']"
+                    class="btn btn-info btn-sm"
+                    data-cy="entityDetailsButton"
+                  >
+                    <fa-icon icon="eye"></fa-icon>
+                    <span class="d-none d-md-inline" jhiTranslate="entity.action.view">Visualizar</span>
+                  </a>
+
+                  <a
+                    [routerLink]="['/ons-carga-energia-programada', onsCargaEnergiaProgramada.id, 'edit']"
+                    class="btn btn-primary btn-sm"
+                    data-cy="entityEditButton"
+                  >
+                    <fa-icon icon="pencil-alt"></fa-icon>
+                    <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Editar</span>
+                  </a>
+
+                  <button
+                    type="submit"
+                    (click)="delete(onsCargaEnergiaProgramada)"
+                    class="btn btn-danger btn-sm"
+                    data-cy="entityDeleteButton"
+                  >
+                    <fa-icon icon="times"></fa-icon>
+                    <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Excluir</span>
+                  </button>
+                </div>
+              </td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+  }
+</div>

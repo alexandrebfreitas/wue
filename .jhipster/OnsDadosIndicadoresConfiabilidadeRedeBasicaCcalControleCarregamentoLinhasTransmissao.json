@@ -1,0 +1,39 @@
+{
+  "annotations": {
+    "changelogDate": "20250330013655"
+  },
+  "applications": "*",
+  "entityTableName": "OnsTable18",
+  "fields": [
+    {
+      "fieldName": "codTipoagregacao",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "idPeriodicidade",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nomAgregacao",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "dinReferencia",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "numLinhasoperacao",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "numLinhasvioladas",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "valCcal",
+      "fieldType": "Double"
+    }
+  ],
+  "name": "OnsDadosIndicadoresConfiabilidadeRedeBasicaCcalControleCarregamentoLinhasTransmissao",
+  "relationships": []
+}

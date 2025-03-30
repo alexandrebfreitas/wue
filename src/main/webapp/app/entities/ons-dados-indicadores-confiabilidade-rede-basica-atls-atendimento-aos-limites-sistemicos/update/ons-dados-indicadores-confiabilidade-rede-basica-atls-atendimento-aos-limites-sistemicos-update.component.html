@@ -1,0 +1,123 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <form name="editForm" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+      <h2
+        id="jhi-ons-dados-indicadores-confiabilidade-rede-basica-atls-atendimento-aos-limites-sistemicos-heading"
+        data-cy="OnsDadosIndicadoresConfiabilidadeRedeBasicaAtlsAtendimentoAosLimitesSistemicosCreateUpdateHeading"
+        jhiTranslate="wattsUpEnergyApp.onsDadosIndicadoresConfiabilidadeRedeBasicaAtlsAtendimentoAosLimitesSistemicos.home.createOrEditLabel"
+      >
+        Criar ou editar Ons Dados Indicadores Confiabilidade Rede Basica Atls Atendimento Aos Limites Sistemicos
+      </h2>
+
+      <div>
+        <jhi-alert-error></jhi-alert-error>
+
+        @if (editForm.controls.id.value !== null) {
+          <div class="mb-3">
+            <label
+              class="form-label"
+              for="field_id"
+              jhiTranslate="wattsUpEnergyApp.onsDadosIndicadoresConfiabilidadeRedeBasicaAtlsAtendimentoAosLimitesSistemicos.id"
+              >ID</label
+            >
+            <input type="number" class="form-control" name="id" id="field_id" data-cy="id" formControlName="id" [readonly]="true" />
+          </div>
+        }
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_nomFluxo"
+            jhiTranslate="wattsUpEnergyApp.onsDadosIndicadoresConfiabilidadeRedeBasicaAtlsAtendimentoAosLimitesSistemicos.nomFluxo"
+            >Nom Fluxo</label
+          >
+          <input type="text" class="form-control" name="nomFluxo" id="field_nomFluxo" data-cy="nomFluxo" formControlName="nomFluxo" />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_idPeriodicidade"
+            jhiTranslate="wattsUpEnergyApp.onsDadosIndicadoresConfiabilidadeRedeBasicaAtlsAtendimentoAosLimitesSistemicos.idPeriodicidade"
+            >Id Periodicidade</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="idPeriodicidade"
+            id="field_idPeriodicidade"
+            data-cy="idPeriodicidade"
+            formControlName="idPeriodicidade"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_dinReferencia"
+            jhiTranslate="wattsUpEnergyApp.onsDadosIndicadoresConfiabilidadeRedeBasicaAtlsAtendimentoAosLimitesSistemicos.dinReferencia"
+            >Din Referencia</label
+          >
+          <div class="input-group">
+            <input
+              id="field_dinReferencia"
+              data-cy="dinReferencia"
+              type="text"
+              class="form-control"
+              name="dinReferencia"
+              ngbDatepicker
+              #dinReferenciaDp="ngbDatepicker"
+              formControlName="dinReferencia"
+            />
+            <button type="button" class="btn btn-secondary" (click)="dinReferenciaDp.toggle()">
+              <fa-icon icon="calendar-alt"></fa-icon>
+            </button>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_valAtls"
+            jhiTranslate="wattsUpEnergyApp.onsDadosIndicadoresConfiabilidadeRedeBasicaAtlsAtendimentoAosLimitesSistemicos.valAtls"
+            >Val Atls</label
+          >
+          <input type="number" class="form-control" name="valAtls" id="field_valAtls" data-cy="valAtls" formControlName="valAtls" />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_numHorasviolacao"
+            jhiTranslate="wattsUpEnergyApp.onsDadosIndicadoresConfiabilidadeRedeBasicaAtlsAtendimentoAosLimitesSistemicos.numHorasviolacao"
+            >Num Horasviolacao</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="numHorasviolacao"
+            id="field_numHorasviolacao"
+            data-cy="numHorasviolacao"
+            formControlName="numHorasviolacao"
+          />
+        </div>
+      </div>
+
+      <div>
+        <button type="button" id="cancel-save" data-cy="entityCreateCancelButton" class="btn btn-secondary" (click)="previousState()">
+          <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancelar</span>
+        </button>
+
+        <button
+          type="submit"
+          id="save-entity"
+          data-cy="entityCreateSaveButton"
+          [disabled]="editForm.invalid || isSaving"
+          class="btn btn-primary"
+        >
+          <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Salvar</span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

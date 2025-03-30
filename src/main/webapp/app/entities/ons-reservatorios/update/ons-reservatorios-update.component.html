@@ -1,0 +1,209 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <form name="editForm" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+      <h2
+        id="jhi-ons-reservatorios-heading"
+        data-cy="OnsReservatoriosCreateUpdateHeading"
+        jhiTranslate="wattsUpEnergyApp.onsReservatorios.home.createOrEditLabel"
+      >
+        Criar ou editar Ons Reservatorios
+      </h2>
+
+      <div>
+        <jhi-alert-error></jhi-alert-error>
+
+        @if (editForm.controls.id.value !== null) {
+          <div class="mb-3">
+            <label class="form-label" for="field_id" jhiTranslate="wattsUpEnergyApp.onsReservatorios.id">ID</label>
+            <input type="number" class="form-control" name="id" id="field_id" data-cy="id" formControlName="id" [readonly]="true" />
+          </div>
+        }
+
+        <div class="mb-3">
+          <label class="form-label" for="field_nomRee" jhiTranslate="wattsUpEnergyApp.onsReservatorios.nomRee">Nom Ree</label>
+          <input type="text" class="form-control" name="nomRee" id="field_nomRee" data-cy="nomRee" formControlName="nomRee" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_datEntrada" jhiTranslate="wattsUpEnergyApp.onsReservatorios.datEntrada">Dat Entrada</label>
+          <div class="input-group">
+            <input
+              id="field_datEntrada"
+              data-cy="datEntrada"
+              type="text"
+              class="form-control"
+              name="datEntrada"
+              ngbDatepicker
+              #datEntradaDp="ngbDatepicker"
+              formControlName="datEntrada"
+            />
+            <button type="button" class="btn btn-secondary" (click)="datEntradaDp.toggle()"><fa-icon icon="calendar-alt"></fa-icon></button>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_valCotamaxima" jhiTranslate="wattsUpEnergyApp.onsReservatorios.valCotamaxima"
+            >Val Cotamaxima</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="valCotamaxima"
+            id="field_valCotamaxima"
+            data-cy="valCotamaxima"
+            formControlName="valCotamaxima"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_valCotaminima" jhiTranslate="wattsUpEnergyApp.onsReservatorios.valCotaminima"
+            >Val Cotaminima</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="valCotaminima"
+            id="field_valCotaminima"
+            data-cy="valCotaminima"
+            formControlName="valCotaminima"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_valVolmax" jhiTranslate="wattsUpEnergyApp.onsReservatorios.valVolmax">Val Volmax</label>
+          <input type="number" class="form-control" name="valVolmax" id="field_valVolmax" data-cy="valVolmax" formControlName="valVolmax" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_valVolmin" jhiTranslate="wattsUpEnergyApp.onsReservatorios.valVolmin">Val Volmin</label>
+          <input type="number" class="form-control" name="valVolmin" id="field_valVolmin" data-cy="valVolmin" formControlName="valVolmin" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_valVolutiltot" jhiTranslate="wattsUpEnergyApp.onsReservatorios.valVolutiltot"
+            >Val Volutiltot</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="valVolutiltot"
+            id="field_valVolutiltot"
+            data-cy="valVolutiltot"
+            formControlName="valVolutiltot"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_valProdutibilidadeespecifica"
+            jhiTranslate="wattsUpEnergyApp.onsReservatorios.valProdutibilidadeespecifica"
+            >Val Produtibilidadeespecifica</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="valProdutibilidadeespecifica"
+            id="field_valProdutibilidadeespecifica"
+            data-cy="valProdutibilidadeespecifica"
+            formControlName="valProdutibilidadeespecifica"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_valProdutividade65volutil"
+            jhiTranslate="wattsUpEnergyApp.onsReservatorios.valProdutividade65volutil"
+            >Val Produtividade 65 Volutil</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="valProdutividade65volutil"
+            id="field_valProdutividade65volutil"
+            data-cy="valProdutividade65volutil"
+            formControlName="valProdutividade65volutil"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_valTipoperda" jhiTranslate="wattsUpEnergyApp.onsReservatorios.valTipoperda"
+            >Val Tipoperda</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="valTipoperda"
+            id="field_valTipoperda"
+            data-cy="valTipoperda"
+            formControlName="valTipoperda"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_valPerda" jhiTranslate="wattsUpEnergyApp.onsReservatorios.valPerda">Val Perda</label>
+          <input type="number" class="form-control" name="valPerda" id="field_valPerda" data-cy="valPerda" formControlName="valPerda" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_valLatitude" jhiTranslate="wattsUpEnergyApp.onsReservatorios.valLatitude"
+            >Val Latitude</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="valLatitude"
+            id="field_valLatitude"
+            data-cy="valLatitude"
+            formControlName="valLatitude"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_valLongitude" jhiTranslate="wattsUpEnergyApp.onsReservatorios.valLongitude"
+            >Val Longitude</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="valLongitude"
+            id="field_valLongitude"
+            data-cy="valLongitude"
+            formControlName="valLongitude"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_idReservatorio" jhiTranslate="wattsUpEnergyApp.onsReservatorios.idReservatorio"
+            >Id Reservatorio</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="idReservatorio"
+            id="field_idReservatorio"
+            data-cy="idReservatorio"
+            formControlName="idReservatorio"
+          />
+        </div>
+      </div>
+
+      <div>
+        <button type="button" id="cancel-save" data-cy="entityCreateCancelButton" class="btn btn-secondary" (click)="previousState()">
+          <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancelar</span>
+        </button>
+
+        <button
+          type="submit"
+          id="save-entity"
+          data-cy="entityCreateSaveButton"
+          [disabled]="editForm.invalid || isSaving"
+          class="btn btn-primary"
+        >
+          <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Salvar</span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

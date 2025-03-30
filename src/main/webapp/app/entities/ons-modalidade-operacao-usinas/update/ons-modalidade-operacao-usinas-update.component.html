@@ -1,0 +1,138 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <form name="editForm" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+      <h2
+        id="jhi-ons-modalidade-operacao-usinas-heading"
+        data-cy="OnsModalidadeOperacaoUsinasCreateUpdateHeading"
+        jhiTranslate="wattsUpEnergyApp.onsModalidadeOperacaoUsinas.home.createOrEditLabel"
+      >
+        Criar ou editar Ons Modalidade Operacao Usinas
+      </h2>
+
+      <div>
+        <jhi-alert-error></jhi-alert-error>
+
+        @if (editForm.controls.id.value !== null) {
+          <div class="mb-3">
+            <label class="form-label" for="field_id" jhiTranslate="wattsUpEnergyApp.onsModalidadeOperacaoUsinas.id">ID</label>
+            <input type="number" class="form-control" name="id" id="field_id" data-cy="id" formControlName="id" [readonly]="true" />
+          </div>
+        }
+
+        <div class="mb-3">
+          <label class="form-label" for="field_nomUsina" jhiTranslate="wattsUpEnergyApp.onsModalidadeOperacaoUsinas.nomUsina"
+            >Nom Usina</label
+          >
+          <input type="text" class="form-control" name="nomUsina" id="field_nomUsina" data-cy="nomUsina" formControlName="nomUsina" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_ceg" jhiTranslate="wattsUpEnergyApp.onsModalidadeOperacaoUsinas.ceg">Ceg</label>
+          <input type="text" class="form-control" name="ceg" id="field_ceg" data-cy="ceg" formControlName="ceg" />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_nomModalidadeoperacao"
+            jhiTranslate="wattsUpEnergyApp.onsModalidadeOperacaoUsinas.nomModalidadeoperacao"
+            >Nom Modalidadeoperacao</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="nomModalidadeoperacao"
+            id="field_nomModalidadeoperacao"
+            data-cy="nomModalidadeoperacao"
+            formControlName="nomModalidadeoperacao"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_valPotenciaautorizada"
+            jhiTranslate="wattsUpEnergyApp.onsModalidadeOperacaoUsinas.valPotenciaautorizada"
+            >Val Potenciaautorizada</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="valPotenciaautorizada"
+            id="field_valPotenciaautorizada"
+            data-cy="valPotenciaautorizada"
+            formControlName="valPotenciaautorizada"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_sglCentrooperacao"
+            jhiTranslate="wattsUpEnergyApp.onsModalidadeOperacaoUsinas.sglCentrooperacao"
+            >Sgl Centrooperacao</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="sglCentrooperacao"
+            id="field_sglCentrooperacao"
+            data-cy="sglCentrooperacao"
+            formControlName="sglCentrooperacao"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_nomPontoconexao" jhiTranslate="wattsUpEnergyApp.onsModalidadeOperacaoUsinas.nomPontoconexao"
+            >Nom Pontoconexao</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="nomPontoconexao"
+            id="field_nomPontoconexao"
+            data-cy="nomPontoconexao"
+            formControlName="nomPontoconexao"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_idEstado" jhiTranslate="wattsUpEnergyApp.onsModalidadeOperacaoUsinas.idEstado"
+            >Id Estado</label
+          >
+          <input type="text" class="form-control" name="idEstado" id="field_idEstado" data-cy="idEstado" formControlName="idEstado" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_nomEstado" jhiTranslate="wattsUpEnergyApp.onsModalidadeOperacaoUsinas.nomEstado"
+            >Nom Estado</label
+          >
+          <input type="text" class="form-control" name="nomEstado" id="field_nomEstado" data-cy="nomEstado" formControlName="nomEstado" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_stsAneel" jhiTranslate="wattsUpEnergyApp.onsModalidadeOperacaoUsinas.stsAneel"
+            >Sts Aneel</label
+          >
+          <input type="text" class="form-control" name="stsAneel" id="field_stsAneel" data-cy="stsAneel" formControlName="stsAneel" />
+        </div>
+      </div>
+
+      <div>
+        <button type="button" id="cancel-save" data-cy="entityCreateCancelButton" class="btn btn-secondary" (click)="previousState()">
+          <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancelar</span>
+        </button>
+
+        <button
+          type="submit"
+          id="save-entity"
+          data-cy="entityCreateSaveButton"
+          [disabled]="editForm.invalid || isSaving"
+          class="btn btn-primary"
+        >
+          <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Salvar</span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

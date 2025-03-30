@@ -1,0 +1,324 @@
+<div>
+  <h2 id="page-heading" data-cy="OnsFatorCapacidadeGeracaoEolicaESolarHeading">
+    <span jhiTranslate="wattsUpEnergyApp.onsFatorCapacidadeGeracaoEolicaESolar.home.title"
+      >Ons Fator Capacidade Geracao Eolica E Solars</span
+    >
+
+    <div class="d-flex justify-content-end">
+      <button class="btn btn-info me-2" (click)="load()" [disabled]="isLoading">
+        <fa-icon icon="sync" [animation]="isLoading ? 'spin' : undefined"></fa-icon>
+        <span jhiTranslate="wattsUpEnergyApp.onsFatorCapacidadeGeracaoEolicaESolar.home.refreshListLabel">Atualizar lista</span>
+      </button>
+
+      <button
+        id="jh-create-entity"
+        data-cy="entityCreateButton"
+        class="btn btn-primary jh-create-entity create-ons-fator-capacidade-geracao-eolica-e-solar"
+        [routerLink]="['/ons-fator-capacidade-geracao-eolica-e-solar/new']"
+      >
+        <fa-icon icon="plus"></fa-icon>
+        <span class="hidden-sm-down" jhiTranslate="wattsUpEnergyApp.onsFatorCapacidadeGeracaoEolicaESolar.home.createLabel"
+          >Criar novo Ons Fator Capacidade Geracao Eolica E Solar</span
+        >
+      </button>
+    </div>
+  </h2>
+
+  <jhi-alert-error></jhi-alert-error>
+
+  <jhi-alert></jhi-alert>
+
+  <form name="searchForm" class="row row-cols-sm-auto align-items-center">
+    <div class="col-sm-12">
+      <div class="input-group w-100 mt-3">
+        <label class="visually-hidden" for="currentSearch" jhiTranslate="wattsUpEnergyApp.onsFatorCapacidadeGeracaoEolicaESolar.home.search"
+          >Pesquisar por Ons Fator Capacidade Geracao Eolica E Solar</label
+        >
+        <input
+          type="text"
+          class="form-control"
+          [(ngModel)]="currentSearch"
+          id="currentSearch"
+          name="currentSearch"
+          placeholder="{{ 'wattsUpEnergyApp.onsFatorCapacidadeGeracaoEolicaESolar.home.search' | translate }}"
+        />
+
+        <button class="btn btn-info" (click)="search(currentSearch)">
+          <fa-icon icon="search"></fa-icon>
+        </button>
+
+        @if (currentSearch) {
+          <button class="btn btn-danger" (click)="search('')">
+            <fa-icon icon="trash-alt"></fa-icon>
+          </button>
+        }
+      </div>
+    </div>
+  </form>
+
+  @if (onsFatorCapacidadeGeracaoEolicaESolars().length === 0) {
+    <div class="alert alert-warning" id="no-result">
+      <span jhiTranslate="wattsUpEnergyApp.onsFatorCapacidadeGeracaoEolicaESolar.home.notFound"
+        >Nenhum Ons Fator Capacidade Geracao Eolica E Solar encontrado</span
+      >
+    </div>
+  } @else {
+    <div class="table-responsive table-entities" id="entities">
+      <table class="table table-striped" aria-describedby="page-heading">
+        <thead>
+          <tr jhiSort [(sortState)]="sortState" (sortChange)="navigateToWithComponentValues($event)">
+            <th scope="col" jhiSortBy="id">
+              <div class="d-flex">
+                <span jhiTranslate="global.field.id">Código</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="idSubsistema">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsFatorCapacidadeGeracaoEolicaESolar.idSubsistema">Id Subsistema</span>
+                @if (!currentSearch) {
+                  <fa-icon class="p-1" icon="sort"></fa-icon>
+                }
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="nomSubsistema">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsFatorCapacidadeGeracaoEolicaESolar.nomSubsistema">Nom Subsistema</span>
+                @if (!currentSearch) {
+                  <fa-icon class="p-1" icon="sort"></fa-icon>
+                }
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="idEstado">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsFatorCapacidadeGeracaoEolicaESolar.idEstado">Id Estado</span>
+                @if (!currentSearch) {
+                  <fa-icon class="p-1" icon="sort"></fa-icon>
+                }
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="nomEstado">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsFatorCapacidadeGeracaoEolicaESolar.nomEstado">Nom Estado</span>
+                @if (!currentSearch) {
+                  <fa-icon class="p-1" icon="sort"></fa-icon>
+                }
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="codPontoconexao">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsFatorCapacidadeGeracaoEolicaESolar.codPontoconexao">Cod Pontoconexao</span>
+                @if (!currentSearch) {
+                  <fa-icon class="p-1" icon="sort"></fa-icon>
+                }
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="nomPontoconexao">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsFatorCapacidadeGeracaoEolicaESolar.nomPontoconexao">Nom Pontoconexao</span>
+                @if (!currentSearch) {
+                  <fa-icon class="p-1" icon="sort"></fa-icon>
+                }
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="nomLocalizacao">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsFatorCapacidadeGeracaoEolicaESolar.nomLocalizacao">Nom Localizacao</span>
+                @if (!currentSearch) {
+                  <fa-icon class="p-1" icon="sort"></fa-icon>
+                }
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="valLatitudesecoletora">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsFatorCapacidadeGeracaoEolicaESolar.valLatitudesecoletora"
+                  >Val Latitudesecoletora</span
+                >
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="valLongitudesecoletora">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsFatorCapacidadeGeracaoEolicaESolar.valLongitudesecoletora"
+                  >Val Longitudesecoletora</span
+                >
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="valLatitudepontoconexao">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsFatorCapacidadeGeracaoEolicaESolar.valLatitudepontoconexao"
+                  >Val Latitudepontoconexao</span
+                >
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="valLongitudepontoconexao">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsFatorCapacidadeGeracaoEolicaESolar.valLongitudepontoconexao"
+                  >Val Longitudepontoconexao</span
+                >
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="nomModalidadeoperacao">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsFatorCapacidadeGeracaoEolicaESolar.nomModalidadeoperacao"
+                  >Nom Modalidadeoperacao</span
+                >
+                @if (!currentSearch) {
+                  <fa-icon class="p-1" icon="sort"></fa-icon>
+                }
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="nomTipousina">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsFatorCapacidadeGeracaoEolicaESolar.nomTipousina">Nom Tipousina</span>
+                @if (!currentSearch) {
+                  <fa-icon class="p-1" icon="sort"></fa-icon>
+                }
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="nomUsinaConjunto">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsFatorCapacidadeGeracaoEolicaESolar.nomUsinaConjunto">Nom Usina Conjunto</span>
+                @if (!currentSearch) {
+                  <fa-icon class="p-1" icon="sort"></fa-icon>
+                }
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="dinInstante">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsFatorCapacidadeGeracaoEolicaESolar.dinInstante">Din Instante</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="idOns">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsFatorCapacidadeGeracaoEolicaESolar.idOns">Id Ons</span>
+                @if (!currentSearch) {
+                  <fa-icon class="p-1" icon="sort"></fa-icon>
+                }
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="ceg">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsFatorCapacidadeGeracaoEolicaESolar.ceg">Ceg</span>
+                @if (!currentSearch) {
+                  <fa-icon class="p-1" icon="sort"></fa-icon>
+                }
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="valGeracaoprogramada">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsFatorCapacidadeGeracaoEolicaESolar.valGeracaoprogramada"
+                  >Val Geracaoprogramada</span
+                >
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="valGeracaoverificada">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsFatorCapacidadeGeracaoEolicaESolar.valGeracaoverificada"
+                  >Val Geracaoverificada</span
+                >
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="valCapacidadeinstalada">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsFatorCapacidadeGeracaoEolicaESolar.valCapacidadeinstalada"
+                  >Val Capacidadeinstalada</span
+                >
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="valFatorcapacidade">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsFatorCapacidadeGeracaoEolicaESolar.valFatorcapacidade">Val Fatorcapacidade</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (
+            onsFatorCapacidadeGeracaoEolicaESolar of onsFatorCapacidadeGeracaoEolicaESolars();
+            track trackId(onsFatorCapacidadeGeracaoEolicaESolar)
+          ) {
+            <tr data-cy="entityTable">
+              <td>
+                <a [routerLink]="['/ons-fator-capacidade-geracao-eolica-e-solar', onsFatorCapacidadeGeracaoEolicaESolar.id, 'view']">{{
+                  onsFatorCapacidadeGeracaoEolicaESolar.id
+                }}</a>
+              </td>
+              <td>{{ onsFatorCapacidadeGeracaoEolicaESolar.idSubsistema }}</td>
+              <td>{{ onsFatorCapacidadeGeracaoEolicaESolar.nomSubsistema }}</td>
+              <td>{{ onsFatorCapacidadeGeracaoEolicaESolar.idEstado }}</td>
+              <td>{{ onsFatorCapacidadeGeracaoEolicaESolar.nomEstado }}</td>
+              <td>{{ onsFatorCapacidadeGeracaoEolicaESolar.codPontoconexao }}</td>
+              <td>{{ onsFatorCapacidadeGeracaoEolicaESolar.nomPontoconexao }}</td>
+              <td>{{ onsFatorCapacidadeGeracaoEolicaESolar.nomLocalizacao }}</td>
+              <td>{{ onsFatorCapacidadeGeracaoEolicaESolar.valLatitudesecoletora }}</td>
+              <td>{{ onsFatorCapacidadeGeracaoEolicaESolar.valLongitudesecoletora }}</td>
+              <td>{{ onsFatorCapacidadeGeracaoEolicaESolar.valLatitudepontoconexao }}</td>
+              <td>{{ onsFatorCapacidadeGeracaoEolicaESolar.valLongitudepontoconexao }}</td>
+              <td>{{ onsFatorCapacidadeGeracaoEolicaESolar.nomModalidadeoperacao }}</td>
+              <td>{{ onsFatorCapacidadeGeracaoEolicaESolar.nomTipousina }}</td>
+              <td>{{ onsFatorCapacidadeGeracaoEolicaESolar.nomUsinaConjunto }}</td>
+              <td>{{ onsFatorCapacidadeGeracaoEolicaESolar.dinInstante | formatMediumDate }}</td>
+              <td>{{ onsFatorCapacidadeGeracaoEolicaESolar.idOns }}</td>
+              <td>{{ onsFatorCapacidadeGeracaoEolicaESolar.ceg }}</td>
+              <td>{{ onsFatorCapacidadeGeracaoEolicaESolar.valGeracaoprogramada }}</td>
+              <td>{{ onsFatorCapacidadeGeracaoEolicaESolar.valGeracaoverificada }}</td>
+              <td>{{ onsFatorCapacidadeGeracaoEolicaESolar.valCapacidadeinstalada }}</td>
+              <td>{{ onsFatorCapacidadeGeracaoEolicaESolar.valFatorcapacidade }}</td>
+              <td class="text-end">
+                <div class="btn-group">
+                  <a
+                    [routerLink]="['/ons-fator-capacidade-geracao-eolica-e-solar', onsFatorCapacidadeGeracaoEolicaESolar.id, 'view']"
+                    class="btn btn-info btn-sm"
+                    data-cy="entityDetailsButton"
+                  >
+                    <fa-icon icon="eye"></fa-icon>
+                    <span class="d-none d-md-inline" jhiTranslate="entity.action.view">Visualizar</span>
+                  </a>
+
+                  <a
+                    [routerLink]="['/ons-fator-capacidade-geracao-eolica-e-solar', onsFatorCapacidadeGeracaoEolicaESolar.id, 'edit']"
+                    class="btn btn-primary btn-sm"
+                    data-cy="entityEditButton"
+                  >
+                    <fa-icon icon="pencil-alt"></fa-icon>
+                    <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Editar</span>
+                  </a>
+
+                  <button
+                    type="submit"
+                    (click)="delete(onsFatorCapacidadeGeracaoEolicaESolar)"
+                    class="btn btn-danger btn-sm"
+                    data-cy="entityDeleteButton"
+                  >
+                    <fa-icon icon="times"></fa-icon>
+                    <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Excluir</span>
+                  </button>
+                </div>
+              </td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+  }
+</div>

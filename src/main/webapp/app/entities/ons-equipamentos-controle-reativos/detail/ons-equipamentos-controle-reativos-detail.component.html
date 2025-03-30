@@ -1,0 +1,104 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    @if (onsEquipamentosControleReativos(); as onsEquipamentosControleReativosRef) {
+      <div>
+        <h2 data-cy="onsEquipamentosControleReativosDetailsHeading">
+          <span jhiTranslate="wattsUpEnergyApp.onsEquipamentosControleReativos.detail.title">Ons Equipamentos Controle Reativos</span>
+        </h2>
+
+        <hr />
+
+        <jhi-alert-error></jhi-alert-error>
+
+        <jhi-alert></jhi-alert>
+
+        <dl class="row-md jh-entity-details">
+          <dt><span jhiTranslate="global.field.id">Código</span></dt>
+          <dd>
+            <span>{{ onsEquipamentosControleReativosRef.id }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsEquipamentosControleReativos.idSubsistema">Id Subsistema</span></dt>
+          <dd>
+            <span>{{ onsEquipamentosControleReativosRef.idSubsistema }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsEquipamentosControleReativos.nomSubsistema">Nom Subsistema</span></dt>
+          <dd>
+            <span>{{ onsEquipamentosControleReativosRef.nomSubsistema }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsEquipamentosControleReativos.idEstado">Id Estado</span></dt>
+          <dd>
+            <span>{{ onsEquipamentosControleReativosRef.idEstado }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsEquipamentosControleReativos.nomEstado">Nom Estado</span></dt>
+          <dd>
+            <span>{{ onsEquipamentosControleReativosRef.nomEstado }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsEquipamentosControleReativos.nomSubestacao">Nom Subestacao</span></dt>
+          <dd>
+            <span>{{ onsEquipamentosControleReativosRef.nomSubestacao }}</span>
+          </dd>
+          <dt>
+            <span jhiTranslate="wattsUpEnergyApp.onsEquipamentosControleReativos.nomAgenteProprietario">Nom Agente Proprietario</span>
+          </dt>
+          <dd>
+            <span>{{ onsEquipamentosControleReativosRef.nomAgenteProprietario }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsEquipamentosControleReativos.nomTipoderede">Nom Tipoderede</span></dt>
+          <dd>
+            <span>{{ onsEquipamentosControleReativosRef.nomTipoderede }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsEquipamentosControleReativos.nomTipoequipamento">Nom Tipoequipamento</span></dt>
+          <dd>
+            <span>{{ onsEquipamentosControleReativosRef.nomTipoequipamento }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsEquipamentosControleReativos.nomEquipamento">Nom Equipamento</span></dt>
+          <dd>
+            <span>{{ onsEquipamentosControleReativosRef.nomEquipamento }}</span>
+          </dd>
+          <dt>
+            <span jhiTranslate="wattsUpEnergyApp.onsEquipamentosControleReativos.valPotreativanominalMvar">Val Potreativanominal Mvar</span>
+          </dt>
+          <dd>
+            <span>{{ onsEquipamentosControleReativosRef.valPotreativanominalMvar }}</span>
+          </dd>
+          <dt>
+            <span jhiTranslate="wattsUpEnergyApp.onsEquipamentosControleReativos.valLimiteinferiorMvar">Val Limiteinferior Mvar</span>
+          </dt>
+          <dd>
+            <span>{{ onsEquipamentosControleReativosRef.valLimiteinferiorMvar }}</span>
+          </dd>
+          <dt>
+            <span jhiTranslate="wattsUpEnergyApp.onsEquipamentosControleReativos.valLimitesuperiorMvar">Val Limitesuperior Mvar</span>
+          </dt>
+          <dd>
+            <span>{{ onsEquipamentosControleReativosRef.valLimitesuperiorMvar }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsEquipamentosControleReativos.datEntradaoperacao">Dat Entradaoperacao</span></dt>
+          <dd>
+            <span>{{ onsEquipamentosControleReativosRef.datEntradaoperacao | formatMediumDate }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsEquipamentosControleReativos.datDesativacao">Dat Desativacao</span></dt>
+          <dd>
+            <span>{{ onsEquipamentosControleReativosRef.datDesativacao | formatMediumDate }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsEquipamentosControleReativos.codEquipamento">Cod Equipamento</span></dt>
+          <dd>
+            <span>{{ onsEquipamentosControleReativosRef.codEquipamento }}</span>
+          </dd>
+        </dl>
+
+        <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+          <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Voltar</span>
+        </button>
+
+        <button
+          type="button"
+          [routerLink]="['/ons-equipamentos-controle-reativos', onsEquipamentosControleReativosRef.id, 'edit']"
+          class="btn btn-primary"
+        >
+          <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Editar</span>
+        </button>
+      </div>
+    }
+  </div>
+</div>

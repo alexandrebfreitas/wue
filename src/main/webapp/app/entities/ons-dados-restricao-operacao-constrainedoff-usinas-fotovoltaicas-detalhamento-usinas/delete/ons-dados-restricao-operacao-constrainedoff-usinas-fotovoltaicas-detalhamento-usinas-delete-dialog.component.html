@@ -1,0 +1,40 @@
+@if (onsDadosRestricaoOperacaoConstrainedoffUsinasFotovoltaicasDetalhamentoUsinas) {
+  <form name="deleteForm" (ngSubmit)="confirmDelete(onsDadosRestricaoOperacaoConstrainedoffUsinasFotovoltaicasDetalhamentoUsinas.id!)">
+    <div class="modal-header">
+      <h4
+        class="modal-title"
+        data-cy="onsDadosRestricaoOperacaoConstrainedoffUsinasFotovoltaicasDetalhamentoUsinasDeleteDialogHeading"
+        jhiTranslate="entity.delete.title"
+      >
+        Confirme a exclusão
+      </h4>
+    </div>
+
+    <div class="modal-body">
+      <jhi-alert-error></jhi-alert-error>
+      <p
+        id="jhi-delete-onsDadosRestricaoOperacaoConstrainedoffUsinasFotovoltaicasDetalhamentoUsinas-heading"
+        jhiTranslate="wattsUpEnergyApp.onsDadosRestricaoOperacaoConstrainedoffUsinasFotovoltaicasDetalhamentoUsinas.delete.question"
+        [translateValues]="{ id: onsDadosRestricaoOperacaoConstrainedoffUsinasFotovoltaicasDetalhamentoUsinas.id }"
+      >
+        Tem certeza de que deseja excluir Ons Dados Restricao Operacao Constrainedoff Usinas Fotovoltaicas Detalhamento Usinas
+        {{ onsDadosRestricaoOperacaoConstrainedoffUsinasFotovoltaicasDetalhamentoUsinas.id }}?
+      </p>
+    </div>
+
+    <div class="modal-footer">
+      <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="cancel()">
+        <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancelar</span>
+      </button>
+
+      <button
+        id="jhi-confirm-delete-onsDadosRestricaoOperacaoConstrainedoffUsinasFotovoltaicasDetalhamentoUsinas"
+        data-cy="entityConfirmDeleteButton"
+        type="submit"
+        class="btn btn-danger"
+      >
+        <fa-icon icon="times"></fa-icon>&nbsp;<span jhiTranslate="entity.action.delete">Excluir</span>
+      </button>
+    </div>
+  </form>
+}

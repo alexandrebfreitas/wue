@@ -1,0 +1,39 @@
+{
+  "annotations": {
+    "changelogDate": "20250330013710"
+  },
+  "applications": "*",
+  "entityTableName": "OnsTable33",
+  "fields": [
+    {
+      "fieldName": "dscAgregacao",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "codCaracteristica",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "dscCaracteristica",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "idPeriodicidade",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "dinReferencia",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "valDreq",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "valFreq",
+      "fieldType": "Double"
+    }
+  ],
+  "name": "OnsIndicadoresConfiabilidadeRedeBasicaDreqFreq",
+  "relationships": []
+}

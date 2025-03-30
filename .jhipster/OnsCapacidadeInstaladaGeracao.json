@@ -1,0 +1,79 @@
+{
+  "annotations": {
+    "changelogDate": "20250330013739"
+  },
+  "applications": "*",
+  "entityTableName": "OnsTable62",
+  "fields": [
+    {
+      "fieldName": "idSubsistema",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nomSubsistema",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "idEstado",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nomEstado",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nomModalidadeoperacao",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nomAgenteproprietario",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nomTipousina",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nomUsina",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "ceg",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nomUnidadegeradora",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "codEquipamento",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "numUnidadegeradora",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nomCombustivel",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "datEntradateste",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "datEntradaoperacao",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "datDesativacao",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "valPotenciaefetiva",
+      "fieldType": "Double"
+    }
+  ],
+  "name": "OnsCapacidadeInstaladaGeracao",
+  "relationships": []
+}

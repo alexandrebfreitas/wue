@@ -1,0 +1,48 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    @if (onsCargaEnergiaDiaria(); as onsCargaEnergiaDiariaRef) {
+      <div>
+        <h2 data-cy="onsCargaEnergiaDiariaDetailsHeading">
+          <span jhiTranslate="wattsUpEnergyApp.onsCargaEnergiaDiaria.detail.title">Ons Carga Energia Diaria</span>
+        </h2>
+
+        <hr />
+
+        <jhi-alert-error></jhi-alert-error>
+
+        <jhi-alert></jhi-alert>
+
+        <dl class="row-md jh-entity-details">
+          <dt><span jhiTranslate="global.field.id">Código</span></dt>
+          <dd>
+            <span>{{ onsCargaEnergiaDiariaRef.id }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsCargaEnergiaDiaria.idSubsistema">Id Subsistema</span></dt>
+          <dd>
+            <span>{{ onsCargaEnergiaDiariaRef.idSubsistema }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsCargaEnergiaDiaria.nomSubsistema">Nom Subsistema</span></dt>
+          <dd>
+            <span>{{ onsCargaEnergiaDiariaRef.nomSubsistema }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsCargaEnergiaDiaria.dinInstante">Din Instante</span></dt>
+          <dd>
+            <span>{{ onsCargaEnergiaDiariaRef.dinInstante | formatMediumDate }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsCargaEnergiaDiaria.valCargaenergiamwmed">Val Cargaenergiamwmed</span></dt>
+          <dd>
+            <span>{{ onsCargaEnergiaDiariaRef.valCargaenergiamwmed }}</span>
+          </dd>
+        </dl>
+
+        <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+          <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Voltar</span>
+        </button>
+
+        <button type="button" [routerLink]="['/ons-carga-energia-diaria', onsCargaEnergiaDiariaRef.id, 'edit']" class="btn btn-primary">
+          <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Editar</span>
+        </button>
+      </div>
+    }
+  </div>
+</div>

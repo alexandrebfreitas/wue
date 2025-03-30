@@ -1,0 +1,39 @@
+{
+  "annotations": {
+    "changelogDate": "20250330013707"
+  },
+  "applications": "*",
+  "entityTableName": "OnsTable30",
+  "fields": [
+    {
+      "fieldName": "idSubsistema",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nomSubsistema",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "dinInstante",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "valCmomediasemanal",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "valCmoleve",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "valCmomedia",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "valCmopesada",
+      "fieldType": "Double"
+    }
+  ],
+  "name": "OnsCmoSemanal",
+  "relationships": []
+}

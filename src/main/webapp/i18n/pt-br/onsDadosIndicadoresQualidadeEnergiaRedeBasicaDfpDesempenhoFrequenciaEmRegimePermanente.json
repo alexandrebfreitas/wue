@@ -1,0 +1,34 @@
+{
+  "wattsUpEnergyApp": {
+    "onsDadosIndicadoresQualidadeEnergiaRedeBasicaDfpDesempenhoFrequenciaEmRegimePermanente": {
+      "home": {
+        "title": "Ons Dados Indicadores Qualidade Energia Rede Basica Dfp Desempenho Frequencia Em Regime Permanentes",
+        "refreshListLabel": "Atualizar lista",
+        "createLabel": "Criar novo Ons Dados Indicadores Qualidade Energia Rede Basica Dfp Desempenho Frequencia Em Regime Permanente",
+        "createOrEditLabel": "Criar ou editar Ons Dados Indicadores Qualidade Energia Rede Basica Dfp Desempenho Frequencia Em Regime Permanente",
+        "search": "Pesquisar por Ons Dados Indicadores Qualidade Energia Rede Basica Dfp Desempenho Frequencia Em Regime Permanente",
+        "notFound": "Nenhum Ons Dados Indicadores Qualidade Energia Rede Basica Dfp Desempenho Frequencia Em Regime Permanente encontrado"
+      },
+      "created": "Um novo Ons Dados Indicadores Qualidade Energia Rede Basica Dfp Desempenho Frequencia Em Regime Permanente foi criado com o identificador {{ param }}",
+      "updated": "Um Ons Dados Indicadores Qualidade Energia Rede Basica Dfp Desempenho Frequencia Em Regime Permanente foi atualizado com o identificador {{ param }}",
+      "deleted": "Um Ons Dados Indicadores Qualidade Energia Rede Basica Dfp Desempenho Frequencia Em Regime Permanente foi excluído com o identificador {{ param }}",
+      "delete": {
+        "question": "Tem certeza de que deseja excluir Ons Dados Indicadores Qualidade Energia Rede Basica Dfp Desempenho Frequencia Em Regime Permanente {{ id }}?"
+      },
+      "detail": {
+        "title": "Ons Dados Indicadores Qualidade Energia Rede Basica Dfp Desempenho Frequencia Em Regime Permanente"
+      },
+      "id": "ID",
+      "idPeriodicidade": "Id Periodicidade",
+      "dinReferencia": "Din Referencia",
+      "numDesvioPermSobre": "Num Desvio Perm Sobre",
+      "numDesvioPermSub": "Num Desvio Perm Sub",
+      "numDesvioDistSobre": "Num Desvio Dist Sobre",
+      "numDesvioDistSub": "Num Desvio Dist Sub",
+      "numMinutos": "Num Minutos",
+      "numVioladodis": "Num Violadodis",
+      "numVioladoperm": "Num Violadoperm",
+      "valDfp": "Val Dfp"
+    }
+  }
+}

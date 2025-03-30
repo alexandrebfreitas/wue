@@ -1,0 +1,30 @@
+{
+  "wattsUpEnergyApp": {
+    "onsDadosValoresPrevisaoVersusProgramadoEolicasESolares": {
+      "home": {
+        "title": "Ons Dados Valores Previsao Versus Programado Eolicas E Solares",
+        "refreshListLabel": "Atualizar lista",
+        "createLabel": "Criar novo Ons Dados Valores Previsao Versus Programado Eolicas E Solares",
+        "createOrEditLabel": "Criar ou editar Ons Dados Valores Previsao Versus Programado Eolicas E Solares",
+        "search": "Pesquisar por Ons Dados Valores Previsao Versus Programado Eolicas E Solares",
+        "notFound": "Nenhum Ons Dados Valores Previsao Versus Programado Eolicas E Solares encontrado"
+      },
+      "created": "Um novo Ons Dados Valores Previsao Versus Programado Eolicas E Solares foi criado com o identificador {{ param }}",
+      "updated": "Um Ons Dados Valores Previsao Versus Programado Eolicas E Solares foi atualizado com o identificador {{ param }}",
+      "deleted": "Um Ons Dados Valores Previsao Versus Programado Eolicas E Solares foi excluído com o identificador {{ param }}",
+      "delete": {
+        "question": "Tem certeza de que deseja excluir Ons Dados Valores Previsao Versus Programado Eolicas E Solares {{ id }}?"
+      },
+      "detail": {
+        "title": "Ons Dados Valores Previsao Versus Programado Eolicas E Solares"
+      },
+      "id": "ID",
+      "datProgramacao": "Dat Programacao",
+      "numPatamar": "Num Patamar",
+      "codUsinapdp": "Cod Usinapdp",
+      "nomUsinapdp": "Nom Usinapdp",
+      "valPrevisao": "Val Previsao",
+      "valProgramado": "Val Programado"
+    }
+  }
+}

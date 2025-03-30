@@ -1,0 +1,31 @@
+{
+  "wattsUpEnergyApp": {
+    "onsDadosIndicadoresQualidadeEnergiaRedeBasicaDfdDesempenhoFrequenciaEmDisturbiosEvento": {
+      "home": {
+        "title": "Ons Dados Indicadores Qualidade Energia Rede Basica Dfd Desempenho Frequencia Em Disturbios Eventos",
+        "refreshListLabel": "Atualizar lista",
+        "createLabel": "Criar novo Ons Dados Indicadores Qualidade Energia Rede Basica Dfd Desempenho Frequencia Em Disturbios Evento",
+        "createOrEditLabel": "Criar ou editar Ons Dados Indicadores Qualidade Energia Rede Basica Dfd Desempenho Frequencia Em Disturbios Evento",
+        "search": "Pesquisar por Ons Dados Indicadores Qualidade Energia Rede Basica Dfd Desempenho Frequencia Em Disturbios Evento",
+        "notFound": "Nenhum Ons Dados Indicadores Qualidade Energia Rede Basica Dfd Desempenho Frequencia Em Disturbios Evento encontrado"
+      },
+      "created": "Um novo Ons Dados Indicadores Qualidade Energia Rede Basica Dfd Desempenho Frequencia Em Disturbios Evento foi criado com o identificador {{ param }}",
+      "updated": "Um Ons Dados Indicadores Qualidade Energia Rede Basica Dfd Desempenho Frequencia Em Disturbios Evento foi atualizado com o identificador {{ param }}",
+      "deleted": "Um Ons Dados Indicadores Qualidade Energia Rede Basica Dfd Desempenho Frequencia Em Disturbios Evento foi excluído com o identificador {{ param }}",
+      "delete": {
+        "question": "Tem certeza de que deseja excluir Ons Dados Indicadores Qualidade Energia Rede Basica Dfd Desempenho Frequencia Em Disturbios Evento {{ id }}?"
+      },
+      "detail": {
+        "title": "Ons Dados Indicadores Qualidade Energia Rede Basica Dfd Desempenho Frequencia Em Disturbios Evento"
+      },
+      "id": "ID",
+      "dinReferencia": "Din Referencia",
+      "dinIniciodesviofreq": "Din Iniciodesviofreq",
+      "dinFimdesviofreq": "Din Fimdesviofreq",
+      "idFaixafrequencia": "Id Faixafrequencia",
+      "nomFaixafrequencia": "Nom Faixafrequencia",
+      "valDfd": "Val Dfd",
+      "valFreqmaxmin": "Val Freqmaxmin"
+    }
+  }
+}

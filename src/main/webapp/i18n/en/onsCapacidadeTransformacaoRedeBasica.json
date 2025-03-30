@@ -1,0 +1,42 @@
+{
+  "wattsUpEnergyApp": {
+    "onsCapacidadeTransformacaoRedeBasica": {
+      "home": {
+        "title": "Ons Capacidade Transformacao Rede Basicas",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Ons Capacidade Transformacao Rede Basica",
+        "createOrEditLabel": "Create or edit a Ons Capacidade Transformacao Rede Basica",
+        "search": "Search for Ons Capacidade Transformacao Rede Basica",
+        "notFound": "No Ons Capacidade Transformacao Rede Basicas found"
+      },
+      "created": "A new Ons Capacidade Transformacao Rede Basica is created with identifier {{ param }}",
+      "updated": "A Ons Capacidade Transformacao Rede Basica is updated with identifier {{ param }}",
+      "deleted": "A Ons Capacidade Transformacao Rede Basica is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Ons Capacidade Transformacao Rede Basica {{ id }}?"
+      },
+      "detail": {
+        "title": "Ons Capacidade Transformacao Rede Basica"
+      },
+      "id": "ID",
+      "idSubsistema": "Id Subsistema",
+      "nomSubsistema": "Nom Subsistema",
+      "idEstado": "Id Estado",
+      "nomEstado": "Nom Estado",
+      "nomTipotransformador": "Nom Tipotransformador",
+      "nomAgenteproprietario": "Nom Agenteproprietario",
+      "nomSubestacao": "Nom Subestacao",
+      "nomTransformador": "Nom Transformador",
+      "codEquipamento": "Cod Equipamento",
+      "datEntradaoperacao": "Dat Entradaoperacao",
+      "datDesativacao": "Dat Desativacao",
+      "valTensaoprimarioKv": "Val Tensaoprimario Kv",
+      "valTensaosecundarioKv": "Val Tensaosecundario Kv",
+      "valTensaoterciarioKv": "Val Tensaoterciario Kv",
+      "valPotencianominalMva": "Val Potencianominal Mva",
+      "nomTipoderede": "Nom Tipoderede",
+      "numBarraPrimario": "Num Barra Primario",
+      "numBarraSecundario": "Num Barra Secundario"
+    }
+  }
+}

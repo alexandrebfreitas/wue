@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd
+                        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    <!--
+        Added the entity OnsLinhasTransmissaoRedeOperacao.
+    -->
+    <changeSet id="20250330013702-1" author="jhipster">
+        <createTable tableName="OnsTable25">
+            <column name="id" type="bigint" autoIncrement="true" startWith="1500">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="id_subsistema_terminalde" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="nom_subsistema_terminalde" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="id_subsistema_terminalpara" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="nom_subsistema_terminalpara" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="id_estado_terminalde" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="nom_estado_de" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="id_estado_terminalpara" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="nom_estado_para" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="nom_subestacao_de" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="nom_subestacao_para" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="val_niveltensao_kv" type="double">
+                <constraints nullable="true" />
+            </column>
+            <column name="nom_tipoderede" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="nom_tipolinha" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="nom_agenteproprietario" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="nom_linhadetransmissao" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="cod_equipamento" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="dat_entradaoperacao" type="date">
+                <constraints nullable="true" />
+            </column>
+            <column name="dat_desativacao" type="date">
+                <constraints nullable="true" />
+            </column>
+            <column name="dat_prevista" type="date">
+                <constraints nullable="true" />
+            </column>
+            <column name="val_comprimento" type="double">
+                <constraints nullable="true" />
+            </column>
+            <column name="val_resistencia" type="double">
+                <constraints nullable="true" />
+            </column>
+            <column name="val_reatancia" type="double">
+                <constraints nullable="true" />
+            </column>
+            <column name="val_shunt" type="double">
+                <constraints nullable="true" />
+            </column>
+            <column name="val_capacoperlongasemlimit" type="double">
+                <constraints nullable="true" />
+            </column>
+            <column name="val_capacoperlongacomlimit" type="double">
+                <constraints nullable="true" />
+            </column>
+            <column name="val_capacopercurtasemlimit" type="double">
+                <constraints nullable="true" />
+            </column>
+            <column name="val_capacopercurtacomlimit" type="double">
+                <constraints nullable="true" />
+            </column>
+            <column name="val_capacidadeoperveraodialonga" type="double">
+                <constraints nullable="true" />
+            </column>
+            <column name="val_capacoperinvernodialonga" type="double">
+                <constraints nullable="true" />
+            </column>
+            <column name="val_capacoperinvernonoitelonga" type="double">
+                <constraints nullable="true" />
+            </column>
+            <column name="val_capacoperveradiacurta" type="double">
+                <constraints nullable="true" />
+            </column>
+            <column name="val_capacoperveraonoitecurta" type="double">
+                <constraints nullable="true" />
+            </column>
+            <column name="val_capacoperinvernodiacurta" type="double">
+                <constraints nullable="true" />
+            </column>
+            <column name="val_capacoperinvernonoitecurta" type="double">
+                <constraints nullable="true" />
+            </column>
+            <!-- jhipster-needle-liquibase-add-column - JHipster will add columns here -->
+        </createTable>
+    </changeSet>
+
+    <!-- jhipster-needle-liquibase-add-changeset - JHipster will add changesets here -->
+
+    <!--
+        Load sample data generated with Faker.js
+        - This data can be easily edited using a CSV editor (or even MS Excel) and
+          is located in the 'src/main/resources/config/liquibase/fake-data' directory
+        - By default this data is applied when running with the JHipster 'dev' profile.
+          This can be customized by adding or removing 'faker' in the 'spring.liquibase.contexts'
+          Spring Boot configuration key.
+    -->
+    <changeSet id="20250330013702-1-data" author="jhipster" context="faker">
+        <loadData
+                  file="config/liquibase/fake-data/OnsTable25.csv"
+                  separator=";"
+                  tableName="OnsTable25"
+                  usePreparedStatements="true">
+            <column name="id" type="numeric"/>
+            <column name="id_subsistema_terminalde" type="string"/>
+            <column name="nom_subsistema_terminalde" type="string"/>
+            <column name="id_subsistema_terminalpara" type="string"/>
+            <column name="nom_subsistema_terminalpara" type="string"/>
+            <column name="id_estado_terminalde" type="string"/>
+            <column name="nom_estado_de" type="string"/>
+            <column name="id_estado_terminalpara" type="string"/>
+            <column name="nom_estado_para" type="string"/>
+            <column name="nom_subestacao_de" type="string"/>
+            <column name="nom_subestacao_para" type="string"/>
+            <column name="val_niveltensao_kv" type="numeric"/>
+            <column name="nom_tipoderede" type="string"/>
+            <column name="nom_tipolinha" type="string"/>
+            <column name="nom_agenteproprietario" type="string"/>
+            <column name="nom_linhadetransmissao" type="string"/>
+            <column name="cod_equipamento" type="string"/>
+            <column name="dat_entradaoperacao" type="date"/>
+            <column name="dat_desativacao" type="date"/>
+            <column name="dat_prevista" type="date"/>
+            <column name="val_comprimento" type="numeric"/>
+            <column name="val_resistencia" type="numeric"/>
+            <column name="val_reatancia" type="numeric"/>
+            <column name="val_shunt" type="numeric"/>
+            <column name="val_capacoperlongasemlimit" type="numeric"/>
+            <column name="val_capacoperlongacomlimit" type="numeric"/>
+            <column name="val_capacopercurtasemlimit" type="numeric"/>
+            <column name="val_capacopercurtacomlimit" type="numeric"/>
+            <column name="val_capacidadeoperveraodialonga" type="numeric"/>
+            <column name="val_capacoperinvernodialonga" type="numeric"/>
+            <column name="val_capacoperinvernonoitelonga" type="numeric"/>
+            <column name="val_capacoperveradiacurta" type="numeric"/>
+            <column name="val_capacoperveraonoitecurta" type="numeric"/>
+            <column name="val_capacoperinvernodiacurta" type="numeric"/>
+            <column name="val_capacoperinvernonoitecurta" type="numeric"/>
+            <!-- jhipster-needle-liquibase-add-loadcolumn - JHipster (and/or extensions) can add load columns here -->
+        </loadData>
+    </changeSet>
+</databaseChangeLog>

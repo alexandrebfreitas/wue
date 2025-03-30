@@ -1,0 +1,63 @@
+{
+  "annotations": {
+    "changelogDate": "20250330013656"
+  },
+  "applications": "*",
+  "entityTableName": "OnsTable19",
+  "fields": [
+    {
+      "fieldName": "idSubsistema",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nomSubsistema",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "estadId",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nomEstado",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "idTipousina",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "idConjuntousina",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "idOnsConjunto",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "idOnsUsina",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nomConjunto",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nomUsina",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "ceg",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "datIniciorelacionamento",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "datFimrelacionamento",
+      "fieldType": "LocalDate"
+    }
+  ],
+  "name": "OnsDadosRelacionamentoEntreConjuntosEUsinas",
+  "relationships": []
+}

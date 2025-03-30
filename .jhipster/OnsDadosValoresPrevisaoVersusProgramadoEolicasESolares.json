@@ -1,0 +1,35 @@
+{
+  "annotations": {
+    "changelogDate": "20250330013724"
+  },
+  "applications": "*",
+  "entityTableName": "OnsTable47",
+  "fields": [
+    {
+      "fieldName": "datProgramacao",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "numPatamar",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "codUsinapdp",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nomUsinapdp",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "valPrevisao",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "valProgramado",
+      "fieldType": "Double"
+    }
+  ],
+  "name": "OnsDadosValoresPrevisaoVersusProgramadoEolicasESolares",
+  "relationships": []
+}

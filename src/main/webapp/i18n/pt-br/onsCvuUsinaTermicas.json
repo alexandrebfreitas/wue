@@ -1,0 +1,35 @@
+{
+  "wattsUpEnergyApp": {
+    "onsCvuUsinaTermicas": {
+      "home": {
+        "title": "Ons Cvu Usina Termicas",
+        "refreshListLabel": "Atualizar lista",
+        "createLabel": "Criar novo Ons Cvu Usina Termicas",
+        "createOrEditLabel": "Criar ou editar Ons Cvu Usina Termicas",
+        "search": "Pesquisar por Ons Cvu Usina Termicas",
+        "notFound": "Nenhum Ons Cvu Usina Termicas encontrado"
+      },
+      "created": "Um novo Ons Cvu Usina Termicas foi criado com o identificador {{ param }}",
+      "updated": "Um Ons Cvu Usina Termicas foi atualizado com o identificador {{ param }}",
+      "deleted": "Um Ons Cvu Usina Termicas foi excluído com o identificador {{ param }}",
+      "delete": {
+        "question": "Tem certeza de que deseja excluir Ons Cvu Usina Termicas {{ id }}?"
+      },
+      "detail": {
+        "title": "Ons Cvu Usina Termicas"
+      },
+      "id": "ID",
+      "datIniciosemana": "Dat Iniciosemana",
+      "datFimsemana": "Dat Fimsemana",
+      "anoReferencia": "Ano Referencia",
+      "mesReferencia": "Mes Referencia",
+      "numRevisao": "Num Revisao",
+      "nomSemanaoperativa": "Nom Semanaoperativa",
+      "codModelos": "Cod Modelos",
+      "idSubsistema": "Id Subsistema",
+      "nomSubsistema": "Nom Subsistema",
+      "nomUsina": "Nom Usina",
+      "valCvu": "Val Cvu"
+    }
+  }
+}

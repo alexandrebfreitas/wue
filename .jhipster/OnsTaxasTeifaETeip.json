@@ -1,0 +1,43 @@
+{
+  "annotations": {
+    "changelogDate": "20250330013726"
+  },
+  "applications": "*",
+  "entityTableName": "OnsTable49",
+  "fields": [
+    {
+      "fieldName": "nomUsina",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "codCeg",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "idTipousina",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "dinMes",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "nomTaxa",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "valTaxa",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "numVersao",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "dinInstante",
+      "fieldType": "LocalDate"
+    }
+  ],
+  "name": "OnsTaxasTeifaETeip",
+  "relationships": []
+}

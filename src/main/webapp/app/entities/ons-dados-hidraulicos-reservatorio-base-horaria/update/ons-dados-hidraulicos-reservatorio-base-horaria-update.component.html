@@ -1,0 +1,178 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <form name="editForm" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+      <h2
+        id="jhi-ons-dados-hidraulicos-reservatorio-base-horaria-heading"
+        data-cy="OnsDadosHidraulicosReservatorioBaseHorariaCreateUpdateHeading"
+        jhiTranslate="wattsUpEnergyApp.onsDadosHidraulicosReservatorioBaseHoraria.home.createOrEditLabel"
+      >
+        Criar ou editar Ons Dados Hidraulicos Reservatorio Base Horaria
+      </h2>
+
+      <div>
+        <jhi-alert-error></jhi-alert-error>
+
+        @if (editForm.controls.id.value !== null) {
+          <div class="mb-3">
+            <label class="form-label" for="field_id" jhiTranslate="wattsUpEnergyApp.onsDadosHidraulicosReservatorioBaseHoraria.id"
+              >ID</label
+            >
+            <input type="number" class="form-control" name="id" id="field_id" data-cy="id" formControlName="id" [readonly]="true" />
+          </div>
+        }
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_valVolumeutil"
+            jhiTranslate="wattsUpEnergyApp.onsDadosHidraulicosReservatorioBaseHoraria.valVolumeutil"
+            >Val Volumeutil</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="valVolumeutil"
+            id="field_valVolumeutil"
+            data-cy="valVolumeutil"
+            formControlName="valVolumeutil"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_valVazaoafluente"
+            jhiTranslate="wattsUpEnergyApp.onsDadosHidraulicosReservatorioBaseHoraria.valVazaoafluente"
+            >Val Vazaoafluente</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="valVazaoafluente"
+            id="field_valVazaoafluente"
+            data-cy="valVazaoafluente"
+            formControlName="valVazaoafluente"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_valVazaodefluente"
+            jhiTranslate="wattsUpEnergyApp.onsDadosHidraulicosReservatorioBaseHoraria.valVazaodefluente"
+            >Val Vazaodefluente</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="valVazaodefluente"
+            id="field_valVazaodefluente"
+            data-cy="valVazaodefluente"
+            formControlName="valVazaodefluente"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_valVazaoturbinada"
+            jhiTranslate="wattsUpEnergyApp.onsDadosHidraulicosReservatorioBaseHoraria.valVazaoturbinada"
+            >Val Vazaoturbinada</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="valVazaoturbinada"
+            id="field_valVazaoturbinada"
+            data-cy="valVazaoturbinada"
+            formControlName="valVazaoturbinada"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_valVazaovertida"
+            jhiTranslate="wattsUpEnergyApp.onsDadosHidraulicosReservatorioBaseHoraria.valVazaovertida"
+            >Val Vazaovertida</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="valVazaovertida"
+            id="field_valVazaovertida"
+            data-cy="valVazaovertida"
+            formControlName="valVazaovertida"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_valVazaooutrasestruturas"
+            jhiTranslate="wattsUpEnergyApp.onsDadosHidraulicosReservatorioBaseHoraria.valVazaooutrasestruturas"
+            >Val Vazaooutrasestruturas</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="valVazaooutrasestruturas"
+            id="field_valVazaooutrasestruturas"
+            data-cy="valVazaooutrasestruturas"
+            formControlName="valVazaooutrasestruturas"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_valVazaotransferida"
+            jhiTranslate="wattsUpEnergyApp.onsDadosHidraulicosReservatorioBaseHoraria.valVazaotransferida"
+            >Val Vazaotransferida</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="valVazaotransferida"
+            id="field_valVazaotransferida"
+            data-cy="valVazaotransferida"
+            formControlName="valVazaotransferida"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_valVazaovertidanaoturbinavel"
+            jhiTranslate="wattsUpEnergyApp.onsDadosHidraulicosReservatorioBaseHoraria.valVazaovertidanaoturbinavel"
+            >Val Vazaovertidanaoturbinavel</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="valVazaovertidanaoturbinavel"
+            id="field_valVazaovertidanaoturbinavel"
+            data-cy="valVazaovertidanaoturbinavel"
+            formControlName="valVazaovertidanaoturbinavel"
+          />
+        </div>
+      </div>
+
+      <div>
+        <button type="button" id="cancel-save" data-cy="entityCreateCancelButton" class="btn btn-secondary" (click)="previousState()">
+          <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancelar</span>
+        </button>
+
+        <button
+          type="submit"
+          id="save-entity"
+          data-cy="entityCreateSaveButton"
+          [disabled]="editForm.invalid || isSaving"
+          class="btn btn-primary"
+        >
+          <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Salvar</span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

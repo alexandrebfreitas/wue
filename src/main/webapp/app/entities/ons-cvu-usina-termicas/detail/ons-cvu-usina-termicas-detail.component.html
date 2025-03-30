@@ -1,0 +1,76 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    @if (onsCvuUsinaTermicas(); as onsCvuUsinaTermicasRef) {
+      <div>
+        <h2 data-cy="onsCvuUsinaTermicasDetailsHeading">
+          <span jhiTranslate="wattsUpEnergyApp.onsCvuUsinaTermicas.detail.title">Ons Cvu Usina Termicas</span>
+        </h2>
+
+        <hr />
+
+        <jhi-alert-error></jhi-alert-error>
+
+        <jhi-alert></jhi-alert>
+
+        <dl class="row-md jh-entity-details">
+          <dt><span jhiTranslate="global.field.id">Código</span></dt>
+          <dd>
+            <span>{{ onsCvuUsinaTermicasRef.id }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsCvuUsinaTermicas.datIniciosemana">Dat Iniciosemana</span></dt>
+          <dd>
+            <span>{{ onsCvuUsinaTermicasRef.datIniciosemana | formatMediumDate }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsCvuUsinaTermicas.datFimsemana">Dat Fimsemana</span></dt>
+          <dd>
+            <span>{{ onsCvuUsinaTermicasRef.datFimsemana | formatMediumDate }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsCvuUsinaTermicas.anoReferencia">Ano Referencia</span></dt>
+          <dd>
+            <span>{{ onsCvuUsinaTermicasRef.anoReferencia }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsCvuUsinaTermicas.mesReferencia">Mes Referencia</span></dt>
+          <dd>
+            <span>{{ onsCvuUsinaTermicasRef.mesReferencia }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsCvuUsinaTermicas.numRevisao">Num Revisao</span></dt>
+          <dd>
+            <span>{{ onsCvuUsinaTermicasRef.numRevisao }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsCvuUsinaTermicas.nomSemanaoperativa">Nom Semanaoperativa</span></dt>
+          <dd>
+            <span>{{ onsCvuUsinaTermicasRef.nomSemanaoperativa }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsCvuUsinaTermicas.codModelos">Cod Modelos</span></dt>
+          <dd>
+            <span>{{ onsCvuUsinaTermicasRef.codModelos }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsCvuUsinaTermicas.idSubsistema">Id Subsistema</span></dt>
+          <dd>
+            <span>{{ onsCvuUsinaTermicasRef.idSubsistema }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsCvuUsinaTermicas.nomSubsistema">Nom Subsistema</span></dt>
+          <dd>
+            <span>{{ onsCvuUsinaTermicasRef.nomSubsistema }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsCvuUsinaTermicas.nomUsina">Nom Usina</span></dt>
+          <dd>
+            <span>{{ onsCvuUsinaTermicasRef.nomUsina }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsCvuUsinaTermicas.valCvu">Val Cvu</span></dt>
+          <dd>
+            <span>{{ onsCvuUsinaTermicasRef.valCvu }}</span>
+          </dd>
+        </dl>
+
+        <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+          <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Voltar</span>
+        </button>
+
+        <button type="button" [routerLink]="['/ons-cvu-usina-termicas', onsCvuUsinaTermicasRef.id, 'edit']" class="btn btn-primary">
+          <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Editar</span>
+        </button>
+      </div>
+    }
+  </div>
+</div>

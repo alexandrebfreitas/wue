@@ -1,0 +1,66 @@
+{
+  "wattsUpEnergyApp": {
+    "onsGeracaoTermicaMotivoDespacho": {
+      "home": {
+        "title": "Ons Geracao Termica Motivo Despachos",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Ons Geracao Termica Motivo Despacho",
+        "createOrEditLabel": "Create or edit a Ons Geracao Termica Motivo Despacho",
+        "search": "Search for Ons Geracao Termica Motivo Despacho",
+        "notFound": "No Ons Geracao Termica Motivo Despachos found"
+      },
+      "created": "A new Ons Geracao Termica Motivo Despacho is created with identifier {{ param }}",
+      "updated": "A Ons Geracao Termica Motivo Despacho is updated with identifier {{ param }}",
+      "deleted": "A Ons Geracao Termica Motivo Despacho is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Ons Geracao Termica Motivo Despacho {{ id }}?"
+      },
+      "detail": {
+        "title": "Ons Geracao Termica Motivo Despacho"
+      },
+      "id": "ID",
+      "dinInstante": "Din Instante",
+      "nomTipopatamar": "Nom Tipopatamar",
+      "idSubsistema": "Id Subsistema",
+      "nomSubsistema": "Nom Subsistema",
+      "nomUsina": "Nom Usina",
+      "codUsinaplanejamento": "Cod Usinaplanejamento",
+      "ceg": "Ceg",
+      "valProggeracao": "Val Proggeracao",
+      "valProgordemmerito": "Val Progordemmerito",
+      "valProgordemdemeritoref": "Val Progordemdemeritoref",
+      "valProgordemdemeritoacimadainflex": "Val Progordemdemeritoacimadainflex",
+      "valProginflexibilidade": "Val Proginflexibilidade",
+      "valProginflexembutmerito": "Val Proginflexembutmerito",
+      "valProginflexpura": "Val Proginflexpura",
+      "valPrograzaoeletrica": "Val Prograzaoeletrica",
+      "valProggarantiaenergetica": "Val Proggarantiaenergetica",
+      "valProggfom": "Val Proggfom",
+      "valProgreposicaoperdas": "Val Progreposicaoperdas",
+      "valProgexportacao": "Val Progexportacao",
+      "valProgreservapotencia": "Val Progreservapotencia",
+      "valProggsub": "Val Proggsub",
+      "valProgunitcommitment": "Val Progunitcommitment",
+      "valProgconstrainedoff": "Val Progconstrainedoff",
+      "valProginflexibilidadedessem": "Val Proginflexibilidadedessem",
+      "valVerifgeracao": "Val Verifgeracao",
+      "valVerifordemmerito": "Val Verifordemmerito",
+      "valVerifordemdemeritoacimadainflex": "Val Verifordemdemeritoacimadainflex",
+      "valVerifinflexibilidade": "Val Verifinflexibilidade",
+      "valVerifinflexembutmerito": "Val Verifinflexembutmerito",
+      "valVerifinflexpura": "Val Verifinflexpura",
+      "valVerifrazaoeletrica": "Val Verifrazaoeletrica",
+      "valVerifgarantiaenergetica": "Val Verifgarantiaenergetica",
+      "valVerifgfom": "Val Verifgfom",
+      "valVerifreposicaoperdas": "Val Verifreposicaoperdas",
+      "valVerifexportacao": "Val Verifexportacao",
+      "valFdexp": "Val Fdexp",
+      "valVerifreservapotencia": "Val Verifreservapotencia",
+      "valAtendsatisfatoriorpo": "Val Atendsatisfatoriorpo",
+      "valVerifgsub": "Val Verifgsub",
+      "valVerifunitcommitment": "Val Verifunitcommitment",
+      "valVerifconstrainedoff": "Val Verifconstrainedoff",
+      "tipRestricaoeletrica": "Tip Restricaoeletrica"
+    }
+  }
+}

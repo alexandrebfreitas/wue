@@ -1,0 +1,440 @@
+<div>
+  <h2 id="page-heading" data-cy="OnsLinhasTransmissaoRedeOperacaoHeading">
+    <span jhiTranslate="wattsUpEnergyApp.onsLinhasTransmissaoRedeOperacao.home.title">Ons Linhas Transmissao Rede Operacaos</span>
+
+    <div class="d-flex justify-content-end">
+      <button class="btn btn-info me-2" (click)="load()" [disabled]="isLoading">
+        <fa-icon icon="sync" [animation]="isLoading ? 'spin' : undefined"></fa-icon>
+        <span jhiTranslate="wattsUpEnergyApp.onsLinhasTransmissaoRedeOperacao.home.refreshListLabel">Atualizar lista</span>
+      </button>
+
+      <button
+        id="jh-create-entity"
+        data-cy="entityCreateButton"
+        class="btn btn-primary jh-create-entity create-ons-linhas-transmissao-rede-operacao"
+        [routerLink]="['/ons-linhas-transmissao-rede-operacao/new']"
+      >
+        <fa-icon icon="plus"></fa-icon>
+        <span class="hidden-sm-down" jhiTranslate="wattsUpEnergyApp.onsLinhasTransmissaoRedeOperacao.home.createLabel"
+          >Criar novo Ons Linhas Transmissao Rede Operacao</span
+        >
+      </button>
+    </div>
+  </h2>
+
+  <jhi-alert-error></jhi-alert-error>
+
+  <jhi-alert></jhi-alert>
+
+  <form name="searchForm" class="row row-cols-sm-auto align-items-center">
+    <div class="col-sm-12">
+      <div class="input-group w-100 mt-3">
+        <label class="visually-hidden" for="currentSearch" jhiTranslate="wattsUpEnergyApp.onsLinhasTransmissaoRedeOperacao.home.search"
+          >Pesquisar por Ons Linhas Transmissao Rede Operacao</label
+        >
+        <input
+          type="text"
+          class="form-control"
+          [(ngModel)]="currentSearch"
+          id="currentSearch"
+          name="currentSearch"
+          placeholder="{{ 'wattsUpEnergyApp.onsLinhasTransmissaoRedeOperacao.home.search' | translate }}"
+        />
+
+        <button class="btn btn-info" (click)="search(currentSearch)">
+          <fa-icon icon="search"></fa-icon>
+        </button>
+
+        @if (currentSearch) {
+          <button class="btn btn-danger" (click)="search('')">
+            <fa-icon icon="trash-alt"></fa-icon>
+          </button>
+        }
+      </div>
+    </div>
+  </form>
+
+  @if (onsLinhasTransmissaoRedeOperacaos().length === 0) {
+    <div class="alert alert-warning" id="no-result">
+      <span jhiTranslate="wattsUpEnergyApp.onsLinhasTransmissaoRedeOperacao.home.notFound"
+        >Nenhum Ons Linhas Transmissao Rede Operacao encontrado</span
+      >
+    </div>
+  } @else {
+    <div class="table-responsive table-entities" id="entities">
+      <table class="table table-striped" aria-describedby="page-heading">
+        <thead>
+          <tr jhiSort [(sortState)]="sortState" (sortChange)="navigateToWithComponentValues($event)">
+            <th scope="col" jhiSortBy="id">
+              <div class="d-flex">
+                <span jhiTranslate="global.field.id">Código</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="idSubsistemaTerminalde">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsLinhasTransmissaoRedeOperacao.idSubsistemaTerminalde"
+                  >Id Subsistema Terminalde</span
+                >
+                @if (!currentSearch) {
+                  <fa-icon class="p-1" icon="sort"></fa-icon>
+                }
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="nomSubsistemaTerminalde">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsLinhasTransmissaoRedeOperacao.nomSubsistemaTerminalde"
+                  >Nom Subsistema Terminalde</span
+                >
+                @if (!currentSearch) {
+                  <fa-icon class="p-1" icon="sort"></fa-icon>
+                }
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="idSubsistemaTerminalpara">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsLinhasTransmissaoRedeOperacao.idSubsistemaTerminalpara"
+                  >Id Subsistema Terminalpara</span
+                >
+                @if (!currentSearch) {
+                  <fa-icon class="p-1" icon="sort"></fa-icon>
+                }
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="nomSubsistemaTerminalpara">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsLinhasTransmissaoRedeOperacao.nomSubsistemaTerminalpara"
+                  >Nom Subsistema Terminalpara</span
+                >
+                @if (!currentSearch) {
+                  <fa-icon class="p-1" icon="sort"></fa-icon>
+                }
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="idEstadoTerminalde">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsLinhasTransmissaoRedeOperacao.idEstadoTerminalde">Id Estado Terminalde</span>
+                @if (!currentSearch) {
+                  <fa-icon class="p-1" icon="sort"></fa-icon>
+                }
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="nomEstadoDe">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsLinhasTransmissaoRedeOperacao.nomEstadoDe">Nom Estado De</span>
+                @if (!currentSearch) {
+                  <fa-icon class="p-1" icon="sort"></fa-icon>
+                }
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="idEstadoTerminalpara">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsLinhasTransmissaoRedeOperacao.idEstadoTerminalpara">Id Estado Terminalpara</span>
+                @if (!currentSearch) {
+                  <fa-icon class="p-1" icon="sort"></fa-icon>
+                }
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="nomEstadoPara">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsLinhasTransmissaoRedeOperacao.nomEstadoPara">Nom Estado Para</span>
+                @if (!currentSearch) {
+                  <fa-icon class="p-1" icon="sort"></fa-icon>
+                }
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="nomSubestacaoDe">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsLinhasTransmissaoRedeOperacao.nomSubestacaoDe">Nom Subestacao De</span>
+                @if (!currentSearch) {
+                  <fa-icon class="p-1" icon="sort"></fa-icon>
+                }
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="nomSubestacaoPara">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsLinhasTransmissaoRedeOperacao.nomSubestacaoPara">Nom Subestacao Para</span>
+                @if (!currentSearch) {
+                  <fa-icon class="p-1" icon="sort"></fa-icon>
+                }
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="valNiveltensaoKv">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsLinhasTransmissaoRedeOperacao.valNiveltensaoKv">Val Niveltensao Kv</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="nomTipoderede">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsLinhasTransmissaoRedeOperacao.nomTipoderede">Nom Tipoderede</span>
+                @if (!currentSearch) {
+                  <fa-icon class="p-1" icon="sort"></fa-icon>
+                }
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="nomTipolinha">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsLinhasTransmissaoRedeOperacao.nomTipolinha">Nom Tipolinha</span>
+                @if (!currentSearch) {
+                  <fa-icon class="p-1" icon="sort"></fa-icon>
+                }
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="nomAgenteproprietario">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsLinhasTransmissaoRedeOperacao.nomAgenteproprietario">Nom Agenteproprietario</span>
+                @if (!currentSearch) {
+                  <fa-icon class="p-1" icon="sort"></fa-icon>
+                }
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="nomLinhadetransmissao">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsLinhasTransmissaoRedeOperacao.nomLinhadetransmissao">Nom Linhadetransmissao</span>
+                @if (!currentSearch) {
+                  <fa-icon class="p-1" icon="sort"></fa-icon>
+                }
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="codEquipamento">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsLinhasTransmissaoRedeOperacao.codEquipamento">Cod Equipamento</span>
+                @if (!currentSearch) {
+                  <fa-icon class="p-1" icon="sort"></fa-icon>
+                }
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="datEntradaoperacao">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsLinhasTransmissaoRedeOperacao.datEntradaoperacao">Dat Entradaoperacao</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="datDesativacao">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsLinhasTransmissaoRedeOperacao.datDesativacao">Dat Desativacao</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="datPrevista">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsLinhasTransmissaoRedeOperacao.datPrevista">Dat Prevista</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="valComprimento">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsLinhasTransmissaoRedeOperacao.valComprimento">Val Comprimento</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="valResistencia">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsLinhasTransmissaoRedeOperacao.valResistencia">Val Resistencia</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="valReatancia">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsLinhasTransmissaoRedeOperacao.valReatancia">Val Reatancia</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="valShunt">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsLinhasTransmissaoRedeOperacao.valShunt">Val Shunt</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="valCapacoperlongasemlimit">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsLinhasTransmissaoRedeOperacao.valCapacoperlongasemlimit"
+                  >Val Capacoperlongasemlimit</span
+                >
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="valCapacoperlongacomlimit">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsLinhasTransmissaoRedeOperacao.valCapacoperlongacomlimit"
+                  >Val Capacoperlongacomlimit</span
+                >
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="valCapacopercurtasemlimit">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsLinhasTransmissaoRedeOperacao.valCapacopercurtasemlimit"
+                  >Val Capacopercurtasemlimit</span
+                >
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="valCapacopercurtacomlimit">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsLinhasTransmissaoRedeOperacao.valCapacopercurtacomlimit"
+                  >Val Capacopercurtacomlimit</span
+                >
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="valCapacidadeoperveraodialonga">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsLinhasTransmissaoRedeOperacao.valCapacidadeoperveraodialonga"
+                  >Val Capacidadeoperveraodialonga</span
+                >
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="valCapacoperinvernodialonga">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsLinhasTransmissaoRedeOperacao.valCapacoperinvernodialonga"
+                  >Val Capacoperinvernodialonga</span
+                >
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="valCapacoperinvernonoitelonga">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsLinhasTransmissaoRedeOperacao.valCapacoperinvernonoitelonga"
+                  >Val Capacoperinvernonoitelonga</span
+                >
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="valCapacoperveradiacurta">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsLinhasTransmissaoRedeOperacao.valCapacoperveradiacurta"
+                  >Val Capacoperveradiacurta</span
+                >
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="valCapacoperveraonoitecurta">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsLinhasTransmissaoRedeOperacao.valCapacoperveraonoitecurta"
+                  >Val Capacoperveraonoitecurta</span
+                >
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="valCapacoperinvernodiacurta">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsLinhasTransmissaoRedeOperacao.valCapacoperinvernodiacurta"
+                  >Val Capacoperinvernodiacurta</span
+                >
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="valCapacoperinvernonoitecurta">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsLinhasTransmissaoRedeOperacao.valCapacoperinvernonoitecurta"
+                  >Val Capacoperinvernonoitecurta</span
+                >
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (onsLinhasTransmissaoRedeOperacao of onsLinhasTransmissaoRedeOperacaos(); track trackId(onsLinhasTransmissaoRedeOperacao)) {
+            <tr data-cy="entityTable">
+              <td>
+                <a [routerLink]="['/ons-linhas-transmissao-rede-operacao', onsLinhasTransmissaoRedeOperacao.id, 'view']">{{
+                  onsLinhasTransmissaoRedeOperacao.id
+                }}</a>
+              </td>
+              <td>{{ onsLinhasTransmissaoRedeOperacao.idSubsistemaTerminalde }}</td>
+              <td>{{ onsLinhasTransmissaoRedeOperacao.nomSubsistemaTerminalde }}</td>
+              <td>{{ onsLinhasTransmissaoRedeOperacao.idSubsistemaTerminalpara }}</td>
+              <td>{{ onsLinhasTransmissaoRedeOperacao.nomSubsistemaTerminalpara }}</td>
+              <td>{{ onsLinhasTransmissaoRedeOperacao.idEstadoTerminalde }}</td>
+              <td>{{ onsLinhasTransmissaoRedeOperacao.nomEstadoDe }}</td>
+              <td>{{ onsLinhasTransmissaoRedeOperacao.idEstadoTerminalpara }}</td>
+              <td>{{ onsLinhasTransmissaoRedeOperacao.nomEstadoPara }}</td>
+              <td>{{ onsLinhasTransmissaoRedeOperacao.nomSubestacaoDe }}</td>
+              <td>{{ onsLinhasTransmissaoRedeOperacao.nomSubestacaoPara }}</td>
+              <td>{{ onsLinhasTransmissaoRedeOperacao.valNiveltensaoKv }}</td>
+              <td>{{ onsLinhasTransmissaoRedeOperacao.nomTipoderede }}</td>
+              <td>{{ onsLinhasTransmissaoRedeOperacao.nomTipolinha }}</td>
+              <td>{{ onsLinhasTransmissaoRedeOperacao.nomAgenteproprietario }}</td>
+              <td>{{ onsLinhasTransmissaoRedeOperacao.nomLinhadetransmissao }}</td>
+              <td>{{ onsLinhasTransmissaoRedeOperacao.codEquipamento }}</td>
+              <td>{{ onsLinhasTransmissaoRedeOperacao.datEntradaoperacao | formatMediumDate }}</td>
+              <td>{{ onsLinhasTransmissaoRedeOperacao.datDesativacao | formatMediumDate }}</td>
+              <td>{{ onsLinhasTransmissaoRedeOperacao.datPrevista | formatMediumDate }}</td>
+              <td>{{ onsLinhasTransmissaoRedeOperacao.valComprimento }}</td>
+              <td>{{ onsLinhasTransmissaoRedeOperacao.valResistencia }}</td>
+              <td>{{ onsLinhasTransmissaoRedeOperacao.valReatancia }}</td>
+              <td>{{ onsLinhasTransmissaoRedeOperacao.valShunt }}</td>
+              <td>{{ onsLinhasTransmissaoRedeOperacao.valCapacoperlongasemlimit }}</td>
+              <td>{{ onsLinhasTransmissaoRedeOperacao.valCapacoperlongacomlimit }}</td>
+              <td>{{ onsLinhasTransmissaoRedeOperacao.valCapacopercurtasemlimit }}</td>
+              <td>{{ onsLinhasTransmissaoRedeOperacao.valCapacopercurtacomlimit }}</td>
+              <td>{{ onsLinhasTransmissaoRedeOperacao.valCapacidadeoperveraodialonga }}</td>
+              <td>{{ onsLinhasTransmissaoRedeOperacao.valCapacoperinvernodialonga }}</td>
+              <td>{{ onsLinhasTransmissaoRedeOperacao.valCapacoperinvernonoitelonga }}</td>
+              <td>{{ onsLinhasTransmissaoRedeOperacao.valCapacoperveradiacurta }}</td>
+              <td>{{ onsLinhasTransmissaoRedeOperacao.valCapacoperveraonoitecurta }}</td>
+              <td>{{ onsLinhasTransmissaoRedeOperacao.valCapacoperinvernodiacurta }}</td>
+              <td>{{ onsLinhasTransmissaoRedeOperacao.valCapacoperinvernonoitecurta }}</td>
+              <td class="text-end">
+                <div class="btn-group">
+                  <a
+                    [routerLink]="['/ons-linhas-transmissao-rede-operacao', onsLinhasTransmissaoRedeOperacao.id, 'view']"
+                    class="btn btn-info btn-sm"
+                    data-cy="entityDetailsButton"
+                  >
+                    <fa-icon icon="eye"></fa-icon>
+                    <span class="d-none d-md-inline" jhiTranslate="entity.action.view">Visualizar</span>
+                  </a>
+
+                  <a
+                    [routerLink]="['/ons-linhas-transmissao-rede-operacao', onsLinhasTransmissaoRedeOperacao.id, 'edit']"
+                    class="btn btn-primary btn-sm"
+                    data-cy="entityEditButton"
+                  >
+                    <fa-icon icon="pencil-alt"></fa-icon>
+                    <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Editar</span>
+                  </a>
+
+                  <button
+                    type="submit"
+                    (click)="delete(onsLinhasTransmissaoRedeOperacao)"
+                    class="btn btn-danger btn-sm"
+                    data-cy="entityDeleteButton"
+                  >
+                    <fa-icon icon="times"></fa-icon>
+                    <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Excluir</span>
+                  </button>
+                </div>
+              </td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+  }
+</div>

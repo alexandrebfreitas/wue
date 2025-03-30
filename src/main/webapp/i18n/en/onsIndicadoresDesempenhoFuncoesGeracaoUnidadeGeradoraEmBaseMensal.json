@@ -1,0 +1,44 @@
+{
+  "wattsUpEnergyApp": {
+    "onsIndicadoresDesempenhoFuncoesGeracaoUnidadeGeradoraEmBaseMensal": {
+      "home": {
+        "title": "Ons Indicadores Desempenho Funcoes Geracao Unidade Geradora Em Base Mensals",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Ons Indicadores Desempenho Funcoes Geracao Unidade Geradora Em Base Mensal",
+        "createOrEditLabel": "Create or edit a Ons Indicadores Desempenho Funcoes Geracao Unidade Geradora Em Base Mensal",
+        "search": "Search for Ons Indicadores Desempenho Funcoes Geracao Unidade Geradora Em Base Mensal",
+        "notFound": "No Ons Indicadores Desempenho Funcoes Geracao Unidade Geradora Em Base Mensals found"
+      },
+      "created": "A new Ons Indicadores Desempenho Funcoes Geracao Unidade Geradora Em Base Mensal is created with identifier {{ param }}",
+      "updated": "A Ons Indicadores Desempenho Funcoes Geracao Unidade Geradora Em Base Mensal is updated with identifier {{ param }}",
+      "deleted": "A Ons Indicadores Desempenho Funcoes Geracao Unidade Geradora Em Base Mensal is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Ons Indicadores Desempenho Funcoes Geracao Unidade Geradora Em Base Mensal {{ id }}?"
+      },
+      "detail": {
+        "title": "Ons Indicadores Desempenho Funcoes Geracao Unidade Geradora Em Base Mensal"
+      },
+      "id": "ID",
+      "idSubsistema": "Id Subsistema",
+      "nomSubsistema": "Nom Subsistema",
+      "idEstado": "Id Estado",
+      "nomEstado": "Nom Estado",
+      "nomModalidadeoperacao": "Nom Modalidadeoperacao",
+      "nomAgenteproprietario": "Nom Agenteproprietario",
+      "idTipousina": "Id Tipousina",
+      "idUsina": "Id Usina",
+      "nomUsina": "Nom Usina",
+      "ceg": "Ceg",
+      "codEquipamento": "Cod Equipamento",
+      "numUnidadegeradora": "Num Unidadegeradora",
+      "nomUnidadegeradora": "Nom Unidadegeradora",
+      "valPotencia": "Val Potencia",
+      "valDispf": "Val Dispf",
+      "valIndisppf": "Val Indisppf",
+      "valIndispff": "Val Indispff",
+      "valDmdff": "Val Dmdff",
+      "valFdff": "Val Fdff",
+      "valTdff": "Val Tdff"
+    }
+  }
+}

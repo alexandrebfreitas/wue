@@ -1,0 +1,244 @@
+<div>
+  <h2 id="page-heading" data-cy="OnsDadosRelacionamentoEntreGruposPequenasUsinasEUsinasHeading">
+    <span jhiTranslate="wattsUpEnergyApp.onsDadosRelacionamentoEntreGruposPequenasUsinasEUsinas.home.title"
+      >Ons Dados Relacionamento Entre Grupos Pequenas Usinas E Usinas</span
+    >
+
+    <div class="d-flex justify-content-end">
+      <button class="btn btn-info me-2" (click)="load()" [disabled]="isLoading">
+        <fa-icon icon="sync" [animation]="isLoading ? 'spin' : undefined"></fa-icon>
+        <span jhiTranslate="wattsUpEnergyApp.onsDadosRelacionamentoEntreGruposPequenasUsinasEUsinas.home.refreshListLabel"
+          >Atualizar lista</span
+        >
+      </button>
+
+      <button
+        id="jh-create-entity"
+        data-cy="entityCreateButton"
+        class="btn btn-primary jh-create-entity create-ons-dados-relacionamento-entre-grupos-pequenas-usinas-e-usinas"
+        [routerLink]="['/ons-dados-relacionamento-entre-grupos-pequenas-usinas-e-usinas/new']"
+      >
+        <fa-icon icon="plus"></fa-icon>
+        <span class="hidden-sm-down" jhiTranslate="wattsUpEnergyApp.onsDadosRelacionamentoEntreGruposPequenasUsinasEUsinas.home.createLabel"
+          >Criar novo Ons Dados Relacionamento Entre Grupos Pequenas Usinas E Usinas</span
+        >
+      </button>
+    </div>
+  </h2>
+
+  <jhi-alert-error></jhi-alert-error>
+
+  <jhi-alert></jhi-alert>
+
+  <form name="searchForm" class="row row-cols-sm-auto align-items-center">
+    <div class="col-sm-12">
+      <div class="input-group w-100 mt-3">
+        <label
+          class="visually-hidden"
+          for="currentSearch"
+          jhiTranslate="wattsUpEnergyApp.onsDadosRelacionamentoEntreGruposPequenasUsinasEUsinas.home.search"
+          >Pesquisar por Ons Dados Relacionamento Entre Grupos Pequenas Usinas E Usinas</label
+        >
+        <input
+          type="text"
+          class="form-control"
+          [(ngModel)]="currentSearch"
+          id="currentSearch"
+          name="currentSearch"
+          placeholder="{{ 'wattsUpEnergyApp.onsDadosRelacionamentoEntreGruposPequenasUsinasEUsinas.home.search' | translate }}"
+        />
+
+        <button class="btn btn-info" (click)="search(currentSearch)">
+          <fa-icon icon="search"></fa-icon>
+        </button>
+
+        @if (currentSearch) {
+          <button class="btn btn-danger" (click)="search('')">
+            <fa-icon icon="trash-alt"></fa-icon>
+          </button>
+        }
+      </div>
+    </div>
+  </form>
+
+  @if (onsDadosRelacionamentoEntreGruposPequenasUsinasEUsinas().length === 0) {
+    <div class="alert alert-warning" id="no-result">
+      <span jhiTranslate="wattsUpEnergyApp.onsDadosRelacionamentoEntreGruposPequenasUsinasEUsinas.home.notFound"
+        >Nenhum Ons Dados Relacionamento Entre Grupos Pequenas Usinas E Usinas encontrado</span
+      >
+    </div>
+  } @else {
+    <div class="table-responsive table-entities" id="entities">
+      <table class="table table-striped" aria-describedby="page-heading">
+        <thead>
+          <tr jhiSort [(sortState)]="sortState" (sortChange)="navigateToWithComponentValues($event)">
+            <th scope="col" jhiSortBy="id">
+              <div class="d-flex">
+                <span jhiTranslate="global.field.id">Código</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="idSubsistema">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsDadosRelacionamentoEntreGruposPequenasUsinasEUsinas.idSubsistema"
+                  >Id Subsistema</span
+                >
+                @if (!currentSearch) {
+                  <fa-icon class="p-1" icon="sort"></fa-icon>
+                }
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="nomSubsistema">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsDadosRelacionamentoEntreGruposPequenasUsinasEUsinas.nomSubsistema"
+                  >Nom Subsistema</span
+                >
+                @if (!currentSearch) {
+                  <fa-icon class="p-1" icon="sort"></fa-icon>
+                }
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="estadId">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsDadosRelacionamentoEntreGruposPequenasUsinasEUsinas.estadId">Estad Id</span>
+                @if (!currentSearch) {
+                  <fa-icon class="p-1" icon="sort"></fa-icon>
+                }
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="nomEstado">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsDadosRelacionamentoEntreGruposPequenasUsinasEUsinas.nomEstado">Nom Estado</span>
+                @if (!currentSearch) {
+                  <fa-icon class="p-1" icon="sort"></fa-icon>
+                }
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="idTipousina">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsDadosRelacionamentoEntreGruposPequenasUsinasEUsinas.idTipousina">Id Tipousina</span>
+                @if (!currentSearch) {
+                  <fa-icon class="p-1" icon="sort"></fa-icon>
+                }
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="idOnsPequenasusinas">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsDadosRelacionamentoEntreGruposPequenasUsinasEUsinas.idOnsPequenasusinas"
+                  >Id Ons Pequenasusinas</span
+                >
+                @if (!currentSearch) {
+                  <fa-icon class="p-1" icon="sort"></fa-icon>
+                }
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="idOnsUsina">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsDadosRelacionamentoEntreGruposPequenasUsinasEUsinas.idOnsUsina">Id Ons Usina</span>
+                @if (!currentSearch) {
+                  <fa-icon class="p-1" icon="sort"></fa-icon>
+                }
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="nomPequenasusinas">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsDadosRelacionamentoEntreGruposPequenasUsinasEUsinas.nomPequenasusinas"
+                  >Nom Pequenasusinas</span
+                >
+                @if (!currentSearch) {
+                  <fa-icon class="p-1" icon="sort"></fa-icon>
+                }
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="nomUsina">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsDadosRelacionamentoEntreGruposPequenasUsinasEUsinas.nomUsina">Nom Usina</span>
+                @if (!currentSearch) {
+                  <fa-icon class="p-1" icon="sort"></fa-icon>
+                }
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="ceg">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsDadosRelacionamentoEntreGruposPequenasUsinasEUsinas.ceg">Ceg</span>
+                @if (!currentSearch) {
+                  <fa-icon class="p-1" icon="sort"></fa-icon>
+                }
+              </div>
+            </th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (
+            onsDadosRelacionamentoEntreGruposPequenasUsinasEUsinas of onsDadosRelacionamentoEntreGruposPequenasUsinasEUsinas();
+            track trackId(onsDadosRelacionamentoEntreGruposPequenasUsinasEUsinas)
+          ) {
+            <tr data-cy="entityTable">
+              <td>
+                <a
+                  [routerLink]="[
+                    '/ons-dados-relacionamento-entre-grupos-pequenas-usinas-e-usinas',
+                    onsDadosRelacionamentoEntreGruposPequenasUsinasEUsinas.id,
+                    'view',
+                  ]"
+                  >{{ onsDadosRelacionamentoEntreGruposPequenasUsinasEUsinas.id }}</a
+                >
+              </td>
+              <td>{{ onsDadosRelacionamentoEntreGruposPequenasUsinasEUsinas.idSubsistema }}</td>
+              <td>{{ onsDadosRelacionamentoEntreGruposPequenasUsinasEUsinas.nomSubsistema }}</td>
+              <td>{{ onsDadosRelacionamentoEntreGruposPequenasUsinasEUsinas.estadId }}</td>
+              <td>{{ onsDadosRelacionamentoEntreGruposPequenasUsinasEUsinas.nomEstado }}</td>
+              <td>{{ onsDadosRelacionamentoEntreGruposPequenasUsinasEUsinas.idTipousina }}</td>
+              <td>{{ onsDadosRelacionamentoEntreGruposPequenasUsinasEUsinas.idOnsPequenasusinas }}</td>
+              <td>{{ onsDadosRelacionamentoEntreGruposPequenasUsinasEUsinas.idOnsUsina }}</td>
+              <td>{{ onsDadosRelacionamentoEntreGruposPequenasUsinasEUsinas.nomPequenasusinas }}</td>
+              <td>{{ onsDadosRelacionamentoEntreGruposPequenasUsinasEUsinas.nomUsina }}</td>
+              <td>{{ onsDadosRelacionamentoEntreGruposPequenasUsinasEUsinas.ceg }}</td>
+              <td class="text-end">
+                <div class="btn-group">
+                  <a
+                    [routerLink]="[
+                      '/ons-dados-relacionamento-entre-grupos-pequenas-usinas-e-usinas',
+                      onsDadosRelacionamentoEntreGruposPequenasUsinasEUsinas.id,
+                      'view',
+                    ]"
+                    class="btn btn-info btn-sm"
+                    data-cy="entityDetailsButton"
+                  >
+                    <fa-icon icon="eye"></fa-icon>
+                    <span class="d-none d-md-inline" jhiTranslate="entity.action.view">Visualizar</span>
+                  </a>
+
+                  <a
+                    [routerLink]="[
+                      '/ons-dados-relacionamento-entre-grupos-pequenas-usinas-e-usinas',
+                      onsDadosRelacionamentoEntreGruposPequenasUsinasEUsinas.id,
+                      'edit',
+                    ]"
+                    class="btn btn-primary btn-sm"
+                    data-cy="entityEditButton"
+                  >
+                    <fa-icon icon="pencil-alt"></fa-icon>
+                    <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Editar</span>
+                  </a>
+
+                  <button
+                    type="submit"
+                    (click)="delete(onsDadosRelacionamentoEntreGruposPequenasUsinasEUsinas)"
+                    class="btn btn-danger btn-sm"
+                    data-cy="entityDeleteButton"
+                  >
+                    <fa-icon icon="times"></fa-icon>
+                    <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Excluir</span>
+                  </button>
+                </div>
+              </td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+  }
+</div>

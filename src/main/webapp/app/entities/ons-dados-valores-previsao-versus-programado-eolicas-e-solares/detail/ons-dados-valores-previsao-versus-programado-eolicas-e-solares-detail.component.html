@@ -1,0 +1,80 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    @if (onsDadosValoresPrevisaoVersusProgramadoEolicasESolares(); as onsDadosValoresPrevisaoVersusProgramadoEolicasESolaresRef) {
+      <div>
+        <h2 data-cy="onsDadosValoresPrevisaoVersusProgramadoEolicasESolaresDetailsHeading">
+          <span jhiTranslate="wattsUpEnergyApp.onsDadosValoresPrevisaoVersusProgramadoEolicasESolares.detail.title"
+            >Ons Dados Valores Previsao Versus Programado Eolicas E Solares</span
+          >
+        </h2>
+
+        <hr />
+
+        <jhi-alert-error></jhi-alert-error>
+
+        <jhi-alert></jhi-alert>
+
+        <dl class="row-md jh-entity-details">
+          <dt><span jhiTranslate="global.field.id">Código</span></dt>
+          <dd>
+            <span>{{ onsDadosValoresPrevisaoVersusProgramadoEolicasESolaresRef.id }}</span>
+          </dd>
+          <dt>
+            <span jhiTranslate="wattsUpEnergyApp.onsDadosValoresPrevisaoVersusProgramadoEolicasESolares.datProgramacao"
+              >Dat Programacao</span
+            >
+          </dt>
+          <dd>
+            <span>{{ onsDadosValoresPrevisaoVersusProgramadoEolicasESolaresRef.datProgramacao | formatMediumDate }}</span>
+          </dd>
+          <dt>
+            <span jhiTranslate="wattsUpEnergyApp.onsDadosValoresPrevisaoVersusProgramadoEolicasESolares.numPatamar">Num Patamar</span>
+          </dt>
+          <dd>
+            <span>{{ onsDadosValoresPrevisaoVersusProgramadoEolicasESolaresRef.numPatamar }}</span>
+          </dd>
+          <dt>
+            <span jhiTranslate="wattsUpEnergyApp.onsDadosValoresPrevisaoVersusProgramadoEolicasESolares.codUsinapdp">Cod Usinapdp</span>
+          </dt>
+          <dd>
+            <span>{{ onsDadosValoresPrevisaoVersusProgramadoEolicasESolaresRef.codUsinapdp }}</span>
+          </dd>
+          <dt>
+            <span jhiTranslate="wattsUpEnergyApp.onsDadosValoresPrevisaoVersusProgramadoEolicasESolares.nomUsinapdp">Nom Usinapdp</span>
+          </dt>
+          <dd>
+            <span>{{ onsDadosValoresPrevisaoVersusProgramadoEolicasESolaresRef.nomUsinapdp }}</span>
+          </dd>
+          <dt>
+            <span jhiTranslate="wattsUpEnergyApp.onsDadosValoresPrevisaoVersusProgramadoEolicasESolares.valPrevisao">Val Previsao</span>
+          </dt>
+          <dd>
+            <span>{{ onsDadosValoresPrevisaoVersusProgramadoEolicasESolaresRef.valPrevisao }}</span>
+          </dd>
+          <dt>
+            <span jhiTranslate="wattsUpEnergyApp.onsDadosValoresPrevisaoVersusProgramadoEolicasESolares.valProgramado">Val Programado</span>
+          </dt>
+          <dd>
+            <span>{{ onsDadosValoresPrevisaoVersusProgramadoEolicasESolaresRef.valProgramado }}</span>
+          </dd>
+        </dl>
+
+        <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+          <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Voltar</span>
+        </button>
+
+        <button
+          type="button"
+          [routerLink]="[
+            '/ons-dados-valores-previsao-versus-programado-eolicas-e-solares',
+            onsDadosValoresPrevisaoVersusProgramadoEolicasESolaresRef.id,
+            'edit',
+          ]"
+          class="btn btn-primary"
+        >
+          <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Editar</span>
+        </button>
+      </div>
+    }
+  </div>
+</div>

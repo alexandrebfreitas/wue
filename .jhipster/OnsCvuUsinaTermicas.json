@@ -1,0 +1,55 @@
+{
+  "annotations": {
+    "changelogDate": "20250330013705"
+  },
+  "applications": "*",
+  "entityTableName": "OnsTable28",
+  "fields": [
+    {
+      "fieldName": "datIniciosemana",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "datFimsemana",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "anoReferencia",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "mesReferencia",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "numRevisao",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "nomSemanaoperativa",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "codModelos",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "idSubsistema",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nomSubsistema",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nomUsina",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "valCvu",
+      "fieldType": "BigDecimal"
+    }
+  ],
+  "name": "OnsCvuUsinaTermicas",
+  "relationships": []
+}

@@ -1,0 +1,39 @@
+{
+  "wattsUpEnergyApp": {
+    "onsEquipamentosControleReativos": {
+      "home": {
+        "title": "Ons Equipamentos Controle Reativos",
+        "refreshListLabel": "Atualizar lista",
+        "createLabel": "Criar novo Ons Equipamentos Controle Reativos",
+        "createOrEditLabel": "Criar ou editar Ons Equipamentos Controle Reativos",
+        "search": "Pesquisar por Ons Equipamentos Controle Reativos",
+        "notFound": "Nenhum Ons Equipamentos Controle Reativos encontrado"
+      },
+      "created": "Um novo Ons Equipamentos Controle Reativos foi criado com o identificador {{ param }}",
+      "updated": "Um Ons Equipamentos Controle Reativos foi atualizado com o identificador {{ param }}",
+      "deleted": "Um Ons Equipamentos Controle Reativos foi excluído com o identificador {{ param }}",
+      "delete": {
+        "question": "Tem certeza de que deseja excluir Ons Equipamentos Controle Reativos {{ id }}?"
+      },
+      "detail": {
+        "title": "Ons Equipamentos Controle Reativos"
+      },
+      "id": "ID",
+      "idSubsistema": "Id Subsistema",
+      "nomSubsistema": "Nom Subsistema",
+      "idEstado": "Id Estado",
+      "nomEstado": "Nom Estado",
+      "nomSubestacao": "Nom Subestacao",
+      "nomAgenteProprietario": "Nom Agente Proprietario",
+      "nomTipoderede": "Nom Tipoderede",
+      "nomTipoequipamento": "Nom Tipoequipamento",
+      "nomEquipamento": "Nom Equipamento",
+      "valPotreativanominalMvar": "Val Potreativanominal Mvar",
+      "valLimiteinferiorMvar": "Val Limiteinferior Mvar",
+      "valLimitesuperiorMvar": "Val Limitesuperior Mvar",
+      "datEntradaoperacao": "Dat Entradaoperacao",
+      "datDesativacao": "Dat Desativacao",
+      "codEquipamento": "Cod Equipamento"
+    }
+  }
+}

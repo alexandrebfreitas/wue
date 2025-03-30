@@ -1,0 +1,243 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <form name="editForm" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+      <h2
+        id="jhi-ons-dados-relacionamento-entre-conjuntos-e-usinas-heading"
+        data-cy="OnsDadosRelacionamentoEntreConjuntosEUsinasCreateUpdateHeading"
+        jhiTranslate="wattsUpEnergyApp.onsDadosRelacionamentoEntreConjuntosEUsinas.home.createOrEditLabel"
+      >
+        Criar ou editar Ons Dados Relacionamento Entre Conjuntos E Usinas
+      </h2>
+
+      <div>
+        <jhi-alert-error></jhi-alert-error>
+
+        @if (editForm.controls.id.value !== null) {
+          <div class="mb-3">
+            <label class="form-label" for="field_id" jhiTranslate="wattsUpEnergyApp.onsDadosRelacionamentoEntreConjuntosEUsinas.id"
+              >ID</label
+            >
+            <input type="number" class="form-control" name="id" id="field_id" data-cy="id" formControlName="id" [readonly]="true" />
+          </div>
+        }
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_idSubsistema"
+            jhiTranslate="wattsUpEnergyApp.onsDadosRelacionamentoEntreConjuntosEUsinas.idSubsistema"
+            >Id Subsistema</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="idSubsistema"
+            id="field_idSubsistema"
+            data-cy="idSubsistema"
+            formControlName="idSubsistema"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_nomSubsistema"
+            jhiTranslate="wattsUpEnergyApp.onsDadosRelacionamentoEntreConjuntosEUsinas.nomSubsistema"
+            >Nom Subsistema</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="nomSubsistema"
+            id="field_nomSubsistema"
+            data-cy="nomSubsistema"
+            formControlName="nomSubsistema"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_estadId" jhiTranslate="wattsUpEnergyApp.onsDadosRelacionamentoEntreConjuntosEUsinas.estadId"
+            >Estad Id</label
+          >
+          <input type="text" class="form-control" name="estadId" id="field_estadId" data-cy="estadId" formControlName="estadId" />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_nomEstado"
+            jhiTranslate="wattsUpEnergyApp.onsDadosRelacionamentoEntreConjuntosEUsinas.nomEstado"
+            >Nom Estado</label
+          >
+          <input type="text" class="form-control" name="nomEstado" id="field_nomEstado" data-cy="nomEstado" formControlName="nomEstado" />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_idTipousina"
+            jhiTranslate="wattsUpEnergyApp.onsDadosRelacionamentoEntreConjuntosEUsinas.idTipousina"
+            >Id Tipousina</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="idTipousina"
+            id="field_idTipousina"
+            data-cy="idTipousina"
+            formControlName="idTipousina"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_idConjuntousina"
+            jhiTranslate="wattsUpEnergyApp.onsDadosRelacionamentoEntreConjuntosEUsinas.idConjuntousina"
+            >Id Conjuntousina</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="idConjuntousina"
+            id="field_idConjuntousina"
+            data-cy="idConjuntousina"
+            formControlName="idConjuntousina"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_idOnsConjunto"
+            jhiTranslate="wattsUpEnergyApp.onsDadosRelacionamentoEntreConjuntosEUsinas.idOnsConjunto"
+            >Id Ons Conjunto</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="idOnsConjunto"
+            id="field_idOnsConjunto"
+            data-cy="idOnsConjunto"
+            formControlName="idOnsConjunto"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_idOnsUsina"
+            jhiTranslate="wattsUpEnergyApp.onsDadosRelacionamentoEntreConjuntosEUsinas.idOnsUsina"
+            >Id Ons Usina</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="idOnsUsina"
+            id="field_idOnsUsina"
+            data-cy="idOnsUsina"
+            formControlName="idOnsUsina"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_nomConjunto"
+            jhiTranslate="wattsUpEnergyApp.onsDadosRelacionamentoEntreConjuntosEUsinas.nomConjunto"
+            >Nom Conjunto</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="nomConjunto"
+            id="field_nomConjunto"
+            data-cy="nomConjunto"
+            formControlName="nomConjunto"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_nomUsina"
+            jhiTranslate="wattsUpEnergyApp.onsDadosRelacionamentoEntreConjuntosEUsinas.nomUsina"
+            >Nom Usina</label
+          >
+          <input type="text" class="form-control" name="nomUsina" id="field_nomUsina" data-cy="nomUsina" formControlName="nomUsina" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_ceg" jhiTranslate="wattsUpEnergyApp.onsDadosRelacionamentoEntreConjuntosEUsinas.ceg"
+            >Ceg</label
+          >
+          <input type="text" class="form-control" name="ceg" id="field_ceg" data-cy="ceg" formControlName="ceg" />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_datIniciorelacionamento"
+            jhiTranslate="wattsUpEnergyApp.onsDadosRelacionamentoEntreConjuntosEUsinas.datIniciorelacionamento"
+            >Dat Iniciorelacionamento</label
+          >
+          <div class="input-group">
+            <input
+              id="field_datIniciorelacionamento"
+              data-cy="datIniciorelacionamento"
+              type="text"
+              class="form-control"
+              name="datIniciorelacionamento"
+              ngbDatepicker
+              #datIniciorelacionamentoDp="ngbDatepicker"
+              formControlName="datIniciorelacionamento"
+            />
+            <button type="button" class="btn btn-secondary" (click)="datIniciorelacionamentoDp.toggle()">
+              <fa-icon icon="calendar-alt"></fa-icon>
+            </button>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_datFimrelacionamento"
+            jhiTranslate="wattsUpEnergyApp.onsDadosRelacionamentoEntreConjuntosEUsinas.datFimrelacionamento"
+            >Dat Fimrelacionamento</label
+          >
+          <div class="input-group">
+            <input
+              id="field_datFimrelacionamento"
+              data-cy="datFimrelacionamento"
+              type="text"
+              class="form-control"
+              name="datFimrelacionamento"
+              ngbDatepicker
+              #datFimrelacionamentoDp="ngbDatepicker"
+              formControlName="datFimrelacionamento"
+            />
+            <button type="button" class="btn btn-secondary" (click)="datFimrelacionamentoDp.toggle()">
+              <fa-icon icon="calendar-alt"></fa-icon>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <button type="button" id="cancel-save" data-cy="entityCreateCancelButton" class="btn btn-secondary" (click)="previousState()">
+          <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancelar</span>
+        </button>
+
+        <button
+          type="submit"
+          id="save-entity"
+          data-cy="entityCreateSaveButton"
+          [disabled]="editForm.invalid || isSaving"
+          class="btn btn-primary"
+        >
+          <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Salvar</span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

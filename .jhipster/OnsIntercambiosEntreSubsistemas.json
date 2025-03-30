@@ -1,0 +1,35 @@
+{
+  "annotations": {
+    "changelogDate": "20250330013736"
+  },
+  "applications": "*",
+  "entityTableName": "OnsTable59",
+  "fields": [
+    {
+      "fieldName": "dinInstante",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "idSubsistemaOrigem",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nomSubsistemaOrigem",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "idSubsistemaDestino",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nomSubsistemaDestino",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "valIntercambiomwmed",
+      "fieldType": "Double"
+    }
+  ],
+  "name": "OnsIntercambiosEntreSubsistemas",
+  "relationships": []
+}

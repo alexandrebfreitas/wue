@@ -1,0 +1,30 @@
+{
+  "wattsUpEnergyApp": {
+    "onsEnaDiarioReservatorio": {
+      "home": {
+        "title": "Ons Ena Diario Reservatorios",
+        "refreshListLabel": "Atualizar lista",
+        "createLabel": "Criar novo Ons Ena Diario Reservatorio",
+        "createOrEditLabel": "Criar ou editar Ons Ena Diario Reservatorio",
+        "search": "Pesquisar por Ons Ena Diario Reservatorio",
+        "notFound": "Nenhum Ons Ena Diario Reservatorio encontrado"
+      },
+      "created": "Um novo Ons Ena Diario Reservatorio foi criado com o identificador {{ param }}",
+      "updated": "Um Ons Ena Diario Reservatorio foi atualizado com o identificador {{ param }}",
+      "deleted": "Um Ons Ena Diario Reservatorio foi excluído com o identificador {{ param }}",
+      "delete": {
+        "question": "Tem certeza de que deseja excluir Ons Ena Diario Reservatorio {{ id }}?"
+      },
+      "detail": {
+        "title": "Ons Ena Diario Reservatorio"
+      },
+      "id": "ID",
+      "enaBrutaResMwmed": "Ena Bruta Res Mwmed",
+      "enaBrutaResPercentualmlt": "Ena Bruta Res Percentualmlt",
+      "enaArmazenavelResMwmed": "Ena Armazenavel Res Mwmed",
+      "enaArmazenavelResPercentualmlt": "Ena Armazenavel Res Percentualmlt",
+      "enaQuedaBruta": "Ena Queda Bruta",
+      "mltEna": "Mlt Ena"
+    }
+  }
+}

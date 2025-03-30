@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd
+                        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    <!--
+        Added the entity OnsGeracaoTermicaMotivoDespacho.
+    -->
+    <changeSet id="20250330013643-1" author="jhipster">
+        <createTable tableName="OnsTable6">
+            <column name="id" type="bigint" autoIncrement="true" startWith="1500">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="din_instante" type="date">
+                <constraints nullable="true" />
+            </column>
+            <column name="nom_tipopatamar" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="id_subsistema" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="nom_subsistema" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="nom_usina" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="cod_usinaplanejamento" type="integer">
+                <constraints nullable="true" />
+            </column>
+            <column name="ceg" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="val_proggeracao" type="double">
+                <constraints nullable="true" />
+            </column>
+            <column name="val_progordemmerito" type="double">
+                <constraints nullable="true" />
+            </column>
+            <column name="val_progordemdemeritoref" type="double">
+                <constraints nullable="true" />
+            </column>
+            <column name="val_progordemdemeritoacimadainflex" type="double">
+                <constraints nullable="true" />
+            </column>
+            <column name="val_proginflexibilidade" type="double">
+                <constraints nullable="true" />
+            </column>
+            <column name="val_proginflexembutmerito" type="double">
+                <constraints nullable="true" />
+            </column>
+            <column name="val_proginflexpura" type="double">
+                <constraints nullable="true" />
+            </column>
+            <column name="val_prograzaoeletrica" type="double">
+                <constraints nullable="true" />
+            </column>
+            <column name="val_proggarantiaenergetica" type="double">
+                <constraints nullable="true" />
+            </column>
+            <column name="val_proggfom" type="double">
+                <constraints nullable="true" />
+            </column>
+            <column name="val_progreposicaoperdas" type="double">
+                <constraints nullable="true" />
+            </column>
+            <column name="val_progexportacao" type="double">
+                <constraints nullable="true" />
+            </column>
+            <column name="val_progreservapotencia" type="double">
+                <constraints nullable="true" />
+            </column>
+            <column name="val_proggsub" type="double">
+                <constraints nullable="true" />
+            </column>
+            <column name="val_progunitcommitment" type="double">
+                <constraints nullable="true" />
+            </column>
+            <column name="val_progconstrainedoff" type="double">
+                <constraints nullable="true" />
+            </column>
+            <column name="val_proginflexibilidadedessem" type="double">
+                <constraints nullable="true" />
+            </column>
+            <column name="val_verifgeracao" type="double">
+                <constraints nullable="true" />
+            </column>
+            <column name="val_verifordemmerito" type="double">
+                <constraints nullable="true" />
+            </column>
+            <column name="val_verifordemdemeritoacimadainflex" type="double">
+                <constraints nullable="true" />
+            </column>
+            <column name="val_verifinflexibilidade" type="double">
+                <constraints nullable="true" />
+            </column>
+            <column name="val_verifinflexembutmerito" type="double">
+                <constraints nullable="true" />
+            </column>
+            <column name="val_verifinflexpura" type="double">
+                <constraints nullable="true" />
+            </column>
+            <column name="val_verifrazaoeletrica" type="double">
+                <constraints nullable="true" />
+            </column>
+            <column name="val_verifgarantiaenergetica" type="double">
+                <constraints nullable="true" />
+            </column>
+            <column name="val_verifgfom" type="double">
+                <constraints nullable="true" />
+            </column>
+            <column name="val_verifreposicaoperdas" type="double">
+                <constraints nullable="true" />
+            </column>
+            <column name="val_verifexportacao" type="double">
+                <constraints nullable="true" />
+            </column>
+            <column name="val_fdexp" type="double">
+                <constraints nullable="true" />
+            </column>
+            <column name="val_verifreservapotencia" type="double">
+                <constraints nullable="true" />
+            </column>
+            <column name="val_atendsatisfatoriorpo" type="integer">
+                <constraints nullable="true" />
+            </column>
+            <column name="val_verifgsub" type="double">
+                <constraints nullable="true" />
+            </column>
+            <column name="val_verifunitcommitment" type="double">
+                <constraints nullable="true" />
+            </column>
+            <column name="val_verifconstrainedoff" type="double">
+                <constraints nullable="true" />
+            </column>
+            <column name="tip_restricaoeletrica" type="integer">
+                <constraints nullable="true" />
+            </column>
+            <!-- jhipster-needle-liquibase-add-column - JHipster will add columns here -->
+        </createTable>
+    </changeSet>
+
+    <!-- jhipster-needle-liquibase-add-changeset - JHipster will add changesets here -->
+
+    <!--
+        Load sample data generated with Faker.js
+        - This data can be easily edited using a CSV editor (or even MS Excel) and
+          is located in the 'src/main/resources/config/liquibase/fake-data' directory
+        - By default this data is applied when running with the JHipster 'dev' profile.
+          This can be customized by adding or removing 'faker' in the 'spring.liquibase.contexts'
+          Spring Boot configuration key.
+    -->
+    <changeSet id="20250330013643-1-data" author="jhipster" context="faker">
+        <loadData
+                  file="config/liquibase/fake-data/OnsTable6.csv"
+                  separator=";"
+                  tableName="OnsTable6"
+                  usePreparedStatements="true">
+            <column name="id" type="numeric"/>
+            <column name="din_instante" type="date"/>
+            <column name="nom_tipopatamar" type="string"/>
+            <column name="id_subsistema" type="string"/>
+            <column name="nom_subsistema" type="string"/>
+            <column name="nom_usina" type="string"/>
+            <column name="cod_usinaplanejamento" type="numeric"/>
+            <column name="ceg" type="string"/>
+            <column name="val_proggeracao" type="numeric"/>
+            <column name="val_progordemmerito" type="numeric"/>
+            <column name="val_progordemdemeritoref" type="numeric"/>
+            <column name="val_progordemdemeritoacimadainflex" type="numeric"/>
+            <column name="val_proginflexibilidade" type="numeric"/>
+            <column name="val_proginflexembutmerito" type="numeric"/>
+            <column name="val_proginflexpura" type="numeric"/>
+            <column name="val_prograzaoeletrica" type="numeric"/>
+            <column name="val_proggarantiaenergetica" type="numeric"/>
+            <column name="val_proggfom" type="numeric"/>
+            <column name="val_progreposicaoperdas" type="numeric"/>
+            <column name="val_progexportacao" type="numeric"/>
+            <column name="val_progreservapotencia" type="numeric"/>
+            <column name="val_proggsub" type="numeric"/>
+            <column name="val_progunitcommitment" type="numeric"/>
+            <column name="val_progconstrainedoff" type="numeric"/>
+            <column name="val_proginflexibilidadedessem" type="numeric"/>
+            <column name="val_verifgeracao" type="numeric"/>
+            <column name="val_verifordemmerito" type="numeric"/>
+            <column name="val_verifordemdemeritoacimadainflex" type="numeric"/>
+            <column name="val_verifinflexibilidade" type="numeric"/>
+            <column name="val_verifinflexembutmerito" type="numeric"/>
+            <column name="val_verifinflexpura" type="numeric"/>
+            <column name="val_verifrazaoeletrica" type="numeric"/>
+            <column name="val_verifgarantiaenergetica" type="numeric"/>
+            <column name="val_verifgfom" type="numeric"/>
+            <column name="val_verifreposicaoperdas" type="numeric"/>
+            <column name="val_verifexportacao" type="numeric"/>
+            <column name="val_fdexp" type="numeric"/>
+            <column name="val_verifreservapotencia" type="numeric"/>
+            <column name="val_atendsatisfatoriorpo" type="numeric"/>
+            <column name="val_verifgsub" type="numeric"/>
+            <column name="val_verifunitcommitment" type="numeric"/>
+            <column name="val_verifconstrainedoff" type="numeric"/>
+            <column name="tip_restricaoeletrica" type="numeric"/>
+            <!-- jhipster-needle-liquibase-add-loadcolumn - JHipster (and/or extensions) can add load columns here -->
+        </loadData>
+    </changeSet>
+</databaseChangeLog>

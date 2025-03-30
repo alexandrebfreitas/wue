@@ -1,0 +1,200 @@
+<div>
+  <h2 id="page-heading" data-cy="OnsDadosValoresPrevisaoVersusProgramadoEolicasESolaresHeading">
+    <span jhiTranslate="wattsUpEnergyApp.onsDadosValoresPrevisaoVersusProgramadoEolicasESolares.home.title"
+      >Ons Dados Valores Previsao Versus Programado Eolicas E Solares</span
+    >
+
+    <div class="d-flex justify-content-end">
+      <button class="btn btn-info me-2" (click)="load()" [disabled]="isLoading">
+        <fa-icon icon="sync" [animation]="isLoading ? 'spin' : undefined"></fa-icon>
+        <span jhiTranslate="wattsUpEnergyApp.onsDadosValoresPrevisaoVersusProgramadoEolicasESolares.home.refreshListLabel"
+          >Atualizar lista</span
+        >
+      </button>
+
+      <button
+        id="jh-create-entity"
+        data-cy="entityCreateButton"
+        class="btn btn-primary jh-create-entity create-ons-dados-valores-previsao-versus-programado-eolicas-e-solares"
+        [routerLink]="['/ons-dados-valores-previsao-versus-programado-eolicas-e-solares/new']"
+      >
+        <fa-icon icon="plus"></fa-icon>
+        <span class="hidden-sm-down" jhiTranslate="wattsUpEnergyApp.onsDadosValoresPrevisaoVersusProgramadoEolicasESolares.home.createLabel"
+          >Criar novo Ons Dados Valores Previsao Versus Programado Eolicas E Solares</span
+        >
+      </button>
+    </div>
+  </h2>
+
+  <jhi-alert-error></jhi-alert-error>
+
+  <jhi-alert></jhi-alert>
+
+  <form name="searchForm" class="row row-cols-sm-auto align-items-center">
+    <div class="col-sm-12">
+      <div class="input-group w-100 mt-3">
+        <label
+          class="visually-hidden"
+          for="currentSearch"
+          jhiTranslate="wattsUpEnergyApp.onsDadosValoresPrevisaoVersusProgramadoEolicasESolares.home.search"
+          >Pesquisar por Ons Dados Valores Previsao Versus Programado Eolicas E Solares</label
+        >
+        <input
+          type="text"
+          class="form-control"
+          [(ngModel)]="currentSearch"
+          id="currentSearch"
+          name="currentSearch"
+          placeholder="{{ 'wattsUpEnergyApp.onsDadosValoresPrevisaoVersusProgramadoEolicasESolares.home.search' | translate }}"
+        />
+
+        <button class="btn btn-info" (click)="search(currentSearch)">
+          <fa-icon icon="search"></fa-icon>
+        </button>
+
+        @if (currentSearch) {
+          <button class="btn btn-danger" (click)="search('')">
+            <fa-icon icon="trash-alt"></fa-icon>
+          </button>
+        }
+      </div>
+    </div>
+  </form>
+
+  @if (onsDadosValoresPrevisaoVersusProgramadoEolicasESolares().length === 0) {
+    <div class="alert alert-warning" id="no-result">
+      <span jhiTranslate="wattsUpEnergyApp.onsDadosValoresPrevisaoVersusProgramadoEolicasESolares.home.notFound"
+        >Nenhum Ons Dados Valores Previsao Versus Programado Eolicas E Solares encontrado</span
+      >
+    </div>
+  } @else {
+    <div class="table-responsive table-entities" id="entities">
+      <table class="table table-striped" aria-describedby="page-heading">
+        <thead>
+          <tr jhiSort [(sortState)]="sortState" (sortChange)="navigateToWithComponentValues($event)">
+            <th scope="col" jhiSortBy="id">
+              <div class="d-flex">
+                <span jhiTranslate="global.field.id">Código</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="datProgramacao">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsDadosValoresPrevisaoVersusProgramadoEolicasESolares.datProgramacao"
+                  >Dat Programacao</span
+                >
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="numPatamar">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsDadosValoresPrevisaoVersusProgramadoEolicasESolares.numPatamar">Num Patamar</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="codUsinapdp">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsDadosValoresPrevisaoVersusProgramadoEolicasESolares.codUsinapdp">Cod Usinapdp</span>
+                @if (!currentSearch) {
+                  <fa-icon class="p-1" icon="sort"></fa-icon>
+                }
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="nomUsinapdp">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsDadosValoresPrevisaoVersusProgramadoEolicasESolares.nomUsinapdp">Nom Usinapdp</span>
+                @if (!currentSearch) {
+                  <fa-icon class="p-1" icon="sort"></fa-icon>
+                }
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="valPrevisao">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsDadosValoresPrevisaoVersusProgramadoEolicasESolares.valPrevisao">Val Previsao</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="valProgramado">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsDadosValoresPrevisaoVersusProgramadoEolicasESolares.valProgramado"
+                  >Val Programado</span
+                >
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (
+            onsDadosValoresPrevisaoVersusProgramadoEolicasESolares of onsDadosValoresPrevisaoVersusProgramadoEolicasESolares();
+            track trackId(onsDadosValoresPrevisaoVersusProgramadoEolicasESolares)
+          ) {
+            <tr data-cy="entityTable">
+              <td>
+                <a
+                  [routerLink]="[
+                    '/ons-dados-valores-previsao-versus-programado-eolicas-e-solares',
+                    onsDadosValoresPrevisaoVersusProgramadoEolicasESolares.id,
+                    'view',
+                  ]"
+                  >{{ onsDadosValoresPrevisaoVersusProgramadoEolicasESolares.id }}</a
+                >
+              </td>
+              <td>{{ onsDadosValoresPrevisaoVersusProgramadoEolicasESolares.datProgramacao | formatMediumDate }}</td>
+              <td>{{ onsDadosValoresPrevisaoVersusProgramadoEolicasESolares.numPatamar }}</td>
+              <td>{{ onsDadosValoresPrevisaoVersusProgramadoEolicasESolares.codUsinapdp }}</td>
+              <td>{{ onsDadosValoresPrevisaoVersusProgramadoEolicasESolares.nomUsinapdp }}</td>
+              <td>{{ onsDadosValoresPrevisaoVersusProgramadoEolicasESolares.valPrevisao }}</td>
+              <td>{{ onsDadosValoresPrevisaoVersusProgramadoEolicasESolares.valProgramado }}</td>
+              <td class="text-end">
+                <div class="btn-group">
+                  <a
+                    [routerLink]="[
+                      '/ons-dados-valores-previsao-versus-programado-eolicas-e-solares',
+                      onsDadosValoresPrevisaoVersusProgramadoEolicasESolares.id,
+                      'view',
+                    ]"
+                    class="btn btn-info btn-sm"
+                    data-cy="entityDetailsButton"
+                  >
+                    <fa-icon icon="eye"></fa-icon>
+                    <span class="d-none d-md-inline" jhiTranslate="entity.action.view">Visualizar</span>
+                  </a>
+
+                  <a
+                    [routerLink]="[
+                      '/ons-dados-valores-previsao-versus-programado-eolicas-e-solares',
+                      onsDadosValoresPrevisaoVersusProgramadoEolicasESolares.id,
+                      'edit',
+                    ]"
+                    class="btn btn-primary btn-sm"
+                    data-cy="entityEditButton"
+                  >
+                    <fa-icon icon="pencil-alt"></fa-icon>
+                    <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Editar</span>
+                  </a>
+
+                  <button
+                    type="submit"
+                    (click)="delete(onsDadosValoresPrevisaoVersusProgramadoEolicasESolares)"
+                    class="btn btn-danger btn-sm"
+                    data-cy="entityDeleteButton"
+                  >
+                    <fa-icon icon="times"></fa-icon>
+                    <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Excluir</span>
+                  </button>
+                </div>
+              </td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+  }
+</div>

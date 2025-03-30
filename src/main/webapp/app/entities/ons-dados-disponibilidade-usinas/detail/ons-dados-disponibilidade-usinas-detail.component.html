@@ -1,0 +1,88 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    @if (onsDadosDisponibilidadeUsinas(); as onsDadosDisponibilidadeUsinasRef) {
+      <div>
+        <h2 data-cy="onsDadosDisponibilidadeUsinasDetailsHeading">
+          <span jhiTranslate="wattsUpEnergyApp.onsDadosDisponibilidadeUsinas.detail.title">Ons Dados Disponibilidade Usinas</span>
+        </h2>
+
+        <hr />
+
+        <jhi-alert-error></jhi-alert-error>
+
+        <jhi-alert></jhi-alert>
+
+        <dl class="row-md jh-entity-details">
+          <dt><span jhiTranslate="global.field.id">Código</span></dt>
+          <dd>
+            <span>{{ onsDadosDisponibilidadeUsinasRef.id }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsDadosDisponibilidadeUsinas.idSubsistema">Id Subsistema</span></dt>
+          <dd>
+            <span>{{ onsDadosDisponibilidadeUsinasRef.idSubsistema }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsDadosDisponibilidadeUsinas.nomSubsistema">Nom Subsistema</span></dt>
+          <dd>
+            <span>{{ onsDadosDisponibilidadeUsinasRef.nomSubsistema }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsDadosDisponibilidadeUsinas.idEstado">Id Estado</span></dt>
+          <dd>
+            <span>{{ onsDadosDisponibilidadeUsinasRef.idEstado }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsDadosDisponibilidadeUsinas.nomEstado">Nom Estado</span></dt>
+          <dd>
+            <span>{{ onsDadosDisponibilidadeUsinasRef.nomEstado }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsDadosDisponibilidadeUsinas.nomUsina">Nom Usina</span></dt>
+          <dd>
+            <span>{{ onsDadosDisponibilidadeUsinasRef.nomUsina }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsDadosDisponibilidadeUsinas.idTipousina">Id Tipousina</span></dt>
+          <dd>
+            <span>{{ onsDadosDisponibilidadeUsinasRef.idTipousina }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsDadosDisponibilidadeUsinas.nomTipocombustivel">Nom Tipocombustivel</span></dt>
+          <dd>
+            <span>{{ onsDadosDisponibilidadeUsinasRef.nomTipocombustivel }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsDadosDisponibilidadeUsinas.idOns">Id Ons</span></dt>
+          <dd>
+            <span>{{ onsDadosDisponibilidadeUsinasRef.idOns }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsDadosDisponibilidadeUsinas.ceg">Ceg</span></dt>
+          <dd>
+            <span>{{ onsDadosDisponibilidadeUsinasRef.ceg }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsDadosDisponibilidadeUsinas.dinInstante">Din Instante</span></dt>
+          <dd>
+            <span>{{ onsDadosDisponibilidadeUsinasRef.dinInstante | formatMediumDate }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsDadosDisponibilidadeUsinas.valPotenciainstalada">Val Potenciainstalada</span></dt>
+          <dd>
+            <span>{{ onsDadosDisponibilidadeUsinasRef.valPotenciainstalada }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsDadosDisponibilidadeUsinas.valDispoperacional">Val Dispoperacional</span></dt>
+          <dd>
+            <span>{{ onsDadosDisponibilidadeUsinasRef.valDispoperacional }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsDadosDisponibilidadeUsinas.valDispsincronizada">Val Dispsincronizada</span></dt>
+          <dd>
+            <span>{{ onsDadosDisponibilidadeUsinasRef.valDispsincronizada }}</span>
+          </dd>
+        </dl>
+
+        <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+          <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Voltar</span>
+        </button>
+
+        <button
+          type="button"
+          [routerLink]="['/ons-dados-disponibilidade-usinas', onsDadosDisponibilidadeUsinasRef.id, 'edit']"
+          class="btn btn-primary"
+        >
+          <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Editar</span>
+        </button>
+      </div>
+    }
+  </div>
+</div>

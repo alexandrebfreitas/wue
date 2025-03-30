@@ -1,0 +1,242 @@
+<div>
+  <h2 id="page-heading" data-cy="OnsIndicadoresConfiabilidadeRedeBasicaSmSeveridadePerturbacoesHeading">
+    <span jhiTranslate="wattsUpEnergyApp.onsIndicadoresConfiabilidadeRedeBasicaSmSeveridadePerturbacoes.home.title"
+      >Ons Indicadores Confiabilidade Rede Basica Sm Severidade Perturbacoes</span
+    >
+
+    <div class="d-flex justify-content-end">
+      <button class="btn btn-info me-2" (click)="load()" [disabled]="isLoading">
+        <fa-icon icon="sync" [animation]="isLoading ? 'spin' : undefined"></fa-icon>
+        <span jhiTranslate="wattsUpEnergyApp.onsIndicadoresConfiabilidadeRedeBasicaSmSeveridadePerturbacoes.home.refreshListLabel"
+          >Atualizar lista</span
+        >
+      </button>
+
+      <button
+        id="jh-create-entity"
+        data-cy="entityCreateButton"
+        class="btn btn-primary jh-create-entity create-ons-indicadores-confiabilidade-rede-basica-sm-severidade-perturbacoes"
+        [routerLink]="['/ons-indicadores-confiabilidade-rede-basica-sm-severidade-perturbacoes/new']"
+      >
+        <fa-icon icon="plus"></fa-icon>
+        <span
+          class="hidden-sm-down"
+          jhiTranslate="wattsUpEnergyApp.onsIndicadoresConfiabilidadeRedeBasicaSmSeveridadePerturbacoes.home.createLabel"
+          >Criar novo Ons Indicadores Confiabilidade Rede Basica Sm Severidade Perturbacoes</span
+        >
+      </button>
+    </div>
+  </h2>
+
+  <jhi-alert-error></jhi-alert-error>
+
+  <jhi-alert></jhi-alert>
+
+  <form name="searchForm" class="row row-cols-sm-auto align-items-center">
+    <div class="col-sm-12">
+      <div class="input-group w-100 mt-3">
+        <label
+          class="visually-hidden"
+          for="currentSearch"
+          jhiTranslate="wattsUpEnergyApp.onsIndicadoresConfiabilidadeRedeBasicaSmSeveridadePerturbacoes.home.search"
+          >Pesquisar por Ons Indicadores Confiabilidade Rede Basica Sm Severidade Perturbacoes</label
+        >
+        <input
+          type="text"
+          class="form-control"
+          [(ngModel)]="currentSearch"
+          id="currentSearch"
+          name="currentSearch"
+          placeholder="{{ 'wattsUpEnergyApp.onsIndicadoresConfiabilidadeRedeBasicaSmSeveridadePerturbacoes.home.search' | translate }}"
+        />
+
+        <button class="btn btn-info" (click)="search(currentSearch)">
+          <fa-icon icon="search"></fa-icon>
+        </button>
+
+        @if (currentSearch) {
+          <button class="btn btn-danger" (click)="search('')">
+            <fa-icon icon="trash-alt"></fa-icon>
+          </button>
+        }
+      </div>
+    </div>
+  </form>
+
+  @if (onsIndicadoresConfiabilidadeRedeBasicaSmSeveridadePerturbacoes().length === 0) {
+    <div class="alert alert-warning" id="no-result">
+      <span jhiTranslate="wattsUpEnergyApp.onsIndicadoresConfiabilidadeRedeBasicaSmSeveridadePerturbacoes.home.notFound"
+        >Nenhum Ons Indicadores Confiabilidade Rede Basica Sm Severidade Perturbacoes encontrado</span
+      >
+    </div>
+  } @else {
+    <div class="table-responsive table-entities" id="entities">
+      <table class="table table-striped" aria-describedby="page-heading">
+        <thead>
+          <tr jhiSort [(sortState)]="sortState" (sortChange)="navigateToWithComponentValues($event)">
+            <th scope="col" jhiSortBy="id">
+              <div class="d-flex">
+                <span jhiTranslate="global.field.id">Código</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="dscAgregacao">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsIndicadoresConfiabilidadeRedeBasicaSmSeveridadePerturbacoes.dscAgregacao"
+                  >Dsc Agregacao</span
+                >
+                @if (!currentSearch) {
+                  <fa-icon class="p-1" icon="sort"></fa-icon>
+                }
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="codCaracteristica">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsIndicadoresConfiabilidadeRedeBasicaSmSeveridadePerturbacoes.codCaracteristica"
+                  >Cod Caracteristica</span
+                >
+                @if (!currentSearch) {
+                  <fa-icon class="p-1" icon="sort"></fa-icon>
+                }
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="dscCaracteristica">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsIndicadoresConfiabilidadeRedeBasicaSmSeveridadePerturbacoes.dscCaracteristica"
+                  >Dsc Caracteristica</span
+                >
+                @if (!currentSearch) {
+                  <fa-icon class="p-1" icon="sort"></fa-icon>
+                }
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="idPeriodicidade">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsIndicadoresConfiabilidadeRedeBasicaSmSeveridadePerturbacoes.idPeriodicidade"
+                  >Id Periodicidade</span
+                >
+                @if (!currentSearch) {
+                  <fa-icon class="p-1" icon="sort"></fa-icon>
+                }
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="dinReferencia">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsIndicadoresConfiabilidadeRedeBasicaSmSeveridadePerturbacoes.dinReferencia"
+                  >Din Referencia</span
+                >
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="valSm1">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsIndicadoresConfiabilidadeRedeBasicaSmSeveridadePerturbacoes.valSm1">Val Sm 1</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="valSm2">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsIndicadoresConfiabilidadeRedeBasicaSmSeveridadePerturbacoes.valSm2">Val Sm 2</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="valSm3">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsIndicadoresConfiabilidadeRedeBasicaSmSeveridadePerturbacoes.valSm3">Val Sm 3</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="valSm4">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsIndicadoresConfiabilidadeRedeBasicaSmSeveridadePerturbacoes.valSm4">Val Sm 4</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="valSm5">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsIndicadoresConfiabilidadeRedeBasicaSmSeveridadePerturbacoes.valSm5">Val Sm 5</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (
+            onsIndicadoresConfiabilidadeRedeBasicaSmSeveridadePerturbacoes of onsIndicadoresConfiabilidadeRedeBasicaSmSeveridadePerturbacoes();
+            track trackId(onsIndicadoresConfiabilidadeRedeBasicaSmSeveridadePerturbacoes)
+          ) {
+            <tr data-cy="entityTable">
+              <td>
+                <a
+                  [routerLink]="[
+                    '/ons-indicadores-confiabilidade-rede-basica-sm-severidade-perturbacoes',
+                    onsIndicadoresConfiabilidadeRedeBasicaSmSeveridadePerturbacoes.id,
+                    'view',
+                  ]"
+                  >{{ onsIndicadoresConfiabilidadeRedeBasicaSmSeveridadePerturbacoes.id }}</a
+                >
+              </td>
+              <td>{{ onsIndicadoresConfiabilidadeRedeBasicaSmSeveridadePerturbacoes.dscAgregacao }}</td>
+              <td>{{ onsIndicadoresConfiabilidadeRedeBasicaSmSeveridadePerturbacoes.codCaracteristica }}</td>
+              <td>{{ onsIndicadoresConfiabilidadeRedeBasicaSmSeveridadePerturbacoes.dscCaracteristica }}</td>
+              <td>{{ onsIndicadoresConfiabilidadeRedeBasicaSmSeveridadePerturbacoes.idPeriodicidade }}</td>
+              <td>{{ onsIndicadoresConfiabilidadeRedeBasicaSmSeveridadePerturbacoes.dinReferencia | formatMediumDate }}</td>
+              <td>{{ onsIndicadoresConfiabilidadeRedeBasicaSmSeveridadePerturbacoes.valSm1 }}</td>
+              <td>{{ onsIndicadoresConfiabilidadeRedeBasicaSmSeveridadePerturbacoes.valSm2 }}</td>
+              <td>{{ onsIndicadoresConfiabilidadeRedeBasicaSmSeveridadePerturbacoes.valSm3 }}</td>
+              <td>{{ onsIndicadoresConfiabilidadeRedeBasicaSmSeveridadePerturbacoes.valSm4 }}</td>
+              <td>{{ onsIndicadoresConfiabilidadeRedeBasicaSmSeveridadePerturbacoes.valSm5 }}</td>
+              <td class="text-end">
+                <div class="btn-group">
+                  <a
+                    [routerLink]="[
+                      '/ons-indicadores-confiabilidade-rede-basica-sm-severidade-perturbacoes',
+                      onsIndicadoresConfiabilidadeRedeBasicaSmSeveridadePerturbacoes.id,
+                      'view',
+                    ]"
+                    class="btn btn-info btn-sm"
+                    data-cy="entityDetailsButton"
+                  >
+                    <fa-icon icon="eye"></fa-icon>
+                    <span class="d-none d-md-inline" jhiTranslate="entity.action.view">Visualizar</span>
+                  </a>
+
+                  <a
+                    [routerLink]="[
+                      '/ons-indicadores-confiabilidade-rede-basica-sm-severidade-perturbacoes',
+                      onsIndicadoresConfiabilidadeRedeBasicaSmSeveridadePerturbacoes.id,
+                      'edit',
+                    ]"
+                    class="btn btn-primary btn-sm"
+                    data-cy="entityEditButton"
+                  >
+                    <fa-icon icon="pencil-alt"></fa-icon>
+                    <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Editar</span>
+                  </a>
+
+                  <button
+                    type="submit"
+                    (click)="delete(onsIndicadoresConfiabilidadeRedeBasicaSmSeveridadePerturbacoes)"
+                    class="btn btn-danger btn-sm"
+                    data-cy="entityDeleteButton"
+                  >
+                    <fa-icon icon="times"></fa-icon>
+                    <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Excluir</span>
+                  </button>
+                </div>
+              </td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+  }
+</div>

@@ -1,0 +1,35 @@
+{
+  "annotations": {
+    "changelogDate": "20250330013639"
+  },
+  "applications": "*",
+  "entityTableName": "OnsTable2",
+  "fields": [
+    {
+      "fieldName": "enaBrutaResMwmed",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "enaBrutaResPercentualmlt",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "enaArmazenavelResMwmed",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "enaArmazenavelResPercentualmlt",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "enaQuedaBruta",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "mltEna",
+      "fieldType": "Double"
+    }
+  ],
+  "name": "OnsEnaDiarioReservatorio",
+  "relationships": []
+}

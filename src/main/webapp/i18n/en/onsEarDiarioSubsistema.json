@@ -1,0 +1,30 @@
+{
+  "wattsUpEnergyApp": {
+    "onsEarDiarioSubsistema": {
+      "home": {
+        "title": "Ons Ear Diario Subsistemas",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Ons Ear Diario Subsistema",
+        "createOrEditLabel": "Create or edit a Ons Ear Diario Subsistema",
+        "search": "Search for Ons Ear Diario Subsistema",
+        "notFound": "No Ons Ear Diario Subsistemas found"
+      },
+      "created": "A new Ons Ear Diario Subsistema is created with identifier {{ param }}",
+      "updated": "A Ons Ear Diario Subsistema is updated with identifier {{ param }}",
+      "deleted": "A Ons Ear Diario Subsistema is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Ons Ear Diario Subsistema {{ id }}?"
+      },
+      "detail": {
+        "title": "Ons Ear Diario Subsistema"
+      },
+      "id": "ID",
+      "idSubsistema": "Id Subsistema",
+      "nomSubsistema": "Nom Subsistema",
+      "earData": "Ear Data",
+      "earMaxSubsistema": "Ear Max Subsistema",
+      "earVerifSubsistemaMwmes": "Ear Verif Subsistema Mwmes",
+      "earVerifSubsistemaPercentual": "Ear Verif Subsistema Percentual"
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "wattsUpEnergyApp": {
+    "onsDadosHidrologicosVolumeEsperaRecomendado": {
+      "home": {
+        "title": "Ons Dados Hidrologicos Volume Espera Recomendados",
+        "refreshListLabel": "Atualizar lista",
+        "createLabel": "Criar novo Ons Dados Hidrologicos Volume Espera Recomendado",
+        "createOrEditLabel": "Criar ou editar Ons Dados Hidrologicos Volume Espera Recomendado",
+        "search": "Pesquisar por Ons Dados Hidrologicos Volume Espera Recomendado",
+        "notFound": "Nenhum Ons Dados Hidrologicos Volume Espera Recomendado encontrado"
+      },
+      "created": "Um novo Ons Dados Hidrologicos Volume Espera Recomendado foi criado com o identificador {{ param }}",
+      "updated": "Um Ons Dados Hidrologicos Volume Espera Recomendado foi atualizado com o identificador {{ param }}",
+      "deleted": "Um Ons Dados Hidrologicos Volume Espera Recomendado foi excluído com o identificador {{ param }}",
+      "delete": {
+        "question": "Tem certeza de que deseja excluir Ons Dados Hidrologicos Volume Espera Recomendado {{ id }}?"
+      },
+      "detail": {
+        "title": "Ons Dados Hidrologicos Volume Espera Recomendado"
+      },
+      "id": "ID",
+      "dinInstante": "Din Instante",
+      "valVolumeespera": "Val Volumeespera"
+    }
+  }
+}

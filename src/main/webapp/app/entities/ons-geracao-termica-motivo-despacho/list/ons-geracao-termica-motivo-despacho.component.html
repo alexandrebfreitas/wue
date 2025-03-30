@@ -1,0 +1,488 @@
+<div>
+  <h2 id="page-heading" data-cy="OnsGeracaoTermicaMotivoDespachoHeading">
+    <span jhiTranslate="wattsUpEnergyApp.onsGeracaoTermicaMotivoDespacho.home.title">Ons Geracao Termica Motivo Despachos</span>
+
+    <div class="d-flex justify-content-end">
+      <button class="btn btn-info me-2" (click)="load()" [disabled]="isLoading">
+        <fa-icon icon="sync" [animation]="isLoading ? 'spin' : undefined"></fa-icon>
+        <span jhiTranslate="wattsUpEnergyApp.onsGeracaoTermicaMotivoDespacho.home.refreshListLabel">Atualizar lista</span>
+      </button>
+
+      <button
+        id="jh-create-entity"
+        data-cy="entityCreateButton"
+        class="btn btn-primary jh-create-entity create-ons-geracao-termica-motivo-despacho"
+        [routerLink]="['/ons-geracao-termica-motivo-despacho/new']"
+      >
+        <fa-icon icon="plus"></fa-icon>
+        <span class="hidden-sm-down" jhiTranslate="wattsUpEnergyApp.onsGeracaoTermicaMotivoDespacho.home.createLabel"
+          >Criar novo Ons Geracao Termica Motivo Despacho</span
+        >
+      </button>
+    </div>
+  </h2>
+
+  <jhi-alert-error></jhi-alert-error>
+
+  <jhi-alert></jhi-alert>
+
+  <form name="searchForm" class="row row-cols-sm-auto align-items-center">
+    <div class="col-sm-12">
+      <div class="input-group w-100 mt-3">
+        <label class="visually-hidden" for="currentSearch" jhiTranslate="wattsUpEnergyApp.onsGeracaoTermicaMotivoDespacho.home.search"
+          >Pesquisar por Ons Geracao Termica Motivo Despacho</label
+        >
+        <input
+          type="text"
+          class="form-control"
+          [(ngModel)]="currentSearch"
+          id="currentSearch"
+          name="currentSearch"
+          placeholder="{{ 'wattsUpEnergyApp.onsGeracaoTermicaMotivoDespacho.home.search' | translate }}"
+        />
+
+        <button class="btn btn-info" (click)="search(currentSearch)">
+          <fa-icon icon="search"></fa-icon>
+        </button>
+
+        @if (currentSearch) {
+          <button class="btn btn-danger" (click)="search('')">
+            <fa-icon icon="trash-alt"></fa-icon>
+          </button>
+        }
+      </div>
+    </div>
+  </form>
+
+  @if (onsGeracaoTermicaMotivoDespachos().length === 0) {
+    <div class="alert alert-warning" id="no-result">
+      <span jhiTranslate="wattsUpEnergyApp.onsGeracaoTermicaMotivoDespacho.home.notFound"
+        >Nenhum Ons Geracao Termica Motivo Despacho encontrado</span
+      >
+    </div>
+  } @else {
+    <div class="table-responsive table-entities" id="entities">
+      <table class="table table-striped" aria-describedby="page-heading">
+        <thead>
+          <tr jhiSort [(sortState)]="sortState" (sortChange)="navigateToWithComponentValues($event)">
+            <th scope="col" jhiSortBy="id">
+              <div class="d-flex">
+                <span jhiTranslate="global.field.id">Código</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="dinInstante">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsGeracaoTermicaMotivoDespacho.dinInstante">Din Instante</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="nomTipopatamar">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsGeracaoTermicaMotivoDespacho.nomTipopatamar">Nom Tipopatamar</span>
+                @if (!currentSearch) {
+                  <fa-icon class="p-1" icon="sort"></fa-icon>
+                }
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="idSubsistema">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsGeracaoTermicaMotivoDespacho.idSubsistema">Id Subsistema</span>
+                @if (!currentSearch) {
+                  <fa-icon class="p-1" icon="sort"></fa-icon>
+                }
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="nomSubsistema">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsGeracaoTermicaMotivoDespacho.nomSubsistema">Nom Subsistema</span>
+                @if (!currentSearch) {
+                  <fa-icon class="p-1" icon="sort"></fa-icon>
+                }
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="nomUsina">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsGeracaoTermicaMotivoDespacho.nomUsina">Nom Usina</span>
+                @if (!currentSearch) {
+                  <fa-icon class="p-1" icon="sort"></fa-icon>
+                }
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="codUsinaplanejamento">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsGeracaoTermicaMotivoDespacho.codUsinaplanejamento">Cod Usinaplanejamento</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="ceg">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsGeracaoTermicaMotivoDespacho.ceg">Ceg</span>
+                @if (!currentSearch) {
+                  <fa-icon class="p-1" icon="sort"></fa-icon>
+                }
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="valProggeracao">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsGeracaoTermicaMotivoDespacho.valProggeracao">Val Proggeracao</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="valProgordemmerito">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsGeracaoTermicaMotivoDespacho.valProgordemmerito">Val Progordemmerito</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="valProgordemdemeritoref">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsGeracaoTermicaMotivoDespacho.valProgordemdemeritoref"
+                  >Val Progordemdemeritoref</span
+                >
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="valProgordemdemeritoacimadainflex">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsGeracaoTermicaMotivoDespacho.valProgordemdemeritoacimadainflex"
+                  >Val Progordemdemeritoacimadainflex</span
+                >
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="valProginflexibilidade">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsGeracaoTermicaMotivoDespacho.valProginflexibilidade">Val Proginflexibilidade</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="valProginflexembutmerito">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsGeracaoTermicaMotivoDespacho.valProginflexembutmerito"
+                  >Val Proginflexembutmerito</span
+                >
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="valProginflexpura">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsGeracaoTermicaMotivoDespacho.valProginflexpura">Val Proginflexpura</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="valPrograzaoeletrica">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsGeracaoTermicaMotivoDespacho.valPrograzaoeletrica">Val Prograzaoeletrica</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="valProggarantiaenergetica">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsGeracaoTermicaMotivoDespacho.valProggarantiaenergetica"
+                  >Val Proggarantiaenergetica</span
+                >
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="valProggfom">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsGeracaoTermicaMotivoDespacho.valProggfom">Val Proggfom</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="valProgreposicaoperdas">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsGeracaoTermicaMotivoDespacho.valProgreposicaoperdas">Val Progreposicaoperdas</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="valProgexportacao">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsGeracaoTermicaMotivoDespacho.valProgexportacao">Val Progexportacao</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="valProgreservapotencia">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsGeracaoTermicaMotivoDespacho.valProgreservapotencia">Val Progreservapotencia</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="valProggsub">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsGeracaoTermicaMotivoDespacho.valProggsub">Val Proggsub</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="valProgunitcommitment">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsGeracaoTermicaMotivoDespacho.valProgunitcommitment">Val Progunitcommitment</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="valProgconstrainedoff">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsGeracaoTermicaMotivoDespacho.valProgconstrainedoff">Val Progconstrainedoff</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="valProginflexibilidadedessem">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsGeracaoTermicaMotivoDespacho.valProginflexibilidadedessem"
+                  >Val Proginflexibilidadedessem</span
+                >
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="valVerifgeracao">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsGeracaoTermicaMotivoDespacho.valVerifgeracao">Val Verifgeracao</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="valVerifordemmerito">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsGeracaoTermicaMotivoDespacho.valVerifordemmerito">Val Verifordemmerito</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="valVerifordemdemeritoacimadainflex">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsGeracaoTermicaMotivoDespacho.valVerifordemdemeritoacimadainflex"
+                  >Val Verifordemdemeritoacimadainflex</span
+                >
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="valVerifinflexibilidade">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsGeracaoTermicaMotivoDespacho.valVerifinflexibilidade"
+                  >Val Verifinflexibilidade</span
+                >
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="valVerifinflexembutmerito">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsGeracaoTermicaMotivoDespacho.valVerifinflexembutmerito"
+                  >Val Verifinflexembutmerito</span
+                >
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="valVerifinflexpura">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsGeracaoTermicaMotivoDespacho.valVerifinflexpura">Val Verifinflexpura</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="valVerifrazaoeletrica">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsGeracaoTermicaMotivoDespacho.valVerifrazaoeletrica">Val Verifrazaoeletrica</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="valVerifgarantiaenergetica">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsGeracaoTermicaMotivoDespacho.valVerifgarantiaenergetica"
+                  >Val Verifgarantiaenergetica</span
+                >
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="valVerifgfom">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsGeracaoTermicaMotivoDespacho.valVerifgfom">Val Verifgfom</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="valVerifreposicaoperdas">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsGeracaoTermicaMotivoDespacho.valVerifreposicaoperdas"
+                  >Val Verifreposicaoperdas</span
+                >
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="valVerifexportacao">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsGeracaoTermicaMotivoDespacho.valVerifexportacao">Val Verifexportacao</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="valFdexp">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsGeracaoTermicaMotivoDespacho.valFdexp">Val Fdexp</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="valVerifreservapotencia">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsGeracaoTermicaMotivoDespacho.valVerifreservapotencia"
+                  >Val Verifreservapotencia</span
+                >
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="valAtendsatisfatoriorpo">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsGeracaoTermicaMotivoDespacho.valAtendsatisfatoriorpo"
+                  >Val Atendsatisfatoriorpo</span
+                >
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="valVerifgsub">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsGeracaoTermicaMotivoDespacho.valVerifgsub">Val Verifgsub</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="valVerifunitcommitment">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsGeracaoTermicaMotivoDespacho.valVerifunitcommitment">Val Verifunitcommitment</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="valVerifconstrainedoff">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsGeracaoTermicaMotivoDespacho.valVerifconstrainedoff">Val Verifconstrainedoff</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="tipRestricaoeletrica">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsGeracaoTermicaMotivoDespacho.tipRestricaoeletrica">Tip Restricaoeletrica</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (onsGeracaoTermicaMotivoDespacho of onsGeracaoTermicaMotivoDespachos(); track trackId(onsGeracaoTermicaMotivoDespacho)) {
+            <tr data-cy="entityTable">
+              <td>
+                <a [routerLink]="['/ons-geracao-termica-motivo-despacho', onsGeracaoTermicaMotivoDespacho.id, 'view']">{{
+                  onsGeracaoTermicaMotivoDespacho.id
+                }}</a>
+              </td>
+              <td>{{ onsGeracaoTermicaMotivoDespacho.dinInstante | formatMediumDate }}</td>
+              <td>{{ onsGeracaoTermicaMotivoDespacho.nomTipopatamar }}</td>
+              <td>{{ onsGeracaoTermicaMotivoDespacho.idSubsistema }}</td>
+              <td>{{ onsGeracaoTermicaMotivoDespacho.nomSubsistema }}</td>
+              <td>{{ onsGeracaoTermicaMotivoDespacho.nomUsina }}</td>
+              <td>{{ onsGeracaoTermicaMotivoDespacho.codUsinaplanejamento }}</td>
+              <td>{{ onsGeracaoTermicaMotivoDespacho.ceg }}</td>
+              <td>{{ onsGeracaoTermicaMotivoDespacho.valProggeracao }}</td>
+              <td>{{ onsGeracaoTermicaMotivoDespacho.valProgordemmerito }}</td>
+              <td>{{ onsGeracaoTermicaMotivoDespacho.valProgordemdemeritoref }}</td>
+              <td>{{ onsGeracaoTermicaMotivoDespacho.valProgordemdemeritoacimadainflex }}</td>
+              <td>{{ onsGeracaoTermicaMotivoDespacho.valProginflexibilidade }}</td>
+              <td>{{ onsGeracaoTermicaMotivoDespacho.valProginflexembutmerito }}</td>
+              <td>{{ onsGeracaoTermicaMotivoDespacho.valProginflexpura }}</td>
+              <td>{{ onsGeracaoTermicaMotivoDespacho.valPrograzaoeletrica }}</td>
+              <td>{{ onsGeracaoTermicaMotivoDespacho.valProggarantiaenergetica }}</td>
+              <td>{{ onsGeracaoTermicaMotivoDespacho.valProggfom }}</td>
+              <td>{{ onsGeracaoTermicaMotivoDespacho.valProgreposicaoperdas }}</td>
+              <td>{{ onsGeracaoTermicaMotivoDespacho.valProgexportacao }}</td>
+              <td>{{ onsGeracaoTermicaMotivoDespacho.valProgreservapotencia }}</td>
+              <td>{{ onsGeracaoTermicaMotivoDespacho.valProggsub }}</td>
+              <td>{{ onsGeracaoTermicaMotivoDespacho.valProgunitcommitment }}</td>
+              <td>{{ onsGeracaoTermicaMotivoDespacho.valProgconstrainedoff }}</td>
+              <td>{{ onsGeracaoTermicaMotivoDespacho.valProginflexibilidadedessem }}</td>
+              <td>{{ onsGeracaoTermicaMotivoDespacho.valVerifgeracao }}</td>
+              <td>{{ onsGeracaoTermicaMotivoDespacho.valVerifordemmerito }}</td>
+              <td>{{ onsGeracaoTermicaMotivoDespacho.valVerifordemdemeritoacimadainflex }}</td>
+              <td>{{ onsGeracaoTermicaMotivoDespacho.valVerifinflexibilidade }}</td>
+              <td>{{ onsGeracaoTermicaMotivoDespacho.valVerifinflexembutmerito }}</td>
+              <td>{{ onsGeracaoTermicaMotivoDespacho.valVerifinflexpura }}</td>
+              <td>{{ onsGeracaoTermicaMotivoDespacho.valVerifrazaoeletrica }}</td>
+              <td>{{ onsGeracaoTermicaMotivoDespacho.valVerifgarantiaenergetica }}</td>
+              <td>{{ onsGeracaoTermicaMotivoDespacho.valVerifgfom }}</td>
+              <td>{{ onsGeracaoTermicaMotivoDespacho.valVerifreposicaoperdas }}</td>
+              <td>{{ onsGeracaoTermicaMotivoDespacho.valVerifexportacao }}</td>
+              <td>{{ onsGeracaoTermicaMotivoDespacho.valFdexp }}</td>
+              <td>{{ onsGeracaoTermicaMotivoDespacho.valVerifreservapotencia }}</td>
+              <td>{{ onsGeracaoTermicaMotivoDespacho.valAtendsatisfatoriorpo }}</td>
+              <td>{{ onsGeracaoTermicaMotivoDespacho.valVerifgsub }}</td>
+              <td>{{ onsGeracaoTermicaMotivoDespacho.valVerifunitcommitment }}</td>
+              <td>{{ onsGeracaoTermicaMotivoDespacho.valVerifconstrainedoff }}</td>
+              <td>{{ onsGeracaoTermicaMotivoDespacho.tipRestricaoeletrica }}</td>
+              <td class="text-end">
+                <div class="btn-group">
+                  <a
+                    [routerLink]="['/ons-geracao-termica-motivo-despacho', onsGeracaoTermicaMotivoDespacho.id, 'view']"
+                    class="btn btn-info btn-sm"
+                    data-cy="entityDetailsButton"
+                  >
+                    <fa-icon icon="eye"></fa-icon>
+                    <span class="d-none d-md-inline" jhiTranslate="entity.action.view">Visualizar</span>
+                  </a>
+
+                  <a
+                    [routerLink]="['/ons-geracao-termica-motivo-despacho', onsGeracaoTermicaMotivoDespacho.id, 'edit']"
+                    class="btn btn-primary btn-sm"
+                    data-cy="entityEditButton"
+                  >
+                    <fa-icon icon="pencil-alt"></fa-icon>
+                    <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Editar</span>
+                  </a>
+
+                  <button
+                    type="submit"
+                    (click)="delete(onsGeracaoTermicaMotivoDespacho)"
+                    class="btn btn-danger btn-sm"
+                    data-cy="entityDeleteButton"
+                  >
+                    <fa-icon icon="times"></fa-icon>
+                    <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Excluir</span>
+                  </button>
+                </div>
+              </td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+  }
+</div>

@@ -1,0 +1,299 @@
+<div>
+  <h2 id="page-heading" data-cy="OnsDadosValoresProgramacaoDiariaHeading">
+    <span jhiTranslate="wattsUpEnergyApp.onsDadosValoresProgramacaoDiaria.home.title">Ons Dados Valores Programacao Diarias</span>
+
+    <div class="d-flex justify-content-end">
+      <button class="btn btn-info me-2" (click)="load()" [disabled]="isLoading">
+        <fa-icon icon="sync" [animation]="isLoading ? 'spin' : undefined"></fa-icon>
+        <span jhiTranslate="wattsUpEnergyApp.onsDadosValoresProgramacaoDiaria.home.refreshListLabel">Atualizar lista</span>
+      </button>
+
+      <button
+        id="jh-create-entity"
+        data-cy="entityCreateButton"
+        class="btn btn-primary jh-create-entity create-ons-dados-valores-programacao-diaria"
+        [routerLink]="['/ons-dados-valores-programacao-diaria/new']"
+      >
+        <fa-icon icon="plus"></fa-icon>
+        <span class="hidden-sm-down" jhiTranslate="wattsUpEnergyApp.onsDadosValoresProgramacaoDiaria.home.createLabel"
+          >Criar novo Ons Dados Valores Programacao Diaria</span
+        >
+      </button>
+    </div>
+  </h2>
+
+  <jhi-alert-error></jhi-alert-error>
+
+  <jhi-alert></jhi-alert>
+
+  <form name="searchForm" class="row row-cols-sm-auto align-items-center">
+    <div class="col-sm-12">
+      <div class="input-group w-100 mt-3">
+        <label class="visually-hidden" for="currentSearch" jhiTranslate="wattsUpEnergyApp.onsDadosValoresProgramacaoDiaria.home.search"
+          >Pesquisar por Ons Dados Valores Programacao Diaria</label
+        >
+        <input
+          type="text"
+          class="form-control"
+          [(ngModel)]="currentSearch"
+          id="currentSearch"
+          name="currentSearch"
+          placeholder="{{ 'wattsUpEnergyApp.onsDadosValoresProgramacaoDiaria.home.search' | translate }}"
+        />
+
+        <button class="btn btn-info" (click)="search(currentSearch)">
+          <fa-icon icon="search"></fa-icon>
+        </button>
+
+        @if (currentSearch) {
+          <button class="btn btn-danger" (click)="search('')">
+            <fa-icon icon="trash-alt"></fa-icon>
+          </button>
+        }
+      </div>
+    </div>
+  </form>
+
+  @if (onsDadosValoresProgramacaoDiarias().length === 0) {
+    <div class="alert alert-warning" id="no-result">
+      <span jhiTranslate="wattsUpEnergyApp.onsDadosValoresProgramacaoDiaria.home.notFound"
+        >Nenhum Ons Dados Valores Programacao Diaria encontrado</span
+      >
+    </div>
+  } @else {
+    <div class="table-responsive table-entities" id="entities">
+      <table class="table table-striped" aria-describedby="page-heading">
+        <thead>
+          <tr jhiSort [(sortState)]="sortState" (sortChange)="navigateToWithComponentValues($event)">
+            <th scope="col" jhiSortBy="id">
+              <div class="d-flex">
+                <span jhiTranslate="global.field.id">Código</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="dinProgramacaodia">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsDadosValoresProgramacaoDiaria.dinProgramacaodia">Din Programacaodia</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="numPatamar">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsDadosValoresProgramacaoDiaria.numPatamar">Num Patamar</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="codExibicaousina">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsDadosValoresProgramacaoDiaria.codExibicaousina">Cod Exibicaousina</span>
+                @if (!currentSearch) {
+                  <fa-icon class="p-1" icon="sort"></fa-icon>
+                }
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="nomUsina">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsDadosValoresProgramacaoDiaria.nomUsina">Nom Usina</span>
+                @if (!currentSearch) {
+                  <fa-icon class="p-1" icon="sort"></fa-icon>
+                }
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="tipGeracao">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsDadosValoresProgramacaoDiaria.tipGeracao">Tip Geracao</span>
+                @if (!currentSearch) {
+                  <fa-icon class="p-1" icon="sort"></fa-icon>
+                }
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="nomModalidadeoperacao">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsDadosValoresProgramacaoDiaria.nomModalidadeoperacao">Nom Modalidadeoperacao</span>
+                @if (!currentSearch) {
+                  <fa-icon class="p-1" icon="sort"></fa-icon>
+                }
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="idSubsistema">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsDadosValoresProgramacaoDiaria.idSubsistema">Id Subsistema</span>
+                @if (!currentSearch) {
+                  <fa-icon class="p-1" icon="sort"></fa-icon>
+                }
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="nomSubsistema">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsDadosValoresProgramacaoDiaria.nomSubsistema">Nom Subsistema</span>
+                @if (!currentSearch) {
+                  <fa-icon class="p-1" icon="sort"></fa-icon>
+                }
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="idEstado">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsDadosValoresProgramacaoDiaria.idEstado">Id Estado</span>
+                @if (!currentSearch) {
+                  <fa-icon class="p-1" icon="sort"></fa-icon>
+                }
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="nomEstado">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsDadosValoresProgramacaoDiaria.nomEstado">Nom Estado</span>
+                @if (!currentSearch) {
+                  <fa-icon class="p-1" icon="sort"></fa-icon>
+                }
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="valGeracaoprogramada">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsDadosValoresProgramacaoDiaria.valGeracaoprogramada">Val Geracaoprogramada</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="valDisponibilidade">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsDadosValoresProgramacaoDiaria.valDisponibilidade">Val Disponibilidade</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="valOrdemmerito">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsDadosValoresProgramacaoDiaria.valOrdemmerito">Val Ordemmerito</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="valInflexibilidade">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsDadosValoresProgramacaoDiaria.valInflexibilidade">Val Inflexibilidade</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="valUc">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsDadosValoresProgramacaoDiaria.valUc">Val Uc</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="valRazaoeletrica">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsDadosValoresProgramacaoDiaria.valRazaoeletrica">Val Razaoeletrica</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="valGeracaoenergetica">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsDadosValoresProgramacaoDiaria.valGeracaoenergetica">Val Geracaoenergetica</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="valGesubgsub">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsDadosValoresProgramacaoDiaria.valGesubgsub">Val Gesubgsub</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="valExportacao">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsDadosValoresProgramacaoDiaria.valExportacao">Val Exportacao</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="valReposicaoexportacao">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsDadosValoresProgramacaoDiaria.valReposicaoexportacao">Val Reposicaoexportacao</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="valFaltacombustivel">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsDadosValoresProgramacaoDiaria.valFaltacombustivel">Val Faltacombustivel</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (onsDadosValoresProgramacaoDiaria of onsDadosValoresProgramacaoDiarias(); track trackId(onsDadosValoresProgramacaoDiaria)) {
+            <tr data-cy="entityTable">
+              <td>
+                <a [routerLink]="['/ons-dados-valores-programacao-diaria', onsDadosValoresProgramacaoDiaria.id, 'view']">{{
+                  onsDadosValoresProgramacaoDiaria.id
+                }}</a>
+              </td>
+              <td>{{ onsDadosValoresProgramacaoDiaria.dinProgramacaodia | formatMediumDate }}</td>
+              <td>{{ onsDadosValoresProgramacaoDiaria.numPatamar }}</td>
+              <td>{{ onsDadosValoresProgramacaoDiaria.codExibicaousina }}</td>
+              <td>{{ onsDadosValoresProgramacaoDiaria.nomUsina }}</td>
+              <td>{{ onsDadosValoresProgramacaoDiaria.tipGeracao }}</td>
+              <td>{{ onsDadosValoresProgramacaoDiaria.nomModalidadeoperacao }}</td>
+              <td>{{ onsDadosValoresProgramacaoDiaria.idSubsistema }}</td>
+              <td>{{ onsDadosValoresProgramacaoDiaria.nomSubsistema }}</td>
+              <td>{{ onsDadosValoresProgramacaoDiaria.idEstado }}</td>
+              <td>{{ onsDadosValoresProgramacaoDiaria.nomEstado }}</td>
+              <td>{{ onsDadosValoresProgramacaoDiaria.valGeracaoprogramada }}</td>
+              <td>{{ onsDadosValoresProgramacaoDiaria.valDisponibilidade }}</td>
+              <td>{{ onsDadosValoresProgramacaoDiaria.valOrdemmerito }}</td>
+              <td>{{ onsDadosValoresProgramacaoDiaria.valInflexibilidade }}</td>
+              <td>{{ onsDadosValoresProgramacaoDiaria.valUc }}</td>
+              <td>{{ onsDadosValoresProgramacaoDiaria.valRazaoeletrica }}</td>
+              <td>{{ onsDadosValoresProgramacaoDiaria.valGeracaoenergetica }}</td>
+              <td>{{ onsDadosValoresProgramacaoDiaria.valGesubgsub }}</td>
+              <td>{{ onsDadosValoresProgramacaoDiaria.valExportacao }}</td>
+              <td>{{ onsDadosValoresProgramacaoDiaria.valReposicaoexportacao }}</td>
+              <td>{{ onsDadosValoresProgramacaoDiaria.valFaltacombustivel }}</td>
+              <td class="text-end">
+                <div class="btn-group">
+                  <a
+                    [routerLink]="['/ons-dados-valores-programacao-diaria', onsDadosValoresProgramacaoDiaria.id, 'view']"
+                    class="btn btn-info btn-sm"
+                    data-cy="entityDetailsButton"
+                  >
+                    <fa-icon icon="eye"></fa-icon>
+                    <span class="d-none d-md-inline" jhiTranslate="entity.action.view">Visualizar</span>
+                  </a>
+
+                  <a
+                    [routerLink]="['/ons-dados-valores-programacao-diaria', onsDadosValoresProgramacaoDiaria.id, 'edit']"
+                    class="btn btn-primary btn-sm"
+                    data-cy="entityEditButton"
+                  >
+                    <fa-icon icon="pencil-alt"></fa-icon>
+                    <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Editar</span>
+                  </a>
+
+                  <button
+                    type="submit"
+                    (click)="delete(onsDadosValoresProgramacaoDiaria)"
+                    class="btn btn-danger btn-sm"
+                    data-cy="entityDeleteButton"
+                  >
+                    <fa-icon icon="times"></fa-icon>
+                    <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Excluir</span>
+                  </button>
+                </div>
+              </td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+  }
+</div>

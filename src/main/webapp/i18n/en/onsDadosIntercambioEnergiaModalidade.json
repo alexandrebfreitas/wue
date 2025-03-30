@@ -1,0 +1,31 @@
+{
+  "wattsUpEnergyApp": {
+    "onsDadosIntercambioEnergiaModalidade": {
+      "home": {
+        "title": "Ons Dados Intercambio Energia Modalidades",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Ons Dados Intercambio Energia Modalidade",
+        "createOrEditLabel": "Create or edit a Ons Dados Intercambio Energia Modalidade",
+        "search": "Search for Ons Dados Intercambio Energia Modalidade",
+        "notFound": "No Ons Dados Intercambio Energia Modalidades found"
+      },
+      "created": "A new Ons Dados Intercambio Energia Modalidade is created with identifier {{ param }}",
+      "updated": "A Ons Dados Intercambio Energia Modalidade is updated with identifier {{ param }}",
+      "deleted": "A Ons Dados Intercambio Energia Modalidade is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Ons Dados Intercambio Energia Modalidade {{ id }}?"
+      },
+      "detail": {
+        "title": "Ons Dados Intercambio Energia Modalidade"
+      },
+      "id": "ID",
+      "nomConversora": "Nom Conversora",
+      "dinInstante": "Din Instante",
+      "valModalidadecontratual": "Val Modalidadecontratual",
+      "valModalidadeemergencial": "Val Modalidadeemergencial",
+      "valModalidadeoportunidade": "Val Modalidadeoportunidade",
+      "valModalidadeteste": "Val Modalidadeteste",
+      "valModalidadeexcepcional": "Val Modalidadeexcepcional"
+    }
+  }
+}

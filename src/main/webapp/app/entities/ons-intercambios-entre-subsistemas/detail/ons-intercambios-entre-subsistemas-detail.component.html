@@ -1,0 +1,60 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    @if (onsIntercambiosEntreSubsistemas(); as onsIntercambiosEntreSubsistemasRef) {
+      <div>
+        <h2 data-cy="onsIntercambiosEntreSubsistemasDetailsHeading">
+          <span jhiTranslate="wattsUpEnergyApp.onsIntercambiosEntreSubsistemas.detail.title">Ons Intercambios Entre Subsistemas</span>
+        </h2>
+
+        <hr />
+
+        <jhi-alert-error></jhi-alert-error>
+
+        <jhi-alert></jhi-alert>
+
+        <dl class="row-md jh-entity-details">
+          <dt><span jhiTranslate="global.field.id">Código</span></dt>
+          <dd>
+            <span>{{ onsIntercambiosEntreSubsistemasRef.id }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsIntercambiosEntreSubsistemas.dinInstante">Din Instante</span></dt>
+          <dd>
+            <span>{{ onsIntercambiosEntreSubsistemasRef.dinInstante | formatMediumDate }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsIntercambiosEntreSubsistemas.idSubsistemaOrigem">Id Subsistema Origem</span></dt>
+          <dd>
+            <span>{{ onsIntercambiosEntreSubsistemasRef.idSubsistemaOrigem }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsIntercambiosEntreSubsistemas.nomSubsistemaOrigem">Nom Subsistema Origem</span></dt>
+          <dd>
+            <span>{{ onsIntercambiosEntreSubsistemasRef.nomSubsistemaOrigem }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsIntercambiosEntreSubsistemas.idSubsistemaDestino">Id Subsistema Destino</span></dt>
+          <dd>
+            <span>{{ onsIntercambiosEntreSubsistemasRef.idSubsistemaDestino }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsIntercambiosEntreSubsistemas.nomSubsistemaDestino">Nom Subsistema Destino</span></dt>
+          <dd>
+            <span>{{ onsIntercambiosEntreSubsistemasRef.nomSubsistemaDestino }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsIntercambiosEntreSubsistemas.valIntercambiomwmed">Val Intercambiomwmed</span></dt>
+          <dd>
+            <span>{{ onsIntercambiosEntreSubsistemasRef.valIntercambiomwmed }}</span>
+          </dd>
+        </dl>
+
+        <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+          <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Voltar</span>
+        </button>
+
+        <button
+          type="button"
+          [routerLink]="['/ons-intercambios-entre-subsistemas', onsIntercambiosEntreSubsistemasRef.id, 'edit']"
+          class="btn btn-primary"
+        >
+          <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Editar</span>
+        </button>
+      </div>
+    }
+  </div>
+</div>

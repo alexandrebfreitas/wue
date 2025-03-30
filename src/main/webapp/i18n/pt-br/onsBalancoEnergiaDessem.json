@@ -1,0 +1,34 @@
+{
+  "wattsUpEnergyApp": {
+    "onsBalancoEnergiaDessem": {
+      "home": {
+        "title": "Ons Balanco Energia Dessems",
+        "refreshListLabel": "Atualizar lista",
+        "createLabel": "Criar novo Ons Balanco Energia Dessem",
+        "createOrEditLabel": "Criar ou editar Ons Balanco Energia Dessem",
+        "search": "Pesquisar por Ons Balanco Energia Dessem",
+        "notFound": "Nenhum Ons Balanco Energia Dessem encontrado"
+      },
+      "created": "Um novo Ons Balanco Energia Dessem foi criado com o identificador {{ param }}",
+      "updated": "Um Ons Balanco Energia Dessem foi atualizado com o identificador {{ param }}",
+      "deleted": "Um Ons Balanco Energia Dessem foi excluído com o identificador {{ param }}",
+      "delete": {
+        "question": "Tem certeza de que deseja excluir Ons Balanco Energia Dessem {{ id }}?"
+      },
+      "detail": {
+        "title": "Ons Balanco Energia Dessem"
+      },
+      "id": "ID",
+      "idSubsistema": "Id Subsistema",
+      "nomSubsistema": "Nom Subsistema",
+      "dinInstante": "Din Instante",
+      "valDemanda": "Val Demanda",
+      "valGeracaohidraulicamwmed": "Val Geracaohidraulicamwmed",
+      "valGeracaopchmwmed": "Val Geracaopchmwmed",
+      "valGeracaotermicamwed": "Val Geracaotermicamwed",
+      "valGeracaopctmwmed": "Val Geracaopctmwmed",
+      "valGeracaoeolicamwmed": "Val Geracaoeolicamwmed",
+      "valGeracaofotovoltaicamwmed": "Val Geracaofotovoltaicamwmed"
+    }
+  }
+}

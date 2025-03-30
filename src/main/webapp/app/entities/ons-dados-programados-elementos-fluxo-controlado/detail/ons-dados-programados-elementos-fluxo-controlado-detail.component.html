@@ -1,0 +1,76 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    @if (onsDadosProgramadosElementosFluxoControlado(); as onsDadosProgramadosElementosFluxoControladoRef) {
+      <div>
+        <h2 data-cy="onsDadosProgramadosElementosFluxoControladoDetailsHeading">
+          <span jhiTranslate="wattsUpEnergyApp.onsDadosProgramadosElementosFluxoControlado.detail.title"
+            >Ons Dados Programados Elementos Fluxo Controlado</span
+          >
+        </h2>
+
+        <hr />
+
+        <jhi-alert-error></jhi-alert-error>
+
+        <jhi-alert></jhi-alert>
+
+        <dl class="row-md jh-entity-details">
+          <dt><span jhiTranslate="global.field.id">Código</span></dt>
+          <dd>
+            <span>{{ onsDadosProgramadosElementosFluxoControladoRef.id }}</span>
+          </dd>
+          <dt>
+            <span jhiTranslate="wattsUpEnergyApp.onsDadosProgramadosElementosFluxoControlado.dinProgramacaodia">Din Programacaodia</span>
+          </dt>
+          <dd>
+            <span>{{ onsDadosProgramadosElementosFluxoControladoRef.dinProgramacaodia | formatMediumDate }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsDadosProgramadosElementosFluxoControlado.numPatamar">Num Patamar</span></dt>
+          <dd>
+            <span>{{ onsDadosProgramadosElementosFluxoControladoRef.numPatamar }}</span>
+          </dd>
+          <dt>
+            <span jhiTranslate="wattsUpEnergyApp.onsDadosProgramadosElementosFluxoControlado.nomElementofluxocontrolado"
+              >Nom Elementofluxocontrolado</span
+            >
+          </dt>
+          <dd>
+            <span>{{ onsDadosProgramadosElementosFluxoControladoRef.nomElementofluxocontrolado }}</span>
+          </dd>
+          <dt>
+            <span jhiTranslate="wattsUpEnergyApp.onsDadosProgramadosElementosFluxoControlado.dscElementofluxocontrolado"
+              >Dsc Elementofluxocontrolado</span
+            >
+          </dt>
+          <dd>
+            <span>{{ onsDadosProgramadosElementosFluxoControladoRef.dscElementofluxocontrolado }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsDadosProgramadosElementosFluxoControlado.tipTerminal">Tip Terminal</span></dt>
+          <dd>
+            <span>{{ onsDadosProgramadosElementosFluxoControladoRef.tipTerminal }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsDadosProgramadosElementosFluxoControlado.codSubmercado">Cod Submercado</span></dt>
+          <dd>
+            <span>{{ onsDadosProgramadosElementosFluxoControladoRef.codSubmercado }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsDadosProgramadosElementosFluxoControlado.valCarga">Val Carga</span></dt>
+          <dd>
+            <span>{{ onsDadosProgramadosElementosFluxoControladoRef.valCarga }}</span>
+          </dd>
+        </dl>
+
+        <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+          <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Voltar</span>
+        </button>
+
+        <button
+          type="button"
+          [routerLink]="['/ons-dados-programados-elementos-fluxo-controlado', onsDadosProgramadosElementosFluxoControladoRef.id, 'edit']"
+          class="btn btn-primary"
+        >
+          <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Editar</span>
+        </button>
+      </div>
+    }
+  </div>
+</div>

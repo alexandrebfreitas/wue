@@ -1,0 +1,31 @@
+{
+  "wattsUpEnergyApp": {
+    "onsGeracaoComercialParaExportacaoInternacional": {
+      "home": {
+        "title": "Ons Geracao Comercial Para Exportacao Internacionals",
+        "refreshListLabel": "Atualizar lista",
+        "createLabel": "Criar novo Ons Geracao Comercial Para Exportacao Internacional",
+        "createOrEditLabel": "Criar ou editar Ons Geracao Comercial Para Exportacao Internacional",
+        "search": "Pesquisar por Ons Geracao Comercial Para Exportacao Internacional",
+        "notFound": "Nenhum Ons Geracao Comercial Para Exportacao Internacional encontrado"
+      },
+      "created": "Um novo Ons Geracao Comercial Para Exportacao Internacional foi criado com o identificador {{ param }}",
+      "updated": "Um Ons Geracao Comercial Para Exportacao Internacional foi atualizado com o identificador {{ param }}",
+      "deleted": "Um Ons Geracao Comercial Para Exportacao Internacional foi excluído com o identificador {{ param }}",
+      "delete": {
+        "question": "Tem certeza de que deseja excluir Ons Geracao Comercial Para Exportacao Internacional {{ id }}?"
+      },
+      "detail": {
+        "title": "Ons Geracao Comercial Para Exportacao Internacional"
+      },
+      "id": "ID",
+      "nomConversora": "Nom Conversora",
+      "dinInstante": "Din Instante",
+      "valModalidadecontratual": "Val Modalidadecontratual",
+      "valModalidadeemergencial": "Val Modalidadeemergencial",
+      "valModalidadeoportunidade": "Val Modalidadeoportunidade",
+      "valModalidadeteste": "Val Modalidadeteste",
+      "valModalidadeexcepcional": "Val Modalidadeexcepcional"
+    }
+  }
+}

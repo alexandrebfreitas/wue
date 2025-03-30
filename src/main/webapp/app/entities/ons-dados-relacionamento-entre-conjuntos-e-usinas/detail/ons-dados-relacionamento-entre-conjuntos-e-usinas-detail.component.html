@@ -1,0 +1,98 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    @if (onsDadosRelacionamentoEntreConjuntosEUsinas(); as onsDadosRelacionamentoEntreConjuntosEUsinasRef) {
+      <div>
+        <h2 data-cy="onsDadosRelacionamentoEntreConjuntosEUsinasDetailsHeading">
+          <span jhiTranslate="wattsUpEnergyApp.onsDadosRelacionamentoEntreConjuntosEUsinas.detail.title"
+            >Ons Dados Relacionamento Entre Conjuntos E Usinas</span
+          >
+        </h2>
+
+        <hr />
+
+        <jhi-alert-error></jhi-alert-error>
+
+        <jhi-alert></jhi-alert>
+
+        <dl class="row-md jh-entity-details">
+          <dt><span jhiTranslate="global.field.id">Código</span></dt>
+          <dd>
+            <span>{{ onsDadosRelacionamentoEntreConjuntosEUsinasRef.id }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsDadosRelacionamentoEntreConjuntosEUsinas.idSubsistema">Id Subsistema</span></dt>
+          <dd>
+            <span>{{ onsDadosRelacionamentoEntreConjuntosEUsinasRef.idSubsistema }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsDadosRelacionamentoEntreConjuntosEUsinas.nomSubsistema">Nom Subsistema</span></dt>
+          <dd>
+            <span>{{ onsDadosRelacionamentoEntreConjuntosEUsinasRef.nomSubsistema }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsDadosRelacionamentoEntreConjuntosEUsinas.estadId">Estad Id</span></dt>
+          <dd>
+            <span>{{ onsDadosRelacionamentoEntreConjuntosEUsinasRef.estadId }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsDadosRelacionamentoEntreConjuntosEUsinas.nomEstado">Nom Estado</span></dt>
+          <dd>
+            <span>{{ onsDadosRelacionamentoEntreConjuntosEUsinasRef.nomEstado }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsDadosRelacionamentoEntreConjuntosEUsinas.idTipousina">Id Tipousina</span></dt>
+          <dd>
+            <span>{{ onsDadosRelacionamentoEntreConjuntosEUsinasRef.idTipousina }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsDadosRelacionamentoEntreConjuntosEUsinas.idConjuntousina">Id Conjuntousina</span></dt>
+          <dd>
+            <span>{{ onsDadosRelacionamentoEntreConjuntosEUsinasRef.idConjuntousina }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsDadosRelacionamentoEntreConjuntosEUsinas.idOnsConjunto">Id Ons Conjunto</span></dt>
+          <dd>
+            <span>{{ onsDadosRelacionamentoEntreConjuntosEUsinasRef.idOnsConjunto }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsDadosRelacionamentoEntreConjuntosEUsinas.idOnsUsina">Id Ons Usina</span></dt>
+          <dd>
+            <span>{{ onsDadosRelacionamentoEntreConjuntosEUsinasRef.idOnsUsina }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsDadosRelacionamentoEntreConjuntosEUsinas.nomConjunto">Nom Conjunto</span></dt>
+          <dd>
+            <span>{{ onsDadosRelacionamentoEntreConjuntosEUsinasRef.nomConjunto }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsDadosRelacionamentoEntreConjuntosEUsinas.nomUsina">Nom Usina</span></dt>
+          <dd>
+            <span>{{ onsDadosRelacionamentoEntreConjuntosEUsinasRef.nomUsina }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsDadosRelacionamentoEntreConjuntosEUsinas.ceg">Ceg</span></dt>
+          <dd>
+            <span>{{ onsDadosRelacionamentoEntreConjuntosEUsinasRef.ceg }}</span>
+          </dd>
+          <dt>
+            <span jhiTranslate="wattsUpEnergyApp.onsDadosRelacionamentoEntreConjuntosEUsinas.datIniciorelacionamento"
+              >Dat Iniciorelacionamento</span
+            >
+          </dt>
+          <dd>
+            <span>{{ onsDadosRelacionamentoEntreConjuntosEUsinasRef.datIniciorelacionamento | formatMediumDate }}</span>
+          </dd>
+          <dt>
+            <span jhiTranslate="wattsUpEnergyApp.onsDadosRelacionamentoEntreConjuntosEUsinas.datFimrelacionamento"
+              >Dat Fimrelacionamento</span
+            >
+          </dt>
+          <dd>
+            <span>{{ onsDadosRelacionamentoEntreConjuntosEUsinasRef.datFimrelacionamento | formatMediumDate }}</span>
+          </dd>
+        </dl>
+
+        <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+          <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Voltar</span>
+        </button>
+
+        <button
+          type="button"
+          [routerLink]="['/ons-dados-relacionamento-entre-conjuntos-e-usinas', onsDadosRelacionamentoEntreConjuntosEUsinasRef.id, 'edit']"
+          class="btn btn-primary"
+        >
+          <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Editar</span>
+        </button>
+      </div>
+    }
+  </div>
+</div>

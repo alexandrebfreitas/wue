@@ -1,0 +1,25 @@
+{
+  "wattsUpEnergyApp": {
+    "onsEnaDiarioReeReservatorioEquivalenteEnergia": {
+      "home": {
+        "title": "Ons Ena Diario Ree Reservatorio Equivalente Energias",
+        "refreshListLabel": "Atualizar lista",
+        "createLabel": "Criar novo Ons Ena Diario Ree Reservatorio Equivalente Energia",
+        "createOrEditLabel": "Criar ou editar Ons Ena Diario Ree Reservatorio Equivalente Energia",
+        "search": "Pesquisar por Ons Ena Diario Ree Reservatorio Equivalente Energia",
+        "notFound": "Nenhum Ons Ena Diario Ree Reservatorio Equivalente Energia encontrado"
+      },
+      "created": "Um novo Ons Ena Diario Ree Reservatorio Equivalente Energia foi criado com o identificador {{ param }}",
+      "updated": "Um Ons Ena Diario Ree Reservatorio Equivalente Energia foi atualizado com o identificador {{ param }}",
+      "deleted": "Um Ons Ena Diario Ree Reservatorio Equivalente Energia foi excluído com o identificador {{ param }}",
+      "delete": {
+        "question": "Tem certeza de que deseja excluir Ons Ena Diario Ree Reservatorio Equivalente Energia {{ id }}?"
+      },
+      "detail": {
+        "title": "Ons Ena Diario Ree Reservatorio Equivalente Energia"
+      },
+      "id": "ID",
+      "enaArmazenavelReePercentualmlt": "Ena Armazenavel Ree Percentualmlt"
+    }
+  }
+}

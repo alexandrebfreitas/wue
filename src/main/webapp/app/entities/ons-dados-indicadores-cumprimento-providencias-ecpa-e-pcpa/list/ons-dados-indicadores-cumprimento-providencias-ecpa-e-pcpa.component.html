@@ -1,0 +1,242 @@
+<div>
+  <h2 id="page-heading" data-cy="OnsDadosIndicadoresCumprimentoProvidenciasEcpaEPcpaHeading">
+    <span jhiTranslate="wattsUpEnergyApp.onsDadosIndicadoresCumprimentoProvidenciasEcpaEPcpa.home.title"
+      >Ons Dados Indicadores Cumprimento Providencias Ecpa E Pcpas</span
+    >
+
+    <div class="d-flex justify-content-end">
+      <button class="btn btn-info me-2" (click)="load()" [disabled]="isLoading">
+        <fa-icon icon="sync" [animation]="isLoading ? 'spin' : undefined"></fa-icon>
+        <span jhiTranslate="wattsUpEnergyApp.onsDadosIndicadoresCumprimentoProvidenciasEcpaEPcpa.home.refreshListLabel"
+          >Atualizar lista</span
+        >
+      </button>
+
+      <button
+        id="jh-create-entity"
+        data-cy="entityCreateButton"
+        class="btn btn-primary jh-create-entity create-ons-dados-indicadores-cumprimento-providencias-ecpa-e-pcpa"
+        [routerLink]="['/ons-dados-indicadores-cumprimento-providencias-ecpa-e-pcpa/new']"
+      >
+        <fa-icon icon="plus"></fa-icon>
+        <span class="hidden-sm-down" jhiTranslate="wattsUpEnergyApp.onsDadosIndicadoresCumprimentoProvidenciasEcpaEPcpa.home.createLabel"
+          >Criar novo Ons Dados Indicadores Cumprimento Providencias Ecpa E Pcpa</span
+        >
+      </button>
+    </div>
+  </h2>
+
+  <jhi-alert-error></jhi-alert-error>
+
+  <jhi-alert></jhi-alert>
+
+  <form name="searchForm" class="row row-cols-sm-auto align-items-center">
+    <div class="col-sm-12">
+      <div class="input-group w-100 mt-3">
+        <label
+          class="visually-hidden"
+          for="currentSearch"
+          jhiTranslate="wattsUpEnergyApp.onsDadosIndicadoresCumprimentoProvidenciasEcpaEPcpa.home.search"
+          >Pesquisar por Ons Dados Indicadores Cumprimento Providencias Ecpa E Pcpa</label
+        >
+        <input
+          type="text"
+          class="form-control"
+          [(ngModel)]="currentSearch"
+          id="currentSearch"
+          name="currentSearch"
+          placeholder="{{ 'wattsUpEnergyApp.onsDadosIndicadoresCumprimentoProvidenciasEcpaEPcpa.home.search' | translate }}"
+        />
+
+        <button class="btn btn-info" (click)="search(currentSearch)">
+          <fa-icon icon="search"></fa-icon>
+        </button>
+
+        @if (currentSearch) {
+          <button class="btn btn-danger" (click)="search('')">
+            <fa-icon icon="trash-alt"></fa-icon>
+          </button>
+        }
+      </div>
+    </div>
+  </form>
+
+  @if (onsDadosIndicadoresCumprimentoProvidenciasEcpaEPcpas().length === 0) {
+    <div class="alert alert-warning" id="no-result">
+      <span jhiTranslate="wattsUpEnergyApp.onsDadosIndicadoresCumprimentoProvidenciasEcpaEPcpa.home.notFound"
+        >Nenhum Ons Dados Indicadores Cumprimento Providencias Ecpa E Pcpa encontrado</span
+      >
+    </div>
+  } @else {
+    <div class="table-responsive table-entities" id="entities">
+      <table class="table table-striped" aria-describedby="page-heading">
+        <thead>
+          <tr jhiSort [(sortState)]="sortState" (sortChange)="navigateToWithComponentValues($event)">
+            <th scope="col" jhiSortBy="id">
+              <div class="d-flex">
+                <span jhiTranslate="global.field.id">Código</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="dscAgregacao">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsDadosIndicadoresCumprimentoProvidenciasEcpaEPcpa.dscAgregacao">Dsc Agregacao</span>
+                @if (!currentSearch) {
+                  <fa-icon class="p-1" icon="sort"></fa-icon>
+                }
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="dscCaracteristica">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsDadosIndicadoresCumprimentoProvidenciasEcpaEPcpa.dscCaracteristica"
+                  >Dsc Caracteristica</span
+                >
+                @if (!currentSearch) {
+                  <fa-icon class="p-1" icon="sort"></fa-icon>
+                }
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="dinReferencia">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsDadosIndicadoresCumprimentoProvidenciasEcpaEPcpa.dinReferencia"
+                  >Din Referencia</span
+                >
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="numNprcConcluidas">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsDadosIndicadoresCumprimentoProvidenciasEcpaEPcpa.numNprcConcluidas"
+                  >Num Nprc Concluidas</span
+                >
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="numNprpProgramadas">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsDadosIndicadoresCumprimentoProvidenciasEcpaEPcpa.numNprpProgramadas"
+                  >Num Nprp Programadas</span
+                >
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="numNpratAtrasadas">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsDadosIndicadoresCumprimentoProvidenciasEcpaEPcpa.numNpratAtrasadas"
+                  >Num Nprat Atrasadas</span
+                >
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="numNpraAntecipadas">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsDadosIndicadoresCumprimentoProvidenciasEcpaEPcpa.numNpraAntecipadas"
+                  >Num Npra Antecipadas</span
+                >
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="numNprcpConcluidasPrazo">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsDadosIndicadoresCumprimentoProvidenciasEcpaEPcpa.numNprcpConcluidasPrazo"
+                  >Num Nprcp Concluidas Prazo</span
+                >
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="valEcpa">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsDadosIndicadoresCumprimentoProvidenciasEcpaEPcpa.valEcpa">Val Ecpa</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="valPcpa">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsDadosIndicadoresCumprimentoProvidenciasEcpaEPcpa.valPcpa">Val Pcpa</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (
+            onsDadosIndicadoresCumprimentoProvidenciasEcpaEPcpa of onsDadosIndicadoresCumprimentoProvidenciasEcpaEPcpas();
+            track trackId(onsDadosIndicadoresCumprimentoProvidenciasEcpaEPcpa)
+          ) {
+            <tr data-cy="entityTable">
+              <td>
+                <a
+                  [routerLink]="[
+                    '/ons-dados-indicadores-cumprimento-providencias-ecpa-e-pcpa',
+                    onsDadosIndicadoresCumprimentoProvidenciasEcpaEPcpa.id,
+                    'view',
+                  ]"
+                  >{{ onsDadosIndicadoresCumprimentoProvidenciasEcpaEPcpa.id }}</a
+                >
+              </td>
+              <td>{{ onsDadosIndicadoresCumprimentoProvidenciasEcpaEPcpa.dscAgregacao }}</td>
+              <td>{{ onsDadosIndicadoresCumprimentoProvidenciasEcpaEPcpa.dscCaracteristica }}</td>
+              <td>{{ onsDadosIndicadoresCumprimentoProvidenciasEcpaEPcpa.dinReferencia | formatMediumDate }}</td>
+              <td>{{ onsDadosIndicadoresCumprimentoProvidenciasEcpaEPcpa.numNprcConcluidas }}</td>
+              <td>{{ onsDadosIndicadoresCumprimentoProvidenciasEcpaEPcpa.numNprpProgramadas }}</td>
+              <td>{{ onsDadosIndicadoresCumprimentoProvidenciasEcpaEPcpa.numNpratAtrasadas }}</td>
+              <td>{{ onsDadosIndicadoresCumprimentoProvidenciasEcpaEPcpa.numNpraAntecipadas }}</td>
+              <td>{{ onsDadosIndicadoresCumprimentoProvidenciasEcpaEPcpa.numNprcpConcluidasPrazo }}</td>
+              <td>{{ onsDadosIndicadoresCumprimentoProvidenciasEcpaEPcpa.valEcpa }}</td>
+              <td>{{ onsDadosIndicadoresCumprimentoProvidenciasEcpaEPcpa.valPcpa }}</td>
+              <td class="text-end">
+                <div class="btn-group">
+                  <a
+                    [routerLink]="[
+                      '/ons-dados-indicadores-cumprimento-providencias-ecpa-e-pcpa',
+                      onsDadosIndicadoresCumprimentoProvidenciasEcpaEPcpa.id,
+                      'view',
+                    ]"
+                    class="btn btn-info btn-sm"
+                    data-cy="entityDetailsButton"
+                  >
+                    <fa-icon icon="eye"></fa-icon>
+                    <span class="d-none d-md-inline" jhiTranslate="entity.action.view">Visualizar</span>
+                  </a>
+
+                  <a
+                    [routerLink]="[
+                      '/ons-dados-indicadores-cumprimento-providencias-ecpa-e-pcpa',
+                      onsDadosIndicadoresCumprimentoProvidenciasEcpaEPcpa.id,
+                      'edit',
+                    ]"
+                    class="btn btn-primary btn-sm"
+                    data-cy="entityEditButton"
+                  >
+                    <fa-icon icon="pencil-alt"></fa-icon>
+                    <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Editar</span>
+                  </a>
+
+                  <button
+                    type="submit"
+                    (click)="delete(onsDadosIndicadoresCumprimentoProvidenciasEcpaEPcpa)"
+                    class="btn btn-danger btn-sm"
+                    data-cy="entityDeleteButton"
+                  >
+                    <fa-icon icon="times"></fa-icon>
+                    <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Excluir</span>
+                  </button>
+                </div>
+              </td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+  }
+</div>

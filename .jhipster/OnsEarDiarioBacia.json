@@ -1,0 +1,31 @@
+{
+  "annotations": {
+    "changelogDate": "20250330013733"
+  },
+  "applications": "*",
+  "entityTableName": "OnsTable56",
+  "fields": [
+    {
+      "fieldName": "nomCurto",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "earData",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "earMaxBacia",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "earVerifBaciaMwmes",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "earVerifBaciaPercentual",
+      "fieldType": "Double"
+    }
+  ],
+  "name": "OnsEarDiarioBacia",
+  "relationships": []
+}

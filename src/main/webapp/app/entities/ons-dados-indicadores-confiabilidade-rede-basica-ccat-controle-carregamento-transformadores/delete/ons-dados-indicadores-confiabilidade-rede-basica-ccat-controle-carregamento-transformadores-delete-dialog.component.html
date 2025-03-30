@@ -1,0 +1,43 @@
+@if (onsDadosIndicadoresConfiabilidadeRedeBasicaCcatControleCarregamentoTransformadores) {
+  <form
+    name="deleteForm"
+    (ngSubmit)="confirmDelete(onsDadosIndicadoresConfiabilidadeRedeBasicaCcatControleCarregamentoTransformadores.id!)"
+  >
+    <div class="modal-header">
+      <h4
+        class="modal-title"
+        data-cy="onsDadosIndicadoresConfiabilidadeRedeBasicaCcatControleCarregamentoTransformadoresDeleteDialogHeading"
+        jhiTranslate="entity.delete.title"
+      >
+        Confirme a exclusão
+      </h4>
+    </div>
+
+    <div class="modal-body">
+      <jhi-alert-error></jhi-alert-error>
+      <p
+        id="jhi-delete-onsDadosIndicadoresConfiabilidadeRedeBasicaCcatControleCarregamentoTransformadores-heading"
+        jhiTranslate="wattsUpEnergyApp.onsDadosIndicadoresConfiabilidadeRedeBasicaCcatControleCarregamentoTransformadores.delete.question"
+        [translateValues]="{ id: onsDadosIndicadoresConfiabilidadeRedeBasicaCcatControleCarregamentoTransformadores.id }"
+      >
+        Tem certeza de que deseja excluir Ons Dados Indicadores Confiabilidade Rede Basica Ccat Controle Carregamento Transformadores
+        {{ onsDadosIndicadoresConfiabilidadeRedeBasicaCcatControleCarregamentoTransformadores.id }}?
+      </p>
+    </div>
+
+    <div class="modal-footer">
+      <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="cancel()">
+        <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancelar</span>
+      </button>
+
+      <button
+        id="jhi-confirm-delete-onsDadosIndicadoresConfiabilidadeRedeBasicaCcatControleCarregamentoTransformadores"
+        data-cy="entityConfirmDeleteButton"
+        type="submit"
+        class="btn btn-danger"
+      >
+        <fa-icon icon="times"></fa-icon>&nbsp;<span jhiTranslate="entity.action.delete">Excluir</span>
+      </button>
+    </div>
+  </form>
+}

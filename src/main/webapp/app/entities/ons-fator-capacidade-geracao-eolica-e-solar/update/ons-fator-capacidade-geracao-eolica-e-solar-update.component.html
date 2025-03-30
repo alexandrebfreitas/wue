@@ -1,0 +1,362 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <form name="editForm" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+      <h2
+        id="jhi-ons-fator-capacidade-geracao-eolica-e-solar-heading"
+        data-cy="OnsFatorCapacidadeGeracaoEolicaESolarCreateUpdateHeading"
+        jhiTranslate="wattsUpEnergyApp.onsFatorCapacidadeGeracaoEolicaESolar.home.createOrEditLabel"
+      >
+        Criar ou editar Ons Fator Capacidade Geracao Eolica E Solar
+      </h2>
+
+      <div>
+        <jhi-alert-error></jhi-alert-error>
+
+        @if (editForm.controls.id.value !== null) {
+          <div class="mb-3">
+            <label class="form-label" for="field_id" jhiTranslate="wattsUpEnergyApp.onsFatorCapacidadeGeracaoEolicaESolar.id">ID</label>
+            <input type="number" class="form-control" name="id" id="field_id" data-cy="id" formControlName="id" [readonly]="true" />
+          </div>
+        }
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_idSubsistema"
+            jhiTranslate="wattsUpEnergyApp.onsFatorCapacidadeGeracaoEolicaESolar.idSubsistema"
+            >Id Subsistema</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="idSubsistema"
+            id="field_idSubsistema"
+            data-cy="idSubsistema"
+            formControlName="idSubsistema"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_nomSubsistema"
+            jhiTranslate="wattsUpEnergyApp.onsFatorCapacidadeGeracaoEolicaESolar.nomSubsistema"
+            >Nom Subsistema</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="nomSubsistema"
+            id="field_nomSubsistema"
+            data-cy="nomSubsistema"
+            formControlName="nomSubsistema"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_idEstado" jhiTranslate="wattsUpEnergyApp.onsFatorCapacidadeGeracaoEolicaESolar.idEstado"
+            >Id Estado</label
+          >
+          <input type="text" class="form-control" name="idEstado" id="field_idEstado" data-cy="idEstado" formControlName="idEstado" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_nomEstado" jhiTranslate="wattsUpEnergyApp.onsFatorCapacidadeGeracaoEolicaESolar.nomEstado"
+            >Nom Estado</label
+          >
+          <input type="text" class="form-control" name="nomEstado" id="field_nomEstado" data-cy="nomEstado" formControlName="nomEstado" />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_codPontoconexao"
+            jhiTranslate="wattsUpEnergyApp.onsFatorCapacidadeGeracaoEolicaESolar.codPontoconexao"
+            >Cod Pontoconexao</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="codPontoconexao"
+            id="field_codPontoconexao"
+            data-cy="codPontoconexao"
+            formControlName="codPontoconexao"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_nomPontoconexao"
+            jhiTranslate="wattsUpEnergyApp.onsFatorCapacidadeGeracaoEolicaESolar.nomPontoconexao"
+            >Nom Pontoconexao</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="nomPontoconexao"
+            id="field_nomPontoconexao"
+            data-cy="nomPontoconexao"
+            formControlName="nomPontoconexao"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_nomLocalizacao"
+            jhiTranslate="wattsUpEnergyApp.onsFatorCapacidadeGeracaoEolicaESolar.nomLocalizacao"
+            >Nom Localizacao</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="nomLocalizacao"
+            id="field_nomLocalizacao"
+            data-cy="nomLocalizacao"
+            formControlName="nomLocalizacao"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_valLatitudesecoletora"
+            jhiTranslate="wattsUpEnergyApp.onsFatorCapacidadeGeracaoEolicaESolar.valLatitudesecoletora"
+            >Val Latitudesecoletora</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="valLatitudesecoletora"
+            id="field_valLatitudesecoletora"
+            data-cy="valLatitudesecoletora"
+            formControlName="valLatitudesecoletora"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_valLongitudesecoletora"
+            jhiTranslate="wattsUpEnergyApp.onsFatorCapacidadeGeracaoEolicaESolar.valLongitudesecoletora"
+            >Val Longitudesecoletora</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="valLongitudesecoletora"
+            id="field_valLongitudesecoletora"
+            data-cy="valLongitudesecoletora"
+            formControlName="valLongitudesecoletora"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_valLatitudepontoconexao"
+            jhiTranslate="wattsUpEnergyApp.onsFatorCapacidadeGeracaoEolicaESolar.valLatitudepontoconexao"
+            >Val Latitudepontoconexao</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="valLatitudepontoconexao"
+            id="field_valLatitudepontoconexao"
+            data-cy="valLatitudepontoconexao"
+            formControlName="valLatitudepontoconexao"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_valLongitudepontoconexao"
+            jhiTranslate="wattsUpEnergyApp.onsFatorCapacidadeGeracaoEolicaESolar.valLongitudepontoconexao"
+            >Val Longitudepontoconexao</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="valLongitudepontoconexao"
+            id="field_valLongitudepontoconexao"
+            data-cy="valLongitudepontoconexao"
+            formControlName="valLongitudepontoconexao"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_nomModalidadeoperacao"
+            jhiTranslate="wattsUpEnergyApp.onsFatorCapacidadeGeracaoEolicaESolar.nomModalidadeoperacao"
+            >Nom Modalidadeoperacao</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="nomModalidadeoperacao"
+            id="field_nomModalidadeoperacao"
+            data-cy="nomModalidadeoperacao"
+            formControlName="nomModalidadeoperacao"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_nomTipousina"
+            jhiTranslate="wattsUpEnergyApp.onsFatorCapacidadeGeracaoEolicaESolar.nomTipousina"
+            >Nom Tipousina</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="nomTipousina"
+            id="field_nomTipousina"
+            data-cy="nomTipousina"
+            formControlName="nomTipousina"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_nomUsinaConjunto"
+            jhiTranslate="wattsUpEnergyApp.onsFatorCapacidadeGeracaoEolicaESolar.nomUsinaConjunto"
+            >Nom Usina Conjunto</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="nomUsinaConjunto"
+            id="field_nomUsinaConjunto"
+            data-cy="nomUsinaConjunto"
+            formControlName="nomUsinaConjunto"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_dinInstante"
+            jhiTranslate="wattsUpEnergyApp.onsFatorCapacidadeGeracaoEolicaESolar.dinInstante"
+            >Din Instante</label
+          >
+          <div class="input-group">
+            <input
+              id="field_dinInstante"
+              data-cy="dinInstante"
+              type="text"
+              class="form-control"
+              name="dinInstante"
+              ngbDatepicker
+              #dinInstanteDp="ngbDatepicker"
+              formControlName="dinInstante"
+            />
+            <button type="button" class="btn btn-secondary" (click)="dinInstanteDp.toggle()">
+              <fa-icon icon="calendar-alt"></fa-icon>
+            </button>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_idOns" jhiTranslate="wattsUpEnergyApp.onsFatorCapacidadeGeracaoEolicaESolar.idOns"
+            >Id Ons</label
+          >
+          <input type="text" class="form-control" name="idOns" id="field_idOns" data-cy="idOns" formControlName="idOns" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_ceg" jhiTranslate="wattsUpEnergyApp.onsFatorCapacidadeGeracaoEolicaESolar.ceg">Ceg</label>
+          <input type="text" class="form-control" name="ceg" id="field_ceg" data-cy="ceg" formControlName="ceg" />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_valGeracaoprogramada"
+            jhiTranslate="wattsUpEnergyApp.onsFatorCapacidadeGeracaoEolicaESolar.valGeracaoprogramada"
+            >Val Geracaoprogramada</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="valGeracaoprogramada"
+            id="field_valGeracaoprogramada"
+            data-cy="valGeracaoprogramada"
+            formControlName="valGeracaoprogramada"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_valGeracaoverificada"
+            jhiTranslate="wattsUpEnergyApp.onsFatorCapacidadeGeracaoEolicaESolar.valGeracaoverificada"
+            >Val Geracaoverificada</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="valGeracaoverificada"
+            id="field_valGeracaoverificada"
+            data-cy="valGeracaoverificada"
+            formControlName="valGeracaoverificada"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_valCapacidadeinstalada"
+            jhiTranslate="wattsUpEnergyApp.onsFatorCapacidadeGeracaoEolicaESolar.valCapacidadeinstalada"
+            >Val Capacidadeinstalada</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="valCapacidadeinstalada"
+            id="field_valCapacidadeinstalada"
+            data-cy="valCapacidadeinstalada"
+            formControlName="valCapacidadeinstalada"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_valFatorcapacidade"
+            jhiTranslate="wattsUpEnergyApp.onsFatorCapacidadeGeracaoEolicaESolar.valFatorcapacidade"
+            >Val Fatorcapacidade</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="valFatorcapacidade"
+            id="field_valFatorcapacidade"
+            data-cy="valFatorcapacidade"
+            formControlName="valFatorcapacidade"
+          />
+        </div>
+      </div>
+
+      <div>
+        <button type="button" id="cancel-save" data-cy="entityCreateCancelButton" class="btn btn-secondary" (click)="previousState()">
+          <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancelar</span>
+        </button>
+
+        <button
+          type="submit"
+          id="save-entity"
+          data-cy="entityCreateSaveButton"
+          [disabled]="editForm.invalid || isSaving"
+          class="btn btn-primary"
+        >
+          <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Salvar</span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

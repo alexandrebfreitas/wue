@@ -1,0 +1,32 @@
+{
+  "wattsUpEnergyApp": {
+    "onsTaxasTeifaETeip": {
+      "home": {
+        "title": "Ons Taxas Teifa E Teips",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Ons Taxas Teifa E Teip",
+        "createOrEditLabel": "Create or edit a Ons Taxas Teifa E Teip",
+        "search": "Search for Ons Taxas Teifa E Teip",
+        "notFound": "No Ons Taxas Teifa E Teips found"
+      },
+      "created": "A new Ons Taxas Teifa E Teip is created with identifier {{ param }}",
+      "updated": "A Ons Taxas Teifa E Teip is updated with identifier {{ param }}",
+      "deleted": "A Ons Taxas Teifa E Teip is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Ons Taxas Teifa E Teip {{ id }}?"
+      },
+      "detail": {
+        "title": "Ons Taxas Teifa E Teip"
+      },
+      "id": "ID",
+      "nomUsina": "Nom Usina",
+      "codCeg": "Cod Ceg",
+      "idTipousina": "Id Tipousina",
+      "dinMes": "Din Mes",
+      "nomTaxa": "Nom Taxa",
+      "valTaxa": "Val Taxa",
+      "numVersao": "Num Versao",
+      "dinInstante": "Din Instante"
+    }
+  }
+}

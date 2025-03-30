@@ -1,0 +1,277 @@
+<div>
+  <h2 id="page-heading" data-cy="OnsIndicadoresConfiabilidadeRedeBasicaRobustezRmalRmcsRrbERrbcsHeading">
+    <span jhiTranslate="wattsUpEnergyApp.onsIndicadoresConfiabilidadeRedeBasicaRobustezRmalRmcsRrbERrbcs.home.title"
+      >Ons Indicadores Confiabilidade Rede Basica Robustez Rmal Rmcs Rrb E Rrbcs</span
+    >
+
+    <div class="d-flex justify-content-end">
+      <button class="btn btn-info me-2" (click)="load()" [disabled]="isLoading">
+        <fa-icon icon="sync" [animation]="isLoading ? 'spin' : undefined"></fa-icon>
+        <span jhiTranslate="wattsUpEnergyApp.onsIndicadoresConfiabilidadeRedeBasicaRobustezRmalRmcsRrbERrbcs.home.refreshListLabel"
+          >Atualizar lista</span
+        >
+      </button>
+
+      <button
+        id="jh-create-entity"
+        data-cy="entityCreateButton"
+        class="btn btn-primary jh-create-entity create-ons-indicadores-confiabilidade-rede-basica-robustez-rmal-rmcs-rrb-e-rrbcs"
+        [routerLink]="['/ons-indicadores-confiabilidade-rede-basica-robustez-rmal-rmcs-rrb-e-rrbcs/new']"
+      >
+        <fa-icon icon="plus"></fa-icon>
+        <span
+          class="hidden-sm-down"
+          jhiTranslate="wattsUpEnergyApp.onsIndicadoresConfiabilidadeRedeBasicaRobustezRmalRmcsRrbERrbcs.home.createLabel"
+          >Criar novo Ons Indicadores Confiabilidade Rede Basica Robustez Rmal Rmcs Rrb E Rrbcs</span
+        >
+      </button>
+    </div>
+  </h2>
+
+  <jhi-alert-error></jhi-alert-error>
+
+  <jhi-alert></jhi-alert>
+
+  <form name="searchForm" class="row row-cols-sm-auto align-items-center">
+    <div class="col-sm-12">
+      <div class="input-group w-100 mt-3">
+        <label
+          class="visually-hidden"
+          for="currentSearch"
+          jhiTranslate="wattsUpEnergyApp.onsIndicadoresConfiabilidadeRedeBasicaRobustezRmalRmcsRrbERrbcs.home.search"
+          >Pesquisar por Ons Indicadores Confiabilidade Rede Basica Robustez Rmal Rmcs Rrb E Rrbcs</label
+        >
+        <input
+          type="text"
+          class="form-control"
+          [(ngModel)]="currentSearch"
+          id="currentSearch"
+          name="currentSearch"
+          placeholder="{{ 'wattsUpEnergyApp.onsIndicadoresConfiabilidadeRedeBasicaRobustezRmalRmcsRrbERrbcs.home.search' | translate }}"
+        />
+
+        <button class="btn btn-info" (click)="search(currentSearch)">
+          <fa-icon icon="search"></fa-icon>
+        </button>
+
+        @if (currentSearch) {
+          <button class="btn btn-danger" (click)="search('')">
+            <fa-icon icon="trash-alt"></fa-icon>
+          </button>
+        }
+      </div>
+    </div>
+  </form>
+
+  @if (onsIndicadoresConfiabilidadeRedeBasicaRobustezRmalRmcsRrbERrbcs().length === 0) {
+    <div class="alert alert-warning" id="no-result">
+      <span jhiTranslate="wattsUpEnergyApp.onsIndicadoresConfiabilidadeRedeBasicaRobustezRmalRmcsRrbERrbcs.home.notFound"
+        >Nenhum Ons Indicadores Confiabilidade Rede Basica Robustez Rmal Rmcs Rrb E Rrbcs encontrado</span
+      >
+    </div>
+  } @else {
+    <div class="table-responsive table-entities" id="entities">
+      <table class="table table-striped" aria-describedby="page-heading">
+        <thead>
+          <tr jhiSort [(sortState)]="sortState" (sortChange)="navigateToWithComponentValues($event)">
+            <th scope="col" jhiSortBy="id">
+              <div class="d-flex">
+                <span jhiTranslate="global.field.id">Código</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="codIndicador">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsIndicadoresConfiabilidadeRedeBasicaRobustezRmalRmcsRrbERrbcs.codIndicador"
+                  >Cod Indicador</span
+                >
+                @if (!currentSearch) {
+                  <fa-icon class="p-1" icon="sort"></fa-icon>
+                }
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="dscAgregacao">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsIndicadoresConfiabilidadeRedeBasicaRobustezRmalRmcsRrbERrbcs.dscAgregacao"
+                  >Dsc Agregacao</span
+                >
+                @if (!currentSearch) {
+                  <fa-icon class="p-1" icon="sort"></fa-icon>
+                }
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="codCaracteristica">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsIndicadoresConfiabilidadeRedeBasicaRobustezRmalRmcsRrbERrbcs.codCaracteristica"
+                  >Cod Caracteristica</span
+                >
+                @if (!currentSearch) {
+                  <fa-icon class="p-1" icon="sort"></fa-icon>
+                }
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="dscCaracteristica">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsIndicadoresConfiabilidadeRedeBasicaRobustezRmalRmcsRrbERrbcs.dscCaracteristica"
+                  >Dsc Caracteristica</span
+                >
+                @if (!currentSearch) {
+                  <fa-icon class="p-1" icon="sort"></fa-icon>
+                }
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="idPeriodicidade">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsIndicadoresConfiabilidadeRedeBasicaRobustezRmalRmcsRrbERrbcs.idPeriodicidade"
+                  >Id Periodicidade</span
+                >
+                @if (!currentSearch) {
+                  <fa-icon class="p-1" icon="sort"></fa-icon>
+                }
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="dinReferencia">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsIndicadoresConfiabilidadeRedeBasicaRobustezRmalRmcsRrbERrbcs.dinReferencia"
+                  >Din Referencia</span
+                >
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="valIndicador">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsIndicadoresConfiabilidadeRedeBasicaRobustezRmalRmcsRrbERrbcs.valIndicador"
+                  >Val Indicador</span
+                >
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="numPerturbacoes">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsIndicadoresConfiabilidadeRedeBasicaRobustezRmalRmcsRrbERrbcs.numPerturbacoes"
+                  >Num Perturbacoes</span
+                >
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="numPerturbacoescortecarga">
+              <div class="d-flex">
+                <span
+                  jhiTranslate="wattsUpEnergyApp.onsIndicadoresConfiabilidadeRedeBasicaRobustezRmalRmcsRrbERrbcs.numPerturbacoescortecarga"
+                  >Num Perturbacoescortecarga</span
+                >
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="numPerturbacoescortecarga0a50mw">
+              <div class="d-flex">
+                <span
+                  jhiTranslate="wattsUpEnergyApp.onsIndicadoresConfiabilidadeRedeBasicaRobustezRmalRmcsRrbERrbcs.numPerturbacoescortecarga0a50mw"
+                  >Num Perturbacoescortecarga 0 A 50 Mw</span
+                >
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="numPerturbacoescortecarga50a100mw">
+              <div class="d-flex">
+                <span
+                  jhiTranslate="wattsUpEnergyApp.onsIndicadoresConfiabilidadeRedeBasicaRobustezRmalRmcsRrbERrbcs.numPerturbacoescortecarga50a100mw"
+                  >Num Perturbacoescortecarga 50 A 100 Mw</span
+                >
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="numPerturbacoescortecargaMaior100mw">
+              <div class="d-flex">
+                <span
+                  jhiTranslate="wattsUpEnergyApp.onsIndicadoresConfiabilidadeRedeBasicaRobustezRmalRmcsRrbERrbcs.numPerturbacoescortecargaMaior100mw"
+                  >Num Perturbacoescortecarga Maior 100 Mw</span
+                >
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (
+            onsIndicadoresConfiabilidadeRedeBasicaRobustezRmalRmcsRrbERrbcs of onsIndicadoresConfiabilidadeRedeBasicaRobustezRmalRmcsRrbERrbcs();
+            track trackId(onsIndicadoresConfiabilidadeRedeBasicaRobustezRmalRmcsRrbERrbcs)
+          ) {
+            <tr data-cy="entityTable">
+              <td>
+                <a
+                  [routerLink]="[
+                    '/ons-indicadores-confiabilidade-rede-basica-robustez-rmal-rmcs-rrb-e-rrbcs',
+                    onsIndicadoresConfiabilidadeRedeBasicaRobustezRmalRmcsRrbERrbcs.id,
+                    'view',
+                  ]"
+                  >{{ onsIndicadoresConfiabilidadeRedeBasicaRobustezRmalRmcsRrbERrbcs.id }}</a
+                >
+              </td>
+              <td>{{ onsIndicadoresConfiabilidadeRedeBasicaRobustezRmalRmcsRrbERrbcs.codIndicador }}</td>
+              <td>{{ onsIndicadoresConfiabilidadeRedeBasicaRobustezRmalRmcsRrbERrbcs.dscAgregacao }}</td>
+              <td>{{ onsIndicadoresConfiabilidadeRedeBasicaRobustezRmalRmcsRrbERrbcs.codCaracteristica }}</td>
+              <td>{{ onsIndicadoresConfiabilidadeRedeBasicaRobustezRmalRmcsRrbERrbcs.dscCaracteristica }}</td>
+              <td>{{ onsIndicadoresConfiabilidadeRedeBasicaRobustezRmalRmcsRrbERrbcs.idPeriodicidade }}</td>
+              <td>{{ onsIndicadoresConfiabilidadeRedeBasicaRobustezRmalRmcsRrbERrbcs.dinReferencia | formatMediumDate }}</td>
+              <td>{{ onsIndicadoresConfiabilidadeRedeBasicaRobustezRmalRmcsRrbERrbcs.valIndicador }}</td>
+              <td>{{ onsIndicadoresConfiabilidadeRedeBasicaRobustezRmalRmcsRrbERrbcs.numPerturbacoes }}</td>
+              <td>{{ onsIndicadoresConfiabilidadeRedeBasicaRobustezRmalRmcsRrbERrbcs.numPerturbacoescortecarga }}</td>
+              <td>{{ onsIndicadoresConfiabilidadeRedeBasicaRobustezRmalRmcsRrbERrbcs.numPerturbacoescortecarga0a50mw }}</td>
+              <td>{{ onsIndicadoresConfiabilidadeRedeBasicaRobustezRmalRmcsRrbERrbcs.numPerturbacoescortecarga50a100mw }}</td>
+              <td>{{ onsIndicadoresConfiabilidadeRedeBasicaRobustezRmalRmcsRrbERrbcs.numPerturbacoescortecargaMaior100mw }}</td>
+              <td class="text-end">
+                <div class="btn-group">
+                  <a
+                    [routerLink]="[
+                      '/ons-indicadores-confiabilidade-rede-basica-robustez-rmal-rmcs-rrb-e-rrbcs',
+                      onsIndicadoresConfiabilidadeRedeBasicaRobustezRmalRmcsRrbERrbcs.id,
+                      'view',
+                    ]"
+                    class="btn btn-info btn-sm"
+                    data-cy="entityDetailsButton"
+                  >
+                    <fa-icon icon="eye"></fa-icon>
+                    <span class="d-none d-md-inline" jhiTranslate="entity.action.view">Visualizar</span>
+                  </a>
+
+                  <a
+                    [routerLink]="[
+                      '/ons-indicadores-confiabilidade-rede-basica-robustez-rmal-rmcs-rrb-e-rrbcs',
+                      onsIndicadoresConfiabilidadeRedeBasicaRobustezRmalRmcsRrbERrbcs.id,
+                      'edit',
+                    ]"
+                    class="btn btn-primary btn-sm"
+                    data-cy="entityEditButton"
+                  >
+                    <fa-icon icon="pencil-alt"></fa-icon>
+                    <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Editar</span>
+                  </a>
+
+                  <button
+                    type="submit"
+                    (click)="delete(onsIndicadoresConfiabilidadeRedeBasicaRobustezRmalRmcsRrbERrbcs)"
+                    class="btn btn-danger btn-sm"
+                    data-cy="entityDeleteButton"
+                  >
+                    <fa-icon icon="times"></fa-icon>
+                    <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Excluir</span>
+                  </button>
+                </div>
+              </td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+  }
+</div>

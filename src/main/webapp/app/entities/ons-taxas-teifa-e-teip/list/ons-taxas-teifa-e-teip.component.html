@@ -1,0 +1,182 @@
+<div>
+  <h2 id="page-heading" data-cy="OnsTaxasTeifaETeipHeading">
+    <span jhiTranslate="wattsUpEnergyApp.onsTaxasTeifaETeip.home.title">Ons Taxas Teifa E Teips</span>
+
+    <div class="d-flex justify-content-end">
+      <button class="btn btn-info me-2" (click)="load()" [disabled]="isLoading">
+        <fa-icon icon="sync" [animation]="isLoading ? 'spin' : undefined"></fa-icon>
+        <span jhiTranslate="wattsUpEnergyApp.onsTaxasTeifaETeip.home.refreshListLabel">Atualizar lista</span>
+      </button>
+
+      <button
+        id="jh-create-entity"
+        data-cy="entityCreateButton"
+        class="btn btn-primary jh-create-entity create-ons-taxas-teifa-e-teip"
+        [routerLink]="['/ons-taxas-teifa-e-teip/new']"
+      >
+        <fa-icon icon="plus"></fa-icon>
+        <span class="hidden-sm-down" jhiTranslate="wattsUpEnergyApp.onsTaxasTeifaETeip.home.createLabel"
+          >Criar novo Ons Taxas Teifa E Teip</span
+        >
+      </button>
+    </div>
+  </h2>
+
+  <jhi-alert-error></jhi-alert-error>
+
+  <jhi-alert></jhi-alert>
+
+  <form name="searchForm" class="row row-cols-sm-auto align-items-center">
+    <div class="col-sm-12">
+      <div class="input-group w-100 mt-3">
+        <label class="visually-hidden" for="currentSearch" jhiTranslate="wattsUpEnergyApp.onsTaxasTeifaETeip.home.search"
+          >Pesquisar por Ons Taxas Teifa E Teip</label
+        >
+        <input
+          type="text"
+          class="form-control"
+          [(ngModel)]="currentSearch"
+          id="currentSearch"
+          name="currentSearch"
+          placeholder="{{ 'wattsUpEnergyApp.onsTaxasTeifaETeip.home.search' | translate }}"
+        />
+
+        <button class="btn btn-info" (click)="search(currentSearch)">
+          <fa-icon icon="search"></fa-icon>
+        </button>
+
+        @if (currentSearch) {
+          <button class="btn btn-danger" (click)="search('')">
+            <fa-icon icon="trash-alt"></fa-icon>
+          </button>
+        }
+      </div>
+    </div>
+  </form>
+
+  @if (onsTaxasTeifaETeips().length === 0) {
+    <div class="alert alert-warning" id="no-result">
+      <span jhiTranslate="wattsUpEnergyApp.onsTaxasTeifaETeip.home.notFound">Nenhum Ons Taxas Teifa E Teip encontrado</span>
+    </div>
+  } @else {
+    <div class="table-responsive table-entities" id="entities">
+      <table class="table table-striped" aria-describedby="page-heading">
+        <thead>
+          <tr jhiSort [(sortState)]="sortState" (sortChange)="navigateToWithComponentValues($event)">
+            <th scope="col" jhiSortBy="id">
+              <div class="d-flex">
+                <span jhiTranslate="global.field.id">Código</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="nomUsina">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsTaxasTeifaETeip.nomUsina">Nom Usina</span>
+                @if (!currentSearch) {
+                  <fa-icon class="p-1" icon="sort"></fa-icon>
+                }
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="codCeg">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsTaxasTeifaETeip.codCeg">Cod Ceg</span>
+                @if (!currentSearch) {
+                  <fa-icon class="p-1" icon="sort"></fa-icon>
+                }
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="idTipousina">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsTaxasTeifaETeip.idTipousina">Id Tipousina</span>
+                @if (!currentSearch) {
+                  <fa-icon class="p-1" icon="sort"></fa-icon>
+                }
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="dinMes">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsTaxasTeifaETeip.dinMes">Din Mes</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="nomTaxa">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsTaxasTeifaETeip.nomTaxa">Nom Taxa</span>
+                @if (!currentSearch) {
+                  <fa-icon class="p-1" icon="sort"></fa-icon>
+                }
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="valTaxa">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsTaxasTeifaETeip.valTaxa">Val Taxa</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="numVersao">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsTaxasTeifaETeip.numVersao">Num Versao</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="dinInstante">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsTaxasTeifaETeip.dinInstante">Din Instante</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (onsTaxasTeifaETeip of onsTaxasTeifaETeips(); track trackId(onsTaxasTeifaETeip)) {
+            <tr data-cy="entityTable">
+              <td>
+                <a [routerLink]="['/ons-taxas-teifa-e-teip', onsTaxasTeifaETeip.id, 'view']">{{ onsTaxasTeifaETeip.id }}</a>
+              </td>
+              <td>{{ onsTaxasTeifaETeip.nomUsina }}</td>
+              <td>{{ onsTaxasTeifaETeip.codCeg }}</td>
+              <td>{{ onsTaxasTeifaETeip.idTipousina }}</td>
+              <td>{{ onsTaxasTeifaETeip.dinMes | formatMediumDate }}</td>
+              <td>{{ onsTaxasTeifaETeip.nomTaxa }}</td>
+              <td>{{ onsTaxasTeifaETeip.valTaxa }}</td>
+              <td>{{ onsTaxasTeifaETeip.numVersao }}</td>
+              <td>{{ onsTaxasTeifaETeip.dinInstante | formatMediumDate }}</td>
+              <td class="text-end">
+                <div class="btn-group">
+                  <a
+                    [routerLink]="['/ons-taxas-teifa-e-teip', onsTaxasTeifaETeip.id, 'view']"
+                    class="btn btn-info btn-sm"
+                    data-cy="entityDetailsButton"
+                  >
+                    <fa-icon icon="eye"></fa-icon>
+                    <span class="d-none d-md-inline" jhiTranslate="entity.action.view">Visualizar</span>
+                  </a>
+
+                  <a
+                    [routerLink]="['/ons-taxas-teifa-e-teip', onsTaxasTeifaETeip.id, 'edit']"
+                    class="btn btn-primary btn-sm"
+                    data-cy="entityEditButton"
+                  >
+                    <fa-icon icon="pencil-alt"></fa-icon>
+                    <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Editar</span>
+                  </a>
+
+                  <button type="submit" (click)="delete(onsTaxasTeifaETeip)" class="btn btn-danger btn-sm" data-cy="entityDeleteButton">
+                    <fa-icon icon="times"></fa-icon>
+                    <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Excluir</span>
+                  </button>
+                </div>
+              </td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+  }
+</div>

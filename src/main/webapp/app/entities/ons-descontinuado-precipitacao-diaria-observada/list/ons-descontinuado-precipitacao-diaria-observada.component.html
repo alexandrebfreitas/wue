@@ -1,0 +1,185 @@
+<div>
+  <h2 id="page-heading" data-cy="OnsDescontinuadoPrecipitacaoDiariaObservadaHeading">
+    <span jhiTranslate="wattsUpEnergyApp.onsDescontinuadoPrecipitacaoDiariaObservada.home.title"
+      >Ons Descontinuado Precipitacao Diaria Observadas</span
+    >
+
+    <div class="d-flex justify-content-end">
+      <button class="btn btn-info me-2" (click)="load()" [disabled]="isLoading">
+        <fa-icon icon="sync" [animation]="isLoading ? 'spin' : undefined"></fa-icon>
+        <span jhiTranslate="wattsUpEnergyApp.onsDescontinuadoPrecipitacaoDiariaObservada.home.refreshListLabel">Atualizar lista</span>
+      </button>
+
+      <button
+        id="jh-create-entity"
+        data-cy="entityCreateButton"
+        class="btn btn-primary jh-create-entity create-ons-descontinuado-precipitacao-diaria-observada"
+        [routerLink]="['/ons-descontinuado-precipitacao-diaria-observada/new']"
+      >
+        <fa-icon icon="plus"></fa-icon>
+        <span class="hidden-sm-down" jhiTranslate="wattsUpEnergyApp.onsDescontinuadoPrecipitacaoDiariaObservada.home.createLabel"
+          >Criar novo Ons Descontinuado Precipitacao Diaria Observada</span
+        >
+      </button>
+    </div>
+  </h2>
+
+  <jhi-alert-error></jhi-alert-error>
+
+  <jhi-alert></jhi-alert>
+
+  <form name="searchForm" class="row row-cols-sm-auto align-items-center">
+    <div class="col-sm-12">
+      <div class="input-group w-100 mt-3">
+        <label
+          class="visually-hidden"
+          for="currentSearch"
+          jhiTranslate="wattsUpEnergyApp.onsDescontinuadoPrecipitacaoDiariaObservada.home.search"
+          >Pesquisar por Ons Descontinuado Precipitacao Diaria Observada</label
+        >
+        <input
+          type="text"
+          class="form-control"
+          [(ngModel)]="currentSearch"
+          id="currentSearch"
+          name="currentSearch"
+          placeholder="{{ 'wattsUpEnergyApp.onsDescontinuadoPrecipitacaoDiariaObservada.home.search' | translate }}"
+        />
+
+        <button class="btn btn-info" (click)="search(currentSearch)">
+          <fa-icon icon="search"></fa-icon>
+        </button>
+
+        @if (currentSearch) {
+          <button class="btn btn-danger" (click)="search('')">
+            <fa-icon icon="trash-alt"></fa-icon>
+          </button>
+        }
+      </div>
+    </div>
+  </form>
+
+  @if (onsDescontinuadoPrecipitacaoDiariaObservadas().length === 0) {
+    <div class="alert alert-warning" id="no-result">
+      <span jhiTranslate="wattsUpEnergyApp.onsDescontinuadoPrecipitacaoDiariaObservada.home.notFound"
+        >Nenhum Ons Descontinuado Precipitacao Diaria Observada encontrado</span
+      >
+    </div>
+  } @else {
+    <div class="table-responsive table-entities" id="entities">
+      <table class="table table-striped" aria-describedby="page-heading">
+        <thead>
+          <tr jhiSort [(sortState)]="sortState" (sortChange)="navigateToWithComponentValues($event)">
+            <th scope="col" jhiSortBy="id">
+              <div class="d-flex">
+                <span jhiTranslate="global.field.id">Código</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="codEstacao">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsDescontinuadoPrecipitacaoDiariaObservada.codEstacao">Cod Estacao</span>
+                @if (!currentSearch) {
+                  <fa-icon class="p-1" icon="sort"></fa-icon>
+                }
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="valLatitude">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsDescontinuadoPrecipitacaoDiariaObservada.valLatitude">Val Latitude</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="valLongitude">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsDescontinuadoPrecipitacaoDiariaObservada.valLongitude">Val Longitude</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="valMedida">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsDescontinuadoPrecipitacaoDiariaObservada.valMedida">Val Medida</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="datObservada">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsDescontinuadoPrecipitacaoDiariaObservada.datObservada">Dat Observada</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (
+            onsDescontinuadoPrecipitacaoDiariaObservada of onsDescontinuadoPrecipitacaoDiariaObservadas();
+            track trackId(onsDescontinuadoPrecipitacaoDiariaObservada)
+          ) {
+            <tr data-cy="entityTable">
+              <td>
+                <a
+                  [routerLink]="[
+                    '/ons-descontinuado-precipitacao-diaria-observada',
+                    onsDescontinuadoPrecipitacaoDiariaObservada.id,
+                    'view',
+                  ]"
+                  >{{ onsDescontinuadoPrecipitacaoDiariaObservada.id }}</a
+                >
+              </td>
+              <td>{{ onsDescontinuadoPrecipitacaoDiariaObservada.codEstacao }}</td>
+              <td>{{ onsDescontinuadoPrecipitacaoDiariaObservada.valLatitude }}</td>
+              <td>{{ onsDescontinuadoPrecipitacaoDiariaObservada.valLongitude }}</td>
+              <td>{{ onsDescontinuadoPrecipitacaoDiariaObservada.valMedida }}</td>
+              <td>{{ onsDescontinuadoPrecipitacaoDiariaObservada.datObservada | formatMediumDate }}</td>
+              <td class="text-end">
+                <div class="btn-group">
+                  <a
+                    [routerLink]="[
+                      '/ons-descontinuado-precipitacao-diaria-observada',
+                      onsDescontinuadoPrecipitacaoDiariaObservada.id,
+                      'view',
+                    ]"
+                    class="btn btn-info btn-sm"
+                    data-cy="entityDetailsButton"
+                  >
+                    <fa-icon icon="eye"></fa-icon>
+                    <span class="d-none d-md-inline" jhiTranslate="entity.action.view">Visualizar</span>
+                  </a>
+
+                  <a
+                    [routerLink]="[
+                      '/ons-descontinuado-precipitacao-diaria-observada',
+                      onsDescontinuadoPrecipitacaoDiariaObservada.id,
+                      'edit',
+                    ]"
+                    class="btn btn-primary btn-sm"
+                    data-cy="entityEditButton"
+                  >
+                    <fa-icon icon="pencil-alt"></fa-icon>
+                    <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Editar</span>
+                  </a>
+
+                  <button
+                    type="submit"
+                    (click)="delete(onsDescontinuadoPrecipitacaoDiariaObservada)"
+                    class="btn btn-danger btn-sm"
+                    data-cy="entityDeleteButton"
+                  >
+                    <fa-icon icon="times"></fa-icon>
+                    <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Excluir</span>
+                  </button>
+                </div>
+              </td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+  }
+</div>

@@ -1,0 +1,30 @@
+@if (onsCargaEnergiaVerificada) {
+  <form name="deleteForm" (ngSubmit)="confirmDelete(onsCargaEnergiaVerificada.id!)">
+    <div class="modal-header">
+      <h4 class="modal-title" data-cy="onsCargaEnergiaVerificadaDeleteDialogHeading" jhiTranslate="entity.delete.title">
+        Confirme a exclusão
+      </h4>
+    </div>
+
+    <div class="modal-body">
+      <jhi-alert-error></jhi-alert-error>
+      <p
+        id="jhi-delete-onsCargaEnergiaVerificada-heading"
+        jhiTranslate="wattsUpEnergyApp.onsCargaEnergiaVerificada.delete.question"
+        [translateValues]="{ id: onsCargaEnergiaVerificada.id }"
+      >
+        Tem certeza de que deseja excluir Ons Carga Energia Verificada {{ onsCargaEnergiaVerificada.id }}?
+      </p>
+    </div>
+
+    <div class="modal-footer">
+      <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="cancel()">
+        <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancelar</span>
+      </button>
+
+      <button id="jhi-confirm-delete-onsCargaEnergiaVerificada" data-cy="entityConfirmDeleteButton" type="submit" class="btn btn-danger">
+        <fa-icon icon="times"></fa-icon>&nbsp;<span jhiTranslate="entity.action.delete">Excluir</span>
+      </button>
+    </div>
+  </form>
+}

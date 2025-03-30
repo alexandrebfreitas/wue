@@ -1,0 +1,51 @@
+{
+  "annotations": {
+    "changelogDate": "20250330013722"
+  },
+  "applications": "*",
+  "entityTableName": "OnsTable45",
+  "fields": [
+    {
+      "fieldName": "codAreacarga",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "datReferencia",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "dinReferenciautc",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "valCargaglobal",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "valCargaglobalsmmg",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "valCargammgd",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "valCargaglobalcons",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "valConsistencia",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "valCargasupervisionada",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "valCarganaosupervisionada",
+      "fieldType": "Double"
+    }
+  ],
+  "name": "OnsCargaEnergiaVerificada",
+  "relationships": []
+}

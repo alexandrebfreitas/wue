@@ -1,0 +1,74 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    @if (onsBalancoEnergiaDessem(); as onsBalancoEnergiaDessemRef) {
+      <div>
+        <h2 data-cy="onsBalancoEnergiaDessemDetailsHeading">
+          <span jhiTranslate="wattsUpEnergyApp.onsBalancoEnergiaDessem.detail.title">Ons Balanco Energia Dessem</span>
+        </h2>
+
+        <hr />
+
+        <jhi-alert-error></jhi-alert-error>
+
+        <jhi-alert></jhi-alert>
+
+        <dl class="row-md jh-entity-details">
+          <dt><span jhiTranslate="global.field.id">Código</span></dt>
+          <dd>
+            <span>{{ onsBalancoEnergiaDessemRef.id }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsBalancoEnergiaDessem.idSubsistema">Id Subsistema</span></dt>
+          <dd>
+            <span>{{ onsBalancoEnergiaDessemRef.idSubsistema }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsBalancoEnergiaDessem.nomSubsistema">Nom Subsistema</span></dt>
+          <dd>
+            <span>{{ onsBalancoEnergiaDessemRef.nomSubsistema }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsBalancoEnergiaDessem.dinInstante">Din Instante</span></dt>
+          <dd>
+            <span>{{ onsBalancoEnergiaDessemRef.dinInstante | formatMediumDate }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsBalancoEnergiaDessem.valDemanda">Val Demanda</span></dt>
+          <dd>
+            <span>{{ onsBalancoEnergiaDessemRef.valDemanda }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsBalancoEnergiaDessem.valGeracaohidraulicamwmed">Val Geracaohidraulicamwmed</span></dt>
+          <dd>
+            <span>{{ onsBalancoEnergiaDessemRef.valGeracaohidraulicamwmed }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsBalancoEnergiaDessem.valGeracaopchmwmed">Val Geracaopchmwmed</span></dt>
+          <dd>
+            <span>{{ onsBalancoEnergiaDessemRef.valGeracaopchmwmed }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsBalancoEnergiaDessem.valGeracaotermicamwed">Val Geracaotermicamwed</span></dt>
+          <dd>
+            <span>{{ onsBalancoEnergiaDessemRef.valGeracaotermicamwed }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsBalancoEnergiaDessem.valGeracaopctmwmed">Val Geracaopctmwmed</span></dt>
+          <dd>
+            <span>{{ onsBalancoEnergiaDessemRef.valGeracaopctmwmed }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsBalancoEnergiaDessem.valGeracaoeolicamwmed">Val Geracaoeolicamwmed</span></dt>
+          <dd>
+            <span>{{ onsBalancoEnergiaDessemRef.valGeracaoeolicamwmed }}</span>
+          </dd>
+          <dt>
+            <span jhiTranslate="wattsUpEnergyApp.onsBalancoEnergiaDessem.valGeracaofotovoltaicamwmed">Val Geracaofotovoltaicamwmed</span>
+          </dt>
+          <dd>
+            <span>{{ onsBalancoEnergiaDessemRef.valGeracaofotovoltaicamwmed }}</span>
+          </dd>
+        </dl>
+
+        <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+          <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Voltar</span>
+        </button>
+
+        <button type="button" [routerLink]="['/ons-balanco-energia-dessem', onsBalancoEnergiaDessemRef.id, 'edit']" class="btn btn-primary">
+          <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Editar</span>
+        </button>
+      </div>
+    }
+  </div>
+</div>

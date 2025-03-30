@@ -1,0 +1,163 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <form name="editForm" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+      <h2
+        id="jhi-ons-dados-intercambio-energia-modalidade-heading"
+        data-cy="OnsDadosIntercambioEnergiaModalidadeCreateUpdateHeading"
+        jhiTranslate="wattsUpEnergyApp.onsDadosIntercambioEnergiaModalidade.home.createOrEditLabel"
+      >
+        Criar ou editar Ons Dados Intercambio Energia Modalidade
+      </h2>
+
+      <div>
+        <jhi-alert-error></jhi-alert-error>
+
+        @if (editForm.controls.id.value !== null) {
+          <div class="mb-3">
+            <label class="form-label" for="field_id" jhiTranslate="wattsUpEnergyApp.onsDadosIntercambioEnergiaModalidade.id">ID</label>
+            <input type="number" class="form-control" name="id" id="field_id" data-cy="id" formControlName="id" [readonly]="true" />
+          </div>
+        }
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_nomConversora"
+            jhiTranslate="wattsUpEnergyApp.onsDadosIntercambioEnergiaModalidade.nomConversora"
+            >Nom Conversora</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="nomConversora"
+            id="field_nomConversora"
+            data-cy="nomConversora"
+            formControlName="nomConversora"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_dinInstante" jhiTranslate="wattsUpEnergyApp.onsDadosIntercambioEnergiaModalidade.dinInstante"
+            >Din Instante</label
+          >
+          <div class="input-group">
+            <input
+              id="field_dinInstante"
+              data-cy="dinInstante"
+              type="text"
+              class="form-control"
+              name="dinInstante"
+              ngbDatepicker
+              #dinInstanteDp="ngbDatepicker"
+              formControlName="dinInstante"
+            />
+            <button type="button" class="btn btn-secondary" (click)="dinInstanteDp.toggle()">
+              <fa-icon icon="calendar-alt"></fa-icon>
+            </button>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_valModalidadecontratual"
+            jhiTranslate="wattsUpEnergyApp.onsDadosIntercambioEnergiaModalidade.valModalidadecontratual"
+            >Val Modalidadecontratual</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="valModalidadecontratual"
+            id="field_valModalidadecontratual"
+            data-cy="valModalidadecontratual"
+            formControlName="valModalidadecontratual"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_valModalidadeemergencial"
+            jhiTranslate="wattsUpEnergyApp.onsDadosIntercambioEnergiaModalidade.valModalidadeemergencial"
+            >Val Modalidadeemergencial</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="valModalidadeemergencial"
+            id="field_valModalidadeemergencial"
+            data-cy="valModalidadeemergencial"
+            formControlName="valModalidadeemergencial"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_valModalidadeoportunidade"
+            jhiTranslate="wattsUpEnergyApp.onsDadosIntercambioEnergiaModalidade.valModalidadeoportunidade"
+            >Val Modalidadeoportunidade</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="valModalidadeoportunidade"
+            id="field_valModalidadeoportunidade"
+            data-cy="valModalidadeoportunidade"
+            formControlName="valModalidadeoportunidade"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_valModalidadeteste"
+            jhiTranslate="wattsUpEnergyApp.onsDadosIntercambioEnergiaModalidade.valModalidadeteste"
+            >Val Modalidadeteste</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="valModalidadeteste"
+            id="field_valModalidadeteste"
+            data-cy="valModalidadeteste"
+            formControlName="valModalidadeteste"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_valModalidadeexcepcional"
+            jhiTranslate="wattsUpEnergyApp.onsDadosIntercambioEnergiaModalidade.valModalidadeexcepcional"
+            >Val Modalidadeexcepcional</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="valModalidadeexcepcional"
+            id="field_valModalidadeexcepcional"
+            data-cy="valModalidadeexcepcional"
+            formControlName="valModalidadeexcepcional"
+          />
+        </div>
+      </div>
+
+      <div>
+        <button type="button" id="cancel-save" data-cy="entityCreateCancelButton" class="btn btn-secondary" (click)="previousState()">
+          <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancelar</span>
+        </button>
+
+        <button
+          type="submit"
+          id="save-entity"
+          data-cy="entityCreateSaveButton"
+          [disabled]="editForm.invalid || isSaving"
+          class="btn btn-primary"
+        >
+          <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Salvar</span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

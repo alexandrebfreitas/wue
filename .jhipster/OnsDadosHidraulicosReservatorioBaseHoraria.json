@@ -1,0 +1,43 @@
+{
+  "annotations": {
+    "changelogDate": "20250330013701"
+  },
+  "applications": "*",
+  "entityTableName": "OnsTable24",
+  "fields": [
+    {
+      "fieldName": "valVolumeutil",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "valVazaoafluente",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "valVazaodefluente",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "valVazaoturbinada",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "valVazaovertida",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "valVazaooutrasestruturas",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "valVazaotransferida",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "valVazaovertidanaoturbinavel",
+      "fieldType": "Double"
+    }
+  ],
+  "name": "OnsDadosHidraulicosReservatorioBaseHoraria",
+  "relationships": []
+}

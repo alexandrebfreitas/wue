@@ -1,0 +1,28 @@
+{
+  "wattsUpEnergyApp": {
+    "onsCurvaCargaHoraria": {
+      "home": {
+        "title": "Ons Curva Carga Horarias",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Ons Curva Carga Horaria",
+        "createOrEditLabel": "Create or edit a Ons Curva Carga Horaria",
+        "search": "Search for Ons Curva Carga Horaria",
+        "notFound": "No Ons Curva Carga Horarias found"
+      },
+      "created": "A new Ons Curva Carga Horaria is created with identifier {{ param }}",
+      "updated": "A Ons Curva Carga Horaria is updated with identifier {{ param }}",
+      "deleted": "A Ons Curva Carga Horaria is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Ons Curva Carga Horaria {{ id }}?"
+      },
+      "detail": {
+        "title": "Ons Curva Carga Horaria"
+      },
+      "id": "ID",
+      "idSubsistema": "Id Subsistema",
+      "nomSubsistema": "Nom Subsistema",
+      "dinInstante": "Din Instante",
+      "valCargaenergiahomwmed": "Val Cargaenergiahomwmed"
+    }
+  }
+}

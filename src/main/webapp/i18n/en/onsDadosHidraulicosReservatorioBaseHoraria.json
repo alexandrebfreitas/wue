@@ -1,0 +1,32 @@
+{
+  "wattsUpEnergyApp": {
+    "onsDadosHidraulicosReservatorioBaseHoraria": {
+      "home": {
+        "title": "Ons Dados Hidraulicos Reservatorio Base Horarias",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Ons Dados Hidraulicos Reservatorio Base Horaria",
+        "createOrEditLabel": "Create or edit a Ons Dados Hidraulicos Reservatorio Base Horaria",
+        "search": "Search for Ons Dados Hidraulicos Reservatorio Base Horaria",
+        "notFound": "No Ons Dados Hidraulicos Reservatorio Base Horarias found"
+      },
+      "created": "A new Ons Dados Hidraulicos Reservatorio Base Horaria is created with identifier {{ param }}",
+      "updated": "A Ons Dados Hidraulicos Reservatorio Base Horaria is updated with identifier {{ param }}",
+      "deleted": "A Ons Dados Hidraulicos Reservatorio Base Horaria is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Ons Dados Hidraulicos Reservatorio Base Horaria {{ id }}?"
+      },
+      "detail": {
+        "title": "Ons Dados Hidraulicos Reservatorio Base Horaria"
+      },
+      "id": "ID",
+      "valVolumeutil": "Val Volumeutil",
+      "valVazaoafluente": "Val Vazaoafluente",
+      "valVazaodefluente": "Val Vazaodefluente",
+      "valVazaoturbinada": "Val Vazaoturbinada",
+      "valVazaovertida": "Val Vazaovertida",
+      "valVazaooutrasestruturas": "Val Vazaooutrasestruturas",
+      "valVazaotransferida": "Val Vazaotransferida",
+      "valVazaovertidanaoturbinavel": "Val Vazaovertidanaoturbinavel"
+    }
+  }
+}

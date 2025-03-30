@@ -1,0 +1,58 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    @if (onsEarDiarioSubsistema(); as onsEarDiarioSubsistemaRef) {
+      <div>
+        <h2 data-cy="onsEarDiarioSubsistemaDetailsHeading">
+          <span jhiTranslate="wattsUpEnergyApp.onsEarDiarioSubsistema.detail.title">Ons Ear Diario Subsistema</span>
+        </h2>
+
+        <hr />
+
+        <jhi-alert-error></jhi-alert-error>
+
+        <jhi-alert></jhi-alert>
+
+        <dl class="row-md jh-entity-details">
+          <dt><span jhiTranslate="global.field.id">Código</span></dt>
+          <dd>
+            <span>{{ onsEarDiarioSubsistemaRef.id }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsEarDiarioSubsistema.idSubsistema">Id Subsistema</span></dt>
+          <dd>
+            <span>{{ onsEarDiarioSubsistemaRef.idSubsistema }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsEarDiarioSubsistema.nomSubsistema">Nom Subsistema</span></dt>
+          <dd>
+            <span>{{ onsEarDiarioSubsistemaRef.nomSubsistema }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsEarDiarioSubsistema.earData">Ear Data</span></dt>
+          <dd>
+            <span>{{ onsEarDiarioSubsistemaRef.earData | formatMediumDate }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsEarDiarioSubsistema.earMaxSubsistema">Ear Max Subsistema</span></dt>
+          <dd>
+            <span>{{ onsEarDiarioSubsistemaRef.earMaxSubsistema }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsEarDiarioSubsistema.earVerifSubsistemaMwmes">Ear Verif Subsistema Mwmes</span></dt>
+          <dd>
+            <span>{{ onsEarDiarioSubsistemaRef.earVerifSubsistemaMwmes }}</span>
+          </dd>
+          <dt>
+            <span jhiTranslate="wattsUpEnergyApp.onsEarDiarioSubsistema.earVerifSubsistemaPercentual">Ear Verif Subsistema Percentual</span>
+          </dt>
+          <dd>
+            <span>{{ onsEarDiarioSubsistemaRef.earVerifSubsistemaPercentual }}</span>
+          </dd>
+        </dl>
+
+        <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+          <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Voltar</span>
+        </button>
+
+        <button type="button" [routerLink]="['/ons-ear-diario-subsistema', onsEarDiarioSubsistemaRef.id, 'edit']" class="btn btn-primary">
+          <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Editar</span>
+        </button>
+      </div>
+    }
+  </div>
+</div>

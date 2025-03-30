@@ -1,0 +1,47 @@
+{
+  "annotations": {
+    "changelogDate": "20250330013717"
+  },
+  "applications": "*",
+  "entityTableName": "OnsTable40",
+  "fields": [
+    {
+      "fieldName": "nomPais",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nomAgente",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nomBloco",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "codBloco",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "dinInstante",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "valImportacaoprogramada",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "valImportacaodespachada",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "valImportacaoverificada",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "valPreco",
+      "fieldType": "Double"
+    }
+  ],
+  "name": "OnsImportacaoEnergiaNaModalidadeComercialBloco",
+  "relationships": []
+}

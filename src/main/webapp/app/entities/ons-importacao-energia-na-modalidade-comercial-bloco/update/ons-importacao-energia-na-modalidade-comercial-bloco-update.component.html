@@ -1,0 +1,167 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <form name="editForm" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+      <h2
+        id="jhi-ons-importacao-energia-na-modalidade-comercial-bloco-heading"
+        data-cy="OnsImportacaoEnergiaNaModalidadeComercialBlocoCreateUpdateHeading"
+        jhiTranslate="wattsUpEnergyApp.onsImportacaoEnergiaNaModalidadeComercialBloco.home.createOrEditLabel"
+      >
+        Criar ou editar Ons Importacao Energia Na Modalidade Comercial Bloco
+      </h2>
+
+      <div>
+        <jhi-alert-error></jhi-alert-error>
+
+        @if (editForm.controls.id.value !== null) {
+          <div class="mb-3">
+            <label class="form-label" for="field_id" jhiTranslate="wattsUpEnergyApp.onsImportacaoEnergiaNaModalidadeComercialBloco.id"
+              >ID</label
+            >
+            <input type="number" class="form-control" name="id" id="field_id" data-cy="id" formControlName="id" [readonly]="true" />
+          </div>
+        }
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_nomPais"
+            jhiTranslate="wattsUpEnergyApp.onsImportacaoEnergiaNaModalidadeComercialBloco.nomPais"
+            >Nom Pais</label
+          >
+          <input type="text" class="form-control" name="nomPais" id="field_nomPais" data-cy="nomPais" formControlName="nomPais" />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_nomAgente"
+            jhiTranslate="wattsUpEnergyApp.onsImportacaoEnergiaNaModalidadeComercialBloco.nomAgente"
+            >Nom Agente</label
+          >
+          <input type="text" class="form-control" name="nomAgente" id="field_nomAgente" data-cy="nomAgente" formControlName="nomAgente" />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_nomBloco"
+            jhiTranslate="wattsUpEnergyApp.onsImportacaoEnergiaNaModalidadeComercialBloco.nomBloco"
+            >Nom Bloco</label
+          >
+          <input type="text" class="form-control" name="nomBloco" id="field_nomBloco" data-cy="nomBloco" formControlName="nomBloco" />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_codBloco"
+            jhiTranslate="wattsUpEnergyApp.onsImportacaoEnergiaNaModalidadeComercialBloco.codBloco"
+            >Cod Bloco</label
+          >
+          <input type="text" class="form-control" name="codBloco" id="field_codBloco" data-cy="codBloco" formControlName="codBloco" />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_dinInstante"
+            jhiTranslate="wattsUpEnergyApp.onsImportacaoEnergiaNaModalidadeComercialBloco.dinInstante"
+            >Din Instante</label
+          >
+          <div class="input-group">
+            <input
+              id="field_dinInstante"
+              data-cy="dinInstante"
+              type="text"
+              class="form-control"
+              name="dinInstante"
+              ngbDatepicker
+              #dinInstanteDp="ngbDatepicker"
+              formControlName="dinInstante"
+            />
+            <button type="button" class="btn btn-secondary" (click)="dinInstanteDp.toggle()">
+              <fa-icon icon="calendar-alt"></fa-icon>
+            </button>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_valImportacaoprogramada"
+            jhiTranslate="wattsUpEnergyApp.onsImportacaoEnergiaNaModalidadeComercialBloco.valImportacaoprogramada"
+            >Val Importacaoprogramada</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="valImportacaoprogramada"
+            id="field_valImportacaoprogramada"
+            data-cy="valImportacaoprogramada"
+            formControlName="valImportacaoprogramada"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_valImportacaodespachada"
+            jhiTranslate="wattsUpEnergyApp.onsImportacaoEnergiaNaModalidadeComercialBloco.valImportacaodespachada"
+            >Val Importacaodespachada</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="valImportacaodespachada"
+            id="field_valImportacaodespachada"
+            data-cy="valImportacaodespachada"
+            formControlName="valImportacaodespachada"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_valImportacaoverificada"
+            jhiTranslate="wattsUpEnergyApp.onsImportacaoEnergiaNaModalidadeComercialBloco.valImportacaoverificada"
+            >Val Importacaoverificada</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="valImportacaoverificada"
+            id="field_valImportacaoverificada"
+            data-cy="valImportacaoverificada"
+            formControlName="valImportacaoverificada"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_valPreco"
+            jhiTranslate="wattsUpEnergyApp.onsImportacaoEnergiaNaModalidadeComercialBloco.valPreco"
+            >Val Preco</label
+          >
+          <input type="number" class="form-control" name="valPreco" id="field_valPreco" data-cy="valPreco" formControlName="valPreco" />
+        </div>
+      </div>
+
+      <div>
+        <button type="button" id="cancel-save" data-cy="entityCreateCancelButton" class="btn btn-secondary" (click)="previousState()">
+          <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancelar</span>
+        </button>
+
+        <button
+          type="submit"
+          id="save-entity"
+          data-cy="entityCreateSaveButton"
+          [disabled]="editForm.invalid || isSaving"
+          class="btn btn-primary"
+        >
+          <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Salvar</span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

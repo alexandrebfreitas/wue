@@ -1,0 +1,161 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <form name="editForm" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+      <h2
+        id="jhi-ons-dados-programados-elementos-fluxo-controlado-heading"
+        data-cy="OnsDadosProgramadosElementosFluxoControladoCreateUpdateHeading"
+        jhiTranslate="wattsUpEnergyApp.onsDadosProgramadosElementosFluxoControlado.home.createOrEditLabel"
+      >
+        Criar ou editar Ons Dados Programados Elementos Fluxo Controlado
+      </h2>
+
+      <div>
+        <jhi-alert-error></jhi-alert-error>
+
+        @if (editForm.controls.id.value !== null) {
+          <div class="mb-3">
+            <label class="form-label" for="field_id" jhiTranslate="wattsUpEnergyApp.onsDadosProgramadosElementosFluxoControlado.id"
+              >ID</label
+            >
+            <input type="number" class="form-control" name="id" id="field_id" data-cy="id" formControlName="id" [readonly]="true" />
+          </div>
+        }
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_dinProgramacaodia"
+            jhiTranslate="wattsUpEnergyApp.onsDadosProgramadosElementosFluxoControlado.dinProgramacaodia"
+            >Din Programacaodia</label
+          >
+          <div class="input-group">
+            <input
+              id="field_dinProgramacaodia"
+              data-cy="dinProgramacaodia"
+              type="text"
+              class="form-control"
+              name="dinProgramacaodia"
+              ngbDatepicker
+              #dinProgramacaodiaDp="ngbDatepicker"
+              formControlName="dinProgramacaodia"
+            />
+            <button type="button" class="btn btn-secondary" (click)="dinProgramacaodiaDp.toggle()">
+              <fa-icon icon="calendar-alt"></fa-icon>
+            </button>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_numPatamar"
+            jhiTranslate="wattsUpEnergyApp.onsDadosProgramadosElementosFluxoControlado.numPatamar"
+            >Num Patamar</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="numPatamar"
+            id="field_numPatamar"
+            data-cy="numPatamar"
+            formControlName="numPatamar"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_nomElementofluxocontrolado"
+            jhiTranslate="wattsUpEnergyApp.onsDadosProgramadosElementosFluxoControlado.nomElementofluxocontrolado"
+            >Nom Elementofluxocontrolado</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="nomElementofluxocontrolado"
+            id="field_nomElementofluxocontrolado"
+            data-cy="nomElementofluxocontrolado"
+            formControlName="nomElementofluxocontrolado"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_dscElementofluxocontrolado"
+            jhiTranslate="wattsUpEnergyApp.onsDadosProgramadosElementosFluxoControlado.dscElementofluxocontrolado"
+            >Dsc Elementofluxocontrolado</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="dscElementofluxocontrolado"
+            id="field_dscElementofluxocontrolado"
+            data-cy="dscElementofluxocontrolado"
+            formControlName="dscElementofluxocontrolado"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_tipTerminal"
+            jhiTranslate="wattsUpEnergyApp.onsDadosProgramadosElementosFluxoControlado.tipTerminal"
+            >Tip Terminal</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="tipTerminal"
+            id="field_tipTerminal"
+            data-cy="tipTerminal"
+            formControlName="tipTerminal"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_codSubmercado"
+            jhiTranslate="wattsUpEnergyApp.onsDadosProgramadosElementosFluxoControlado.codSubmercado"
+            >Cod Submercado</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="codSubmercado"
+            id="field_codSubmercado"
+            data-cy="codSubmercado"
+            formControlName="codSubmercado"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_valCarga"
+            jhiTranslate="wattsUpEnergyApp.onsDadosProgramadosElementosFluxoControlado.valCarga"
+            >Val Carga</label
+          >
+          <input type="number" class="form-control" name="valCarga" id="field_valCarga" data-cy="valCarga" formControlName="valCarga" />
+        </div>
+      </div>
+
+      <div>
+        <button type="button" id="cancel-save" data-cy="entityCreateCancelButton" class="btn btn-secondary" (click)="previousState()">
+          <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancelar</span>
+        </button>
+
+        <button
+          type="submit"
+          id="save-entity"
+          data-cy="entityCreateSaveButton"
+          [disabled]="editForm.invalid || isSaving"
+          class="btn btn-primary"
+        >
+          <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Salvar</span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

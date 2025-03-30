@@ -1,0 +1,48 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    @if (onsCmoSemihorario(); as onsCmoSemihorarioRef) {
+      <div>
+        <h2 data-cy="onsCmoSemihorarioDetailsHeading">
+          <span jhiTranslate="wattsUpEnergyApp.onsCmoSemihorario.detail.title">Ons Cmo Semihorario</span>
+        </h2>
+
+        <hr />
+
+        <jhi-alert-error></jhi-alert-error>
+
+        <jhi-alert></jhi-alert>
+
+        <dl class="row-md jh-entity-details">
+          <dt><span jhiTranslate="global.field.id">Código</span></dt>
+          <dd>
+            <span>{{ onsCmoSemihorarioRef.id }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsCmoSemihorario.idSubsistema">Id Subsistema</span></dt>
+          <dd>
+            <span>{{ onsCmoSemihorarioRef.idSubsistema }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsCmoSemihorario.nomSubsistema">Nom Subsistema</span></dt>
+          <dd>
+            <span>{{ onsCmoSemihorarioRef.nomSubsistema }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsCmoSemihorario.dinInstante">Din Instante</span></dt>
+          <dd>
+            <span>{{ onsCmoSemihorarioRef.dinInstante | formatMediumDate }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsCmoSemihorario.valCmo">Val Cmo</span></dt>
+          <dd>
+            <span>{{ onsCmoSemihorarioRef.valCmo }}</span>
+          </dd>
+        </dl>
+
+        <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+          <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Voltar</span>
+        </button>
+
+        <button type="button" [routerLink]="['/ons-cmo-semihorario', onsCmoSemihorarioRef.id, 'edit']" class="btn btn-primary">
+          <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Editar</span>
+        </button>
+      </div>
+    }
+  </div>
+</div>

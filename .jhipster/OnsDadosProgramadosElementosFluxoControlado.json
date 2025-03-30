@@ -1,0 +1,39 @@
+{
+  "annotations": {
+    "changelogDate": "20250330013658"
+  },
+  "applications": "*",
+  "entityTableName": "OnsTable21",
+  "fields": [
+    {
+      "fieldName": "dinProgramacaodia",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "numPatamar",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "nomElementofluxocontrolado",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "dscElementofluxocontrolado",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "tipTerminal",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "codSubmercado",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "valCarga",
+      "fieldType": "Double"
+    }
+  ],
+  "name": "OnsDadosProgramadosElementosFluxoControlado",
+  "relationships": []
+}

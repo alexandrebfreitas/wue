@@ -1,0 +1,59 @@
+{
+  "annotations": {
+    "changelogDate": "20250330013728"
+  },
+  "applications": "*",
+  "entityTableName": "OnsTable51",
+  "fields": [
+    {
+      "fieldName": "idSubsistema",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nomModalidadeoperacao",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "idEstado",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nomConjuntousina",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nomUsina",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "dinInstante",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "idOns",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "ceg",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "valVentoverificado",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "flgDadoventoinvalido",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "valGeracaoestimada",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "valGeracaoverificada",
+      "fieldType": "Double"
+    }
+  ],
+  "name": "OnsDadosRestricaoOperacaoConstrainedoffUsinasEolicasDetalhamentoUsinas",
+  "relationships": []
+}

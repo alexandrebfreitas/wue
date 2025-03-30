@@ -1,0 +1,179 @@
+{
+  "annotations": {
+    "changelogDate": "20250330013643"
+  },
+  "applications": "*",
+  "entityTableName": "OnsTable6",
+  "fields": [
+    {
+      "fieldName": "dinInstante",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "nomTipopatamar",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "idSubsistema",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nomSubsistema",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nomUsina",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "codUsinaplanejamento",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "ceg",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "valProggeracao",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "valProgordemmerito",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "valProgordemdemeritoref",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "valProgordemdemeritoacimadainflex",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "valProginflexibilidade",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "valProginflexembutmerito",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "valProginflexpura",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "valPrograzaoeletrica",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "valProggarantiaenergetica",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "valProggfom",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "valProgreposicaoperdas",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "valProgexportacao",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "valProgreservapotencia",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "valProggsub",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "valProgunitcommitment",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "valProgconstrainedoff",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "valProginflexibilidadedessem",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "valVerifgeracao",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "valVerifordemmerito",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "valVerifordemdemeritoacimadainflex",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "valVerifinflexibilidade",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "valVerifinflexembutmerito",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "valVerifinflexpura",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "valVerifrazaoeletrica",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "valVerifgarantiaenergetica",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "valVerifgfom",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "valVerifreposicaoperdas",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "valVerifexportacao",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "valFdexp",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "valVerifreservapotencia",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "valAtendsatisfatoriorpo",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "valVerifgsub",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "valVerifunitcommitment",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "valVerifconstrainedoff",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "tipRestricaoeletrica",
+      "fieldType": "Integer"
+    }
+  ],
+  "name": "OnsGeracaoTermicaMotivoDespacho",
+  "relationships": []
+}

@@ -1,0 +1,90 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    @if (onsGeracaoComercialParaExportacaoInternacional(); as onsGeracaoComercialParaExportacaoInternacionalRef) {
+      <div>
+        <h2 data-cy="onsGeracaoComercialParaExportacaoInternacionalDetailsHeading">
+          <span jhiTranslate="wattsUpEnergyApp.onsGeracaoComercialParaExportacaoInternacional.detail.title"
+            >Ons Geracao Comercial Para Exportacao Internacional</span
+          >
+        </h2>
+
+        <hr />
+
+        <jhi-alert-error></jhi-alert-error>
+
+        <jhi-alert></jhi-alert>
+
+        <dl class="row-md jh-entity-details">
+          <dt><span jhiTranslate="global.field.id">Código</span></dt>
+          <dd>
+            <span>{{ onsGeracaoComercialParaExportacaoInternacionalRef.id }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsGeracaoComercialParaExportacaoInternacional.nomConversora">Nom Conversora</span></dt>
+          <dd>
+            <span>{{ onsGeracaoComercialParaExportacaoInternacionalRef.nomConversora }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsGeracaoComercialParaExportacaoInternacional.dinInstante">Din Instante</span></dt>
+          <dd>
+            <span>{{ onsGeracaoComercialParaExportacaoInternacionalRef.dinInstante | formatMediumDate }}</span>
+          </dd>
+          <dt>
+            <span jhiTranslate="wattsUpEnergyApp.onsGeracaoComercialParaExportacaoInternacional.valModalidadecontratual"
+              >Val Modalidadecontratual</span
+            >
+          </dt>
+          <dd>
+            <span>{{ onsGeracaoComercialParaExportacaoInternacionalRef.valModalidadecontratual }}</span>
+          </dd>
+          <dt>
+            <span jhiTranslate="wattsUpEnergyApp.onsGeracaoComercialParaExportacaoInternacional.valModalidadeemergencial"
+              >Val Modalidadeemergencial</span
+            >
+          </dt>
+          <dd>
+            <span>{{ onsGeracaoComercialParaExportacaoInternacionalRef.valModalidadeemergencial }}</span>
+          </dd>
+          <dt>
+            <span jhiTranslate="wattsUpEnergyApp.onsGeracaoComercialParaExportacaoInternacional.valModalidadeoportunidade"
+              >Val Modalidadeoportunidade</span
+            >
+          </dt>
+          <dd>
+            <span>{{ onsGeracaoComercialParaExportacaoInternacionalRef.valModalidadeoportunidade }}</span>
+          </dd>
+          <dt>
+            <span jhiTranslate="wattsUpEnergyApp.onsGeracaoComercialParaExportacaoInternacional.valModalidadeteste"
+              >Val Modalidadeteste</span
+            >
+          </dt>
+          <dd>
+            <span>{{ onsGeracaoComercialParaExportacaoInternacionalRef.valModalidadeteste }}</span>
+          </dd>
+          <dt>
+            <span jhiTranslate="wattsUpEnergyApp.onsGeracaoComercialParaExportacaoInternacional.valModalidadeexcepcional"
+              >Val Modalidadeexcepcional</span
+            >
+          </dt>
+          <dd>
+            <span>{{ onsGeracaoComercialParaExportacaoInternacionalRef.valModalidadeexcepcional }}</span>
+          </dd>
+        </dl>
+
+        <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+          <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Voltar</span>
+        </button>
+
+        <button
+          type="button"
+          [routerLink]="[
+            '/ons-geracao-comercial-para-exportacao-internacional',
+            onsGeracaoComercialParaExportacaoInternacionalRef.id,
+            'edit',
+          ]"
+          class="btn btn-primary"
+        >
+          <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Editar</span>
+        </button>
+      </div>
+    }
+  </div>
+</div>

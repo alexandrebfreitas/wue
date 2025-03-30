@@ -1,0 +1,31 @@
+{
+  "wattsUpEnergyApp": {
+    "onsDadosIndicadoresQualidadeEnergiaRedeBasicaDfdDesempenhoFrequenciaEmDisturbiosEvento": {
+      "home": {
+        "title": "Ons Dados Indicadores Qualidade Energia Rede Basica Dfd Desempenho Frequencia Em Disturbios Eventos",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Ons Dados Indicadores Qualidade Energia Rede Basica Dfd Desempenho Frequencia Em Disturbios Evento",
+        "createOrEditLabel": "Create or edit a Ons Dados Indicadores Qualidade Energia Rede Basica Dfd Desempenho Frequencia Em Disturbios Evento",
+        "search": "Search for Ons Dados Indicadores Qualidade Energia Rede Basica Dfd Desempenho Frequencia Em Disturbios Evento",
+        "notFound": "No Ons Dados Indicadores Qualidade Energia Rede Basica Dfd Desempenho Frequencia Em Disturbios Eventos found"
+      },
+      "created": "A new Ons Dados Indicadores Qualidade Energia Rede Basica Dfd Desempenho Frequencia Em Disturbios Evento is created with identifier {{ param }}",
+      "updated": "A Ons Dados Indicadores Qualidade Energia Rede Basica Dfd Desempenho Frequencia Em Disturbios Evento is updated with identifier {{ param }}",
+      "deleted": "A Ons Dados Indicadores Qualidade Energia Rede Basica Dfd Desempenho Frequencia Em Disturbios Evento is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Ons Dados Indicadores Qualidade Energia Rede Basica Dfd Desempenho Frequencia Em Disturbios Evento {{ id }}?"
+      },
+      "detail": {
+        "title": "Ons Dados Indicadores Qualidade Energia Rede Basica Dfd Desempenho Frequencia Em Disturbios Evento"
+      },
+      "id": "ID",
+      "dinReferencia": "Din Referencia",
+      "dinIniciodesviofreq": "Din Iniciodesviofreq",
+      "dinFimdesviofreq": "Din Fimdesviofreq",
+      "idFaixafrequencia": "Id Faixafrequencia",
+      "nomFaixafrequencia": "Nom Faixafrequencia",
+      "valDfd": "Val Dfd",
+      "valFreqmaxmin": "Val Freqmaxmin"
+    }
+  }
+}

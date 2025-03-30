@@ -1,0 +1,84 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    @if (onsGeracaoUsinaEmBaseHoraria(); as onsGeracaoUsinaEmBaseHorariaRef) {
+      <div>
+        <h2 data-cy="onsGeracaoUsinaEmBaseHorariaDetailsHeading">
+          <span jhiTranslate="wattsUpEnergyApp.onsGeracaoUsinaEmBaseHoraria.detail.title">Ons Geracao Usina Em Base Horaria</span>
+        </h2>
+
+        <hr />
+
+        <jhi-alert-error></jhi-alert-error>
+
+        <jhi-alert></jhi-alert>
+
+        <dl class="row-md jh-entity-details">
+          <dt><span jhiTranslate="global.field.id">Código</span></dt>
+          <dd>
+            <span>{{ onsGeracaoUsinaEmBaseHorariaRef.id }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsGeracaoUsinaEmBaseHoraria.dinInstante">Din Instante</span></dt>
+          <dd>
+            <span>{{ onsGeracaoUsinaEmBaseHorariaRef.dinInstante | formatMediumDate }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsGeracaoUsinaEmBaseHoraria.idSubsistema">Id Subsistema</span></dt>
+          <dd>
+            <span>{{ onsGeracaoUsinaEmBaseHorariaRef.idSubsistema }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsGeracaoUsinaEmBaseHoraria.nomSubsistema">Nom Subsistema</span></dt>
+          <dd>
+            <span>{{ onsGeracaoUsinaEmBaseHorariaRef.nomSubsistema }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsGeracaoUsinaEmBaseHoraria.idEstado">Id Estado</span></dt>
+          <dd>
+            <span>{{ onsGeracaoUsinaEmBaseHorariaRef.idEstado }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsGeracaoUsinaEmBaseHoraria.nomEstado">Nom Estado</span></dt>
+          <dd>
+            <span>{{ onsGeracaoUsinaEmBaseHorariaRef.nomEstado }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsGeracaoUsinaEmBaseHoraria.codModalidadeoperacao">Cod Modalidadeoperacao</span></dt>
+          <dd>
+            <span>{{ onsGeracaoUsinaEmBaseHorariaRef.codModalidadeoperacao }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsGeracaoUsinaEmBaseHoraria.nomTipousina">Nom Tipousina</span></dt>
+          <dd>
+            <span>{{ onsGeracaoUsinaEmBaseHorariaRef.nomTipousina }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsGeracaoUsinaEmBaseHoraria.nomTipocombustivel">Nom Tipocombustivel</span></dt>
+          <dd>
+            <span>{{ onsGeracaoUsinaEmBaseHorariaRef.nomTipocombustivel }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsGeracaoUsinaEmBaseHoraria.nomUsina">Nom Usina</span></dt>
+          <dd>
+            <span>{{ onsGeracaoUsinaEmBaseHorariaRef.nomUsina }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsGeracaoUsinaEmBaseHoraria.idOns">Id Ons</span></dt>
+          <dd>
+            <span>{{ onsGeracaoUsinaEmBaseHorariaRef.idOns }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsGeracaoUsinaEmBaseHoraria.ceg">Ceg</span></dt>
+          <dd>
+            <span>{{ onsGeracaoUsinaEmBaseHorariaRef.ceg }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsGeracaoUsinaEmBaseHoraria.valGeracao">Val Geracao</span></dt>
+          <dd>
+            <span>{{ onsGeracaoUsinaEmBaseHorariaRef.valGeracao }}</span>
+          </dd>
+        </dl>
+
+        <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+          <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Voltar</span>
+        </button>
+
+        <button
+          type="button"
+          [routerLink]="['/ons-geracao-usina-em-base-horaria', onsGeracaoUsinaEmBaseHorariaRef.id, 'edit']"
+          class="btn btn-primary"
+        >
+          <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Editar</span>
+        </button>
+      </div>
+    }
+  </div>
+</div>

@@ -1,0 +1,35 @@
+{
+  "annotations": {
+    "changelogDate": "20250330013708"
+  },
+  "applications": "*",
+  "entityTableName": "OnsTable31",
+  "fields": [
+    {
+      "fieldName": "idSubsistema",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nomSubsistema",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "earData",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "earMaxSubsistema",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "earVerifSubsistemaMwmes",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "earVerifSubsistemaPercentual",
+      "fieldType": "Double"
+    }
+  ],
+  "name": "OnsEarDiarioSubsistema",
+  "relationships": []
+}

@@ -1,0 +1,272 @@
+<div>
+  <h2 id="page-heading" data-cy="OnsCapacidadeInstaladaGeracaoHeading">
+    <span jhiTranslate="wattsUpEnergyApp.onsCapacidadeInstaladaGeracao.home.title">Ons Capacidade Instalada Geracaos</span>
+
+    <div class="d-flex justify-content-end">
+      <button class="btn btn-info me-2" (click)="load()" [disabled]="isLoading">
+        <fa-icon icon="sync" [animation]="isLoading ? 'spin' : undefined"></fa-icon>
+        <span jhiTranslate="wattsUpEnergyApp.onsCapacidadeInstaladaGeracao.home.refreshListLabel">Atualizar lista</span>
+      </button>
+
+      <button
+        id="jh-create-entity"
+        data-cy="entityCreateButton"
+        class="btn btn-primary jh-create-entity create-ons-capacidade-instalada-geracao"
+        [routerLink]="['/ons-capacidade-instalada-geracao/new']"
+      >
+        <fa-icon icon="plus"></fa-icon>
+        <span class="hidden-sm-down" jhiTranslate="wattsUpEnergyApp.onsCapacidadeInstaladaGeracao.home.createLabel"
+          >Criar novo Ons Capacidade Instalada Geracao</span
+        >
+      </button>
+    </div>
+  </h2>
+
+  <jhi-alert-error></jhi-alert-error>
+
+  <jhi-alert></jhi-alert>
+
+  <form name="searchForm" class="row row-cols-sm-auto align-items-center">
+    <div class="col-sm-12">
+      <div class="input-group w-100 mt-3">
+        <label class="visually-hidden" for="currentSearch" jhiTranslate="wattsUpEnergyApp.onsCapacidadeInstaladaGeracao.home.search"
+          >Pesquisar por Ons Capacidade Instalada Geracao</label
+        >
+        <input
+          type="text"
+          class="form-control"
+          [(ngModel)]="currentSearch"
+          id="currentSearch"
+          name="currentSearch"
+          placeholder="{{ 'wattsUpEnergyApp.onsCapacidadeInstaladaGeracao.home.search' | translate }}"
+        />
+
+        <button class="btn btn-info" (click)="search(currentSearch)">
+          <fa-icon icon="search"></fa-icon>
+        </button>
+
+        @if (currentSearch) {
+          <button class="btn btn-danger" (click)="search('')">
+            <fa-icon icon="trash-alt"></fa-icon>
+          </button>
+        }
+      </div>
+    </div>
+  </form>
+
+  @if (onsCapacidadeInstaladaGeracaos().length === 0) {
+    <div class="alert alert-warning" id="no-result">
+      <span jhiTranslate="wattsUpEnergyApp.onsCapacidadeInstaladaGeracao.home.notFound"
+        >Nenhum Ons Capacidade Instalada Geracao encontrado</span
+      >
+    </div>
+  } @else {
+    <div class="table-responsive table-entities" id="entities">
+      <table class="table table-striped" aria-describedby="page-heading">
+        <thead>
+          <tr jhiSort [(sortState)]="sortState" (sortChange)="navigateToWithComponentValues($event)">
+            <th scope="col" jhiSortBy="id">
+              <div class="d-flex">
+                <span jhiTranslate="global.field.id">Código</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="idSubsistema">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsCapacidadeInstaladaGeracao.idSubsistema">Id Subsistema</span>
+                @if (!currentSearch) {
+                  <fa-icon class="p-1" icon="sort"></fa-icon>
+                }
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="nomSubsistema">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsCapacidadeInstaladaGeracao.nomSubsistema">Nom Subsistema</span>
+                @if (!currentSearch) {
+                  <fa-icon class="p-1" icon="sort"></fa-icon>
+                }
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="idEstado">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsCapacidadeInstaladaGeracao.idEstado">Id Estado</span>
+                @if (!currentSearch) {
+                  <fa-icon class="p-1" icon="sort"></fa-icon>
+                }
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="nomEstado">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsCapacidadeInstaladaGeracao.nomEstado">Nom Estado</span>
+                @if (!currentSearch) {
+                  <fa-icon class="p-1" icon="sort"></fa-icon>
+                }
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="nomModalidadeoperacao">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsCapacidadeInstaladaGeracao.nomModalidadeoperacao">Nom Modalidadeoperacao</span>
+                @if (!currentSearch) {
+                  <fa-icon class="p-1" icon="sort"></fa-icon>
+                }
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="nomAgenteproprietario">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsCapacidadeInstaladaGeracao.nomAgenteproprietario">Nom Agenteproprietario</span>
+                @if (!currentSearch) {
+                  <fa-icon class="p-1" icon="sort"></fa-icon>
+                }
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="nomTipousina">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsCapacidadeInstaladaGeracao.nomTipousina">Nom Tipousina</span>
+                @if (!currentSearch) {
+                  <fa-icon class="p-1" icon="sort"></fa-icon>
+                }
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="nomUsina">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsCapacidadeInstaladaGeracao.nomUsina">Nom Usina</span>
+                @if (!currentSearch) {
+                  <fa-icon class="p-1" icon="sort"></fa-icon>
+                }
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="ceg">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsCapacidadeInstaladaGeracao.ceg">Ceg</span>
+                @if (!currentSearch) {
+                  <fa-icon class="p-1" icon="sort"></fa-icon>
+                }
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="nomUnidadegeradora">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsCapacidadeInstaladaGeracao.nomUnidadegeradora">Nom Unidadegeradora</span>
+                @if (!currentSearch) {
+                  <fa-icon class="p-1" icon="sort"></fa-icon>
+                }
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="codEquipamento">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsCapacidadeInstaladaGeracao.codEquipamento">Cod Equipamento</span>
+                @if (!currentSearch) {
+                  <fa-icon class="p-1" icon="sort"></fa-icon>
+                }
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="numUnidadegeradora">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsCapacidadeInstaladaGeracao.numUnidadegeradora">Num Unidadegeradora</span>
+                @if (!currentSearch) {
+                  <fa-icon class="p-1" icon="sort"></fa-icon>
+                }
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="nomCombustivel">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsCapacidadeInstaladaGeracao.nomCombustivel">Nom Combustivel</span>
+                @if (!currentSearch) {
+                  <fa-icon class="p-1" icon="sort"></fa-icon>
+                }
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="datEntradateste">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsCapacidadeInstaladaGeracao.datEntradateste">Dat Entradateste</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="datEntradaoperacao">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsCapacidadeInstaladaGeracao.datEntradaoperacao">Dat Entradaoperacao</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="datDesativacao">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsCapacidadeInstaladaGeracao.datDesativacao">Dat Desativacao</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="valPotenciaefetiva">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsCapacidadeInstaladaGeracao.valPotenciaefetiva">Val Potenciaefetiva</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (onsCapacidadeInstaladaGeracao of onsCapacidadeInstaladaGeracaos(); track trackId(onsCapacidadeInstaladaGeracao)) {
+            <tr data-cy="entityTable">
+              <td>
+                <a [routerLink]="['/ons-capacidade-instalada-geracao', onsCapacidadeInstaladaGeracao.id, 'view']">{{
+                  onsCapacidadeInstaladaGeracao.id
+                }}</a>
+              </td>
+              <td>{{ onsCapacidadeInstaladaGeracao.idSubsistema }}</td>
+              <td>{{ onsCapacidadeInstaladaGeracao.nomSubsistema }}</td>
+              <td>{{ onsCapacidadeInstaladaGeracao.idEstado }}</td>
+              <td>{{ onsCapacidadeInstaladaGeracao.nomEstado }}</td>
+              <td>{{ onsCapacidadeInstaladaGeracao.nomModalidadeoperacao }}</td>
+              <td>{{ onsCapacidadeInstaladaGeracao.nomAgenteproprietario }}</td>
+              <td>{{ onsCapacidadeInstaladaGeracao.nomTipousina }}</td>
+              <td>{{ onsCapacidadeInstaladaGeracao.nomUsina }}</td>
+              <td>{{ onsCapacidadeInstaladaGeracao.ceg }}</td>
+              <td>{{ onsCapacidadeInstaladaGeracao.nomUnidadegeradora }}</td>
+              <td>{{ onsCapacidadeInstaladaGeracao.codEquipamento }}</td>
+              <td>{{ onsCapacidadeInstaladaGeracao.numUnidadegeradora }}</td>
+              <td>{{ onsCapacidadeInstaladaGeracao.nomCombustivel }}</td>
+              <td>{{ onsCapacidadeInstaladaGeracao.datEntradateste | formatMediumDate }}</td>
+              <td>{{ onsCapacidadeInstaladaGeracao.datEntradaoperacao | formatMediumDate }}</td>
+              <td>{{ onsCapacidadeInstaladaGeracao.datDesativacao | formatMediumDate }}</td>
+              <td>{{ onsCapacidadeInstaladaGeracao.valPotenciaefetiva }}</td>
+              <td class="text-end">
+                <div class="btn-group">
+                  <a
+                    [routerLink]="['/ons-capacidade-instalada-geracao', onsCapacidadeInstaladaGeracao.id, 'view']"
+                    class="btn btn-info btn-sm"
+                    data-cy="entityDetailsButton"
+                  >
+                    <fa-icon icon="eye"></fa-icon>
+                    <span class="d-none d-md-inline" jhiTranslate="entity.action.view">Visualizar</span>
+                  </a>
+
+                  <a
+                    [routerLink]="['/ons-capacidade-instalada-geracao', onsCapacidadeInstaladaGeracao.id, 'edit']"
+                    class="btn btn-primary btn-sm"
+                    data-cy="entityEditButton"
+                  >
+                    <fa-icon icon="pencil-alt"></fa-icon>
+                    <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Editar</span>
+                  </a>
+
+                  <button
+                    type="submit"
+                    (click)="delete(onsCapacidadeInstaladaGeracao)"
+                    class="btn btn-danger btn-sm"
+                    data-cy="entityDeleteButton"
+                  >
+                    <fa-icon icon="times"></fa-icon>
+                    <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Excluir</span>
+                  </button>
+                </div>
+              </td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+  }
+</div>

@@ -1,0 +1,124 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    @if (onsDadosValoresProgramacaoDiaria(); as onsDadosValoresProgramacaoDiariaRef) {
+      <div>
+        <h2 data-cy="onsDadosValoresProgramacaoDiariaDetailsHeading">
+          <span jhiTranslate="wattsUpEnergyApp.onsDadosValoresProgramacaoDiaria.detail.title">Ons Dados Valores Programacao Diaria</span>
+        </h2>
+
+        <hr />
+
+        <jhi-alert-error></jhi-alert-error>
+
+        <jhi-alert></jhi-alert>
+
+        <dl class="row-md jh-entity-details">
+          <dt><span jhiTranslate="global.field.id">Código</span></dt>
+          <dd>
+            <span>{{ onsDadosValoresProgramacaoDiariaRef.id }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsDadosValoresProgramacaoDiaria.dinProgramacaodia">Din Programacaodia</span></dt>
+          <dd>
+            <span>{{ onsDadosValoresProgramacaoDiariaRef.dinProgramacaodia | formatMediumDate }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsDadosValoresProgramacaoDiaria.numPatamar">Num Patamar</span></dt>
+          <dd>
+            <span>{{ onsDadosValoresProgramacaoDiariaRef.numPatamar }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsDadosValoresProgramacaoDiaria.codExibicaousina">Cod Exibicaousina</span></dt>
+          <dd>
+            <span>{{ onsDadosValoresProgramacaoDiariaRef.codExibicaousina }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsDadosValoresProgramacaoDiaria.nomUsina">Nom Usina</span></dt>
+          <dd>
+            <span>{{ onsDadosValoresProgramacaoDiariaRef.nomUsina }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsDadosValoresProgramacaoDiaria.tipGeracao">Tip Geracao</span></dt>
+          <dd>
+            <span>{{ onsDadosValoresProgramacaoDiariaRef.tipGeracao }}</span>
+          </dd>
+          <dt>
+            <span jhiTranslate="wattsUpEnergyApp.onsDadosValoresProgramacaoDiaria.nomModalidadeoperacao">Nom Modalidadeoperacao</span>
+          </dt>
+          <dd>
+            <span>{{ onsDadosValoresProgramacaoDiariaRef.nomModalidadeoperacao }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsDadosValoresProgramacaoDiaria.idSubsistema">Id Subsistema</span></dt>
+          <dd>
+            <span>{{ onsDadosValoresProgramacaoDiariaRef.idSubsistema }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsDadosValoresProgramacaoDiaria.nomSubsistema">Nom Subsistema</span></dt>
+          <dd>
+            <span>{{ onsDadosValoresProgramacaoDiariaRef.nomSubsistema }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsDadosValoresProgramacaoDiaria.idEstado">Id Estado</span></dt>
+          <dd>
+            <span>{{ onsDadosValoresProgramacaoDiariaRef.idEstado }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsDadosValoresProgramacaoDiaria.nomEstado">Nom Estado</span></dt>
+          <dd>
+            <span>{{ onsDadosValoresProgramacaoDiariaRef.nomEstado }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsDadosValoresProgramacaoDiaria.valGeracaoprogramada">Val Geracaoprogramada</span></dt>
+          <dd>
+            <span>{{ onsDadosValoresProgramacaoDiariaRef.valGeracaoprogramada }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsDadosValoresProgramacaoDiaria.valDisponibilidade">Val Disponibilidade</span></dt>
+          <dd>
+            <span>{{ onsDadosValoresProgramacaoDiariaRef.valDisponibilidade }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsDadosValoresProgramacaoDiaria.valOrdemmerito">Val Ordemmerito</span></dt>
+          <dd>
+            <span>{{ onsDadosValoresProgramacaoDiariaRef.valOrdemmerito }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsDadosValoresProgramacaoDiaria.valInflexibilidade">Val Inflexibilidade</span></dt>
+          <dd>
+            <span>{{ onsDadosValoresProgramacaoDiariaRef.valInflexibilidade }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsDadosValoresProgramacaoDiaria.valUc">Val Uc</span></dt>
+          <dd>
+            <span>{{ onsDadosValoresProgramacaoDiariaRef.valUc }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsDadosValoresProgramacaoDiaria.valRazaoeletrica">Val Razaoeletrica</span></dt>
+          <dd>
+            <span>{{ onsDadosValoresProgramacaoDiariaRef.valRazaoeletrica }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsDadosValoresProgramacaoDiaria.valGeracaoenergetica">Val Geracaoenergetica</span></dt>
+          <dd>
+            <span>{{ onsDadosValoresProgramacaoDiariaRef.valGeracaoenergetica }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsDadosValoresProgramacaoDiaria.valGesubgsub">Val Gesubgsub</span></dt>
+          <dd>
+            <span>{{ onsDadosValoresProgramacaoDiariaRef.valGesubgsub }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsDadosValoresProgramacaoDiaria.valExportacao">Val Exportacao</span></dt>
+          <dd>
+            <span>{{ onsDadosValoresProgramacaoDiariaRef.valExportacao }}</span>
+          </dd>
+          <dt>
+            <span jhiTranslate="wattsUpEnergyApp.onsDadosValoresProgramacaoDiaria.valReposicaoexportacao">Val Reposicaoexportacao</span>
+          </dt>
+          <dd>
+            <span>{{ onsDadosValoresProgramacaoDiariaRef.valReposicaoexportacao }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsDadosValoresProgramacaoDiaria.valFaltacombustivel">Val Faltacombustivel</span></dt>
+          <dd>
+            <span>{{ onsDadosValoresProgramacaoDiariaRef.valFaltacombustivel }}</span>
+          </dd>
+        </dl>
+
+        <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+          <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Voltar</span>
+        </button>
+
+        <button
+          type="button"
+          [routerLink]="['/ons-dados-valores-programacao-diaria', onsDadosValoresProgramacaoDiariaRef.id, 'edit']"
+          class="btn btn-primary"
+        >
+          <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Editar</span>
+        </button>
+      </div>
+    }
+  </div>
+</div>

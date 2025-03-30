@@ -1,0 +1,48 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    @if (onsCurvaCargaHoraria(); as onsCurvaCargaHorariaRef) {
+      <div>
+        <h2 data-cy="onsCurvaCargaHorariaDetailsHeading">
+          <span jhiTranslate="wattsUpEnergyApp.onsCurvaCargaHoraria.detail.title">Ons Curva Carga Horaria</span>
+        </h2>
+
+        <hr />
+
+        <jhi-alert-error></jhi-alert-error>
+
+        <jhi-alert></jhi-alert>
+
+        <dl class="row-md jh-entity-details">
+          <dt><span jhiTranslate="global.field.id">Código</span></dt>
+          <dd>
+            <span>{{ onsCurvaCargaHorariaRef.id }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsCurvaCargaHoraria.idSubsistema">Id Subsistema</span></dt>
+          <dd>
+            <span>{{ onsCurvaCargaHorariaRef.idSubsistema }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsCurvaCargaHoraria.nomSubsistema">Nom Subsistema</span></dt>
+          <dd>
+            <span>{{ onsCurvaCargaHorariaRef.nomSubsistema }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsCurvaCargaHoraria.dinInstante">Din Instante</span></dt>
+          <dd>
+            <span>{{ onsCurvaCargaHorariaRef.dinInstante | formatMediumDate }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsCurvaCargaHoraria.valCargaenergiahomwmed">Val Cargaenergiahomwmed</span></dt>
+          <dd>
+            <span>{{ onsCurvaCargaHorariaRef.valCargaenergiahomwmed }}</span>
+          </dd>
+        </dl>
+
+        <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+          <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Voltar</span>
+        </button>
+
+        <button type="button" [routerLink]="['/ons-curva-carga-horaria', onsCurvaCargaHorariaRef.id, 'edit']" class="btn btn-primary">
+          <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Editar</span>
+        </button>
+      </div>
+    }
+  </div>
+</div>

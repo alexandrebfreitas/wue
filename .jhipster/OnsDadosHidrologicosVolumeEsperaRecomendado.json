@@ -1,0 +1,19 @@
+{
+  "annotations": {
+    "changelogDate": "20250330013651"
+  },
+  "applications": "*",
+  "entityTableName": "OnsTable14",
+  "fields": [
+    {
+      "fieldName": "dinInstante",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "valVolumeespera",
+      "fieldType": "Double"
+    }
+  ],
+  "name": "OnsDadosHidrologicosVolumeEsperaRecomendado",
+  "relationships": []
+}

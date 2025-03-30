@@ -1,0 +1,221 @@
+<div>
+  <h2 id="page-heading" data-cy="OnsDadosHistoricoDespachoEnergiaJaneiro2021ASetembro2024Heading">
+    <span jhiTranslate="wattsUpEnergyApp.onsDadosHistoricoDespachoEnergiaJaneiro2021ASetembro2024.home.title"
+      >Ons Dados Historico Despacho Energia Janeiro 2021 A Setembro 2024 S</span
+    >
+
+    <div class="d-flex justify-content-end">
+      <button class="btn btn-info me-2" (click)="load()" [disabled]="isLoading">
+        <fa-icon icon="sync" [animation]="isLoading ? 'spin' : undefined"></fa-icon>
+        <span jhiTranslate="wattsUpEnergyApp.onsDadosHistoricoDespachoEnergiaJaneiro2021ASetembro2024.home.refreshListLabel"
+          >Atualizar lista</span
+        >
+      </button>
+
+      <button
+        id="jh-create-entity"
+        data-cy="entityCreateButton"
+        class="btn btn-primary jh-create-entity create-ons-dados-historico-despacho-energia-janeiro-2021-a-setembro-2024"
+        [routerLink]="['/ons-dados-historico-despacho-energia-janeiro-2021-a-setembro-2024/new']"
+      >
+        <fa-icon icon="plus"></fa-icon>
+        <span
+          class="hidden-sm-down"
+          jhiTranslate="wattsUpEnergyApp.onsDadosHistoricoDespachoEnergiaJaneiro2021ASetembro2024.home.createLabel"
+          >Criar novo Ons Dados Historico Despacho Energia Janeiro 2021 A Setembro 2024</span
+        >
+      </button>
+    </div>
+  </h2>
+
+  <jhi-alert-error></jhi-alert-error>
+
+  <jhi-alert></jhi-alert>
+
+  <form name="searchForm" class="row row-cols-sm-auto align-items-center">
+    <div class="col-sm-12">
+      <div class="input-group w-100 mt-3">
+        <label
+          class="visually-hidden"
+          for="currentSearch"
+          jhiTranslate="wattsUpEnergyApp.onsDadosHistoricoDespachoEnergiaJaneiro2021ASetembro2024.home.search"
+          >Pesquisar por Ons Dados Historico Despacho Energia Janeiro 2021 A Setembro 2024</label
+        >
+        <input
+          type="text"
+          class="form-control"
+          [(ngModel)]="currentSearch"
+          id="currentSearch"
+          name="currentSearch"
+          placeholder="{{ 'wattsUpEnergyApp.onsDadosHistoricoDespachoEnergiaJaneiro2021ASetembro2024.home.search' | translate }}"
+        />
+
+        <button class="btn btn-info" (click)="search(currentSearch)">
+          <fa-icon icon="search"></fa-icon>
+        </button>
+
+        @if (currentSearch) {
+          <button class="btn btn-danger" (click)="search('')">
+            <fa-icon icon="trash-alt"></fa-icon>
+          </button>
+        }
+      </div>
+    </div>
+  </form>
+
+  @if (onsDadosHistoricoDespachoEnergiaJaneiro2021ASetembro2024s().length === 0) {
+    <div class="alert alert-warning" id="no-result">
+      <span jhiTranslate="wattsUpEnergyApp.onsDadosHistoricoDespachoEnergiaJaneiro2021ASetembro2024.home.notFound"
+        >Nenhum Ons Dados Historico Despacho Energia Janeiro 2021 A Setembro 2024 encontrado</span
+      >
+    </div>
+  } @else {
+    <div class="table-responsive table-entities" id="entities">
+      <table class="table table-striped" aria-describedby="page-heading">
+        <thead>
+          <tr jhiSort [(sortState)]="sortState" (sortChange)="navigateToWithComponentValues($event)">
+            <th scope="col" jhiSortBy="id">
+              <div class="d-flex">
+                <span jhiTranslate="global.field.id">Código</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="datPdp">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsDadosHistoricoDespachoEnergiaJaneiro2021ASetembro2024.datPdp">Dat Pdp</span>
+                @if (!currentSearch) {
+                  <fa-icon class="p-1" icon="sort"></fa-icon>
+                }
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="codSubmercado">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsDadosHistoricoDespachoEnergiaJaneiro2021ASetembro2024.codSubmercado"
+                  >Cod Submercado</span
+                >
+                @if (!currentSearch) {
+                  <fa-icon class="p-1" icon="sort"></fa-icon>
+                }
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="sglTipousina">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsDadosHistoricoDespachoEnergiaJaneiro2021ASetembro2024.sglTipousina"
+                  >Sgl Tipousina</span
+                >
+                @if (!currentSearch) {
+                  <fa-icon class="p-1" icon="sort"></fa-icon>
+                }
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="codUsinapdp">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsDadosHistoricoDespachoEnergiaJaneiro2021ASetembro2024.codUsinapdp"
+                  >Cod Usinapdp</span
+                >
+                @if (!currentSearch) {
+                  <fa-icon class="p-1" icon="sort"></fa-icon>
+                }
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="nomUsinapdp">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsDadosHistoricoDespachoEnergiaJaneiro2021ASetembro2024.nomUsinapdp"
+                  >Nom Usinapdp</span
+                >
+                @if (!currentSearch) {
+                  <fa-icon class="p-1" icon="sort"></fa-icon>
+                }
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="numIntdespa">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsDadosHistoricoDespachoEnergiaJaneiro2021ASetembro2024.numIntdespa"
+                  >Num Intdespa</span
+                >
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="valDespasup">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsDadosHistoricoDespachoEnergiaJaneiro2021ASetembro2024.valDespasup"
+                  >Val Despasup</span
+                >
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (
+            onsDadosHistoricoDespachoEnergiaJaneiro2021ASetembro2024 of onsDadosHistoricoDespachoEnergiaJaneiro2021ASetembro2024s();
+            track trackId(onsDadosHistoricoDespachoEnergiaJaneiro2021ASetembro2024)
+          ) {
+            <tr data-cy="entityTable">
+              <td>
+                <a
+                  [routerLink]="[
+                    '/ons-dados-historico-despacho-energia-janeiro-2021-a-setembro-2024',
+                    onsDadosHistoricoDespachoEnergiaJaneiro2021ASetembro2024.id,
+                    'view',
+                  ]"
+                  >{{ onsDadosHistoricoDespachoEnergiaJaneiro2021ASetembro2024.id }}</a
+                >
+              </td>
+              <td>{{ onsDadosHistoricoDespachoEnergiaJaneiro2021ASetembro2024.datPdp }}</td>
+              <td>{{ onsDadosHistoricoDespachoEnergiaJaneiro2021ASetembro2024.codSubmercado }}</td>
+              <td>{{ onsDadosHistoricoDespachoEnergiaJaneiro2021ASetembro2024.sglTipousina }}</td>
+              <td>{{ onsDadosHistoricoDespachoEnergiaJaneiro2021ASetembro2024.codUsinapdp }}</td>
+              <td>{{ onsDadosHistoricoDespachoEnergiaJaneiro2021ASetembro2024.nomUsinapdp }}</td>
+              <td>{{ onsDadosHistoricoDespachoEnergiaJaneiro2021ASetembro2024.numIntdespa }}</td>
+              <td>{{ onsDadosHistoricoDespachoEnergiaJaneiro2021ASetembro2024.valDespasup }}</td>
+              <td class="text-end">
+                <div class="btn-group">
+                  <a
+                    [routerLink]="[
+                      '/ons-dados-historico-despacho-energia-janeiro-2021-a-setembro-2024',
+                      onsDadosHistoricoDespachoEnergiaJaneiro2021ASetembro2024.id,
+                      'view',
+                    ]"
+                    class="btn btn-info btn-sm"
+                    data-cy="entityDetailsButton"
+                  >
+                    <fa-icon icon="eye"></fa-icon>
+                    <span class="d-none d-md-inline" jhiTranslate="entity.action.view">Visualizar</span>
+                  </a>
+
+                  <a
+                    [routerLink]="[
+                      '/ons-dados-historico-despacho-energia-janeiro-2021-a-setembro-2024',
+                      onsDadosHistoricoDespachoEnergiaJaneiro2021ASetembro2024.id,
+                      'edit',
+                    ]"
+                    class="btn btn-primary btn-sm"
+                    data-cy="entityEditButton"
+                  >
+                    <fa-icon icon="pencil-alt"></fa-icon>
+                    <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Editar</span>
+                  </a>
+
+                  <button
+                    type="submit"
+                    (click)="delete(onsDadosHistoricoDespachoEnergiaJaneiro2021ASetembro2024)"
+                    class="btn btn-danger btn-sm"
+                    data-cy="entityDeleteButton"
+                  >
+                    <fa-icon icon="times"></fa-icon>
+                    <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Excluir</span>
+                  </button>
+                </div>
+              </td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+  }
+</div>

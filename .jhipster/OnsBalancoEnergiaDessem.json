@@ -1,0 +1,51 @@
+{
+  "annotations": {
+    "changelogDate": "20250330013711"
+  },
+  "applications": "*",
+  "entityTableName": "OnsTable34",
+  "fields": [
+    {
+      "fieldName": "idSubsistema",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nomSubsistema",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "dinInstante",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "valDemanda",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "valGeracaohidraulicamwmed",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "valGeracaopchmwmed",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "valGeracaotermicamwed",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "valGeracaopctmwmed",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "valGeracaoeolicamwmed",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "valGeracaofotovoltaicamwmed",
+      "fieldType": "Double"
+    }
+  ],
+  "name": "OnsBalancoEnergiaDessem",
+  "relationships": []
+}

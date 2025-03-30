@@ -1,0 +1,114 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    @if (
+      onsDadosIndicadoresConfiabilidadeRedeBasicaCcatControleCarregamentoTransformadores();
+      as onsDadosIndicadoresConfiabilidadeRedeBasicaCcatControleCarregamentoTransformadoresRef
+    ) {
+      <div>
+        <h2 data-cy="onsDadosIndicadoresConfiabilidadeRedeBasicaCcatControleCarregamentoTransformadoresDetailsHeading">
+          <span
+            jhiTranslate="wattsUpEnergyApp.onsDadosIndicadoresConfiabilidadeRedeBasicaCcatControleCarregamentoTransformadores.detail.title"
+            >Ons Dados Indicadores Confiabilidade Rede Basica Ccat Controle Carregamento Transformadores</span
+          >
+        </h2>
+
+        <hr />
+
+        <jhi-alert-error></jhi-alert-error>
+
+        <jhi-alert></jhi-alert>
+
+        <dl class="row-md jh-entity-details">
+          <dt><span jhiTranslate="global.field.id">Código</span></dt>
+          <dd>
+            <span>{{ onsDadosIndicadoresConfiabilidadeRedeBasicaCcatControleCarregamentoTransformadoresRef.id }}</span>
+          </dd>
+          <dt>
+            <span
+              jhiTranslate="wattsUpEnergyApp.onsDadosIndicadoresConfiabilidadeRedeBasicaCcatControleCarregamentoTransformadores.codTipoagregacao"
+              >Cod Tipoagregacao</span
+            >
+          </dt>
+          <dd>
+            <span>{{ onsDadosIndicadoresConfiabilidadeRedeBasicaCcatControleCarregamentoTransformadoresRef.codTipoagregacao }}</span>
+          </dd>
+          <dt>
+            <span
+              jhiTranslate="wattsUpEnergyApp.onsDadosIndicadoresConfiabilidadeRedeBasicaCcatControleCarregamentoTransformadores.idPeriodicidade"
+              >Id Periodicidade</span
+            >
+          </dt>
+          <dd>
+            <span>{{ onsDadosIndicadoresConfiabilidadeRedeBasicaCcatControleCarregamentoTransformadoresRef.idPeriodicidade }}</span>
+          </dd>
+          <dt>
+            <span
+              jhiTranslate="wattsUpEnergyApp.onsDadosIndicadoresConfiabilidadeRedeBasicaCcatControleCarregamentoTransformadores.nomAgregacao"
+              >Nom Agregacao</span
+            >
+          </dt>
+          <dd>
+            <span>{{ onsDadosIndicadoresConfiabilidadeRedeBasicaCcatControleCarregamentoTransformadoresRef.nomAgregacao }}</span>
+          </dd>
+          <dt>
+            <span
+              jhiTranslate="wattsUpEnergyApp.onsDadosIndicadoresConfiabilidadeRedeBasicaCcatControleCarregamentoTransformadores.dinReferencia"
+              >Din Referencia</span
+            >
+          </dt>
+          <dd>
+            <span>{{
+              onsDadosIndicadoresConfiabilidadeRedeBasicaCcatControleCarregamentoTransformadoresRef.dinReferencia | formatMediumDate
+            }}</span>
+          </dd>
+          <dt>
+            <span
+              jhiTranslate="wattsUpEnergyApp.onsDadosIndicadoresConfiabilidadeRedeBasicaCcatControleCarregamentoTransformadores.numTransformadoresoperacao"
+              >Num Transformadoresoperacao</span
+            >
+          </dt>
+          <dd>
+            <span>{{
+              onsDadosIndicadoresConfiabilidadeRedeBasicaCcatControleCarregamentoTransformadoresRef.numTransformadoresoperacao
+            }}</span>
+          </dd>
+          <dt>
+            <span
+              jhiTranslate="wattsUpEnergyApp.onsDadosIndicadoresConfiabilidadeRedeBasicaCcatControleCarregamentoTransformadores.numTransformadoresviolados"
+              >Num Transformadoresviolados</span
+            >
+          </dt>
+          <dd>
+            <span>{{
+              onsDadosIndicadoresConfiabilidadeRedeBasicaCcatControleCarregamentoTransformadoresRef.numTransformadoresviolados
+            }}</span>
+          </dd>
+          <dt>
+            <span jhiTranslate="wattsUpEnergyApp.onsDadosIndicadoresConfiabilidadeRedeBasicaCcatControleCarregamentoTransformadores.valCcat"
+              >Val Ccat</span
+            >
+          </dt>
+          <dd>
+            <span>{{ onsDadosIndicadoresConfiabilidadeRedeBasicaCcatControleCarregamentoTransformadoresRef.valCcat }}</span>
+          </dd>
+        </dl>
+
+        <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+          <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Voltar</span>
+        </button>
+
+        <button
+          type="button"
+          [routerLink]="[
+            '/ons-dados-indicadores-confiabilidade-rede-basica-ccat-controle-carregamento-transformadores',
+            onsDadosIndicadoresConfiabilidadeRedeBasicaCcatControleCarregamentoTransformadoresRef.id,
+            'edit',
+          ]"
+          class="btn btn-primary"
+        >
+          <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Editar</span>
+        </button>
+      </div>
+    }
+  </div>
+</div>

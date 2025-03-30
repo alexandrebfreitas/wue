@@ -1,0 +1,27 @@
+{
+  "annotations": {
+    "changelogDate": "20250330013638"
+  },
+  "applications": "*",
+  "entityTableName": "OnsTable1",
+  "fields": [
+    {
+      "fieldName": "idSubsistema",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nomSubsistema",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "dinInstante",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "valCargaenergiahomwmed",
+      "fieldType": "Double"
+    }
+  ],
+  "name": "OnsCurvaCargaHoraria",
+  "relationships": []
+}

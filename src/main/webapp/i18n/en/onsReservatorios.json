@@ -1,0 +1,38 @@
+{
+  "wattsUpEnergyApp": {
+    "onsReservatorios": {
+      "home": {
+        "title": "Ons Reservatorios",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Ons Reservatorios",
+        "createOrEditLabel": "Create or edit a Ons Reservatorios",
+        "search": "Search for Ons Reservatorios",
+        "notFound": "No Ons Reservatorios found"
+      },
+      "created": "A new Ons Reservatorios is created with identifier {{ param }}",
+      "updated": "A Ons Reservatorios is updated with identifier {{ param }}",
+      "deleted": "A Ons Reservatorios is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Ons Reservatorios {{ id }}?"
+      },
+      "detail": {
+        "title": "Ons Reservatorios"
+      },
+      "id": "ID",
+      "nomRee": "Nom Ree",
+      "datEntrada": "Dat Entrada",
+      "valCotamaxima": "Val Cotamaxima",
+      "valCotaminima": "Val Cotaminima",
+      "valVolmax": "Val Volmax",
+      "valVolmin": "Val Volmin",
+      "valVolutiltot": "Val Volutiltot",
+      "valProdutibilidadeespecifica": "Val Produtibilidadeespecifica",
+      "valProdutividade65volutil": "Val Produtividade 65 Volutil",
+      "valTipoperda": "Val Tipoperda",
+      "valPerda": "Val Perda",
+      "valLatitude": "Val Latitude",
+      "valLongitude": "Val Longitude",
+      "idReservatorio": "Id Reservatorio"
+    }
+  }
+}

@@ -1,0 +1,250 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    @if (onsGeracaoTermicaMotivoDespacho(); as onsGeracaoTermicaMotivoDespachoRef) {
+      <div>
+        <h2 data-cy="onsGeracaoTermicaMotivoDespachoDetailsHeading">
+          <span jhiTranslate="wattsUpEnergyApp.onsGeracaoTermicaMotivoDespacho.detail.title">Ons Geracao Termica Motivo Despacho</span>
+        </h2>
+
+        <hr />
+
+        <jhi-alert-error></jhi-alert-error>
+
+        <jhi-alert></jhi-alert>
+
+        <dl class="row-md jh-entity-details">
+          <dt><span jhiTranslate="global.field.id">Código</span></dt>
+          <dd>
+            <span>{{ onsGeracaoTermicaMotivoDespachoRef.id }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsGeracaoTermicaMotivoDespacho.dinInstante">Din Instante</span></dt>
+          <dd>
+            <span>{{ onsGeracaoTermicaMotivoDespachoRef.dinInstante | formatMediumDate }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsGeracaoTermicaMotivoDespacho.nomTipopatamar">Nom Tipopatamar</span></dt>
+          <dd>
+            <span>{{ onsGeracaoTermicaMotivoDespachoRef.nomTipopatamar }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsGeracaoTermicaMotivoDespacho.idSubsistema">Id Subsistema</span></dt>
+          <dd>
+            <span>{{ onsGeracaoTermicaMotivoDespachoRef.idSubsistema }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsGeracaoTermicaMotivoDespacho.nomSubsistema">Nom Subsistema</span></dt>
+          <dd>
+            <span>{{ onsGeracaoTermicaMotivoDespachoRef.nomSubsistema }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsGeracaoTermicaMotivoDespacho.nomUsina">Nom Usina</span></dt>
+          <dd>
+            <span>{{ onsGeracaoTermicaMotivoDespachoRef.nomUsina }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsGeracaoTermicaMotivoDespacho.codUsinaplanejamento">Cod Usinaplanejamento</span></dt>
+          <dd>
+            <span>{{ onsGeracaoTermicaMotivoDespachoRef.codUsinaplanejamento }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsGeracaoTermicaMotivoDespacho.ceg">Ceg</span></dt>
+          <dd>
+            <span>{{ onsGeracaoTermicaMotivoDespachoRef.ceg }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsGeracaoTermicaMotivoDespacho.valProggeracao">Val Proggeracao</span></dt>
+          <dd>
+            <span>{{ onsGeracaoTermicaMotivoDespachoRef.valProggeracao }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsGeracaoTermicaMotivoDespacho.valProgordemmerito">Val Progordemmerito</span></dt>
+          <dd>
+            <span>{{ onsGeracaoTermicaMotivoDespachoRef.valProgordemmerito }}</span>
+          </dd>
+          <dt>
+            <span jhiTranslate="wattsUpEnergyApp.onsGeracaoTermicaMotivoDespacho.valProgordemdemeritoref">Val Progordemdemeritoref</span>
+          </dt>
+          <dd>
+            <span>{{ onsGeracaoTermicaMotivoDespachoRef.valProgordemdemeritoref }}</span>
+          </dd>
+          <dt>
+            <span jhiTranslate="wattsUpEnergyApp.onsGeracaoTermicaMotivoDespacho.valProgordemdemeritoacimadainflex"
+              >Val Progordemdemeritoacimadainflex</span
+            >
+          </dt>
+          <dd>
+            <span>{{ onsGeracaoTermicaMotivoDespachoRef.valProgordemdemeritoacimadainflex }}</span>
+          </dd>
+          <dt>
+            <span jhiTranslate="wattsUpEnergyApp.onsGeracaoTermicaMotivoDespacho.valProginflexibilidade">Val Proginflexibilidade</span>
+          </dt>
+          <dd>
+            <span>{{ onsGeracaoTermicaMotivoDespachoRef.valProginflexibilidade }}</span>
+          </dd>
+          <dt>
+            <span jhiTranslate="wattsUpEnergyApp.onsGeracaoTermicaMotivoDespacho.valProginflexembutmerito">Val Proginflexembutmerito</span>
+          </dt>
+          <dd>
+            <span>{{ onsGeracaoTermicaMotivoDespachoRef.valProginflexembutmerito }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsGeracaoTermicaMotivoDespacho.valProginflexpura">Val Proginflexpura</span></dt>
+          <dd>
+            <span>{{ onsGeracaoTermicaMotivoDespachoRef.valProginflexpura }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsGeracaoTermicaMotivoDespacho.valPrograzaoeletrica">Val Prograzaoeletrica</span></dt>
+          <dd>
+            <span>{{ onsGeracaoTermicaMotivoDespachoRef.valPrograzaoeletrica }}</span>
+          </dd>
+          <dt>
+            <span jhiTranslate="wattsUpEnergyApp.onsGeracaoTermicaMotivoDespacho.valProggarantiaenergetica"
+              >Val Proggarantiaenergetica</span
+            >
+          </dt>
+          <dd>
+            <span>{{ onsGeracaoTermicaMotivoDespachoRef.valProggarantiaenergetica }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsGeracaoTermicaMotivoDespacho.valProggfom">Val Proggfom</span></dt>
+          <dd>
+            <span>{{ onsGeracaoTermicaMotivoDespachoRef.valProggfom }}</span>
+          </dd>
+          <dt>
+            <span jhiTranslate="wattsUpEnergyApp.onsGeracaoTermicaMotivoDespacho.valProgreposicaoperdas">Val Progreposicaoperdas</span>
+          </dt>
+          <dd>
+            <span>{{ onsGeracaoTermicaMotivoDespachoRef.valProgreposicaoperdas }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsGeracaoTermicaMotivoDespacho.valProgexportacao">Val Progexportacao</span></dt>
+          <dd>
+            <span>{{ onsGeracaoTermicaMotivoDespachoRef.valProgexportacao }}</span>
+          </dd>
+          <dt>
+            <span jhiTranslate="wattsUpEnergyApp.onsGeracaoTermicaMotivoDespacho.valProgreservapotencia">Val Progreservapotencia</span>
+          </dt>
+          <dd>
+            <span>{{ onsGeracaoTermicaMotivoDespachoRef.valProgreservapotencia }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsGeracaoTermicaMotivoDespacho.valProggsub">Val Proggsub</span></dt>
+          <dd>
+            <span>{{ onsGeracaoTermicaMotivoDespachoRef.valProggsub }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsGeracaoTermicaMotivoDespacho.valProgunitcommitment">Val Progunitcommitment</span></dt>
+          <dd>
+            <span>{{ onsGeracaoTermicaMotivoDespachoRef.valProgunitcommitment }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsGeracaoTermicaMotivoDespacho.valProgconstrainedoff">Val Progconstrainedoff</span></dt>
+          <dd>
+            <span>{{ onsGeracaoTermicaMotivoDespachoRef.valProgconstrainedoff }}</span>
+          </dd>
+          <dt>
+            <span jhiTranslate="wattsUpEnergyApp.onsGeracaoTermicaMotivoDespacho.valProginflexibilidadedessem"
+              >Val Proginflexibilidadedessem</span
+            >
+          </dt>
+          <dd>
+            <span>{{ onsGeracaoTermicaMotivoDespachoRef.valProginflexibilidadedessem }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsGeracaoTermicaMotivoDespacho.valVerifgeracao">Val Verifgeracao</span></dt>
+          <dd>
+            <span>{{ onsGeracaoTermicaMotivoDespachoRef.valVerifgeracao }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsGeracaoTermicaMotivoDespacho.valVerifordemmerito">Val Verifordemmerito</span></dt>
+          <dd>
+            <span>{{ onsGeracaoTermicaMotivoDespachoRef.valVerifordemmerito }}</span>
+          </dd>
+          <dt>
+            <span jhiTranslate="wattsUpEnergyApp.onsGeracaoTermicaMotivoDespacho.valVerifordemdemeritoacimadainflex"
+              >Val Verifordemdemeritoacimadainflex</span
+            >
+          </dt>
+          <dd>
+            <span>{{ onsGeracaoTermicaMotivoDespachoRef.valVerifordemdemeritoacimadainflex }}</span>
+          </dd>
+          <dt>
+            <span jhiTranslate="wattsUpEnergyApp.onsGeracaoTermicaMotivoDespacho.valVerifinflexibilidade">Val Verifinflexibilidade</span>
+          </dt>
+          <dd>
+            <span>{{ onsGeracaoTermicaMotivoDespachoRef.valVerifinflexibilidade }}</span>
+          </dd>
+          <dt>
+            <span jhiTranslate="wattsUpEnergyApp.onsGeracaoTermicaMotivoDespacho.valVerifinflexembutmerito"
+              >Val Verifinflexembutmerito</span
+            >
+          </dt>
+          <dd>
+            <span>{{ onsGeracaoTermicaMotivoDespachoRef.valVerifinflexembutmerito }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsGeracaoTermicaMotivoDespacho.valVerifinflexpura">Val Verifinflexpura</span></dt>
+          <dd>
+            <span>{{ onsGeracaoTermicaMotivoDespachoRef.valVerifinflexpura }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsGeracaoTermicaMotivoDespacho.valVerifrazaoeletrica">Val Verifrazaoeletrica</span></dt>
+          <dd>
+            <span>{{ onsGeracaoTermicaMotivoDespachoRef.valVerifrazaoeletrica }}</span>
+          </dd>
+          <dt>
+            <span jhiTranslate="wattsUpEnergyApp.onsGeracaoTermicaMotivoDespacho.valVerifgarantiaenergetica"
+              >Val Verifgarantiaenergetica</span
+            >
+          </dt>
+          <dd>
+            <span>{{ onsGeracaoTermicaMotivoDespachoRef.valVerifgarantiaenergetica }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsGeracaoTermicaMotivoDespacho.valVerifgfom">Val Verifgfom</span></dt>
+          <dd>
+            <span>{{ onsGeracaoTermicaMotivoDespachoRef.valVerifgfom }}</span>
+          </dd>
+          <dt>
+            <span jhiTranslate="wattsUpEnergyApp.onsGeracaoTermicaMotivoDespacho.valVerifreposicaoperdas">Val Verifreposicaoperdas</span>
+          </dt>
+          <dd>
+            <span>{{ onsGeracaoTermicaMotivoDespachoRef.valVerifreposicaoperdas }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsGeracaoTermicaMotivoDespacho.valVerifexportacao">Val Verifexportacao</span></dt>
+          <dd>
+            <span>{{ onsGeracaoTermicaMotivoDespachoRef.valVerifexportacao }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsGeracaoTermicaMotivoDespacho.valFdexp">Val Fdexp</span></dt>
+          <dd>
+            <span>{{ onsGeracaoTermicaMotivoDespachoRef.valFdexp }}</span>
+          </dd>
+          <dt>
+            <span jhiTranslate="wattsUpEnergyApp.onsGeracaoTermicaMotivoDespacho.valVerifreservapotencia">Val Verifreservapotencia</span>
+          </dt>
+          <dd>
+            <span>{{ onsGeracaoTermicaMotivoDespachoRef.valVerifreservapotencia }}</span>
+          </dd>
+          <dt>
+            <span jhiTranslate="wattsUpEnergyApp.onsGeracaoTermicaMotivoDespacho.valAtendsatisfatoriorpo">Val Atendsatisfatoriorpo</span>
+          </dt>
+          <dd>
+            <span>{{ onsGeracaoTermicaMotivoDespachoRef.valAtendsatisfatoriorpo }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsGeracaoTermicaMotivoDespacho.valVerifgsub">Val Verifgsub</span></dt>
+          <dd>
+            <span>{{ onsGeracaoTermicaMotivoDespachoRef.valVerifgsub }}</span>
+          </dd>
+          <dt>
+            <span jhiTranslate="wattsUpEnergyApp.onsGeracaoTermicaMotivoDespacho.valVerifunitcommitment">Val Verifunitcommitment</span>
+          </dt>
+          <dd>
+            <span>{{ onsGeracaoTermicaMotivoDespachoRef.valVerifunitcommitment }}</span>
+          </dd>
+          <dt>
+            <span jhiTranslate="wattsUpEnergyApp.onsGeracaoTermicaMotivoDespacho.valVerifconstrainedoff">Val Verifconstrainedoff</span>
+          </dt>
+          <dd>
+            <span>{{ onsGeracaoTermicaMotivoDespachoRef.valVerifconstrainedoff }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsGeracaoTermicaMotivoDespacho.tipRestricaoeletrica">Tip Restricaoeletrica</span></dt>
+          <dd>
+            <span>{{ onsGeracaoTermicaMotivoDespachoRef.tipRestricaoeletrica }}</span>
+          </dd>
+        </dl>
+
+        <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+          <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Voltar</span>
+        </button>
+
+        <button
+          type="button"
+          [routerLink]="['/ons-geracao-termica-motivo-despacho', onsGeracaoTermicaMotivoDespachoRef.id, 'edit']"
+          class="btn btn-primary"
+        >
+          <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Editar</span>
+        </button>
+      </div>
+    }
+  </div>
+</div>

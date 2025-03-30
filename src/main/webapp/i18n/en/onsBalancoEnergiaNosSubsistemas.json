@@ -1,0 +1,33 @@
+{
+  "wattsUpEnergyApp": {
+    "onsBalancoEnergiaNosSubsistemas": {
+      "home": {
+        "title": "Ons Balanco Energia Nos Subsistemas",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Ons Balanco Energia Nos Subsistemas",
+        "createOrEditLabel": "Create or edit a Ons Balanco Energia Nos Subsistemas",
+        "search": "Search for Ons Balanco Energia Nos Subsistemas",
+        "notFound": "No Ons Balanco Energia Nos Subsistemas found"
+      },
+      "created": "A new Ons Balanco Energia Nos Subsistemas is created with identifier {{ param }}",
+      "updated": "A Ons Balanco Energia Nos Subsistemas is updated with identifier {{ param }}",
+      "deleted": "A Ons Balanco Energia Nos Subsistemas is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Ons Balanco Energia Nos Subsistemas {{ id }}?"
+      },
+      "detail": {
+        "title": "Ons Balanco Energia Nos Subsistemas"
+      },
+      "id": "ID",
+      "idSubsistema": "Id Subsistema",
+      "nomSubsistema": "Nom Subsistema",
+      "dinInstante": "Din Instante",
+      "valGerhidraulica": "Val Gerhidraulica",
+      "valGertermica": "Val Gertermica",
+      "valGereolica": "Val Gereolica",
+      "valGersolar": "Val Gersolar",
+      "valCarga": "Val Carga",
+      "valIntercambio": "Val Intercambio"
+    }
+  }
+}

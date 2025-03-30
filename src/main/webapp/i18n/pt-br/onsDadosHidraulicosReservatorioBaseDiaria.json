@@ -1,0 +1,38 @@
+{
+  "wattsUpEnergyApp": {
+    "onsDadosHidraulicosReservatorioBaseDiaria": {
+      "home": {
+        "title": "Ons Dados Hidraulicos Reservatorio Base Diarias",
+        "refreshListLabel": "Atualizar lista",
+        "createLabel": "Criar novo Ons Dados Hidraulicos Reservatorio Base Diaria",
+        "createOrEditLabel": "Criar ou editar Ons Dados Hidraulicos Reservatorio Base Diaria",
+        "search": "Pesquisar por Ons Dados Hidraulicos Reservatorio Base Diaria",
+        "notFound": "Nenhum Ons Dados Hidraulicos Reservatorio Base Diaria encontrado"
+      },
+      "created": "Um novo Ons Dados Hidraulicos Reservatorio Base Diaria foi criado com o identificador {{ param }}",
+      "updated": "Um Ons Dados Hidraulicos Reservatorio Base Diaria foi atualizado com o identificador {{ param }}",
+      "deleted": "Um Ons Dados Hidraulicos Reservatorio Base Diaria foi excluído com o identificador {{ param }}",
+      "delete": {
+        "question": "Tem certeza de que deseja excluir Ons Dados Hidraulicos Reservatorio Base Diaria {{ id }}?"
+      },
+      "detail": {
+        "title": "Ons Dados Hidraulicos Reservatorio Base Diaria"
+      },
+      "id": "ID",
+      "valNivelmontante": "Val Nivelmontante",
+      "valNiveljusante": "Val Niveljusante",
+      "valVolumeutilcon": "Val Volumeutilcon",
+      "valVazaoafluente": "Val Vazaoafluente",
+      "valVazaoturbinada": "Val Vazaoturbinada",
+      "valVazaovertida": "Val Vazaovertida",
+      "valVazaooutrasestruturas": "Val Vazaooutrasestruturas",
+      "valVazaodefluente": "Val Vazaodefluente",
+      "valVazaotransferida": "Val Vazaotransferida",
+      "valVazaonatural": "Val Vazaonatural",
+      "valVazaoartificial": "Val Vazaoartificial",
+      "valVazaoincremental": "Val Vazaoincremental",
+      "valVazaoevaporacaoliquida": "Val Vazaoevaporacaoliquida",
+      "valVazaousoconsuntivo": "Val Vazaousoconsuntivo"
+    }
+  }
+}

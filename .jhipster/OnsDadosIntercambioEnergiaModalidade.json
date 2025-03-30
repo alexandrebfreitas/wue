@@ -1,0 +1,39 @@
+{
+  "annotations": {
+    "changelogDate": "20250330013719"
+  },
+  "applications": "*",
+  "entityTableName": "OnsTable42",
+  "fields": [
+    {
+      "fieldName": "nomConversora",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "dinInstante",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "valModalidadecontratual",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "valModalidadeemergencial",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "valModalidadeoportunidade",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "valModalidadeteste",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "valModalidadeexcepcional",
+      "fieldType": "Double"
+    }
+  ],
+  "name": "OnsDadosIntercambioEnergiaModalidade",
+  "relationships": []
+}

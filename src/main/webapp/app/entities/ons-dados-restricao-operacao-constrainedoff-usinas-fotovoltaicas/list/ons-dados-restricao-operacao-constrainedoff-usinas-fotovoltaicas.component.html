@@ -1,0 +1,297 @@
+<div>
+  <h2 id="page-heading" data-cy="OnsDadosRestricaoOperacaoConstrainedoffUsinasFotovoltaicasHeading">
+    <span jhiTranslate="wattsUpEnergyApp.onsDadosRestricaoOperacaoConstrainedoffUsinasFotovoltaicas.home.title"
+      >Ons Dados Restricao Operacao Constrainedoff Usinas Fotovoltaicas</span
+    >
+
+    <div class="d-flex justify-content-end">
+      <button class="btn btn-info me-2" (click)="load()" [disabled]="isLoading">
+        <fa-icon icon="sync" [animation]="isLoading ? 'spin' : undefined"></fa-icon>
+        <span jhiTranslate="wattsUpEnergyApp.onsDadosRestricaoOperacaoConstrainedoffUsinasFotovoltaicas.home.refreshListLabel"
+          >Atualizar lista</span
+        >
+      </button>
+
+      <button
+        id="jh-create-entity"
+        data-cy="entityCreateButton"
+        class="btn btn-primary jh-create-entity create-ons-dados-restricao-operacao-constrainedoff-usinas-fotovoltaicas"
+        [routerLink]="['/ons-dados-restricao-operacao-constrainedoff-usinas-fotovoltaicas/new']"
+      >
+        <fa-icon icon="plus"></fa-icon>
+        <span
+          class="hidden-sm-down"
+          jhiTranslate="wattsUpEnergyApp.onsDadosRestricaoOperacaoConstrainedoffUsinasFotovoltaicas.home.createLabel"
+          >Criar novo Ons Dados Restricao Operacao Constrainedoff Usinas Fotovoltaicas</span
+        >
+      </button>
+    </div>
+  </h2>
+
+  <jhi-alert-error></jhi-alert-error>
+
+  <jhi-alert></jhi-alert>
+
+  <form name="searchForm" class="row row-cols-sm-auto align-items-center">
+    <div class="col-sm-12">
+      <div class="input-group w-100 mt-3">
+        <label
+          class="visually-hidden"
+          for="currentSearch"
+          jhiTranslate="wattsUpEnergyApp.onsDadosRestricaoOperacaoConstrainedoffUsinasFotovoltaicas.home.search"
+          >Pesquisar por Ons Dados Restricao Operacao Constrainedoff Usinas Fotovoltaicas</label
+        >
+        <input
+          type="text"
+          class="form-control"
+          [(ngModel)]="currentSearch"
+          id="currentSearch"
+          name="currentSearch"
+          placeholder="{{ 'wattsUpEnergyApp.onsDadosRestricaoOperacaoConstrainedoffUsinasFotovoltaicas.home.search' | translate }}"
+        />
+
+        <button class="btn btn-info" (click)="search(currentSearch)">
+          <fa-icon icon="search"></fa-icon>
+        </button>
+
+        @if (currentSearch) {
+          <button class="btn btn-danger" (click)="search('')">
+            <fa-icon icon="trash-alt"></fa-icon>
+          </button>
+        }
+      </div>
+    </div>
+  </form>
+
+  @if (onsDadosRestricaoOperacaoConstrainedoffUsinasFotovoltaicas().length === 0) {
+    <div class="alert alert-warning" id="no-result">
+      <span jhiTranslate="wattsUpEnergyApp.onsDadosRestricaoOperacaoConstrainedoffUsinasFotovoltaicas.home.notFound"
+        >Nenhum Ons Dados Restricao Operacao Constrainedoff Usinas Fotovoltaicas encontrado</span
+      >
+    </div>
+  } @else {
+    <div class="table-responsive table-entities" id="entities">
+      <table class="table table-striped" aria-describedby="page-heading">
+        <thead>
+          <tr jhiSort [(sortState)]="sortState" (sortChange)="navigateToWithComponentValues($event)">
+            <th scope="col" jhiSortBy="id">
+              <div class="d-flex">
+                <span jhiTranslate="global.field.id">Código</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="idSubsistema">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsDadosRestricaoOperacaoConstrainedoffUsinasFotovoltaicas.idSubsistema"
+                  >Id Subsistema</span
+                >
+                @if (!currentSearch) {
+                  <fa-icon class="p-1" icon="sort"></fa-icon>
+                }
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="nomSubsistema">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsDadosRestricaoOperacaoConstrainedoffUsinasFotovoltaicas.nomSubsistema"
+                  >Nom Subsistema</span
+                >
+                @if (!currentSearch) {
+                  <fa-icon class="p-1" icon="sort"></fa-icon>
+                }
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="idEstado">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsDadosRestricaoOperacaoConstrainedoffUsinasFotovoltaicas.idEstado">Id Estado</span>
+                @if (!currentSearch) {
+                  <fa-icon class="p-1" icon="sort"></fa-icon>
+                }
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="nomEstado">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsDadosRestricaoOperacaoConstrainedoffUsinasFotovoltaicas.nomEstado">Nom Estado</span>
+                @if (!currentSearch) {
+                  <fa-icon class="p-1" icon="sort"></fa-icon>
+                }
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="nomUsina">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsDadosRestricaoOperacaoConstrainedoffUsinasFotovoltaicas.nomUsina">Nom Usina</span>
+                @if (!currentSearch) {
+                  <fa-icon class="p-1" icon="sort"></fa-icon>
+                }
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="idOns">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsDadosRestricaoOperacaoConstrainedoffUsinasFotovoltaicas.idOns">Id Ons</span>
+                @if (!currentSearch) {
+                  <fa-icon class="p-1" icon="sort"></fa-icon>
+                }
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="ceg">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsDadosRestricaoOperacaoConstrainedoffUsinasFotovoltaicas.ceg">Ceg</span>
+                @if (!currentSearch) {
+                  <fa-icon class="p-1" icon="sort"></fa-icon>
+                }
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="dinInstante">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsDadosRestricaoOperacaoConstrainedoffUsinasFotovoltaicas.dinInstante"
+                  >Din Instante</span
+                >
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="valGeracao">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsDadosRestricaoOperacaoConstrainedoffUsinasFotovoltaicas.valGeracao"
+                  >Val Geracao</span
+                >
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="valGeracaolimitada">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsDadosRestricaoOperacaoConstrainedoffUsinasFotovoltaicas.valGeracaolimitada"
+                  >Val Geracaolimitada</span
+                >
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="valDisponibilidade">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsDadosRestricaoOperacaoConstrainedoffUsinasFotovoltaicas.valDisponibilidade"
+                  >Val Disponibilidade</span
+                >
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="valGeracaoreferencia">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsDadosRestricaoOperacaoConstrainedoffUsinasFotovoltaicas.valGeracaoreferencia"
+                  >Val Geracaoreferencia</span
+                >
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="valGeracaoreferenciafinal">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsDadosRestricaoOperacaoConstrainedoffUsinasFotovoltaicas.valGeracaoreferenciafinal"
+                  >Val Geracaoreferenciafinal</span
+                >
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="codRazaorestricao">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsDadosRestricaoOperacaoConstrainedoffUsinasFotovoltaicas.codRazaorestricao"
+                  >Cod Razaorestricao</span
+                >
+                @if (!currentSearch) {
+                  <fa-icon class="p-1" icon="sort"></fa-icon>
+                }
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="codOrigemrestricao">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsDadosRestricaoOperacaoConstrainedoffUsinasFotovoltaicas.codOrigemrestricao"
+                  >Cod Origemrestricao</span
+                >
+                @if (!currentSearch) {
+                  <fa-icon class="p-1" icon="sort"></fa-icon>
+                }
+              </div>
+            </th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (
+            onsDadosRestricaoOperacaoConstrainedoffUsinasFotovoltaicas of onsDadosRestricaoOperacaoConstrainedoffUsinasFotovoltaicas();
+            track trackId(onsDadosRestricaoOperacaoConstrainedoffUsinasFotovoltaicas)
+          ) {
+            <tr data-cy="entityTable">
+              <td>
+                <a
+                  [routerLink]="[
+                    '/ons-dados-restricao-operacao-constrainedoff-usinas-fotovoltaicas',
+                    onsDadosRestricaoOperacaoConstrainedoffUsinasFotovoltaicas.id,
+                    'view',
+                  ]"
+                  >{{ onsDadosRestricaoOperacaoConstrainedoffUsinasFotovoltaicas.id }}</a
+                >
+              </td>
+              <td>{{ onsDadosRestricaoOperacaoConstrainedoffUsinasFotovoltaicas.idSubsistema }}</td>
+              <td>{{ onsDadosRestricaoOperacaoConstrainedoffUsinasFotovoltaicas.nomSubsistema }}</td>
+              <td>{{ onsDadosRestricaoOperacaoConstrainedoffUsinasFotovoltaicas.idEstado }}</td>
+              <td>{{ onsDadosRestricaoOperacaoConstrainedoffUsinasFotovoltaicas.nomEstado }}</td>
+              <td>{{ onsDadosRestricaoOperacaoConstrainedoffUsinasFotovoltaicas.nomUsina }}</td>
+              <td>{{ onsDadosRestricaoOperacaoConstrainedoffUsinasFotovoltaicas.idOns }}</td>
+              <td>{{ onsDadosRestricaoOperacaoConstrainedoffUsinasFotovoltaicas.ceg }}</td>
+              <td>{{ onsDadosRestricaoOperacaoConstrainedoffUsinasFotovoltaicas.dinInstante | formatMediumDate }}</td>
+              <td>{{ onsDadosRestricaoOperacaoConstrainedoffUsinasFotovoltaicas.valGeracao }}</td>
+              <td>{{ onsDadosRestricaoOperacaoConstrainedoffUsinasFotovoltaicas.valGeracaolimitada }}</td>
+              <td>{{ onsDadosRestricaoOperacaoConstrainedoffUsinasFotovoltaicas.valDisponibilidade }}</td>
+              <td>{{ onsDadosRestricaoOperacaoConstrainedoffUsinasFotovoltaicas.valGeracaoreferencia }}</td>
+              <td>{{ onsDadosRestricaoOperacaoConstrainedoffUsinasFotovoltaicas.valGeracaoreferenciafinal }}</td>
+              <td>{{ onsDadosRestricaoOperacaoConstrainedoffUsinasFotovoltaicas.codRazaorestricao }}</td>
+              <td>{{ onsDadosRestricaoOperacaoConstrainedoffUsinasFotovoltaicas.codOrigemrestricao }}</td>
+              <td class="text-end">
+                <div class="btn-group">
+                  <a
+                    [routerLink]="[
+                      '/ons-dados-restricao-operacao-constrainedoff-usinas-fotovoltaicas',
+                      onsDadosRestricaoOperacaoConstrainedoffUsinasFotovoltaicas.id,
+                      'view',
+                    ]"
+                    class="btn btn-info btn-sm"
+                    data-cy="entityDetailsButton"
+                  >
+                    <fa-icon icon="eye"></fa-icon>
+                    <span class="d-none d-md-inline" jhiTranslate="entity.action.view">Visualizar</span>
+                  </a>
+
+                  <a
+                    [routerLink]="[
+                      '/ons-dados-restricao-operacao-constrainedoff-usinas-fotovoltaicas',
+                      onsDadosRestricaoOperacaoConstrainedoffUsinasFotovoltaicas.id,
+                      'edit',
+                    ]"
+                    class="btn btn-primary btn-sm"
+                    data-cy="entityEditButton"
+                  >
+                    <fa-icon icon="pencil-alt"></fa-icon>
+                    <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Editar</span>
+                  </a>
+
+                  <button
+                    type="submit"
+                    (click)="delete(onsDadosRestricaoOperacaoConstrainedoffUsinasFotovoltaicas)"
+                    class="btn btn-danger btn-sm"
+                    data-cy="entityDeleteButton"
+                  >
+                    <fa-icon icon="times"></fa-icon>
+                    <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Excluir</span>
+                  </button>
+                </div>
+              </td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+  }
+</div>

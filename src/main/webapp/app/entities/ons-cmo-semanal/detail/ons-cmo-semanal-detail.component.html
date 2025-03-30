@@ -1,0 +1,60 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    @if (onsCmoSemanal(); as onsCmoSemanalRef) {
+      <div>
+        <h2 data-cy="onsCmoSemanalDetailsHeading">
+          <span jhiTranslate="wattsUpEnergyApp.onsCmoSemanal.detail.title">Ons Cmo Semanal</span>
+        </h2>
+
+        <hr />
+
+        <jhi-alert-error></jhi-alert-error>
+
+        <jhi-alert></jhi-alert>
+
+        <dl class="row-md jh-entity-details">
+          <dt><span jhiTranslate="global.field.id">Código</span></dt>
+          <dd>
+            <span>{{ onsCmoSemanalRef.id }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsCmoSemanal.idSubsistema">Id Subsistema</span></dt>
+          <dd>
+            <span>{{ onsCmoSemanalRef.idSubsistema }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsCmoSemanal.nomSubsistema">Nom Subsistema</span></dt>
+          <dd>
+            <span>{{ onsCmoSemanalRef.nomSubsistema }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsCmoSemanal.dinInstante">Din Instante</span></dt>
+          <dd>
+            <span>{{ onsCmoSemanalRef.dinInstante | formatMediumDate }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsCmoSemanal.valCmomediasemanal">Val Cmomediasemanal</span></dt>
+          <dd>
+            <span>{{ onsCmoSemanalRef.valCmomediasemanal }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsCmoSemanal.valCmoleve">Val Cmoleve</span></dt>
+          <dd>
+            <span>{{ onsCmoSemanalRef.valCmoleve }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsCmoSemanal.valCmomedia">Val Cmomedia</span></dt>
+          <dd>
+            <span>{{ onsCmoSemanalRef.valCmomedia }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsCmoSemanal.valCmopesada">Val Cmopesada</span></dt>
+          <dd>
+            <span>{{ onsCmoSemanalRef.valCmopesada }}</span>
+          </dd>
+        </dl>
+
+        <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+          <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Voltar</span>
+        </button>
+
+        <button type="button" [routerLink]="['/ons-cmo-semanal', onsCmoSemanalRef.id, 'edit']" class="btn btn-primary">
+          <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Editar</span>
+        </button>
+      </div>
+    }
+  </div>
+</div>

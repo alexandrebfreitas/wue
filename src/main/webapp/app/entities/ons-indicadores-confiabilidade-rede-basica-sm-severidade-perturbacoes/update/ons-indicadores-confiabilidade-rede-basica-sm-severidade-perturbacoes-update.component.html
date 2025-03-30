@@ -1,0 +1,187 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <form name="editForm" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+      <h2
+        id="jhi-ons-indicadores-confiabilidade-rede-basica-sm-severidade-perturbacoes-heading"
+        data-cy="OnsIndicadoresConfiabilidadeRedeBasicaSmSeveridadePerturbacoesCreateUpdateHeading"
+        jhiTranslate="wattsUpEnergyApp.onsIndicadoresConfiabilidadeRedeBasicaSmSeveridadePerturbacoes.home.createOrEditLabel"
+      >
+        Criar ou editar Ons Indicadores Confiabilidade Rede Basica Sm Severidade Perturbacoes
+      </h2>
+
+      <div>
+        <jhi-alert-error></jhi-alert-error>
+
+        @if (editForm.controls.id.value !== null) {
+          <div class="mb-3">
+            <label
+              class="form-label"
+              for="field_id"
+              jhiTranslate="wattsUpEnergyApp.onsIndicadoresConfiabilidadeRedeBasicaSmSeveridadePerturbacoes.id"
+              >ID</label
+            >
+            <input type="number" class="form-control" name="id" id="field_id" data-cy="id" formControlName="id" [readonly]="true" />
+          </div>
+        }
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_dscAgregacao"
+            jhiTranslate="wattsUpEnergyApp.onsIndicadoresConfiabilidadeRedeBasicaSmSeveridadePerturbacoes.dscAgregacao"
+            >Dsc Agregacao</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="dscAgregacao"
+            id="field_dscAgregacao"
+            data-cy="dscAgregacao"
+            formControlName="dscAgregacao"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_codCaracteristica"
+            jhiTranslate="wattsUpEnergyApp.onsIndicadoresConfiabilidadeRedeBasicaSmSeveridadePerturbacoes.codCaracteristica"
+            >Cod Caracteristica</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="codCaracteristica"
+            id="field_codCaracteristica"
+            data-cy="codCaracteristica"
+            formControlName="codCaracteristica"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_dscCaracteristica"
+            jhiTranslate="wattsUpEnergyApp.onsIndicadoresConfiabilidadeRedeBasicaSmSeveridadePerturbacoes.dscCaracteristica"
+            >Dsc Caracteristica</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="dscCaracteristica"
+            id="field_dscCaracteristica"
+            data-cy="dscCaracteristica"
+            formControlName="dscCaracteristica"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_idPeriodicidade"
+            jhiTranslate="wattsUpEnergyApp.onsIndicadoresConfiabilidadeRedeBasicaSmSeveridadePerturbacoes.idPeriodicidade"
+            >Id Periodicidade</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="idPeriodicidade"
+            id="field_idPeriodicidade"
+            data-cy="idPeriodicidade"
+            formControlName="idPeriodicidade"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_dinReferencia"
+            jhiTranslate="wattsUpEnergyApp.onsIndicadoresConfiabilidadeRedeBasicaSmSeveridadePerturbacoes.dinReferencia"
+            >Din Referencia</label
+          >
+          <div class="input-group">
+            <input
+              id="field_dinReferencia"
+              data-cy="dinReferencia"
+              type="text"
+              class="form-control"
+              name="dinReferencia"
+              ngbDatepicker
+              #dinReferenciaDp="ngbDatepicker"
+              formControlName="dinReferencia"
+            />
+            <button type="button" class="btn btn-secondary" (click)="dinReferenciaDp.toggle()">
+              <fa-icon icon="calendar-alt"></fa-icon>
+            </button>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_valSm1"
+            jhiTranslate="wattsUpEnergyApp.onsIndicadoresConfiabilidadeRedeBasicaSmSeveridadePerturbacoes.valSm1"
+            >Val Sm 1</label
+          >
+          <input type="number" class="form-control" name="valSm1" id="field_valSm1" data-cy="valSm1" formControlName="valSm1" />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_valSm2"
+            jhiTranslate="wattsUpEnergyApp.onsIndicadoresConfiabilidadeRedeBasicaSmSeveridadePerturbacoes.valSm2"
+            >Val Sm 2</label
+          >
+          <input type="number" class="form-control" name="valSm2" id="field_valSm2" data-cy="valSm2" formControlName="valSm2" />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_valSm3"
+            jhiTranslate="wattsUpEnergyApp.onsIndicadoresConfiabilidadeRedeBasicaSmSeveridadePerturbacoes.valSm3"
+            >Val Sm 3</label
+          >
+          <input type="number" class="form-control" name="valSm3" id="field_valSm3" data-cy="valSm3" formControlName="valSm3" />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_valSm4"
+            jhiTranslate="wattsUpEnergyApp.onsIndicadoresConfiabilidadeRedeBasicaSmSeveridadePerturbacoes.valSm4"
+            >Val Sm 4</label
+          >
+          <input type="number" class="form-control" name="valSm4" id="field_valSm4" data-cy="valSm4" formControlName="valSm4" />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_valSm5"
+            jhiTranslate="wattsUpEnergyApp.onsIndicadoresConfiabilidadeRedeBasicaSmSeveridadePerturbacoes.valSm5"
+            >Val Sm 5</label
+          >
+          <input type="number" class="form-control" name="valSm5" id="field_valSm5" data-cy="valSm5" formControlName="valSm5" />
+        </div>
+      </div>
+
+      <div>
+        <button type="button" id="cancel-save" data-cy="entityCreateCancelButton" class="btn btn-secondary" (click)="previousState()">
+          <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancelar</span>
+        </button>
+
+        <button
+          type="submit"
+          id="save-entity"
+          data-cy="entityCreateSaveButton"
+          [disabled]="editForm.invalid || isSaving"
+          class="btn btn-primary"
+        >
+          <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Salvar</span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

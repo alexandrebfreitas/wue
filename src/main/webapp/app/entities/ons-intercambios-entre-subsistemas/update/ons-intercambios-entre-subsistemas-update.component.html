@@ -1,0 +1,146 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <form name="editForm" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+      <h2
+        id="jhi-ons-intercambios-entre-subsistemas-heading"
+        data-cy="OnsIntercambiosEntreSubsistemasCreateUpdateHeading"
+        jhiTranslate="wattsUpEnergyApp.onsIntercambiosEntreSubsistemas.home.createOrEditLabel"
+      >
+        Criar ou editar Ons Intercambios Entre Subsistemas
+      </h2>
+
+      <div>
+        <jhi-alert-error></jhi-alert-error>
+
+        @if (editForm.controls.id.value !== null) {
+          <div class="mb-3">
+            <label class="form-label" for="field_id" jhiTranslate="wattsUpEnergyApp.onsIntercambiosEntreSubsistemas.id">ID</label>
+            <input type="number" class="form-control" name="id" id="field_id" data-cy="id" formControlName="id" [readonly]="true" />
+          </div>
+        }
+
+        <div class="mb-3">
+          <label class="form-label" for="field_dinInstante" jhiTranslate="wattsUpEnergyApp.onsIntercambiosEntreSubsistemas.dinInstante"
+            >Din Instante</label
+          >
+          <div class="input-group">
+            <input
+              id="field_dinInstante"
+              data-cy="dinInstante"
+              type="text"
+              class="form-control"
+              name="dinInstante"
+              ngbDatepicker
+              #dinInstanteDp="ngbDatepicker"
+              formControlName="dinInstante"
+            />
+            <button type="button" class="btn btn-secondary" (click)="dinInstanteDp.toggle()">
+              <fa-icon icon="calendar-alt"></fa-icon>
+            </button>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_idSubsistemaOrigem"
+            jhiTranslate="wattsUpEnergyApp.onsIntercambiosEntreSubsistemas.idSubsistemaOrigem"
+            >Id Subsistema Origem</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="idSubsistemaOrigem"
+            id="field_idSubsistemaOrigem"
+            data-cy="idSubsistemaOrigem"
+            formControlName="idSubsistemaOrigem"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_nomSubsistemaOrigem"
+            jhiTranslate="wattsUpEnergyApp.onsIntercambiosEntreSubsistemas.nomSubsistemaOrigem"
+            >Nom Subsistema Origem</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="nomSubsistemaOrigem"
+            id="field_nomSubsistemaOrigem"
+            data-cy="nomSubsistemaOrigem"
+            formControlName="nomSubsistemaOrigem"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_idSubsistemaDestino"
+            jhiTranslate="wattsUpEnergyApp.onsIntercambiosEntreSubsistemas.idSubsistemaDestino"
+            >Id Subsistema Destino</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="idSubsistemaDestino"
+            id="field_idSubsistemaDestino"
+            data-cy="idSubsistemaDestino"
+            formControlName="idSubsistemaDestino"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_nomSubsistemaDestino"
+            jhiTranslate="wattsUpEnergyApp.onsIntercambiosEntreSubsistemas.nomSubsistemaDestino"
+            >Nom Subsistema Destino</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="nomSubsistemaDestino"
+            id="field_nomSubsistemaDestino"
+            data-cy="nomSubsistemaDestino"
+            formControlName="nomSubsistemaDestino"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_valIntercambiomwmed"
+            jhiTranslate="wattsUpEnergyApp.onsIntercambiosEntreSubsistemas.valIntercambiomwmed"
+            >Val Intercambiomwmed</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="valIntercambiomwmed"
+            id="field_valIntercambiomwmed"
+            data-cy="valIntercambiomwmed"
+            formControlName="valIntercambiomwmed"
+          />
+        </div>
+      </div>
+
+      <div>
+        <button type="button" id="cancel-save" data-cy="entityCreateCancelButton" class="btn btn-secondary" (click)="previousState()">
+          <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancelar</span>
+        </button>
+
+        <button
+          type="submit"
+          id="save-entity"
+          data-cy="entityCreateSaveButton"
+          [disabled]="editForm.invalid || isSaving"
+          class="btn btn-primary"
+        >
+          <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Salvar</span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

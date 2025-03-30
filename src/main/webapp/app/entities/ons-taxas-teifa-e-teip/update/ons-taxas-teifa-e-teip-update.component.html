@@ -1,0 +1,117 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <form name="editForm" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+      <h2
+        id="jhi-ons-taxas-teifa-e-teip-heading"
+        data-cy="OnsTaxasTeifaETeipCreateUpdateHeading"
+        jhiTranslate="wattsUpEnergyApp.onsTaxasTeifaETeip.home.createOrEditLabel"
+      >
+        Criar ou editar Ons Taxas Teifa E Teip
+      </h2>
+
+      <div>
+        <jhi-alert-error></jhi-alert-error>
+
+        @if (editForm.controls.id.value !== null) {
+          <div class="mb-3">
+            <label class="form-label" for="field_id" jhiTranslate="wattsUpEnergyApp.onsTaxasTeifaETeip.id">ID</label>
+            <input type="number" class="form-control" name="id" id="field_id" data-cy="id" formControlName="id" [readonly]="true" />
+          </div>
+        }
+
+        <div class="mb-3">
+          <label class="form-label" for="field_nomUsina" jhiTranslate="wattsUpEnergyApp.onsTaxasTeifaETeip.nomUsina">Nom Usina</label>
+          <input type="text" class="form-control" name="nomUsina" id="field_nomUsina" data-cy="nomUsina" formControlName="nomUsina" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_codCeg" jhiTranslate="wattsUpEnergyApp.onsTaxasTeifaETeip.codCeg">Cod Ceg</label>
+          <input type="text" class="form-control" name="codCeg" id="field_codCeg" data-cy="codCeg" formControlName="codCeg" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_idTipousina" jhiTranslate="wattsUpEnergyApp.onsTaxasTeifaETeip.idTipousina"
+            >Id Tipousina</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="idTipousina"
+            id="field_idTipousina"
+            data-cy="idTipousina"
+            formControlName="idTipousina"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_dinMes" jhiTranslate="wattsUpEnergyApp.onsTaxasTeifaETeip.dinMes">Din Mes</label>
+          <div class="input-group">
+            <input
+              id="field_dinMes"
+              data-cy="dinMes"
+              type="text"
+              class="form-control"
+              name="dinMes"
+              ngbDatepicker
+              #dinMesDp="ngbDatepicker"
+              formControlName="dinMes"
+            />
+            <button type="button" class="btn btn-secondary" (click)="dinMesDp.toggle()"><fa-icon icon="calendar-alt"></fa-icon></button>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_nomTaxa" jhiTranslate="wattsUpEnergyApp.onsTaxasTeifaETeip.nomTaxa">Nom Taxa</label>
+          <input type="text" class="form-control" name="nomTaxa" id="field_nomTaxa" data-cy="nomTaxa" formControlName="nomTaxa" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_valTaxa" jhiTranslate="wattsUpEnergyApp.onsTaxasTeifaETeip.valTaxa">Val Taxa</label>
+          <input type="number" class="form-control" name="valTaxa" id="field_valTaxa" data-cy="valTaxa" formControlName="valTaxa" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_numVersao" jhiTranslate="wattsUpEnergyApp.onsTaxasTeifaETeip.numVersao">Num Versao</label>
+          <input type="number" class="form-control" name="numVersao" id="field_numVersao" data-cy="numVersao" formControlName="numVersao" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_dinInstante" jhiTranslate="wattsUpEnergyApp.onsTaxasTeifaETeip.dinInstante"
+            >Din Instante</label
+          >
+          <div class="input-group">
+            <input
+              id="field_dinInstante"
+              data-cy="dinInstante"
+              type="text"
+              class="form-control"
+              name="dinInstante"
+              ngbDatepicker
+              #dinInstanteDp="ngbDatepicker"
+              formControlName="dinInstante"
+            />
+            <button type="button" class="btn btn-secondary" (click)="dinInstanteDp.toggle()">
+              <fa-icon icon="calendar-alt"></fa-icon>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <button type="button" id="cancel-save" data-cy="entityCreateCancelButton" class="btn btn-secondary" (click)="previousState()">
+          <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancelar</span>
+        </button>
+
+        <button
+          type="submit"
+          id="save-entity"
+          data-cy="entityCreateSaveButton"
+          [disabled]="editForm.invalid || isSaving"
+          class="btn btn-primary"
+        >
+          <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Salvar</span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

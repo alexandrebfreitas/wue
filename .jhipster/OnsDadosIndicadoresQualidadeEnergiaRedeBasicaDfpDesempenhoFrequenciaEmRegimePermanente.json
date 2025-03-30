@@ -1,0 +1,51 @@
+{
+  "annotations": {
+    "changelogDate": "20250330013645"
+  },
+  "applications": "*",
+  "entityTableName": "OnsTable8",
+  "fields": [
+    {
+      "fieldName": "idPeriodicidade",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "dinReferencia",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "numDesvioPermSobre",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "numDesvioPermSub",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "numDesvioDistSobre",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "numDesvioDistSub",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "numMinutos",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "numVioladodis",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "numVioladoperm",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "valDfp",
+      "fieldType": "Double"
+    }
+  ],
+  "name": "OnsDadosIndicadoresQualidadeEnergiaRedeBasicaDfpDesempenhoFrequenciaEmRegimePermanente",
+  "relationships": []
+}

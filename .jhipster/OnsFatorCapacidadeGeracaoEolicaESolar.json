@@ -1,0 +1,95 @@
+{
+  "annotations": {
+    "changelogDate": "20250330013646"
+  },
+  "applications": "*",
+  "entityTableName": "OnsTable9",
+  "fields": [
+    {
+      "fieldName": "idSubsistema",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nomSubsistema",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "idEstado",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nomEstado",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "codPontoconexao",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nomPontoconexao",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nomLocalizacao",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "valLatitudesecoletora",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "valLongitudesecoletora",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "valLatitudepontoconexao",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "valLongitudepontoconexao",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "nomModalidadeoperacao",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nomTipousina",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nomUsinaConjunto",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "dinInstante",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "idOns",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "ceg",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "valGeracaoprogramada",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "valGeracaoverificada",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "valCapacidadeinstalada",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "valFatorcapacidade",
+      "fieldType": "Double"
+    }
+  ],
+  "name": "OnsFatorCapacidadeGeracaoEolicaESolar",
+  "relationships": []
+}

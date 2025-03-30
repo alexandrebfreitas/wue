@@ -1,0 +1,205 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <form name="editForm" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+      <h2
+        id="jhi-ons-balanco-energia-dessem-heading"
+        data-cy="OnsBalancoEnergiaDessemCreateUpdateHeading"
+        jhiTranslate="wattsUpEnergyApp.onsBalancoEnergiaDessem.home.createOrEditLabel"
+      >
+        Criar ou editar Ons Balanco Energia Dessem
+      </h2>
+
+      <div>
+        <jhi-alert-error></jhi-alert-error>
+
+        @if (editForm.controls.id.value !== null) {
+          <div class="mb-3">
+            <label class="form-label" for="field_id" jhiTranslate="wattsUpEnergyApp.onsBalancoEnergiaDessem.id">ID</label>
+            <input type="number" class="form-control" name="id" id="field_id" data-cy="id" formControlName="id" [readonly]="true" />
+          </div>
+        }
+
+        <div class="mb-3">
+          <label class="form-label" for="field_idSubsistema" jhiTranslate="wattsUpEnergyApp.onsBalancoEnergiaDessem.idSubsistema"
+            >Id Subsistema</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="idSubsistema"
+            id="field_idSubsistema"
+            data-cy="idSubsistema"
+            formControlName="idSubsistema"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_nomSubsistema" jhiTranslate="wattsUpEnergyApp.onsBalancoEnergiaDessem.nomSubsistema"
+            >Nom Subsistema</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="nomSubsistema"
+            id="field_nomSubsistema"
+            data-cy="nomSubsistema"
+            formControlName="nomSubsistema"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_dinInstante" jhiTranslate="wattsUpEnergyApp.onsBalancoEnergiaDessem.dinInstante"
+            >Din Instante</label
+          >
+          <div class="input-group">
+            <input
+              id="field_dinInstante"
+              data-cy="dinInstante"
+              type="text"
+              class="form-control"
+              name="dinInstante"
+              ngbDatepicker
+              #dinInstanteDp="ngbDatepicker"
+              formControlName="dinInstante"
+            />
+            <button type="button" class="btn btn-secondary" (click)="dinInstanteDp.toggle()">
+              <fa-icon icon="calendar-alt"></fa-icon>
+            </button>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_valDemanda" jhiTranslate="wattsUpEnergyApp.onsBalancoEnergiaDessem.valDemanda"
+            >Val Demanda</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="valDemanda"
+            id="field_valDemanda"
+            data-cy="valDemanda"
+            formControlName="valDemanda"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_valGeracaohidraulicamwmed"
+            jhiTranslate="wattsUpEnergyApp.onsBalancoEnergiaDessem.valGeracaohidraulicamwmed"
+            >Val Geracaohidraulicamwmed</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="valGeracaohidraulicamwmed"
+            id="field_valGeracaohidraulicamwmed"
+            data-cy="valGeracaohidraulicamwmed"
+            formControlName="valGeracaohidraulicamwmed"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_valGeracaopchmwmed"
+            jhiTranslate="wattsUpEnergyApp.onsBalancoEnergiaDessem.valGeracaopchmwmed"
+            >Val Geracaopchmwmed</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="valGeracaopchmwmed"
+            id="field_valGeracaopchmwmed"
+            data-cy="valGeracaopchmwmed"
+            formControlName="valGeracaopchmwmed"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_valGeracaotermicamwed"
+            jhiTranslate="wattsUpEnergyApp.onsBalancoEnergiaDessem.valGeracaotermicamwed"
+            >Val Geracaotermicamwed</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="valGeracaotermicamwed"
+            id="field_valGeracaotermicamwed"
+            data-cy="valGeracaotermicamwed"
+            formControlName="valGeracaotermicamwed"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_valGeracaopctmwmed"
+            jhiTranslate="wattsUpEnergyApp.onsBalancoEnergiaDessem.valGeracaopctmwmed"
+            >Val Geracaopctmwmed</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="valGeracaopctmwmed"
+            id="field_valGeracaopctmwmed"
+            data-cy="valGeracaopctmwmed"
+            formControlName="valGeracaopctmwmed"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_valGeracaoeolicamwmed"
+            jhiTranslate="wattsUpEnergyApp.onsBalancoEnergiaDessem.valGeracaoeolicamwmed"
+            >Val Geracaoeolicamwmed</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="valGeracaoeolicamwmed"
+            id="field_valGeracaoeolicamwmed"
+            data-cy="valGeracaoeolicamwmed"
+            formControlName="valGeracaoeolicamwmed"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_valGeracaofotovoltaicamwmed"
+            jhiTranslate="wattsUpEnergyApp.onsBalancoEnergiaDessem.valGeracaofotovoltaicamwmed"
+            >Val Geracaofotovoltaicamwmed</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="valGeracaofotovoltaicamwmed"
+            id="field_valGeracaofotovoltaicamwmed"
+            data-cy="valGeracaofotovoltaicamwmed"
+            formControlName="valGeracaofotovoltaicamwmed"
+          />
+        </div>
+      </div>
+
+      <div>
+        <button type="button" id="cancel-save" data-cy="entityCreateCancelButton" class="btn btn-secondary" (click)="previousState()">
+          <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancelar</span>
+        </button>
+
+        <button
+          type="submit"
+          id="save-entity"
+          data-cy="entityCreateSaveButton"
+          [disabled]="editForm.invalid || isSaving"
+          class="btn btn-primary"
+        >
+          <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Salvar</span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

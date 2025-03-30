@@ -1,0 +1,71 @@
+{
+  "annotations": {
+    "changelogDate": "20250330013732"
+  },
+  "applications": "*",
+  "entityTableName": "OnsTable55",
+  "fields": [
+    {
+      "fieldName": "idSubsistema",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nomSubsistema",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "idEstado",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nomEstado",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nomSubestacao",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nomAgenteProprietario",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nomTipoderede",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nomTipoequipamento",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nomEquipamento",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "valPotreativanominalMvar",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "valLimiteinferiorMvar",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "valLimitesuperiorMvar",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "datEntradaoperacao",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "datDesativacao",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "codEquipamento",
+      "fieldType": "String"
+    }
+  ],
+  "name": "OnsEquipamentosControleReativos",
+  "relationships": []
+}

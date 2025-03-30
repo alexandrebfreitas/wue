@@ -1,0 +1,36 @@
+{
+  "wattsUpEnergyApp": {
+    "onsIndicadoresConfiabilidadeRedeBasicaRobustezRmalRmcsRrbERrbcs": {
+      "home": {
+        "title": "Ons Indicadores Confiabilidade Rede Basica Robustez Rmal Rmcs Rrb E Rrbcs",
+        "refreshListLabel": "Atualizar lista",
+        "createLabel": "Criar novo Ons Indicadores Confiabilidade Rede Basica Robustez Rmal Rmcs Rrb E Rrbcs",
+        "createOrEditLabel": "Criar ou editar Ons Indicadores Confiabilidade Rede Basica Robustez Rmal Rmcs Rrb E Rrbcs",
+        "search": "Pesquisar por Ons Indicadores Confiabilidade Rede Basica Robustez Rmal Rmcs Rrb E Rrbcs",
+        "notFound": "Nenhum Ons Indicadores Confiabilidade Rede Basica Robustez Rmal Rmcs Rrb E Rrbcs encontrado"
+      },
+      "created": "Um novo Ons Indicadores Confiabilidade Rede Basica Robustez Rmal Rmcs Rrb E Rrbcs foi criado com o identificador {{ param }}",
+      "updated": "Um Ons Indicadores Confiabilidade Rede Basica Robustez Rmal Rmcs Rrb E Rrbcs foi atualizado com o identificador {{ param }}",
+      "deleted": "Um Ons Indicadores Confiabilidade Rede Basica Robustez Rmal Rmcs Rrb E Rrbcs foi excluído com o identificador {{ param }}",
+      "delete": {
+        "question": "Tem certeza de que deseja excluir Ons Indicadores Confiabilidade Rede Basica Robustez Rmal Rmcs Rrb E Rrbcs {{ id }}?"
+      },
+      "detail": {
+        "title": "Ons Indicadores Confiabilidade Rede Basica Robustez Rmal Rmcs Rrb E Rrbcs"
+      },
+      "id": "ID",
+      "codIndicador": "Cod Indicador",
+      "dscAgregacao": "Dsc Agregacao",
+      "codCaracteristica": "Cod Caracteristica",
+      "dscCaracteristica": "Dsc Caracteristica",
+      "idPeriodicidade": "Id Periodicidade",
+      "dinReferencia": "Din Referencia",
+      "valIndicador": "Val Indicador",
+      "numPerturbacoes": "Num Perturbacoes",
+      "numPerturbacoescortecarga": "Num Perturbacoescortecarga",
+      "numPerturbacoescortecarga0a50mw": "Num Perturbacoescortecarga 0 A 50 Mw",
+      "numPerturbacoescortecarga50a100mw": "Num Perturbacoescortecarga 50 A 100 Mw",
+      "numPerturbacoescortecargaMaior100mw": "Num Perturbacoescortecarga Maior 100 Mw"
+    }
+  }
+}

@@ -1,0 +1,72 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    @if (onsModalidadeOperacaoUsinas(); as onsModalidadeOperacaoUsinasRef) {
+      <div>
+        <h2 data-cy="onsModalidadeOperacaoUsinasDetailsHeading">
+          <span jhiTranslate="wattsUpEnergyApp.onsModalidadeOperacaoUsinas.detail.title">Ons Modalidade Operacao Usinas</span>
+        </h2>
+
+        <hr />
+
+        <jhi-alert-error></jhi-alert-error>
+
+        <jhi-alert></jhi-alert>
+
+        <dl class="row-md jh-entity-details">
+          <dt><span jhiTranslate="global.field.id">Código</span></dt>
+          <dd>
+            <span>{{ onsModalidadeOperacaoUsinasRef.id }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsModalidadeOperacaoUsinas.nomUsina">Nom Usina</span></dt>
+          <dd>
+            <span>{{ onsModalidadeOperacaoUsinasRef.nomUsina }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsModalidadeOperacaoUsinas.ceg">Ceg</span></dt>
+          <dd>
+            <span>{{ onsModalidadeOperacaoUsinasRef.ceg }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsModalidadeOperacaoUsinas.nomModalidadeoperacao">Nom Modalidadeoperacao</span></dt>
+          <dd>
+            <span>{{ onsModalidadeOperacaoUsinasRef.nomModalidadeoperacao }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsModalidadeOperacaoUsinas.valPotenciaautorizada">Val Potenciaautorizada</span></dt>
+          <dd>
+            <span>{{ onsModalidadeOperacaoUsinasRef.valPotenciaautorizada }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsModalidadeOperacaoUsinas.sglCentrooperacao">Sgl Centrooperacao</span></dt>
+          <dd>
+            <span>{{ onsModalidadeOperacaoUsinasRef.sglCentrooperacao }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsModalidadeOperacaoUsinas.nomPontoconexao">Nom Pontoconexao</span></dt>
+          <dd>
+            <span>{{ onsModalidadeOperacaoUsinasRef.nomPontoconexao }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsModalidadeOperacaoUsinas.idEstado">Id Estado</span></dt>
+          <dd>
+            <span>{{ onsModalidadeOperacaoUsinasRef.idEstado }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsModalidadeOperacaoUsinas.nomEstado">Nom Estado</span></dt>
+          <dd>
+            <span>{{ onsModalidadeOperacaoUsinasRef.nomEstado }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsModalidadeOperacaoUsinas.stsAneel">Sts Aneel</span></dt>
+          <dd>
+            <span>{{ onsModalidadeOperacaoUsinasRef.stsAneel }}</span>
+          </dd>
+        </dl>
+
+        <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+          <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Voltar</span>
+        </button>
+
+        <button
+          type="button"
+          [routerLink]="['/ons-modalidade-operacao-usinas', onsModalidadeOperacaoUsinasRef.id, 'edit']"
+          class="btn btn-primary"
+        >
+          <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Editar</span>
+        </button>
+      </div>
+    }
+  </div>
+</div>

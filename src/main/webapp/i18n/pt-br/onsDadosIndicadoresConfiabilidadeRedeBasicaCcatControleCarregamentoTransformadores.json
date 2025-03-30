@@ -1,0 +1,31 @@
+{
+  "wattsUpEnergyApp": {
+    "onsDadosIndicadoresConfiabilidadeRedeBasicaCcatControleCarregamentoTransformadores": {
+      "home": {
+        "title": "Ons Dados Indicadores Confiabilidade Rede Basica Ccat Controle Carregamento Transformadores",
+        "refreshListLabel": "Atualizar lista",
+        "createLabel": "Criar novo Ons Dados Indicadores Confiabilidade Rede Basica Ccat Controle Carregamento Transformadores",
+        "createOrEditLabel": "Criar ou editar Ons Dados Indicadores Confiabilidade Rede Basica Ccat Controle Carregamento Transformadores",
+        "search": "Pesquisar por Ons Dados Indicadores Confiabilidade Rede Basica Ccat Controle Carregamento Transformadores",
+        "notFound": "Nenhum Ons Dados Indicadores Confiabilidade Rede Basica Ccat Controle Carregamento Transformadores encontrado"
+      },
+      "created": "Um novo Ons Dados Indicadores Confiabilidade Rede Basica Ccat Controle Carregamento Transformadores foi criado com o identificador {{ param }}",
+      "updated": "Um Ons Dados Indicadores Confiabilidade Rede Basica Ccat Controle Carregamento Transformadores foi atualizado com o identificador {{ param }}",
+      "deleted": "Um Ons Dados Indicadores Confiabilidade Rede Basica Ccat Controle Carregamento Transformadores foi excluído com o identificador {{ param }}",
+      "delete": {
+        "question": "Tem certeza de que deseja excluir Ons Dados Indicadores Confiabilidade Rede Basica Ccat Controle Carregamento Transformadores {{ id }}?"
+      },
+      "detail": {
+        "title": "Ons Dados Indicadores Confiabilidade Rede Basica Ccat Controle Carregamento Transformadores"
+      },
+      "id": "ID",
+      "codTipoagregacao": "Cod Tipoagregacao",
+      "idPeriodicidade": "Id Periodicidade",
+      "nomAgregacao": "Nom Agregacao",
+      "dinReferencia": "Din Referencia",
+      "numTransformadoresoperacao": "Num Transformadoresoperacao",
+      "numTransformadoresviolados": "Num Transformadoresviolados",
+      "valCcat": "Val Ccat"
+    }
+  }
+}

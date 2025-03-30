@@ -1,0 +1,37 @@
+{
+  "wattsUpEnergyApp": {
+    "onsDadosDisponibilidadeUsinas": {
+      "home": {
+        "title": "Ons Dados Disponibilidade Usinas",
+        "refreshListLabel": "Atualizar lista",
+        "createLabel": "Criar novo Ons Dados Disponibilidade Usinas",
+        "createOrEditLabel": "Criar ou editar Ons Dados Disponibilidade Usinas",
+        "search": "Pesquisar por Ons Dados Disponibilidade Usinas",
+        "notFound": "Nenhum Ons Dados Disponibilidade Usinas encontrado"
+      },
+      "created": "Um novo Ons Dados Disponibilidade Usinas foi criado com o identificador {{ param }}",
+      "updated": "Um Ons Dados Disponibilidade Usinas foi atualizado com o identificador {{ param }}",
+      "deleted": "Um Ons Dados Disponibilidade Usinas foi excluído com o identificador {{ param }}",
+      "delete": {
+        "question": "Tem certeza de que deseja excluir Ons Dados Disponibilidade Usinas {{ id }}?"
+      },
+      "detail": {
+        "title": "Ons Dados Disponibilidade Usinas"
+      },
+      "id": "ID",
+      "idSubsistema": "Id Subsistema",
+      "nomSubsistema": "Nom Subsistema",
+      "idEstado": "Id Estado",
+      "nomEstado": "Nom Estado",
+      "nomUsina": "Nom Usina",
+      "idTipousina": "Id Tipousina",
+      "nomTipocombustivel": "Nom Tipocombustivel",
+      "idOns": "Id Ons",
+      "ceg": "Ceg",
+      "dinInstante": "Din Instante",
+      "valPotenciainstalada": "Val Potenciainstalada",
+      "valDispoperacional": "Val Dispoperacional",
+      "valDispsincronizada": "Val Dispsincronizada"
+    }
+  }
+}

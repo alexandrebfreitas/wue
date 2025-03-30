@@ -1,0 +1,367 @@
+<div>
+  <h2 id="page-heading" data-cy="OnsIndicadoresDesempenhoFuncoesGeracaoUnidadeGeradoraEmBaseAnualHeading">
+    <span jhiTranslate="wattsUpEnergyApp.onsIndicadoresDesempenhoFuncoesGeracaoUnidadeGeradoraEmBaseAnual.home.title"
+      >Ons Indicadores Desempenho Funcoes Geracao Unidade Geradora Em Base Anuals</span
+    >
+
+    <div class="d-flex justify-content-end">
+      <button class="btn btn-info me-2" (click)="load()" [disabled]="isLoading">
+        <fa-icon icon="sync" [animation]="isLoading ? 'spin' : undefined"></fa-icon>
+        <span jhiTranslate="wattsUpEnergyApp.onsIndicadoresDesempenhoFuncoesGeracaoUnidadeGeradoraEmBaseAnual.home.refreshListLabel"
+          >Atualizar lista</span
+        >
+      </button>
+
+      <button
+        id="jh-create-entity"
+        data-cy="entityCreateButton"
+        class="btn btn-primary jh-create-entity create-ons-indicadores-desempenho-funcoes-geracao-unidade-geradora-em-base-anual"
+        [routerLink]="['/ons-indicadores-desempenho-funcoes-geracao-unidade-geradora-em-base-anual/new']"
+      >
+        <fa-icon icon="plus"></fa-icon>
+        <span
+          class="hidden-sm-down"
+          jhiTranslate="wattsUpEnergyApp.onsIndicadoresDesempenhoFuncoesGeracaoUnidadeGeradoraEmBaseAnual.home.createLabel"
+          >Criar novo Ons Indicadores Desempenho Funcoes Geracao Unidade Geradora Em Base Anual</span
+        >
+      </button>
+    </div>
+  </h2>
+
+  <jhi-alert-error></jhi-alert-error>
+
+  <jhi-alert></jhi-alert>
+
+  <form name="searchForm" class="row row-cols-sm-auto align-items-center">
+    <div class="col-sm-12">
+      <div class="input-group w-100 mt-3">
+        <label
+          class="visually-hidden"
+          for="currentSearch"
+          jhiTranslate="wattsUpEnergyApp.onsIndicadoresDesempenhoFuncoesGeracaoUnidadeGeradoraEmBaseAnual.home.search"
+          >Pesquisar por Ons Indicadores Desempenho Funcoes Geracao Unidade Geradora Em Base Anual</label
+        >
+        <input
+          type="text"
+          class="form-control"
+          [(ngModel)]="currentSearch"
+          id="currentSearch"
+          name="currentSearch"
+          placeholder="{{ 'wattsUpEnergyApp.onsIndicadoresDesempenhoFuncoesGeracaoUnidadeGeradoraEmBaseAnual.home.search' | translate }}"
+        />
+
+        <button class="btn btn-info" (click)="search(currentSearch)">
+          <fa-icon icon="search"></fa-icon>
+        </button>
+
+        @if (currentSearch) {
+          <button class="btn btn-danger" (click)="search('')">
+            <fa-icon icon="trash-alt"></fa-icon>
+          </button>
+        }
+      </div>
+    </div>
+  </form>
+
+  @if (onsIndicadoresDesempenhoFuncoesGeracaoUnidadeGeradoraEmBaseAnuals().length === 0) {
+    <div class="alert alert-warning" id="no-result">
+      <span jhiTranslate="wattsUpEnergyApp.onsIndicadoresDesempenhoFuncoesGeracaoUnidadeGeradoraEmBaseAnual.home.notFound"
+        >Nenhum Ons Indicadores Desempenho Funcoes Geracao Unidade Geradora Em Base Anual encontrado</span
+      >
+    </div>
+  } @else {
+    <div class="table-responsive table-entities" id="entities">
+      <table class="table table-striped" aria-describedby="page-heading">
+        <thead>
+          <tr jhiSort [(sortState)]="sortState" (sortChange)="navigateToWithComponentValues($event)">
+            <th scope="col" jhiSortBy="id">
+              <div class="d-flex">
+                <span jhiTranslate="global.field.id">Código</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="idSubsistema">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsIndicadoresDesempenhoFuncoesGeracaoUnidadeGeradoraEmBaseAnual.idSubsistema"
+                  >Id Subsistema</span
+                >
+                @if (!currentSearch) {
+                  <fa-icon class="p-1" icon="sort"></fa-icon>
+                }
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="nomSubsistema">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsIndicadoresDesempenhoFuncoesGeracaoUnidadeGeradoraEmBaseAnual.nomSubsistema"
+                  >Nom Subsistema</span
+                >
+                @if (!currentSearch) {
+                  <fa-icon class="p-1" icon="sort"></fa-icon>
+                }
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="idEstado">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsIndicadoresDesempenhoFuncoesGeracaoUnidadeGeradoraEmBaseAnual.idEstado"
+                  >Id Estado</span
+                >
+                @if (!currentSearch) {
+                  <fa-icon class="p-1" icon="sort"></fa-icon>
+                }
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="nomEstado">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsIndicadoresDesempenhoFuncoesGeracaoUnidadeGeradoraEmBaseAnual.nomEstado"
+                  >Nom Estado</span
+                >
+                @if (!currentSearch) {
+                  <fa-icon class="p-1" icon="sort"></fa-icon>
+                }
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="nomModalidadeoperacao">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsIndicadoresDesempenhoFuncoesGeracaoUnidadeGeradoraEmBaseAnual.nomModalidadeoperacao"
+                  >Nom Modalidadeoperacao</span
+                >
+                @if (!currentSearch) {
+                  <fa-icon class="p-1" icon="sort"></fa-icon>
+                }
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="nomAgenteproprietario">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsIndicadoresDesempenhoFuncoesGeracaoUnidadeGeradoraEmBaseAnual.nomAgenteproprietario"
+                  >Nom Agenteproprietario</span
+                >
+                @if (!currentSearch) {
+                  <fa-icon class="p-1" icon="sort"></fa-icon>
+                }
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="idTipousina">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsIndicadoresDesempenhoFuncoesGeracaoUnidadeGeradoraEmBaseAnual.idTipousina"
+                  >Id Tipousina</span
+                >
+                @if (!currentSearch) {
+                  <fa-icon class="p-1" icon="sort"></fa-icon>
+                }
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="idUsina">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsIndicadoresDesempenhoFuncoesGeracaoUnidadeGeradoraEmBaseAnual.idUsina"
+                  >Id Usina</span
+                >
+                @if (!currentSearch) {
+                  <fa-icon class="p-1" icon="sort"></fa-icon>
+                }
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="nomUsina">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsIndicadoresDesempenhoFuncoesGeracaoUnidadeGeradoraEmBaseAnual.nomUsina"
+                  >Nom Usina</span
+                >
+                @if (!currentSearch) {
+                  <fa-icon class="p-1" icon="sort"></fa-icon>
+                }
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="ceg">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsIndicadoresDesempenhoFuncoesGeracaoUnidadeGeradoraEmBaseAnual.ceg">Ceg</span>
+                @if (!currentSearch) {
+                  <fa-icon class="p-1" icon="sort"></fa-icon>
+                }
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="codEquipamento">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsIndicadoresDesempenhoFuncoesGeracaoUnidadeGeradoraEmBaseAnual.codEquipamento"
+                  >Cod Equipamento</span
+                >
+                @if (!currentSearch) {
+                  <fa-icon class="p-1" icon="sort"></fa-icon>
+                }
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="numUnidadegeradora">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsIndicadoresDesempenhoFuncoesGeracaoUnidadeGeradoraEmBaseAnual.numUnidadegeradora"
+                  >Num Unidadegeradora</span
+                >
+                @if (!currentSearch) {
+                  <fa-icon class="p-1" icon="sort"></fa-icon>
+                }
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="nomUnidadegeradora">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsIndicadoresDesempenhoFuncoesGeracaoUnidadeGeradoraEmBaseAnual.nomUnidadegeradora"
+                  >Nom Unidadegeradora</span
+                >
+                @if (!currentSearch) {
+                  <fa-icon class="p-1" icon="sort"></fa-icon>
+                }
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="valPotencia">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsIndicadoresDesempenhoFuncoesGeracaoUnidadeGeradoraEmBaseAnual.valPotencia"
+                  >Val Potencia</span
+                >
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="dinAno">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsIndicadoresDesempenhoFuncoesGeracaoUnidadeGeradoraEmBaseAnual.dinAno">Din Ano</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="valDispf">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsIndicadoresDesempenhoFuncoesGeracaoUnidadeGeradoraEmBaseAnual.valDispf"
+                  >Val Dispf</span
+                >
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="valIndisppf">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsIndicadoresDesempenhoFuncoesGeracaoUnidadeGeradoraEmBaseAnual.valIndisppf"
+                  >Val Indisppf</span
+                >
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="valIndispff">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsIndicadoresDesempenhoFuncoesGeracaoUnidadeGeradoraEmBaseAnual.valIndispff"
+                  >Val Indispff</span
+                >
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="valDmdff">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsIndicadoresDesempenhoFuncoesGeracaoUnidadeGeradoraEmBaseAnual.valDmdff"
+                  >Val Dmdff</span
+                >
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="valFdff">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsIndicadoresDesempenhoFuncoesGeracaoUnidadeGeradoraEmBaseAnual.valFdff"
+                  >Val Fdff</span
+                >
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="valTdff">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsIndicadoresDesempenhoFuncoesGeracaoUnidadeGeradoraEmBaseAnual.valTdff"
+                  >Val Tdff</span
+                >
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (
+            onsIndicadoresDesempenhoFuncoesGeracaoUnidadeGeradoraEmBaseAnual of onsIndicadoresDesempenhoFuncoesGeracaoUnidadeGeradoraEmBaseAnuals();
+            track trackId(onsIndicadoresDesempenhoFuncoesGeracaoUnidadeGeradoraEmBaseAnual)
+          ) {
+            <tr data-cy="entityTable">
+              <td>
+                <a
+                  [routerLink]="[
+                    '/ons-indicadores-desempenho-funcoes-geracao-unidade-geradora-em-base-anual',
+                    onsIndicadoresDesempenhoFuncoesGeracaoUnidadeGeradoraEmBaseAnual.id,
+                    'view',
+                  ]"
+                  >{{ onsIndicadoresDesempenhoFuncoesGeracaoUnidadeGeradoraEmBaseAnual.id }}</a
+                >
+              </td>
+              <td>{{ onsIndicadoresDesempenhoFuncoesGeracaoUnidadeGeradoraEmBaseAnual.idSubsistema }}</td>
+              <td>{{ onsIndicadoresDesempenhoFuncoesGeracaoUnidadeGeradoraEmBaseAnual.nomSubsistema }}</td>
+              <td>{{ onsIndicadoresDesempenhoFuncoesGeracaoUnidadeGeradoraEmBaseAnual.idEstado }}</td>
+              <td>{{ onsIndicadoresDesempenhoFuncoesGeracaoUnidadeGeradoraEmBaseAnual.nomEstado }}</td>
+              <td>{{ onsIndicadoresDesempenhoFuncoesGeracaoUnidadeGeradoraEmBaseAnual.nomModalidadeoperacao }}</td>
+              <td>{{ onsIndicadoresDesempenhoFuncoesGeracaoUnidadeGeradoraEmBaseAnual.nomAgenteproprietario }}</td>
+              <td>{{ onsIndicadoresDesempenhoFuncoesGeracaoUnidadeGeradoraEmBaseAnual.idTipousina }}</td>
+              <td>{{ onsIndicadoresDesempenhoFuncoesGeracaoUnidadeGeradoraEmBaseAnual.idUsina }}</td>
+              <td>{{ onsIndicadoresDesempenhoFuncoesGeracaoUnidadeGeradoraEmBaseAnual.nomUsina }}</td>
+              <td>{{ onsIndicadoresDesempenhoFuncoesGeracaoUnidadeGeradoraEmBaseAnual.ceg }}</td>
+              <td>{{ onsIndicadoresDesempenhoFuncoesGeracaoUnidadeGeradoraEmBaseAnual.codEquipamento }}</td>
+              <td>{{ onsIndicadoresDesempenhoFuncoesGeracaoUnidadeGeradoraEmBaseAnual.numUnidadegeradora }}</td>
+              <td>{{ onsIndicadoresDesempenhoFuncoesGeracaoUnidadeGeradoraEmBaseAnual.nomUnidadegeradora }}</td>
+              <td>{{ onsIndicadoresDesempenhoFuncoesGeracaoUnidadeGeradoraEmBaseAnual.valPotencia }}</td>
+              <td>{{ onsIndicadoresDesempenhoFuncoesGeracaoUnidadeGeradoraEmBaseAnual.dinAno }}</td>
+              <td>{{ onsIndicadoresDesempenhoFuncoesGeracaoUnidadeGeradoraEmBaseAnual.valDispf }}</td>
+              <td>{{ onsIndicadoresDesempenhoFuncoesGeracaoUnidadeGeradoraEmBaseAnual.valIndisppf }}</td>
+              <td>{{ onsIndicadoresDesempenhoFuncoesGeracaoUnidadeGeradoraEmBaseAnual.valIndispff }}</td>
+              <td>{{ onsIndicadoresDesempenhoFuncoesGeracaoUnidadeGeradoraEmBaseAnual.valDmdff }}</td>
+              <td>{{ onsIndicadoresDesempenhoFuncoesGeracaoUnidadeGeradoraEmBaseAnual.valFdff }}</td>
+              <td>{{ onsIndicadoresDesempenhoFuncoesGeracaoUnidadeGeradoraEmBaseAnual.valTdff }}</td>
+              <td class="text-end">
+                <div class="btn-group">
+                  <a
+                    [routerLink]="[
+                      '/ons-indicadores-desempenho-funcoes-geracao-unidade-geradora-em-base-anual',
+                      onsIndicadoresDesempenhoFuncoesGeracaoUnidadeGeradoraEmBaseAnual.id,
+                      'view',
+                    ]"
+                    class="btn btn-info btn-sm"
+                    data-cy="entityDetailsButton"
+                  >
+                    <fa-icon icon="eye"></fa-icon>
+                    <span class="d-none d-md-inline" jhiTranslate="entity.action.view">Visualizar</span>
+                  </a>
+
+                  <a
+                    [routerLink]="[
+                      '/ons-indicadores-desempenho-funcoes-geracao-unidade-geradora-em-base-anual',
+                      onsIndicadoresDesempenhoFuncoesGeracaoUnidadeGeradoraEmBaseAnual.id,
+                      'edit',
+                    ]"
+                    class="btn btn-primary btn-sm"
+                    data-cy="entityEditButton"
+                  >
+                    <fa-icon icon="pencil-alt"></fa-icon>
+                    <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Editar</span>
+                  </a>
+
+                  <button
+                    type="submit"
+                    (click)="delete(onsIndicadoresDesempenhoFuncoesGeracaoUnidadeGeradoraEmBaseAnual)"
+                    class="btn btn-danger btn-sm"
+                    data-cy="entityDeleteButton"
+                  >
+                    <fa-icon icon="times"></fa-icon>
+                    <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Excluir</span>
+                  </button>
+                </div>
+              </td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+  }
+</div>

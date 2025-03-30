@@ -1,0 +1,146 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    @if (onsFatorCapacidadeGeracaoEolicaESolar(); as onsFatorCapacidadeGeracaoEolicaESolarRef) {
+      <div>
+        <h2 data-cy="onsFatorCapacidadeGeracaoEolicaESolarDetailsHeading">
+          <span jhiTranslate="wattsUpEnergyApp.onsFatorCapacidadeGeracaoEolicaESolar.detail.title"
+            >Ons Fator Capacidade Geracao Eolica E Solar</span
+          >
+        </h2>
+
+        <hr />
+
+        <jhi-alert-error></jhi-alert-error>
+
+        <jhi-alert></jhi-alert>
+
+        <dl class="row-md jh-entity-details">
+          <dt><span jhiTranslate="global.field.id">Código</span></dt>
+          <dd>
+            <span>{{ onsFatorCapacidadeGeracaoEolicaESolarRef.id }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsFatorCapacidadeGeracaoEolicaESolar.idSubsistema">Id Subsistema</span></dt>
+          <dd>
+            <span>{{ onsFatorCapacidadeGeracaoEolicaESolarRef.idSubsistema }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsFatorCapacidadeGeracaoEolicaESolar.nomSubsistema">Nom Subsistema</span></dt>
+          <dd>
+            <span>{{ onsFatorCapacidadeGeracaoEolicaESolarRef.nomSubsistema }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsFatorCapacidadeGeracaoEolicaESolar.idEstado">Id Estado</span></dt>
+          <dd>
+            <span>{{ onsFatorCapacidadeGeracaoEolicaESolarRef.idEstado }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsFatorCapacidadeGeracaoEolicaESolar.nomEstado">Nom Estado</span></dt>
+          <dd>
+            <span>{{ onsFatorCapacidadeGeracaoEolicaESolarRef.nomEstado }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsFatorCapacidadeGeracaoEolicaESolar.codPontoconexao">Cod Pontoconexao</span></dt>
+          <dd>
+            <span>{{ onsFatorCapacidadeGeracaoEolicaESolarRef.codPontoconexao }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsFatorCapacidadeGeracaoEolicaESolar.nomPontoconexao">Nom Pontoconexao</span></dt>
+          <dd>
+            <span>{{ onsFatorCapacidadeGeracaoEolicaESolarRef.nomPontoconexao }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsFatorCapacidadeGeracaoEolicaESolar.nomLocalizacao">Nom Localizacao</span></dt>
+          <dd>
+            <span>{{ onsFatorCapacidadeGeracaoEolicaESolarRef.nomLocalizacao }}</span>
+          </dd>
+          <dt>
+            <span jhiTranslate="wattsUpEnergyApp.onsFatorCapacidadeGeracaoEolicaESolar.valLatitudesecoletora">Val Latitudesecoletora</span>
+          </dt>
+          <dd>
+            <span>{{ onsFatorCapacidadeGeracaoEolicaESolarRef.valLatitudesecoletora }}</span>
+          </dd>
+          <dt>
+            <span jhiTranslate="wattsUpEnergyApp.onsFatorCapacidadeGeracaoEolicaESolar.valLongitudesecoletora"
+              >Val Longitudesecoletora</span
+            >
+          </dt>
+          <dd>
+            <span>{{ onsFatorCapacidadeGeracaoEolicaESolarRef.valLongitudesecoletora }}</span>
+          </dd>
+          <dt>
+            <span jhiTranslate="wattsUpEnergyApp.onsFatorCapacidadeGeracaoEolicaESolar.valLatitudepontoconexao"
+              >Val Latitudepontoconexao</span
+            >
+          </dt>
+          <dd>
+            <span>{{ onsFatorCapacidadeGeracaoEolicaESolarRef.valLatitudepontoconexao }}</span>
+          </dd>
+          <dt>
+            <span jhiTranslate="wattsUpEnergyApp.onsFatorCapacidadeGeracaoEolicaESolar.valLongitudepontoconexao"
+              >Val Longitudepontoconexao</span
+            >
+          </dt>
+          <dd>
+            <span>{{ onsFatorCapacidadeGeracaoEolicaESolarRef.valLongitudepontoconexao }}</span>
+          </dd>
+          <dt>
+            <span jhiTranslate="wattsUpEnergyApp.onsFatorCapacidadeGeracaoEolicaESolar.nomModalidadeoperacao">Nom Modalidadeoperacao</span>
+          </dt>
+          <dd>
+            <span>{{ onsFatorCapacidadeGeracaoEolicaESolarRef.nomModalidadeoperacao }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsFatorCapacidadeGeracaoEolicaESolar.nomTipousina">Nom Tipousina</span></dt>
+          <dd>
+            <span>{{ onsFatorCapacidadeGeracaoEolicaESolarRef.nomTipousina }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsFatorCapacidadeGeracaoEolicaESolar.nomUsinaConjunto">Nom Usina Conjunto</span></dt>
+          <dd>
+            <span>{{ onsFatorCapacidadeGeracaoEolicaESolarRef.nomUsinaConjunto }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsFatorCapacidadeGeracaoEolicaESolar.dinInstante">Din Instante</span></dt>
+          <dd>
+            <span>{{ onsFatorCapacidadeGeracaoEolicaESolarRef.dinInstante | formatMediumDate }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsFatorCapacidadeGeracaoEolicaESolar.idOns">Id Ons</span></dt>
+          <dd>
+            <span>{{ onsFatorCapacidadeGeracaoEolicaESolarRef.idOns }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsFatorCapacidadeGeracaoEolicaESolar.ceg">Ceg</span></dt>
+          <dd>
+            <span>{{ onsFatorCapacidadeGeracaoEolicaESolarRef.ceg }}</span>
+          </dd>
+          <dt>
+            <span jhiTranslate="wattsUpEnergyApp.onsFatorCapacidadeGeracaoEolicaESolar.valGeracaoprogramada">Val Geracaoprogramada</span>
+          </dt>
+          <dd>
+            <span>{{ onsFatorCapacidadeGeracaoEolicaESolarRef.valGeracaoprogramada }}</span>
+          </dd>
+          <dt>
+            <span jhiTranslate="wattsUpEnergyApp.onsFatorCapacidadeGeracaoEolicaESolar.valGeracaoverificada">Val Geracaoverificada</span>
+          </dt>
+          <dd>
+            <span>{{ onsFatorCapacidadeGeracaoEolicaESolarRef.valGeracaoverificada }}</span>
+          </dd>
+          <dt>
+            <span jhiTranslate="wattsUpEnergyApp.onsFatorCapacidadeGeracaoEolicaESolar.valCapacidadeinstalada"
+              >Val Capacidadeinstalada</span
+            >
+          </dt>
+          <dd>
+            <span>{{ onsFatorCapacidadeGeracaoEolicaESolarRef.valCapacidadeinstalada }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsFatorCapacidadeGeracaoEolicaESolar.valFatorcapacidade">Val Fatorcapacidade</span></dt>
+          <dd>
+            <span>{{ onsFatorCapacidadeGeracaoEolicaESolarRef.valFatorcapacidade }}</span>
+          </dd>
+        </dl>
+
+        <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+          <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Voltar</span>
+        </button>
+
+        <button
+          type="button"
+          [routerLink]="['/ons-fator-capacidade-geracao-eolica-e-solar', onsFatorCapacidadeGeracaoEolicaESolarRef.id, 'edit']"
+          class="btn btn-primary"
+        >
+          <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Editar</span>
+        </button>
+      </div>
+    }
+  </div>
+</div>

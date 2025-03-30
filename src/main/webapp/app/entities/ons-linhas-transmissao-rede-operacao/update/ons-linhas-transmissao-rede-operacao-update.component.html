@@ -1,0 +1,611 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <form name="editForm" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+      <h2
+        id="jhi-ons-linhas-transmissao-rede-operacao-heading"
+        data-cy="OnsLinhasTransmissaoRedeOperacaoCreateUpdateHeading"
+        jhiTranslate="wattsUpEnergyApp.onsLinhasTransmissaoRedeOperacao.home.createOrEditLabel"
+      >
+        Criar ou editar Ons Linhas Transmissao Rede Operacao
+      </h2>
+
+      <div>
+        <jhi-alert-error></jhi-alert-error>
+
+        @if (editForm.controls.id.value !== null) {
+          <div class="mb-3">
+            <label class="form-label" for="field_id" jhiTranslate="wattsUpEnergyApp.onsLinhasTransmissaoRedeOperacao.id">ID</label>
+            <input type="number" class="form-control" name="id" id="field_id" data-cy="id" formControlName="id" [readonly]="true" />
+          </div>
+        }
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_idSubsistemaTerminalde"
+            jhiTranslate="wattsUpEnergyApp.onsLinhasTransmissaoRedeOperacao.idSubsistemaTerminalde"
+            >Id Subsistema Terminalde</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="idSubsistemaTerminalde"
+            id="field_idSubsistemaTerminalde"
+            data-cy="idSubsistemaTerminalde"
+            formControlName="idSubsistemaTerminalde"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_nomSubsistemaTerminalde"
+            jhiTranslate="wattsUpEnergyApp.onsLinhasTransmissaoRedeOperacao.nomSubsistemaTerminalde"
+            >Nom Subsistema Terminalde</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="nomSubsistemaTerminalde"
+            id="field_nomSubsistemaTerminalde"
+            data-cy="nomSubsistemaTerminalde"
+            formControlName="nomSubsistemaTerminalde"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_idSubsistemaTerminalpara"
+            jhiTranslate="wattsUpEnergyApp.onsLinhasTransmissaoRedeOperacao.idSubsistemaTerminalpara"
+            >Id Subsistema Terminalpara</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="idSubsistemaTerminalpara"
+            id="field_idSubsistemaTerminalpara"
+            data-cy="idSubsistemaTerminalpara"
+            formControlName="idSubsistemaTerminalpara"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_nomSubsistemaTerminalpara"
+            jhiTranslate="wattsUpEnergyApp.onsLinhasTransmissaoRedeOperacao.nomSubsistemaTerminalpara"
+            >Nom Subsistema Terminalpara</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="nomSubsistemaTerminalpara"
+            id="field_nomSubsistemaTerminalpara"
+            data-cy="nomSubsistemaTerminalpara"
+            formControlName="nomSubsistemaTerminalpara"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_idEstadoTerminalde"
+            jhiTranslate="wattsUpEnergyApp.onsLinhasTransmissaoRedeOperacao.idEstadoTerminalde"
+            >Id Estado Terminalde</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="idEstadoTerminalde"
+            id="field_idEstadoTerminalde"
+            data-cy="idEstadoTerminalde"
+            formControlName="idEstadoTerminalde"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_nomEstadoDe" jhiTranslate="wattsUpEnergyApp.onsLinhasTransmissaoRedeOperacao.nomEstadoDe"
+            >Nom Estado De</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="nomEstadoDe"
+            id="field_nomEstadoDe"
+            data-cy="nomEstadoDe"
+            formControlName="nomEstadoDe"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_idEstadoTerminalpara"
+            jhiTranslate="wattsUpEnergyApp.onsLinhasTransmissaoRedeOperacao.idEstadoTerminalpara"
+            >Id Estado Terminalpara</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="idEstadoTerminalpara"
+            id="field_idEstadoTerminalpara"
+            data-cy="idEstadoTerminalpara"
+            formControlName="idEstadoTerminalpara"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_nomEstadoPara" jhiTranslate="wattsUpEnergyApp.onsLinhasTransmissaoRedeOperacao.nomEstadoPara"
+            >Nom Estado Para</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="nomEstadoPara"
+            id="field_nomEstadoPara"
+            data-cy="nomEstadoPara"
+            formControlName="nomEstadoPara"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_nomSubestacaoDe"
+            jhiTranslate="wattsUpEnergyApp.onsLinhasTransmissaoRedeOperacao.nomSubestacaoDe"
+            >Nom Subestacao De</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="nomSubestacaoDe"
+            id="field_nomSubestacaoDe"
+            data-cy="nomSubestacaoDe"
+            formControlName="nomSubestacaoDe"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_nomSubestacaoPara"
+            jhiTranslate="wattsUpEnergyApp.onsLinhasTransmissaoRedeOperacao.nomSubestacaoPara"
+            >Nom Subestacao Para</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="nomSubestacaoPara"
+            id="field_nomSubestacaoPara"
+            data-cy="nomSubestacaoPara"
+            formControlName="nomSubestacaoPara"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_valNiveltensaoKv"
+            jhiTranslate="wattsUpEnergyApp.onsLinhasTransmissaoRedeOperacao.valNiveltensaoKv"
+            >Val Niveltensao Kv</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="valNiveltensaoKv"
+            id="field_valNiveltensaoKv"
+            data-cy="valNiveltensaoKv"
+            formControlName="valNiveltensaoKv"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_nomTipoderede" jhiTranslate="wattsUpEnergyApp.onsLinhasTransmissaoRedeOperacao.nomTipoderede"
+            >Nom Tipoderede</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="nomTipoderede"
+            id="field_nomTipoderede"
+            data-cy="nomTipoderede"
+            formControlName="nomTipoderede"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_nomTipolinha" jhiTranslate="wattsUpEnergyApp.onsLinhasTransmissaoRedeOperacao.nomTipolinha"
+            >Nom Tipolinha</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="nomTipolinha"
+            id="field_nomTipolinha"
+            data-cy="nomTipolinha"
+            formControlName="nomTipolinha"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_nomAgenteproprietario"
+            jhiTranslate="wattsUpEnergyApp.onsLinhasTransmissaoRedeOperacao.nomAgenteproprietario"
+            >Nom Agenteproprietario</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="nomAgenteproprietario"
+            id="field_nomAgenteproprietario"
+            data-cy="nomAgenteproprietario"
+            formControlName="nomAgenteproprietario"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_nomLinhadetransmissao"
+            jhiTranslate="wattsUpEnergyApp.onsLinhasTransmissaoRedeOperacao.nomLinhadetransmissao"
+            >Nom Linhadetransmissao</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="nomLinhadetransmissao"
+            id="field_nomLinhadetransmissao"
+            data-cy="nomLinhadetransmissao"
+            formControlName="nomLinhadetransmissao"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_codEquipamento"
+            jhiTranslate="wattsUpEnergyApp.onsLinhasTransmissaoRedeOperacao.codEquipamento"
+            >Cod Equipamento</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="codEquipamento"
+            id="field_codEquipamento"
+            data-cy="codEquipamento"
+            formControlName="codEquipamento"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_datEntradaoperacao"
+            jhiTranslate="wattsUpEnergyApp.onsLinhasTransmissaoRedeOperacao.datEntradaoperacao"
+            >Dat Entradaoperacao</label
+          >
+          <div class="input-group">
+            <input
+              id="field_datEntradaoperacao"
+              data-cy="datEntradaoperacao"
+              type="text"
+              class="form-control"
+              name="datEntradaoperacao"
+              ngbDatepicker
+              #datEntradaoperacaoDp="ngbDatepicker"
+              formControlName="datEntradaoperacao"
+            />
+            <button type="button" class="btn btn-secondary" (click)="datEntradaoperacaoDp.toggle()">
+              <fa-icon icon="calendar-alt"></fa-icon>
+            </button>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_datDesativacao"
+            jhiTranslate="wattsUpEnergyApp.onsLinhasTransmissaoRedeOperacao.datDesativacao"
+            >Dat Desativacao</label
+          >
+          <div class="input-group">
+            <input
+              id="field_datDesativacao"
+              data-cy="datDesativacao"
+              type="text"
+              class="form-control"
+              name="datDesativacao"
+              ngbDatepicker
+              #datDesativacaoDp="ngbDatepicker"
+              formControlName="datDesativacao"
+            />
+            <button type="button" class="btn btn-secondary" (click)="datDesativacaoDp.toggle()">
+              <fa-icon icon="calendar-alt"></fa-icon>
+            </button>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_datPrevista" jhiTranslate="wattsUpEnergyApp.onsLinhasTransmissaoRedeOperacao.datPrevista"
+            >Dat Prevista</label
+          >
+          <div class="input-group">
+            <input
+              id="field_datPrevista"
+              data-cy="datPrevista"
+              type="text"
+              class="form-control"
+              name="datPrevista"
+              ngbDatepicker
+              #datPrevistaDp="ngbDatepicker"
+              formControlName="datPrevista"
+            />
+            <button type="button" class="btn btn-secondary" (click)="datPrevistaDp.toggle()">
+              <fa-icon icon="calendar-alt"></fa-icon>
+            </button>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_valComprimento"
+            jhiTranslate="wattsUpEnergyApp.onsLinhasTransmissaoRedeOperacao.valComprimento"
+            >Val Comprimento</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="valComprimento"
+            id="field_valComprimento"
+            data-cy="valComprimento"
+            formControlName="valComprimento"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_valResistencia"
+            jhiTranslate="wattsUpEnergyApp.onsLinhasTransmissaoRedeOperacao.valResistencia"
+            >Val Resistencia</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="valResistencia"
+            id="field_valResistencia"
+            data-cy="valResistencia"
+            formControlName="valResistencia"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_valReatancia" jhiTranslate="wattsUpEnergyApp.onsLinhasTransmissaoRedeOperacao.valReatancia"
+            >Val Reatancia</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="valReatancia"
+            id="field_valReatancia"
+            data-cy="valReatancia"
+            formControlName="valReatancia"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_valShunt" jhiTranslate="wattsUpEnergyApp.onsLinhasTransmissaoRedeOperacao.valShunt"
+            >Val Shunt</label
+          >
+          <input type="number" class="form-control" name="valShunt" id="field_valShunt" data-cy="valShunt" formControlName="valShunt" />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_valCapacoperlongasemlimit"
+            jhiTranslate="wattsUpEnergyApp.onsLinhasTransmissaoRedeOperacao.valCapacoperlongasemlimit"
+            >Val Capacoperlongasemlimit</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="valCapacoperlongasemlimit"
+            id="field_valCapacoperlongasemlimit"
+            data-cy="valCapacoperlongasemlimit"
+            formControlName="valCapacoperlongasemlimit"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_valCapacoperlongacomlimit"
+            jhiTranslate="wattsUpEnergyApp.onsLinhasTransmissaoRedeOperacao.valCapacoperlongacomlimit"
+            >Val Capacoperlongacomlimit</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="valCapacoperlongacomlimit"
+            id="field_valCapacoperlongacomlimit"
+            data-cy="valCapacoperlongacomlimit"
+            formControlName="valCapacoperlongacomlimit"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_valCapacopercurtasemlimit"
+            jhiTranslate="wattsUpEnergyApp.onsLinhasTransmissaoRedeOperacao.valCapacopercurtasemlimit"
+            >Val Capacopercurtasemlimit</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="valCapacopercurtasemlimit"
+            id="field_valCapacopercurtasemlimit"
+            data-cy="valCapacopercurtasemlimit"
+            formControlName="valCapacopercurtasemlimit"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_valCapacopercurtacomlimit"
+            jhiTranslate="wattsUpEnergyApp.onsLinhasTransmissaoRedeOperacao.valCapacopercurtacomlimit"
+            >Val Capacopercurtacomlimit</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="valCapacopercurtacomlimit"
+            id="field_valCapacopercurtacomlimit"
+            data-cy="valCapacopercurtacomlimit"
+            formControlName="valCapacopercurtacomlimit"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_valCapacidadeoperveraodialonga"
+            jhiTranslate="wattsUpEnergyApp.onsLinhasTransmissaoRedeOperacao.valCapacidadeoperveraodialonga"
+            >Val Capacidadeoperveraodialonga</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="valCapacidadeoperveraodialonga"
+            id="field_valCapacidadeoperveraodialonga"
+            data-cy="valCapacidadeoperveraodialonga"
+            formControlName="valCapacidadeoperveraodialonga"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_valCapacoperinvernodialonga"
+            jhiTranslate="wattsUpEnergyApp.onsLinhasTransmissaoRedeOperacao.valCapacoperinvernodialonga"
+            >Val Capacoperinvernodialonga</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="valCapacoperinvernodialonga"
+            id="field_valCapacoperinvernodialonga"
+            data-cy="valCapacoperinvernodialonga"
+            formControlName="valCapacoperinvernodialonga"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_valCapacoperinvernonoitelonga"
+            jhiTranslate="wattsUpEnergyApp.onsLinhasTransmissaoRedeOperacao.valCapacoperinvernonoitelonga"
+            >Val Capacoperinvernonoitelonga</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="valCapacoperinvernonoitelonga"
+            id="field_valCapacoperinvernonoitelonga"
+            data-cy="valCapacoperinvernonoitelonga"
+            formControlName="valCapacoperinvernonoitelonga"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_valCapacoperveradiacurta"
+            jhiTranslate="wattsUpEnergyApp.onsLinhasTransmissaoRedeOperacao.valCapacoperveradiacurta"
+            >Val Capacoperveradiacurta</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="valCapacoperveradiacurta"
+            id="field_valCapacoperveradiacurta"
+            data-cy="valCapacoperveradiacurta"
+            formControlName="valCapacoperveradiacurta"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_valCapacoperveraonoitecurta"
+            jhiTranslate="wattsUpEnergyApp.onsLinhasTransmissaoRedeOperacao.valCapacoperveraonoitecurta"
+            >Val Capacoperveraonoitecurta</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="valCapacoperveraonoitecurta"
+            id="field_valCapacoperveraonoitecurta"
+            data-cy="valCapacoperveraonoitecurta"
+            formControlName="valCapacoperveraonoitecurta"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_valCapacoperinvernodiacurta"
+            jhiTranslate="wattsUpEnergyApp.onsLinhasTransmissaoRedeOperacao.valCapacoperinvernodiacurta"
+            >Val Capacoperinvernodiacurta</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="valCapacoperinvernodiacurta"
+            id="field_valCapacoperinvernodiacurta"
+            data-cy="valCapacoperinvernodiacurta"
+            formControlName="valCapacoperinvernodiacurta"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_valCapacoperinvernonoitecurta"
+            jhiTranslate="wattsUpEnergyApp.onsLinhasTransmissaoRedeOperacao.valCapacoperinvernonoitecurta"
+            >Val Capacoperinvernonoitecurta</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="valCapacoperinvernonoitecurta"
+            id="field_valCapacoperinvernonoitecurta"
+            data-cy="valCapacoperinvernonoitecurta"
+            formControlName="valCapacoperinvernonoitecurta"
+          />
+        </div>
+      </div>
+
+      <div>
+        <button type="button" id="cancel-save" data-cy="entityCreateCancelButton" class="btn btn-secondary" (click)="previousState()">
+          <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancelar</span>
+        </button>
+
+        <button
+          type="submit"
+          id="save-entity"
+          data-cy="entityCreateSaveButton"
+          [disabled]="editForm.invalid || isSaving"
+          class="btn btn-primary"
+        >
+          <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Salvar</span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

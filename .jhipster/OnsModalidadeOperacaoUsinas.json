@@ -1,0 +1,47 @@
+{
+  "annotations": {
+    "changelogDate": "20250330013647"
+  },
+  "applications": "*",
+  "entityTableName": "OnsTable10",
+  "fields": [
+    {
+      "fieldName": "nomUsina",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "ceg",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nomModalidadeoperacao",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "valPotenciaautorizada",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "sglCentrooperacao",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nomPontoconexao",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "idEstado",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nomEstado",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "stsAneel",
+      "fieldType": "String"
+    }
+  ],
+  "name": "OnsModalidadeOperacaoUsinas",
+  "relationships": []
+}

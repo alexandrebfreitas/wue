@@ -1,0 +1,272 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <form name="editForm" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+      <h2
+        id="jhi-ons-dados-restricao-operacao-constrainedoff-usinas-fotovoltaicas-heading"
+        data-cy="OnsDadosRestricaoOperacaoConstrainedoffUsinasFotovoltaicasCreateUpdateHeading"
+        jhiTranslate="wattsUpEnergyApp.onsDadosRestricaoOperacaoConstrainedoffUsinasFotovoltaicas.home.createOrEditLabel"
+      >
+        Criar ou editar Ons Dados Restricao Operacao Constrainedoff Usinas Fotovoltaicas
+      </h2>
+
+      <div>
+        <jhi-alert-error></jhi-alert-error>
+
+        @if (editForm.controls.id.value !== null) {
+          <div class="mb-3">
+            <label
+              class="form-label"
+              for="field_id"
+              jhiTranslate="wattsUpEnergyApp.onsDadosRestricaoOperacaoConstrainedoffUsinasFotovoltaicas.id"
+              >ID</label
+            >
+            <input type="number" class="form-control" name="id" id="field_id" data-cy="id" formControlName="id" [readonly]="true" />
+          </div>
+        }
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_idSubsistema"
+            jhiTranslate="wattsUpEnergyApp.onsDadosRestricaoOperacaoConstrainedoffUsinasFotovoltaicas.idSubsistema"
+            >Id Subsistema</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="idSubsistema"
+            id="field_idSubsistema"
+            data-cy="idSubsistema"
+            formControlName="idSubsistema"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_nomSubsistema"
+            jhiTranslate="wattsUpEnergyApp.onsDadosRestricaoOperacaoConstrainedoffUsinasFotovoltaicas.nomSubsistema"
+            >Nom Subsistema</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="nomSubsistema"
+            id="field_nomSubsistema"
+            data-cy="nomSubsistema"
+            formControlName="nomSubsistema"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_idEstado"
+            jhiTranslate="wattsUpEnergyApp.onsDadosRestricaoOperacaoConstrainedoffUsinasFotovoltaicas.idEstado"
+            >Id Estado</label
+          >
+          <input type="text" class="form-control" name="idEstado" id="field_idEstado" data-cy="idEstado" formControlName="idEstado" />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_nomEstado"
+            jhiTranslate="wattsUpEnergyApp.onsDadosRestricaoOperacaoConstrainedoffUsinasFotovoltaicas.nomEstado"
+            >Nom Estado</label
+          >
+          <input type="text" class="form-control" name="nomEstado" id="field_nomEstado" data-cy="nomEstado" formControlName="nomEstado" />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_nomUsina"
+            jhiTranslate="wattsUpEnergyApp.onsDadosRestricaoOperacaoConstrainedoffUsinasFotovoltaicas.nomUsina"
+            >Nom Usina</label
+          >
+          <input type="text" class="form-control" name="nomUsina" id="field_nomUsina" data-cy="nomUsina" formControlName="nomUsina" />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_idOns"
+            jhiTranslate="wattsUpEnergyApp.onsDadosRestricaoOperacaoConstrainedoffUsinasFotovoltaicas.idOns"
+            >Id Ons</label
+          >
+          <input type="text" class="form-control" name="idOns" id="field_idOns" data-cy="idOns" formControlName="idOns" />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_ceg"
+            jhiTranslate="wattsUpEnergyApp.onsDadosRestricaoOperacaoConstrainedoffUsinasFotovoltaicas.ceg"
+            >Ceg</label
+          >
+          <input type="text" class="form-control" name="ceg" id="field_ceg" data-cy="ceg" formControlName="ceg" />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_dinInstante"
+            jhiTranslate="wattsUpEnergyApp.onsDadosRestricaoOperacaoConstrainedoffUsinasFotovoltaicas.dinInstante"
+            >Din Instante</label
+          >
+          <div class="input-group">
+            <input
+              id="field_dinInstante"
+              data-cy="dinInstante"
+              type="text"
+              class="form-control"
+              name="dinInstante"
+              ngbDatepicker
+              #dinInstanteDp="ngbDatepicker"
+              formControlName="dinInstante"
+            />
+            <button type="button" class="btn btn-secondary" (click)="dinInstanteDp.toggle()">
+              <fa-icon icon="calendar-alt"></fa-icon>
+            </button>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_valGeracao"
+            jhiTranslate="wattsUpEnergyApp.onsDadosRestricaoOperacaoConstrainedoffUsinasFotovoltaicas.valGeracao"
+            >Val Geracao</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="valGeracao"
+            id="field_valGeracao"
+            data-cy="valGeracao"
+            formControlName="valGeracao"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_valGeracaolimitada"
+            jhiTranslate="wattsUpEnergyApp.onsDadosRestricaoOperacaoConstrainedoffUsinasFotovoltaicas.valGeracaolimitada"
+            >Val Geracaolimitada</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="valGeracaolimitada"
+            id="field_valGeracaolimitada"
+            data-cy="valGeracaolimitada"
+            formControlName="valGeracaolimitada"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_valDisponibilidade"
+            jhiTranslate="wattsUpEnergyApp.onsDadosRestricaoOperacaoConstrainedoffUsinasFotovoltaicas.valDisponibilidade"
+            >Val Disponibilidade</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="valDisponibilidade"
+            id="field_valDisponibilidade"
+            data-cy="valDisponibilidade"
+            formControlName="valDisponibilidade"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_valGeracaoreferencia"
+            jhiTranslate="wattsUpEnergyApp.onsDadosRestricaoOperacaoConstrainedoffUsinasFotovoltaicas.valGeracaoreferencia"
+            >Val Geracaoreferencia</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="valGeracaoreferencia"
+            id="field_valGeracaoreferencia"
+            data-cy="valGeracaoreferencia"
+            formControlName="valGeracaoreferencia"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_valGeracaoreferenciafinal"
+            jhiTranslate="wattsUpEnergyApp.onsDadosRestricaoOperacaoConstrainedoffUsinasFotovoltaicas.valGeracaoreferenciafinal"
+            >Val Geracaoreferenciafinal</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="valGeracaoreferenciafinal"
+            id="field_valGeracaoreferenciafinal"
+            data-cy="valGeracaoreferenciafinal"
+            formControlName="valGeracaoreferenciafinal"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_codRazaorestricao"
+            jhiTranslate="wattsUpEnergyApp.onsDadosRestricaoOperacaoConstrainedoffUsinasFotovoltaicas.codRazaorestricao"
+            >Cod Razaorestricao</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="codRazaorestricao"
+            id="field_codRazaorestricao"
+            data-cy="codRazaorestricao"
+            formControlName="codRazaorestricao"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_codOrigemrestricao"
+            jhiTranslate="wattsUpEnergyApp.onsDadosRestricaoOperacaoConstrainedoffUsinasFotovoltaicas.codOrigemrestricao"
+            >Cod Origemrestricao</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="codOrigemrestricao"
+            id="field_codOrigemrestricao"
+            data-cy="codOrigemrestricao"
+            formControlName="codOrigemrestricao"
+          />
+        </div>
+      </div>
+
+      <div>
+        <button type="button" id="cancel-save" data-cy="entityCreateCancelButton" class="btn btn-secondary" (click)="previousState()">
+          <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancelar</span>
+        </button>
+
+        <button
+          type="submit"
+          id="save-entity"
+          data-cy="entityCreateSaveButton"
+          [disabled]="editForm.invalid || isSaving"
+          class="btn btn-primary"
+        >
+          <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Salvar</span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

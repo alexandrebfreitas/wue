@@ -1,0 +1,48 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    @if (onsIntercambioSinComOutrosPaises(); as onsIntercambioSinComOutrosPaisesRef) {
+      <div>
+        <h2 data-cy="onsIntercambioSinComOutrosPaisesDetailsHeading">
+          <span jhiTranslate="wattsUpEnergyApp.onsIntercambioSinComOutrosPaises.detail.title">Ons Intercambio Sin Com Outros Paises</span>
+        </h2>
+
+        <hr />
+
+        <jhi-alert-error></jhi-alert-error>
+
+        <jhi-alert></jhi-alert>
+
+        <dl class="row-md jh-entity-details">
+          <dt><span jhiTranslate="global.field.id">Código</span></dt>
+          <dd>
+            <span>{{ onsIntercambioSinComOutrosPaisesRef.id }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsIntercambioSinComOutrosPaises.dinInstante">Din Instante</span></dt>
+          <dd>
+            <span>{{ onsIntercambioSinComOutrosPaisesRef.dinInstante | formatMediumDate }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsIntercambioSinComOutrosPaises.nomPaisdestino">Nom Paisdestino</span></dt>
+          <dd>
+            <span>{{ onsIntercambioSinComOutrosPaisesRef.nomPaisdestino }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsIntercambioSinComOutrosPaises.valIntercambiomwmed">Val Intercambiomwmed</span></dt>
+          <dd>
+            <span>{{ onsIntercambioSinComOutrosPaisesRef.valIntercambiomwmed }}</span>
+          </dd>
+        </dl>
+
+        <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+          <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Voltar</span>
+        </button>
+
+        <button
+          type="button"
+          [routerLink]="['/ons-intercambio-sin-com-outros-paises', onsIntercambioSinComOutrosPaisesRef.id, 'edit']"
+          class="btn btn-primary"
+        >
+          <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Editar</span>
+        </button>
+      </div>
+    }
+  </div>
+</div>

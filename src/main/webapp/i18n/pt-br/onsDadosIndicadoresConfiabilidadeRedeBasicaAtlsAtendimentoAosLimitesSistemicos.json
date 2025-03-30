@@ -1,0 +1,29 @@
+{
+  "wattsUpEnergyApp": {
+    "onsDadosIndicadoresConfiabilidadeRedeBasicaAtlsAtendimentoAosLimitesSistemicos": {
+      "home": {
+        "title": "Ons Dados Indicadores Confiabilidade Rede Basica Atls Atendimento Aos Limites Sistemicos",
+        "refreshListLabel": "Atualizar lista",
+        "createLabel": "Criar novo Ons Dados Indicadores Confiabilidade Rede Basica Atls Atendimento Aos Limites Sistemicos",
+        "createOrEditLabel": "Criar ou editar Ons Dados Indicadores Confiabilidade Rede Basica Atls Atendimento Aos Limites Sistemicos",
+        "search": "Pesquisar por Ons Dados Indicadores Confiabilidade Rede Basica Atls Atendimento Aos Limites Sistemicos",
+        "notFound": "Nenhum Ons Dados Indicadores Confiabilidade Rede Basica Atls Atendimento Aos Limites Sistemicos encontrado"
+      },
+      "created": "Um novo Ons Dados Indicadores Confiabilidade Rede Basica Atls Atendimento Aos Limites Sistemicos foi criado com o identificador {{ param }}",
+      "updated": "Um Ons Dados Indicadores Confiabilidade Rede Basica Atls Atendimento Aos Limites Sistemicos foi atualizado com o identificador {{ param }}",
+      "deleted": "Um Ons Dados Indicadores Confiabilidade Rede Basica Atls Atendimento Aos Limites Sistemicos foi excluído com o identificador {{ param }}",
+      "delete": {
+        "question": "Tem certeza de que deseja excluir Ons Dados Indicadores Confiabilidade Rede Basica Atls Atendimento Aos Limites Sistemicos {{ id }}?"
+      },
+      "detail": {
+        "title": "Ons Dados Indicadores Confiabilidade Rede Basica Atls Atendimento Aos Limites Sistemicos"
+      },
+      "id": "ID",
+      "nomFluxo": "Nom Fluxo",
+      "idPeriodicidade": "Id Periodicidade",
+      "dinReferencia": "Din Referencia",
+      "valAtls": "Val Atls",
+      "numHorasviolacao": "Num Horasviolacao"
+    }
+  }
+}

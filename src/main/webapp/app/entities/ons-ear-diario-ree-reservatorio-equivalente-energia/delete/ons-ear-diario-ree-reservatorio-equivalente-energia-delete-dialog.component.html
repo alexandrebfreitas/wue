@@ -1,0 +1,36 @@
+@if (onsEarDiarioReeReservatorioEquivalenteEnergia) {
+  <form name="deleteForm" (ngSubmit)="confirmDelete(onsEarDiarioReeReservatorioEquivalenteEnergia.id!)">
+    <div class="modal-header">
+      <h4 class="modal-title" data-cy="onsEarDiarioReeReservatorioEquivalenteEnergiaDeleteDialogHeading" jhiTranslate="entity.delete.title">
+        Confirme a exclusão
+      </h4>
+    </div>
+
+    <div class="modal-body">
+      <jhi-alert-error></jhi-alert-error>
+      <p
+        id="jhi-delete-onsEarDiarioReeReservatorioEquivalenteEnergia-heading"
+        jhiTranslate="wattsUpEnergyApp.onsEarDiarioReeReservatorioEquivalenteEnergia.delete.question"
+        [translateValues]="{ id: onsEarDiarioReeReservatorioEquivalenteEnergia.id }"
+      >
+        Tem certeza de que deseja excluir Ons Ear Diario Ree Reservatorio Equivalente Energia
+        {{ onsEarDiarioReeReservatorioEquivalenteEnergia.id }}?
+      </p>
+    </div>
+
+    <div class="modal-footer">
+      <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="cancel()">
+        <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancelar</span>
+      </button>
+
+      <button
+        id="jhi-confirm-delete-onsEarDiarioReeReservatorioEquivalenteEnergia"
+        data-cy="entityConfirmDeleteButton"
+        type="submit"
+        class="btn btn-danger"
+      >
+        <fa-icon icon="times"></fa-icon>&nbsp;<span jhiTranslate="entity.action.delete">Excluir</span>
+      </button>
+    </div>
+  </form>
+}

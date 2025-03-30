@@ -1,0 +1,34 @@
+{
+  "wattsUpEnergyApp": {
+    "onsIndicadoresConfiabilidadeRedeBasicaCiperCargaInterrompidaPerturbacoes": {
+      "home": {
+        "title": "Ons Indicadores Confiabilidade Rede Basica Ciper Carga Interrompida Perturbacoes",
+        "refreshListLabel": "Atualizar lista",
+        "createLabel": "Criar novo Ons Indicadores Confiabilidade Rede Basica Ciper Carga Interrompida Perturbacoes",
+        "createOrEditLabel": "Criar ou editar Ons Indicadores Confiabilidade Rede Basica Ciper Carga Interrompida Perturbacoes",
+        "search": "Pesquisar por Ons Indicadores Confiabilidade Rede Basica Ciper Carga Interrompida Perturbacoes",
+        "notFound": "Nenhum Ons Indicadores Confiabilidade Rede Basica Ciper Carga Interrompida Perturbacoes encontrado"
+      },
+      "created": "Um novo Ons Indicadores Confiabilidade Rede Basica Ciper Carga Interrompida Perturbacoes foi criado com o identificador {{ param }}",
+      "updated": "Um Ons Indicadores Confiabilidade Rede Basica Ciper Carga Interrompida Perturbacoes foi atualizado com o identificador {{ param }}",
+      "deleted": "Um Ons Indicadores Confiabilidade Rede Basica Ciper Carga Interrompida Perturbacoes foi excluído com o identificador {{ param }}",
+      "delete": {
+        "question": "Tem certeza de que deseja excluir Ons Indicadores Confiabilidade Rede Basica Ciper Carga Interrompida Perturbacoes {{ id }}?"
+      },
+      "detail": {
+        "title": "Ons Indicadores Confiabilidade Rede Basica Ciper Carga Interrompida Perturbacoes"
+      },
+      "id": "ID",
+      "dscAgregacao": "Dsc Agregacao",
+      "codCaracteristica": "Cod Caracteristica",
+      "dscCaracteristica": "Dsc Caracteristica",
+      "idPeriodicidade": "Id Periodicidade",
+      "dinReferencia": "Din Referencia",
+      "valCiper1": "Val Ciper 1",
+      "valCiper2": "Val Ciper 2",
+      "valCiper3": "Val Ciper 3",
+      "valCiper4": "Val Ciper 4",
+      "valCiper5": "Val Ciper 5"
+    }
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "annotations": {
+    "changelogDate": "20250330013640"
+  },
+  "applications": "*",
+  "entityTableName": "OnsTable3",
+  "fields": [
+    {
+      "fieldName": "idSubsistema",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nomSubsistema",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "idEstado",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nomEstado",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nomTipotransformador",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nomAgenteproprietario",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nomSubestacao",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nomTransformador",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "codEquipamento",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "datEntradaoperacao",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "datDesativacao",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "valTensaoprimarioKv",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "valTensaosecundarioKv",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "valTensaoterciarioKv",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "valPotencianominalMva",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "nomTipoderede",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "numBarraPrimario",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "numBarraSecundario",
+      "fieldType": "Integer"
+    }
+  ],
+  "name": "OnsCapacidadeTransformacaoRedeBasica",
+  "relationships": []
+}

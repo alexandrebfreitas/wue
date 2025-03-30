@@ -1,0 +1,68 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    @if (onsEarDiarioReeReservatorioEquivalenteEnergia(); as onsEarDiarioReeReservatorioEquivalenteEnergiaRef) {
+      <div>
+        <h2 data-cy="onsEarDiarioReeReservatorioEquivalenteEnergiaDetailsHeading">
+          <span jhiTranslate="wattsUpEnergyApp.onsEarDiarioReeReservatorioEquivalenteEnergia.detail.title"
+            >Ons Ear Diario Ree Reservatorio Equivalente Energia</span
+          >
+        </h2>
+
+        <hr />
+
+        <jhi-alert-error></jhi-alert-error>
+
+        <jhi-alert></jhi-alert>
+
+        <dl class="row-md jh-entity-details">
+          <dt><span jhiTranslate="global.field.id">Código</span></dt>
+          <dd>
+            <span>{{ onsEarDiarioReeReservatorioEquivalenteEnergiaRef.id }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsEarDiarioReeReservatorioEquivalenteEnergia.nomRee">Nom Ree</span></dt>
+          <dd>
+            <span>{{ onsEarDiarioReeReservatorioEquivalenteEnergiaRef.nomRee }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsEarDiarioReeReservatorioEquivalenteEnergia.earData">Ear Data</span></dt>
+          <dd>
+            <span>{{ onsEarDiarioReeReservatorioEquivalenteEnergiaRef.earData | formatMediumDate }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsEarDiarioReeReservatorioEquivalenteEnergia.earMaxRee">Ear Max Ree</span></dt>
+          <dd>
+            <span>{{ onsEarDiarioReeReservatorioEquivalenteEnergiaRef.earMaxRee }}</span>
+          </dd>
+          <dt>
+            <span jhiTranslate="wattsUpEnergyApp.onsEarDiarioReeReservatorioEquivalenteEnergia.earVerifReeMwmes">Ear Verif Ree Mwmes</span>
+          </dt>
+          <dd>
+            <span>{{ onsEarDiarioReeReservatorioEquivalenteEnergiaRef.earVerifReeMwmes }}</span>
+          </dd>
+          <dt>
+            <span jhiTranslate="wattsUpEnergyApp.onsEarDiarioReeReservatorioEquivalenteEnergia.earVerifReePercentual"
+              >Ear Verif Ree Percentual</span
+            >
+          </dt>
+          <dd>
+            <span>{{ onsEarDiarioReeReservatorioEquivalenteEnergiaRef.earVerifReePercentual }}</span>
+          </dd>
+        </dl>
+
+        <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+          <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Voltar</span>
+        </button>
+
+        <button
+          type="button"
+          [routerLink]="[
+            '/ons-ear-diario-ree-reservatorio-equivalente-energia',
+            onsEarDiarioReeReservatorioEquivalenteEnergiaRef.id,
+            'edit',
+          ]"
+          class="btn btn-primary"
+        >
+          <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Editar</span>
+        </button>
+      </div>
+    }
+  </div>
+</div>

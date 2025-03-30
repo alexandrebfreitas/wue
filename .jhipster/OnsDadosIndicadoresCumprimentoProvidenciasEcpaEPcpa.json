@@ -1,0 +1,51 @@
+{
+  "annotations": {
+    "changelogDate": "20250330013652"
+  },
+  "applications": "*",
+  "entityTableName": "OnsTable15",
+  "fields": [
+    {
+      "fieldName": "dscAgregacao",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "dscCaracteristica",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "dinReferencia",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "numNprcConcluidas",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "numNprpProgramadas",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "numNpratAtrasadas",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "numNpraAntecipadas",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "numNprcpConcluidasPrazo",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "valEcpa",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "valPcpa",
+      "fieldType": "Double"
+    }
+  ],
+  "name": "OnsDadosIndicadoresCumprimentoProvidenciasEcpaEPcpa",
+  "relationships": []
+}

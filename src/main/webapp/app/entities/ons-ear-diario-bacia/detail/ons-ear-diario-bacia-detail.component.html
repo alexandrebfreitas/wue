@@ -1,0 +1,52 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    @if (onsEarDiarioBacia(); as onsEarDiarioBaciaRef) {
+      <div>
+        <h2 data-cy="onsEarDiarioBaciaDetailsHeading">
+          <span jhiTranslate="wattsUpEnergyApp.onsEarDiarioBacia.detail.title">Ons Ear Diario Bacia</span>
+        </h2>
+
+        <hr />
+
+        <jhi-alert-error></jhi-alert-error>
+
+        <jhi-alert></jhi-alert>
+
+        <dl class="row-md jh-entity-details">
+          <dt><span jhiTranslate="global.field.id">Código</span></dt>
+          <dd>
+            <span>{{ onsEarDiarioBaciaRef.id }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsEarDiarioBacia.nomCurto">Nom Curto</span></dt>
+          <dd>
+            <span>{{ onsEarDiarioBaciaRef.nomCurto }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsEarDiarioBacia.earData">Ear Data</span></dt>
+          <dd>
+            <span>{{ onsEarDiarioBaciaRef.earData | formatMediumDate }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsEarDiarioBacia.earMaxBacia">Ear Max Bacia</span></dt>
+          <dd>
+            <span>{{ onsEarDiarioBaciaRef.earMaxBacia }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsEarDiarioBacia.earVerifBaciaMwmes">Ear Verif Bacia Mwmes</span></dt>
+          <dd>
+            <span>{{ onsEarDiarioBaciaRef.earVerifBaciaMwmes }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsEarDiarioBacia.earVerifBaciaPercentual">Ear Verif Bacia Percentual</span></dt>
+          <dd>
+            <span>{{ onsEarDiarioBaciaRef.earVerifBaciaPercentual }}</span>
+          </dd>
+        </dl>
+
+        <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+          <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Voltar</span>
+        </button>
+
+        <button type="button" [routerLink]="['/ons-ear-diario-bacia', onsEarDiarioBaciaRef.id, 'edit']" class="btn btn-primary">
+          <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Editar</span>
+        </button>
+      </div>
+    }
+  </div>
+</div>

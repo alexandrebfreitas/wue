@@ -1,0 +1,256 @@
+<div>
+  <h2 id="page-heading" data-cy="OnsDadosHidraulicosReservatorioBaseDiariaHeading">
+    <span jhiTranslate="wattsUpEnergyApp.onsDadosHidraulicosReservatorioBaseDiaria.home.title"
+      >Ons Dados Hidraulicos Reservatorio Base Diarias</span
+    >
+
+    <div class="d-flex justify-content-end">
+      <button class="btn btn-info me-2" (click)="load()" [disabled]="isLoading">
+        <fa-icon icon="sync" [animation]="isLoading ? 'spin' : undefined"></fa-icon>
+        <span jhiTranslate="wattsUpEnergyApp.onsDadosHidraulicosReservatorioBaseDiaria.home.refreshListLabel">Atualizar lista</span>
+      </button>
+
+      <button
+        id="jh-create-entity"
+        data-cy="entityCreateButton"
+        class="btn btn-primary jh-create-entity create-ons-dados-hidraulicos-reservatorio-base-diaria"
+        [routerLink]="['/ons-dados-hidraulicos-reservatorio-base-diaria/new']"
+      >
+        <fa-icon icon="plus"></fa-icon>
+        <span class="hidden-sm-down" jhiTranslate="wattsUpEnergyApp.onsDadosHidraulicosReservatorioBaseDiaria.home.createLabel"
+          >Criar novo Ons Dados Hidraulicos Reservatorio Base Diaria</span
+        >
+      </button>
+    </div>
+  </h2>
+
+  <jhi-alert-error></jhi-alert-error>
+
+  <jhi-alert></jhi-alert>
+
+  <form name="searchForm" class="row row-cols-sm-auto align-items-center">
+    <div class="col-sm-12">
+      <div class="input-group w-100 mt-3">
+        <label
+          class="visually-hidden"
+          for="currentSearch"
+          jhiTranslate="wattsUpEnergyApp.onsDadosHidraulicosReservatorioBaseDiaria.home.search"
+          >Pesquisar por Ons Dados Hidraulicos Reservatorio Base Diaria</label
+        >
+        <input
+          type="text"
+          class="form-control"
+          [(ngModel)]="currentSearch"
+          id="currentSearch"
+          name="currentSearch"
+          placeholder="{{ 'wattsUpEnergyApp.onsDadosHidraulicosReservatorioBaseDiaria.home.search' | translate }}"
+        />
+
+        <button class="btn btn-info" (click)="search(currentSearch)">
+          <fa-icon icon="search"></fa-icon>
+        </button>
+
+        @if (currentSearch) {
+          <button class="btn btn-danger" (click)="search('')">
+            <fa-icon icon="trash-alt"></fa-icon>
+          </button>
+        }
+      </div>
+    </div>
+  </form>
+
+  @if (onsDadosHidraulicosReservatorioBaseDiarias().length === 0) {
+    <div class="alert alert-warning" id="no-result">
+      <span jhiTranslate="wattsUpEnergyApp.onsDadosHidraulicosReservatorioBaseDiaria.home.notFound"
+        >Nenhum Ons Dados Hidraulicos Reservatorio Base Diaria encontrado</span
+      >
+    </div>
+  } @else {
+    <div class="table-responsive table-entities" id="entities">
+      <table class="table table-striped" aria-describedby="page-heading">
+        <thead>
+          <tr jhiSort [(sortState)]="sortState" (sortChange)="navigateToWithComponentValues($event)">
+            <th scope="col" jhiSortBy="id">
+              <div class="d-flex">
+                <span jhiTranslate="global.field.id">Código</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="valNivelmontante">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsDadosHidraulicosReservatorioBaseDiaria.valNivelmontante">Val Nivelmontante</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="valNiveljusante">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsDadosHidraulicosReservatorioBaseDiaria.valNiveljusante">Val Niveljusante</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="valVolumeutilcon">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsDadosHidraulicosReservatorioBaseDiaria.valVolumeutilcon">Val Volumeutilcon</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="valVazaoafluente">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsDadosHidraulicosReservatorioBaseDiaria.valVazaoafluente">Val Vazaoafluente</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="valVazaoturbinada">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsDadosHidraulicosReservatorioBaseDiaria.valVazaoturbinada">Val Vazaoturbinada</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="valVazaovertida">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsDadosHidraulicosReservatorioBaseDiaria.valVazaovertida">Val Vazaovertida</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="valVazaooutrasestruturas">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsDadosHidraulicosReservatorioBaseDiaria.valVazaooutrasestruturas"
+                  >Val Vazaooutrasestruturas</span
+                >
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="valVazaodefluente">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsDadosHidraulicosReservatorioBaseDiaria.valVazaodefluente">Val Vazaodefluente</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="valVazaotransferida">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsDadosHidraulicosReservatorioBaseDiaria.valVazaotransferida"
+                  >Val Vazaotransferida</span
+                >
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="valVazaonatural">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsDadosHidraulicosReservatorioBaseDiaria.valVazaonatural">Val Vazaonatural</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="valVazaoartificial">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsDadosHidraulicosReservatorioBaseDiaria.valVazaoartificial"
+                  >Val Vazaoartificial</span
+                >
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="valVazaoincremental">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsDadosHidraulicosReservatorioBaseDiaria.valVazaoincremental"
+                  >Val Vazaoincremental</span
+                >
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="valVazaoevaporacaoliquida">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsDadosHidraulicosReservatorioBaseDiaria.valVazaoevaporacaoliquida"
+                  >Val Vazaoevaporacaoliquida</span
+                >
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="valVazaousoconsuntivo">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsDadosHidraulicosReservatorioBaseDiaria.valVazaousoconsuntivo"
+                  >Val Vazaousoconsuntivo</span
+                >
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (
+            onsDadosHidraulicosReservatorioBaseDiaria of onsDadosHidraulicosReservatorioBaseDiarias();
+            track trackId(onsDadosHidraulicosReservatorioBaseDiaria)
+          ) {
+            <tr data-cy="entityTable">
+              <td>
+                <a
+                  [routerLink]="['/ons-dados-hidraulicos-reservatorio-base-diaria', onsDadosHidraulicosReservatorioBaseDiaria.id, 'view']"
+                  >{{ onsDadosHidraulicosReservatorioBaseDiaria.id }}</a
+                >
+              </td>
+              <td>{{ onsDadosHidraulicosReservatorioBaseDiaria.valNivelmontante }}</td>
+              <td>{{ onsDadosHidraulicosReservatorioBaseDiaria.valNiveljusante }}</td>
+              <td>{{ onsDadosHidraulicosReservatorioBaseDiaria.valVolumeutilcon }}</td>
+              <td>{{ onsDadosHidraulicosReservatorioBaseDiaria.valVazaoafluente }}</td>
+              <td>{{ onsDadosHidraulicosReservatorioBaseDiaria.valVazaoturbinada }}</td>
+              <td>{{ onsDadosHidraulicosReservatorioBaseDiaria.valVazaovertida }}</td>
+              <td>{{ onsDadosHidraulicosReservatorioBaseDiaria.valVazaooutrasestruturas }}</td>
+              <td>{{ onsDadosHidraulicosReservatorioBaseDiaria.valVazaodefluente }}</td>
+              <td>{{ onsDadosHidraulicosReservatorioBaseDiaria.valVazaotransferida }}</td>
+              <td>{{ onsDadosHidraulicosReservatorioBaseDiaria.valVazaonatural }}</td>
+              <td>{{ onsDadosHidraulicosReservatorioBaseDiaria.valVazaoartificial }}</td>
+              <td>{{ onsDadosHidraulicosReservatorioBaseDiaria.valVazaoincremental }}</td>
+              <td>{{ onsDadosHidraulicosReservatorioBaseDiaria.valVazaoevaporacaoliquida }}</td>
+              <td>{{ onsDadosHidraulicosReservatorioBaseDiaria.valVazaousoconsuntivo }}</td>
+              <td class="text-end">
+                <div class="btn-group">
+                  <a
+                    [routerLink]="['/ons-dados-hidraulicos-reservatorio-base-diaria', onsDadosHidraulicosReservatorioBaseDiaria.id, 'view']"
+                    class="btn btn-info btn-sm"
+                    data-cy="entityDetailsButton"
+                  >
+                    <fa-icon icon="eye"></fa-icon>
+                    <span class="d-none d-md-inline" jhiTranslate="entity.action.view">Visualizar</span>
+                  </a>
+
+                  <a
+                    [routerLink]="['/ons-dados-hidraulicos-reservatorio-base-diaria', onsDadosHidraulicosReservatorioBaseDiaria.id, 'edit']"
+                    class="btn btn-primary btn-sm"
+                    data-cy="entityEditButton"
+                  >
+                    <fa-icon icon="pencil-alt"></fa-icon>
+                    <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Editar</span>
+                  </a>
+
+                  <button
+                    type="submit"
+                    (click)="delete(onsDadosHidraulicosReservatorioBaseDiaria)"
+                    class="btn btn-danger btn-sm"
+                    data-cy="entityDeleteButton"
+                  >
+                    <fa-icon icon="times"></fa-icon>
+                    <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Excluir</span>
+                  </button>
+                </div>
+              </td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+  }
+</div>

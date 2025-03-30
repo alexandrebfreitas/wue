@@ -1,0 +1,199 @@
+<div>
+  <h2 id="page-heading" data-cy="OnsDadosGrandezasFluviometricasHeading">
+    <span jhiTranslate="wattsUpEnergyApp.onsDadosGrandezasFluviometricas.home.title">Ons Dados Grandezas Fluviometricas</span>
+
+    <div class="d-flex justify-content-end">
+      <button class="btn btn-info me-2" (click)="load()" [disabled]="isLoading">
+        <fa-icon icon="sync" [animation]="isLoading ? 'spin' : undefined"></fa-icon>
+        <span jhiTranslate="wattsUpEnergyApp.onsDadosGrandezasFluviometricas.home.refreshListLabel">Atualizar lista</span>
+      </button>
+
+      <button
+        id="jh-create-entity"
+        data-cy="entityCreateButton"
+        class="btn btn-primary jh-create-entity create-ons-dados-grandezas-fluviometricas"
+        [routerLink]="['/ons-dados-grandezas-fluviometricas/new']"
+      >
+        <fa-icon icon="plus"></fa-icon>
+        <span class="hidden-sm-down" jhiTranslate="wattsUpEnergyApp.onsDadosGrandezasFluviometricas.home.createLabel"
+          >Criar novo Ons Dados Grandezas Fluviometricas</span
+        >
+      </button>
+    </div>
+  </h2>
+
+  <jhi-alert-error></jhi-alert-error>
+
+  <jhi-alert></jhi-alert>
+
+  <form name="searchForm" class="row row-cols-sm-auto align-items-center">
+    <div class="col-sm-12">
+      <div class="input-group w-100 mt-3">
+        <label class="visually-hidden" for="currentSearch" jhiTranslate="wattsUpEnergyApp.onsDadosGrandezasFluviometricas.home.search"
+          >Pesquisar por Ons Dados Grandezas Fluviometricas</label
+        >
+        <input
+          type="text"
+          class="form-control"
+          [(ngModel)]="currentSearch"
+          id="currentSearch"
+          name="currentSearch"
+          placeholder="{{ 'wattsUpEnergyApp.onsDadosGrandezasFluviometricas.home.search' | translate }}"
+        />
+
+        <button class="btn btn-info" (click)="search(currentSearch)">
+          <fa-icon icon="search"></fa-icon>
+        </button>
+
+        @if (currentSearch) {
+          <button class="btn btn-danger" (click)="search('')">
+            <fa-icon icon="trash-alt"></fa-icon>
+          </button>
+        }
+      </div>
+    </div>
+  </form>
+
+  @if (onsDadosGrandezasFluviometricas().length === 0) {
+    <div class="alert alert-warning" id="no-result">
+      <span jhiTranslate="wattsUpEnergyApp.onsDadosGrandezasFluviometricas.home.notFound"
+        >Nenhum Ons Dados Grandezas Fluviometricas encontrado</span
+      >
+    </div>
+  } @else {
+    <div class="table-responsive table-entities" id="entities">
+      <table class="table table-striped" aria-describedby="page-heading">
+        <thead>
+          <tr jhiSort [(sortState)]="sortState" (sortChange)="navigateToWithComponentValues($event)">
+            <th scope="col" jhiSortBy="id">
+              <div class="d-flex">
+                <span jhiTranslate="global.field.id">Código</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="idPostofluv">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsDadosGrandezasFluviometricas.idPostofluv">Id Postofluv</span>
+                @if (!currentSearch) {
+                  <fa-icon class="p-1" icon="sort"></fa-icon>
+                }
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="nomPostofluviometrico">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsDadosGrandezasFluviometricas.nomPostofluviometrico">Nom Postofluviometrico</span>
+                @if (!currentSearch) {
+                  <fa-icon class="p-1" icon="sort"></fa-icon>
+                }
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="valLatitude">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsDadosGrandezasFluviometricas.valLatitude">Val Latitude</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="valLongitude">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsDadosGrandezasFluviometricas.valLongitude">Val Longitude</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="nomRio">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsDadosGrandezasFluviometricas.nomRio">Nom Rio</span>
+                @if (!currentSearch) {
+                  <fa-icon class="p-1" icon="sort"></fa-icon>
+                }
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="nomBacia">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsDadosGrandezasFluviometricas.nomBacia">Nom Bacia</span>
+                @if (!currentSearch) {
+                  <fa-icon class="p-1" icon="sort"></fa-icon>
+                }
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="dinMedicao">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsDadosGrandezasFluviometricas.dinMedicao">Din Medicao</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="valVazaomedia">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsDadosGrandezasFluviometricas.valVazaomedia">Val Vazaomedia</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="valVazaomediaincr">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsDadosGrandezasFluviometricas.valVazaomediaincr">Val Vazaomediaincr</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (onsDadosGrandezasFluviometricas of onsDadosGrandezasFluviometricas(); track trackId(onsDadosGrandezasFluviometricas)) {
+            <tr data-cy="entityTable">
+              <td>
+                <a [routerLink]="['/ons-dados-grandezas-fluviometricas', onsDadosGrandezasFluviometricas.id, 'view']">{{
+                  onsDadosGrandezasFluviometricas.id
+                }}</a>
+              </td>
+              <td>{{ onsDadosGrandezasFluviometricas.idPostofluv }}</td>
+              <td>{{ onsDadosGrandezasFluviometricas.nomPostofluviometrico }}</td>
+              <td>{{ onsDadosGrandezasFluviometricas.valLatitude }}</td>
+              <td>{{ onsDadosGrandezasFluviometricas.valLongitude }}</td>
+              <td>{{ onsDadosGrandezasFluviometricas.nomRio }}</td>
+              <td>{{ onsDadosGrandezasFluviometricas.nomBacia }}</td>
+              <td>{{ onsDadosGrandezasFluviometricas.dinMedicao | formatMediumDate }}</td>
+              <td>{{ onsDadosGrandezasFluviometricas.valVazaomedia }}</td>
+              <td>{{ onsDadosGrandezasFluviometricas.valVazaomediaincr }}</td>
+              <td class="text-end">
+                <div class="btn-group">
+                  <a
+                    [routerLink]="['/ons-dados-grandezas-fluviometricas', onsDadosGrandezasFluviometricas.id, 'view']"
+                    class="btn btn-info btn-sm"
+                    data-cy="entityDetailsButton"
+                  >
+                    <fa-icon icon="eye"></fa-icon>
+                    <span class="d-none d-md-inline" jhiTranslate="entity.action.view">Visualizar</span>
+                  </a>
+
+                  <a
+                    [routerLink]="['/ons-dados-grandezas-fluviometricas', onsDadosGrandezasFluviometricas.id, 'edit']"
+                    class="btn btn-primary btn-sm"
+                    data-cy="entityEditButton"
+                  >
+                    <fa-icon icon="pencil-alt"></fa-icon>
+                    <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Editar</span>
+                  </a>
+
+                  <button
+                    type="submit"
+                    (click)="delete(onsDadosGrandezasFluviometricas)"
+                    class="btn btn-danger btn-sm"
+                    data-cy="entityDeleteButton"
+                  >
+                    <fa-icon icon="times"></fa-icon>
+                    <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Excluir</span>
+                  </button>
+                </div>
+              </td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+  }
+</div>

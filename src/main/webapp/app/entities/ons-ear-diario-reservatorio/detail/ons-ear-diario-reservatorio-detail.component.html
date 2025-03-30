@@ -1,0 +1,136 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    @if (onsEarDiarioReservatorio(); as onsEarDiarioReservatorioRef) {
+      <div>
+        <h2 data-cy="onsEarDiarioReservatorioDetailsHeading">
+          <span jhiTranslate="wattsUpEnergyApp.onsEarDiarioReservatorio.detail.title">Ons Ear Diario Reservatorio</span>
+        </h2>
+
+        <hr />
+
+        <jhi-alert-error></jhi-alert-error>
+
+        <jhi-alert></jhi-alert>
+
+        <dl class="row-md jh-entity-details">
+          <dt><span jhiTranslate="global.field.id">Código</span></dt>
+          <dd>
+            <span>{{ onsEarDiarioReservatorioRef.id }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsEarDiarioReservatorio.idSubsistemaJusante">Id Subsistema Jusante</span></dt>
+          <dd>
+            <span>{{ onsEarDiarioReservatorioRef.idSubsistemaJusante }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsEarDiarioReservatorio.nomSubsistemaJusante">Nom Subsistema Jusante</span></dt>
+          <dd>
+            <span>{{ onsEarDiarioReservatorioRef.nomSubsistemaJusante }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsEarDiarioReservatorio.earData">Ear Data</span></dt>
+          <dd>
+            <span>{{ onsEarDiarioReservatorioRef.earData | formatMediumDate }}</span>
+          </dd>
+          <dt>
+            <span jhiTranslate="wattsUpEnergyApp.onsEarDiarioReservatorio.earReservatorioSubsistemaProprioMwmes"
+              >Ear Reservatorio Subsistema Proprio Mwmes</span
+            >
+          </dt>
+          <dd>
+            <span>{{ onsEarDiarioReservatorioRef.earReservatorioSubsistemaProprioMwmes }}</span>
+          </dd>
+          <dt>
+            <span jhiTranslate="wattsUpEnergyApp.onsEarDiarioReservatorio.earReservatorioSubsistemaJusanteMwmes"
+              >Ear Reservatorio Subsistema Jusante Mwmes</span
+            >
+          </dt>
+          <dd>
+            <span>{{ onsEarDiarioReservatorioRef.earReservatorioSubsistemaJusanteMwmes }}</span>
+          </dd>
+          <dt>
+            <span jhiTranslate="wattsUpEnergyApp.onsEarDiarioReservatorio.earmaxReservatorioSubsistemaProprioMwmes"
+              >Earmax Reservatorio Subsistema Proprio Mwmes</span
+            >
+          </dt>
+          <dd>
+            <span>{{ onsEarDiarioReservatorioRef.earmaxReservatorioSubsistemaProprioMwmes }}</span>
+          </dd>
+          <dt>
+            <span jhiTranslate="wattsUpEnergyApp.onsEarDiarioReservatorio.earmaxReservatorioSubsistemaJusanteMwmes"
+              >Earmax Reservatorio Subsistema Jusante Mwmes</span
+            >
+          </dt>
+          <dd>
+            <span>{{ onsEarDiarioReservatorioRef.earmaxReservatorioSubsistemaJusanteMwmes }}</span>
+          </dd>
+          <dt>
+            <span jhiTranslate="wattsUpEnergyApp.onsEarDiarioReservatorio.earReservatorioPercentual">Ear Reservatorio Percentual</span>
+          </dt>
+          <dd>
+            <span>{{ onsEarDiarioReservatorioRef.earReservatorioPercentual }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsEarDiarioReservatorio.earTotalMwmes">Ear Total Mwmes</span></dt>
+          <dd>
+            <span>{{ onsEarDiarioReservatorioRef.earTotalMwmes }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsEarDiarioReservatorio.earMaximaTotalMwmes">Ear Maxima Total Mwmes</span></dt>
+          <dd>
+            <span>{{ onsEarDiarioReservatorioRef.earMaximaTotalMwmes }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsEarDiarioReservatorio.valContribearbacia">Val Contribearbacia</span></dt>
+          <dd>
+            <span>{{ onsEarDiarioReservatorioRef.valContribearbacia }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsEarDiarioReservatorio.valContribearmaxbacia">Val Contribearmaxbacia</span></dt>
+          <dd>
+            <span>{{ onsEarDiarioReservatorioRef.valContribearmaxbacia }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsEarDiarioReservatorio.valContribearsubsistema">Val Contribearsubsistema</span></dt>
+          <dd>
+            <span>{{ onsEarDiarioReservatorioRef.valContribearsubsistema }}</span>
+          </dd>
+          <dt>
+            <span jhiTranslate="wattsUpEnergyApp.onsEarDiarioReservatorio.valContribearmaxsubsistema">Val Contribearmaxsubsistema</span>
+          </dt>
+          <dd>
+            <span>{{ onsEarDiarioReservatorioRef.valContribearmaxsubsistema }}</span>
+          </dd>
+          <dt>
+            <span jhiTranslate="wattsUpEnergyApp.onsEarDiarioReservatorio.valContribearsubsistemajusante"
+              >Val Contribearsubsistemajusante</span
+            >
+          </dt>
+          <dd>
+            <span>{{ onsEarDiarioReservatorioRef.valContribearsubsistemajusante }}</span>
+          </dd>
+          <dt>
+            <span jhiTranslate="wattsUpEnergyApp.onsEarDiarioReservatorio.valContribearmaxsubsistemajusante"
+              >Val Contribearmaxsubsistemajusante</span
+            >
+          </dt>
+          <dd>
+            <span>{{ onsEarDiarioReservatorioRef.valContribearmaxsubsistemajusante }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsEarDiarioReservatorio.valContribearsin">Val Contribearsin</span></dt>
+          <dd>
+            <span>{{ onsEarDiarioReservatorioRef.valContribearsin }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsEarDiarioReservatorio.valContribearmaxsin">Val Contribearmaxsin</span></dt>
+          <dd>
+            <span>{{ onsEarDiarioReservatorioRef.valContribearmaxsin }}</span>
+          </dd>
+        </dl>
+
+        <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+          <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Voltar</span>
+        </button>
+
+        <button
+          type="button"
+          [routerLink]="['/ons-ear-diario-reservatorio', onsEarDiarioReservatorioRef.id, 'edit']"
+          class="btn btn-primary"
+        >
+          <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Editar</span>
+        </button>
+      </div>
+    }
+  </div>
+</div>

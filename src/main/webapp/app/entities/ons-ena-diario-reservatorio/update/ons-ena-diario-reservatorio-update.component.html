@@ -1,0 +1,124 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <form name="editForm" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+      <h2
+        id="jhi-ons-ena-diario-reservatorio-heading"
+        data-cy="OnsEnaDiarioReservatorioCreateUpdateHeading"
+        jhiTranslate="wattsUpEnergyApp.onsEnaDiarioReservatorio.home.createOrEditLabel"
+      >
+        Criar ou editar Ons Ena Diario Reservatorio
+      </h2>
+
+      <div>
+        <jhi-alert-error></jhi-alert-error>
+
+        @if (editForm.controls.id.value !== null) {
+          <div class="mb-3">
+            <label class="form-label" for="field_id" jhiTranslate="wattsUpEnergyApp.onsEnaDiarioReservatorio.id">ID</label>
+            <input type="number" class="form-control" name="id" id="field_id" data-cy="id" formControlName="id" [readonly]="true" />
+          </div>
+        }
+
+        <div class="mb-3">
+          <label class="form-label" for="field_enaBrutaResMwmed" jhiTranslate="wattsUpEnergyApp.onsEnaDiarioReservatorio.enaBrutaResMwmed"
+            >Ena Bruta Res Mwmed</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="enaBrutaResMwmed"
+            id="field_enaBrutaResMwmed"
+            data-cy="enaBrutaResMwmed"
+            formControlName="enaBrutaResMwmed"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_enaBrutaResPercentualmlt"
+            jhiTranslate="wattsUpEnergyApp.onsEnaDiarioReservatorio.enaBrutaResPercentualmlt"
+            >Ena Bruta Res Percentualmlt</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="enaBrutaResPercentualmlt"
+            id="field_enaBrutaResPercentualmlt"
+            data-cy="enaBrutaResPercentualmlt"
+            formControlName="enaBrutaResPercentualmlt"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_enaArmazenavelResMwmed"
+            jhiTranslate="wattsUpEnergyApp.onsEnaDiarioReservatorio.enaArmazenavelResMwmed"
+            >Ena Armazenavel Res Mwmed</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="enaArmazenavelResMwmed"
+            id="field_enaArmazenavelResMwmed"
+            data-cy="enaArmazenavelResMwmed"
+            formControlName="enaArmazenavelResMwmed"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_enaArmazenavelResPercentualmlt"
+            jhiTranslate="wattsUpEnergyApp.onsEnaDiarioReservatorio.enaArmazenavelResPercentualmlt"
+            >Ena Armazenavel Res Percentualmlt</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="enaArmazenavelResPercentualmlt"
+            id="field_enaArmazenavelResPercentualmlt"
+            data-cy="enaArmazenavelResPercentualmlt"
+            formControlName="enaArmazenavelResPercentualmlt"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_enaQuedaBruta" jhiTranslate="wattsUpEnergyApp.onsEnaDiarioReservatorio.enaQuedaBruta"
+            >Ena Queda Bruta</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="enaQuedaBruta"
+            id="field_enaQuedaBruta"
+            data-cy="enaQuedaBruta"
+            formControlName="enaQuedaBruta"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_mltEna" jhiTranslate="wattsUpEnergyApp.onsEnaDiarioReservatorio.mltEna">Mlt Ena</label>
+          <input type="number" class="form-control" name="mltEna" id="field_mltEna" data-cy="mltEna" formControlName="mltEna" />
+        </div>
+      </div>
+
+      <div>
+        <button type="button" id="cancel-save" data-cy="entityCreateCancelButton" class="btn btn-secondary" (click)="previousState()">
+          <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancelar</span>
+        </button>
+
+        <button
+          type="submit"
+          id="save-entity"
+          data-cy="entityCreateSaveButton"
+          [disabled]="editForm.invalid || isSaving"
+          class="btn btn-primary"
+        >
+          <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Salvar</span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

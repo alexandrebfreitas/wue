@@ -1,0 +1,104 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    @if (onsCapacidadeInstaladaGeracao(); as onsCapacidadeInstaladaGeracaoRef) {
+      <div>
+        <h2 data-cy="onsCapacidadeInstaladaGeracaoDetailsHeading">
+          <span jhiTranslate="wattsUpEnergyApp.onsCapacidadeInstaladaGeracao.detail.title">Ons Capacidade Instalada Geracao</span>
+        </h2>
+
+        <hr />
+
+        <jhi-alert-error></jhi-alert-error>
+
+        <jhi-alert></jhi-alert>
+
+        <dl class="row-md jh-entity-details">
+          <dt><span jhiTranslate="global.field.id">Código</span></dt>
+          <dd>
+            <span>{{ onsCapacidadeInstaladaGeracaoRef.id }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsCapacidadeInstaladaGeracao.idSubsistema">Id Subsistema</span></dt>
+          <dd>
+            <span>{{ onsCapacidadeInstaladaGeracaoRef.idSubsistema }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsCapacidadeInstaladaGeracao.nomSubsistema">Nom Subsistema</span></dt>
+          <dd>
+            <span>{{ onsCapacidadeInstaladaGeracaoRef.nomSubsistema }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsCapacidadeInstaladaGeracao.idEstado">Id Estado</span></dt>
+          <dd>
+            <span>{{ onsCapacidadeInstaladaGeracaoRef.idEstado }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsCapacidadeInstaladaGeracao.nomEstado">Nom Estado</span></dt>
+          <dd>
+            <span>{{ onsCapacidadeInstaladaGeracaoRef.nomEstado }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsCapacidadeInstaladaGeracao.nomModalidadeoperacao">Nom Modalidadeoperacao</span></dt>
+          <dd>
+            <span>{{ onsCapacidadeInstaladaGeracaoRef.nomModalidadeoperacao }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsCapacidadeInstaladaGeracao.nomAgenteproprietario">Nom Agenteproprietario</span></dt>
+          <dd>
+            <span>{{ onsCapacidadeInstaladaGeracaoRef.nomAgenteproprietario }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsCapacidadeInstaladaGeracao.nomTipousina">Nom Tipousina</span></dt>
+          <dd>
+            <span>{{ onsCapacidadeInstaladaGeracaoRef.nomTipousina }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsCapacidadeInstaladaGeracao.nomUsina">Nom Usina</span></dt>
+          <dd>
+            <span>{{ onsCapacidadeInstaladaGeracaoRef.nomUsina }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsCapacidadeInstaladaGeracao.ceg">Ceg</span></dt>
+          <dd>
+            <span>{{ onsCapacidadeInstaladaGeracaoRef.ceg }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsCapacidadeInstaladaGeracao.nomUnidadegeradora">Nom Unidadegeradora</span></dt>
+          <dd>
+            <span>{{ onsCapacidadeInstaladaGeracaoRef.nomUnidadegeradora }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsCapacidadeInstaladaGeracao.codEquipamento">Cod Equipamento</span></dt>
+          <dd>
+            <span>{{ onsCapacidadeInstaladaGeracaoRef.codEquipamento }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsCapacidadeInstaladaGeracao.numUnidadegeradora">Num Unidadegeradora</span></dt>
+          <dd>
+            <span>{{ onsCapacidadeInstaladaGeracaoRef.numUnidadegeradora }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsCapacidadeInstaladaGeracao.nomCombustivel">Nom Combustivel</span></dt>
+          <dd>
+            <span>{{ onsCapacidadeInstaladaGeracaoRef.nomCombustivel }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsCapacidadeInstaladaGeracao.datEntradateste">Dat Entradateste</span></dt>
+          <dd>
+            <span>{{ onsCapacidadeInstaladaGeracaoRef.datEntradateste | formatMediumDate }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsCapacidadeInstaladaGeracao.datEntradaoperacao">Dat Entradaoperacao</span></dt>
+          <dd>
+            <span>{{ onsCapacidadeInstaladaGeracaoRef.datEntradaoperacao | formatMediumDate }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsCapacidadeInstaladaGeracao.datDesativacao">Dat Desativacao</span></dt>
+          <dd>
+            <span>{{ onsCapacidadeInstaladaGeracaoRef.datDesativacao | formatMediumDate }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsCapacidadeInstaladaGeracao.valPotenciaefetiva">Val Potenciaefetiva</span></dt>
+          <dd>
+            <span>{{ onsCapacidadeInstaladaGeracaoRef.valPotenciaefetiva }}</span>
+          </dd>
+        </dl>
+
+        <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+          <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Voltar</span>
+        </button>
+
+        <button
+          type="button"
+          [routerLink]="['/ons-capacidade-instalada-geracao', onsCapacidadeInstaladaGeracaoRef.id, 'edit']"
+          class="btn btn-primary"
+        >
+          <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Editar</span>
+        </button>
+      </div>
+    }
+  </div>
+</div>

@@ -1,0 +1,47 @@
+{
+  "annotations": {
+    "changelogDate": "20250330013735"
+  },
+  "applications": "*",
+  "entityTableName": "OnsTable58",
+  "fields": [
+    {
+      "fieldName": "idPostofluv",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nomPostofluviometrico",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "valLatitude",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "valLongitude",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "nomRio",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nomBacia",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "dinMedicao",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "valVazaomedia",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "valVazaomediaincr",
+      "fieldType": "Double"
+    }
+  ],
+  "name": "OnsDadosGrandezasFluviometricas",
+  "relationships": []
+}

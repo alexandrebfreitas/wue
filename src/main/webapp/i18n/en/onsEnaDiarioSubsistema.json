@@ -1,0 +1,25 @@
+{
+  "wattsUpEnergyApp": {
+    "onsEnaDiarioSubsistema": {
+      "home": {
+        "title": "Ons Ena Diario Subsistemas",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Ons Ena Diario Subsistema",
+        "createOrEditLabel": "Create or edit a Ons Ena Diario Subsistema",
+        "search": "Search for Ons Ena Diario Subsistema",
+        "notFound": "No Ons Ena Diario Subsistemas found"
+      },
+      "created": "A new Ons Ena Diario Subsistema is created with identifier {{ param }}",
+      "updated": "A Ons Ena Diario Subsistema is updated with identifier {{ param }}",
+      "deleted": "A Ons Ena Diario Subsistema is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Ons Ena Diario Subsistema {{ id }}?"
+      },
+      "detail": {
+        "title": "Ons Ena Diario Subsistema"
+      },
+      "id": "ID",
+      "enaArmazenavelRegiaoPercentualmlt": "Ena Armazenavel Regiao Percentualmlt"
+    }
+  }
+}

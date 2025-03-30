@@ -1,0 +1,42 @@
+{
+  "wattsUpEnergyApp": {
+    "onsEarDiarioReservatorio": {
+      "home": {
+        "title": "Ons Ear Diario Reservatorios",
+        "refreshListLabel": "Atualizar lista",
+        "createLabel": "Criar novo Ons Ear Diario Reservatorio",
+        "createOrEditLabel": "Criar ou editar Ons Ear Diario Reservatorio",
+        "search": "Pesquisar por Ons Ear Diario Reservatorio",
+        "notFound": "Nenhum Ons Ear Diario Reservatorio encontrado"
+      },
+      "created": "Um novo Ons Ear Diario Reservatorio foi criado com o identificador {{ param }}",
+      "updated": "Um Ons Ear Diario Reservatorio foi atualizado com o identificador {{ param }}",
+      "deleted": "Um Ons Ear Diario Reservatorio foi excluído com o identificador {{ param }}",
+      "delete": {
+        "question": "Tem certeza de que deseja excluir Ons Ear Diario Reservatorio {{ id }}?"
+      },
+      "detail": {
+        "title": "Ons Ear Diario Reservatorio"
+      },
+      "id": "ID",
+      "idSubsistemaJusante": "Id Subsistema Jusante",
+      "nomSubsistemaJusante": "Nom Subsistema Jusante",
+      "earData": "Ear Data",
+      "earReservatorioSubsistemaProprioMwmes": "Ear Reservatorio Subsistema Proprio Mwmes",
+      "earReservatorioSubsistemaJusanteMwmes": "Ear Reservatorio Subsistema Jusante Mwmes",
+      "earmaxReservatorioSubsistemaProprioMwmes": "Earmax Reservatorio Subsistema Proprio Mwmes",
+      "earmaxReservatorioSubsistemaJusanteMwmes": "Earmax Reservatorio Subsistema Jusante Mwmes",
+      "earReservatorioPercentual": "Ear Reservatorio Percentual",
+      "earTotalMwmes": "Ear Total Mwmes",
+      "earMaximaTotalMwmes": "Ear Maxima Total Mwmes",
+      "valContribearbacia": "Val Contribearbacia",
+      "valContribearmaxbacia": "Val Contribearmaxbacia",
+      "valContribearsubsistema": "Val Contribearsubsistema",
+      "valContribearmaxsubsistema": "Val Contribearmaxsubsistema",
+      "valContribearsubsistemajusante": "Val Contribearsubsistemajusante",
+      "valContribearmaxsubsistemajusante": "Val Contribearmaxsubsistemajusante",
+      "valContribearsin": "Val Contribearsin",
+      "valContribearmaxsin": "Val Contribearmaxsin"
+    }
+  }
+}

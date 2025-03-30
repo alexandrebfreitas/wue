@@ -1,0 +1,33 @@
+{
+  "wattsUpEnergyApp": {
+    "onsModalidadeOperacaoUsinas": {
+      "home": {
+        "title": "Ons Modalidade Operacao Usinas",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Ons Modalidade Operacao Usinas",
+        "createOrEditLabel": "Create or edit a Ons Modalidade Operacao Usinas",
+        "search": "Search for Ons Modalidade Operacao Usinas",
+        "notFound": "No Ons Modalidade Operacao Usinas found"
+      },
+      "created": "A new Ons Modalidade Operacao Usinas is created with identifier {{ param }}",
+      "updated": "A Ons Modalidade Operacao Usinas is updated with identifier {{ param }}",
+      "deleted": "A Ons Modalidade Operacao Usinas is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Ons Modalidade Operacao Usinas {{ id }}?"
+      },
+      "detail": {
+        "title": "Ons Modalidade Operacao Usinas"
+      },
+      "id": "ID",
+      "nomUsina": "Nom Usina",
+      "ceg": "Ceg",
+      "nomModalidadeoperacao": "Nom Modalidadeoperacao",
+      "valPotenciaautorizada": "Val Potenciaautorizada",
+      "sglCentrooperacao": "Sgl Centrooperacao",
+      "nomPontoconexao": "Nom Pontoconexao",
+      "idEstado": "Id Estado",
+      "nomEstado": "Nom Estado",
+      "stsAneel": "Sts Aneel"
+    }
+  }
+}

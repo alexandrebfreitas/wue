@@ -1,0 +1,83 @@
+{
+  "annotations": {
+    "changelogDate": "20250330013730"
+  },
+  "applications": "*",
+  "entityTableName": "OnsTable53",
+  "fields": [
+    {
+      "fieldName": "idSubsistemaJusante",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nomSubsistemaJusante",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "earData",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "earReservatorioSubsistemaProprioMwmes",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "earReservatorioSubsistemaJusanteMwmes",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "earmaxReservatorioSubsistemaProprioMwmes",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "earmaxReservatorioSubsistemaJusanteMwmes",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "earReservatorioPercentual",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "earTotalMwmes",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "earMaximaTotalMwmes",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "valContribearbacia",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "valContribearmaxbacia",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "valContribearsubsistema",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "valContribearmaxsubsistema",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "valContribearsubsistemajusante",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "valContribearmaxsubsistemajusante",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "valContribearsin",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "valContribearmaxsin",
+      "fieldType": "Double"
+    }
+  ],
+  "name": "OnsEarDiarioReservatorio",
+  "relationships": []
+}

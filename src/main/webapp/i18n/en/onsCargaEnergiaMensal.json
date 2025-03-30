@@ -1,0 +1,28 @@
+{
+  "wattsUpEnergyApp": {
+    "onsCargaEnergiaMensal": {
+      "home": {
+        "title": "Ons Carga Energia Mensals",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Ons Carga Energia Mensal",
+        "createOrEditLabel": "Create or edit a Ons Carga Energia Mensal",
+        "search": "Search for Ons Carga Energia Mensal",
+        "notFound": "No Ons Carga Energia Mensals found"
+      },
+      "created": "A new Ons Carga Energia Mensal is created with identifier {{ param }}",
+      "updated": "A Ons Carga Energia Mensal is updated with identifier {{ param }}",
+      "deleted": "A Ons Carga Energia Mensal is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Ons Carga Energia Mensal {{ id }}?"
+      },
+      "detail": {
+        "title": "Ons Carga Energia Mensal"
+      },
+      "id": "ID",
+      "idSubsistema": "Id Subsistema",
+      "nomSubsistema": "Nom Subsistema",
+      "dinInstante": "Din Instante",
+      "valCargaenergiamwmed": "Val Cargaenergiamwmed"
+    }
+  }
+}

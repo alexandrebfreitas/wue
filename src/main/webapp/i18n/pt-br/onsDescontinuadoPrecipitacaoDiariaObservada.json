@@ -1,0 +1,29 @@
+{
+  "wattsUpEnergyApp": {
+    "onsDescontinuadoPrecipitacaoDiariaObservada": {
+      "home": {
+        "title": "Ons Descontinuado Precipitacao Diaria Observadas",
+        "refreshListLabel": "Atualizar lista",
+        "createLabel": "Criar novo Ons Descontinuado Precipitacao Diaria Observada",
+        "createOrEditLabel": "Criar ou editar Ons Descontinuado Precipitacao Diaria Observada",
+        "search": "Pesquisar por Ons Descontinuado Precipitacao Diaria Observada",
+        "notFound": "Nenhum Ons Descontinuado Precipitacao Diaria Observada encontrado"
+      },
+      "created": "Um novo Ons Descontinuado Precipitacao Diaria Observada foi criado com o identificador {{ param }}",
+      "updated": "Um Ons Descontinuado Precipitacao Diaria Observada foi atualizado com o identificador {{ param }}",
+      "deleted": "Um Ons Descontinuado Precipitacao Diaria Observada foi excluído com o identificador {{ param }}",
+      "delete": {
+        "question": "Tem certeza de que deseja excluir Ons Descontinuado Precipitacao Diaria Observada {{ id }}?"
+      },
+      "detail": {
+        "title": "Ons Descontinuado Precipitacao Diaria Observada"
+      },
+      "id": "ID",
+      "codEstacao": "Cod Estacao",
+      "valLatitude": "Val Latitude",
+      "valLongitude": "Val Longitude",
+      "valMedida": "Val Medida",
+      "datObservada": "Dat Observada"
+    }
+  }
+}

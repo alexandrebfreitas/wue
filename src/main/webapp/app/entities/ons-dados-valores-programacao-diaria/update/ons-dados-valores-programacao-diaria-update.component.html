@@ -1,0 +1,344 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <form name="editForm" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+      <h2
+        id="jhi-ons-dados-valores-programacao-diaria-heading"
+        data-cy="OnsDadosValoresProgramacaoDiariaCreateUpdateHeading"
+        jhiTranslate="wattsUpEnergyApp.onsDadosValoresProgramacaoDiaria.home.createOrEditLabel"
+      >
+        Criar ou editar Ons Dados Valores Programacao Diaria
+      </h2>
+
+      <div>
+        <jhi-alert-error></jhi-alert-error>
+
+        @if (editForm.controls.id.value !== null) {
+          <div class="mb-3">
+            <label class="form-label" for="field_id" jhiTranslate="wattsUpEnergyApp.onsDadosValoresProgramacaoDiaria.id">ID</label>
+            <input type="number" class="form-control" name="id" id="field_id" data-cy="id" formControlName="id" [readonly]="true" />
+          </div>
+        }
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_dinProgramacaodia"
+            jhiTranslate="wattsUpEnergyApp.onsDadosValoresProgramacaoDiaria.dinProgramacaodia"
+            >Din Programacaodia</label
+          >
+          <div class="input-group">
+            <input
+              id="field_dinProgramacaodia"
+              data-cy="dinProgramacaodia"
+              type="text"
+              class="form-control"
+              name="dinProgramacaodia"
+              ngbDatepicker
+              #dinProgramacaodiaDp="ngbDatepicker"
+              formControlName="dinProgramacaodia"
+            />
+            <button type="button" class="btn btn-secondary" (click)="dinProgramacaodiaDp.toggle()">
+              <fa-icon icon="calendar-alt"></fa-icon>
+            </button>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_numPatamar" jhiTranslate="wattsUpEnergyApp.onsDadosValoresProgramacaoDiaria.numPatamar"
+            >Num Patamar</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="numPatamar"
+            id="field_numPatamar"
+            data-cy="numPatamar"
+            formControlName="numPatamar"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_codExibicaousina"
+            jhiTranslate="wattsUpEnergyApp.onsDadosValoresProgramacaoDiaria.codExibicaousina"
+            >Cod Exibicaousina</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="codExibicaousina"
+            id="field_codExibicaousina"
+            data-cy="codExibicaousina"
+            formControlName="codExibicaousina"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_nomUsina" jhiTranslate="wattsUpEnergyApp.onsDadosValoresProgramacaoDiaria.nomUsina"
+            >Nom Usina</label
+          >
+          <input type="text" class="form-control" name="nomUsina" id="field_nomUsina" data-cy="nomUsina" formControlName="nomUsina" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_tipGeracao" jhiTranslate="wattsUpEnergyApp.onsDadosValoresProgramacaoDiaria.tipGeracao"
+            >Tip Geracao</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="tipGeracao"
+            id="field_tipGeracao"
+            data-cy="tipGeracao"
+            formControlName="tipGeracao"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_nomModalidadeoperacao"
+            jhiTranslate="wattsUpEnergyApp.onsDadosValoresProgramacaoDiaria.nomModalidadeoperacao"
+            >Nom Modalidadeoperacao</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="nomModalidadeoperacao"
+            id="field_nomModalidadeoperacao"
+            data-cy="nomModalidadeoperacao"
+            formControlName="nomModalidadeoperacao"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_idSubsistema" jhiTranslate="wattsUpEnergyApp.onsDadosValoresProgramacaoDiaria.idSubsistema"
+            >Id Subsistema</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="idSubsistema"
+            id="field_idSubsistema"
+            data-cy="idSubsistema"
+            formControlName="idSubsistema"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_nomSubsistema" jhiTranslate="wattsUpEnergyApp.onsDadosValoresProgramacaoDiaria.nomSubsistema"
+            >Nom Subsistema</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="nomSubsistema"
+            id="field_nomSubsistema"
+            data-cy="nomSubsistema"
+            formControlName="nomSubsistema"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_idEstado" jhiTranslate="wattsUpEnergyApp.onsDadosValoresProgramacaoDiaria.idEstado"
+            >Id Estado</label
+          >
+          <input type="text" class="form-control" name="idEstado" id="field_idEstado" data-cy="idEstado" formControlName="idEstado" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_nomEstado" jhiTranslate="wattsUpEnergyApp.onsDadosValoresProgramacaoDiaria.nomEstado"
+            >Nom Estado</label
+          >
+          <input type="text" class="form-control" name="nomEstado" id="field_nomEstado" data-cy="nomEstado" formControlName="nomEstado" />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_valGeracaoprogramada"
+            jhiTranslate="wattsUpEnergyApp.onsDadosValoresProgramacaoDiaria.valGeracaoprogramada"
+            >Val Geracaoprogramada</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="valGeracaoprogramada"
+            id="field_valGeracaoprogramada"
+            data-cy="valGeracaoprogramada"
+            formControlName="valGeracaoprogramada"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_valDisponibilidade"
+            jhiTranslate="wattsUpEnergyApp.onsDadosValoresProgramacaoDiaria.valDisponibilidade"
+            >Val Disponibilidade</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="valDisponibilidade"
+            id="field_valDisponibilidade"
+            data-cy="valDisponibilidade"
+            formControlName="valDisponibilidade"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_valOrdemmerito"
+            jhiTranslate="wattsUpEnergyApp.onsDadosValoresProgramacaoDiaria.valOrdemmerito"
+            >Val Ordemmerito</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="valOrdemmerito"
+            id="field_valOrdemmerito"
+            data-cy="valOrdemmerito"
+            formControlName="valOrdemmerito"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_valInflexibilidade"
+            jhiTranslate="wattsUpEnergyApp.onsDadosValoresProgramacaoDiaria.valInflexibilidade"
+            >Val Inflexibilidade</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="valInflexibilidade"
+            id="field_valInflexibilidade"
+            data-cy="valInflexibilidade"
+            formControlName="valInflexibilidade"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_valUc" jhiTranslate="wattsUpEnergyApp.onsDadosValoresProgramacaoDiaria.valUc">Val Uc</label>
+          <input type="number" class="form-control" name="valUc" id="field_valUc" data-cy="valUc" formControlName="valUc" />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_valRazaoeletrica"
+            jhiTranslate="wattsUpEnergyApp.onsDadosValoresProgramacaoDiaria.valRazaoeletrica"
+            >Val Razaoeletrica</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="valRazaoeletrica"
+            id="field_valRazaoeletrica"
+            data-cy="valRazaoeletrica"
+            formControlName="valRazaoeletrica"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_valGeracaoenergetica"
+            jhiTranslate="wattsUpEnergyApp.onsDadosValoresProgramacaoDiaria.valGeracaoenergetica"
+            >Val Geracaoenergetica</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="valGeracaoenergetica"
+            id="field_valGeracaoenergetica"
+            data-cy="valGeracaoenergetica"
+            formControlName="valGeracaoenergetica"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_valGesubgsub" jhiTranslate="wattsUpEnergyApp.onsDadosValoresProgramacaoDiaria.valGesubgsub"
+            >Val Gesubgsub</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="valGesubgsub"
+            id="field_valGesubgsub"
+            data-cy="valGesubgsub"
+            formControlName="valGesubgsub"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_valExportacao" jhiTranslate="wattsUpEnergyApp.onsDadosValoresProgramacaoDiaria.valExportacao"
+            >Val Exportacao</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="valExportacao"
+            id="field_valExportacao"
+            data-cy="valExportacao"
+            formControlName="valExportacao"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_valReposicaoexportacao"
+            jhiTranslate="wattsUpEnergyApp.onsDadosValoresProgramacaoDiaria.valReposicaoexportacao"
+            >Val Reposicaoexportacao</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="valReposicaoexportacao"
+            id="field_valReposicaoexportacao"
+            data-cy="valReposicaoexportacao"
+            formControlName="valReposicaoexportacao"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_valFaltacombustivel"
+            jhiTranslate="wattsUpEnergyApp.onsDadosValoresProgramacaoDiaria.valFaltacombustivel"
+            >Val Faltacombustivel</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="valFaltacombustivel"
+            id="field_valFaltacombustivel"
+            data-cy="valFaltacombustivel"
+            formControlName="valFaltacombustivel"
+          />
+        </div>
+      </div>
+
+      <div>
+        <button type="button" id="cancel-save" data-cy="entityCreateCancelButton" class="btn btn-secondary" (click)="previousState()">
+          <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancelar</span>
+        </button>
+
+        <button
+          type="submit"
+          id="save-entity"
+          data-cy="entityCreateSaveButton"
+          [disabled]="editForm.invalid || isSaving"
+          class="btn btn-primary"
+        >
+          <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Salvar</span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

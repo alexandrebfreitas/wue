@@ -1,0 +1,45 @@
+{
+  "wattsUpEnergyApp": {
+    "onsFatorCapacidadeGeracaoEolicaESolar": {
+      "home": {
+        "title": "Ons Fator Capacidade Geracao Eolica E Solars",
+        "refreshListLabel": "Atualizar lista",
+        "createLabel": "Criar novo Ons Fator Capacidade Geracao Eolica E Solar",
+        "createOrEditLabel": "Criar ou editar Ons Fator Capacidade Geracao Eolica E Solar",
+        "search": "Pesquisar por Ons Fator Capacidade Geracao Eolica E Solar",
+        "notFound": "Nenhum Ons Fator Capacidade Geracao Eolica E Solar encontrado"
+      },
+      "created": "Um novo Ons Fator Capacidade Geracao Eolica E Solar foi criado com o identificador {{ param }}",
+      "updated": "Um Ons Fator Capacidade Geracao Eolica E Solar foi atualizado com o identificador {{ param }}",
+      "deleted": "Um Ons Fator Capacidade Geracao Eolica E Solar foi excluído com o identificador {{ param }}",
+      "delete": {
+        "question": "Tem certeza de que deseja excluir Ons Fator Capacidade Geracao Eolica E Solar {{ id }}?"
+      },
+      "detail": {
+        "title": "Ons Fator Capacidade Geracao Eolica E Solar"
+      },
+      "id": "ID",
+      "idSubsistema": "Id Subsistema",
+      "nomSubsistema": "Nom Subsistema",
+      "idEstado": "Id Estado",
+      "nomEstado": "Nom Estado",
+      "codPontoconexao": "Cod Pontoconexao",
+      "nomPontoconexao": "Nom Pontoconexao",
+      "nomLocalizacao": "Nom Localizacao",
+      "valLatitudesecoletora": "Val Latitudesecoletora",
+      "valLongitudesecoletora": "Val Longitudesecoletora",
+      "valLatitudepontoconexao": "Val Latitudepontoconexao",
+      "valLongitudepontoconexao": "Val Longitudepontoconexao",
+      "nomModalidadeoperacao": "Nom Modalidadeoperacao",
+      "nomTipousina": "Nom Tipousina",
+      "nomUsinaConjunto": "Nom Usina Conjunto",
+      "dinInstante": "Din Instante",
+      "idOns": "Id Ons",
+      "ceg": "Ceg",
+      "valGeracaoprogramada": "Val Geracaoprogramada",
+      "valGeracaoverificada": "Val Geracaoverificada",
+      "valCapacidadeinstalada": "Val Capacidadeinstalada",
+      "valFatorcapacidade": "Val Fatorcapacidade"
+    }
+  }
+}

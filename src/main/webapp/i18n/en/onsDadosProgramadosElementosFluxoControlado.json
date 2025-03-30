@@ -1,0 +1,31 @@
+{
+  "wattsUpEnergyApp": {
+    "onsDadosProgramadosElementosFluxoControlado": {
+      "home": {
+        "title": "Ons Dados Programados Elementos Fluxo Controlados",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Ons Dados Programados Elementos Fluxo Controlado",
+        "createOrEditLabel": "Create or edit a Ons Dados Programados Elementos Fluxo Controlado",
+        "search": "Search for Ons Dados Programados Elementos Fluxo Controlado",
+        "notFound": "No Ons Dados Programados Elementos Fluxo Controlados found"
+      },
+      "created": "A new Ons Dados Programados Elementos Fluxo Controlado is created with identifier {{ param }}",
+      "updated": "A Ons Dados Programados Elementos Fluxo Controlado is updated with identifier {{ param }}",
+      "deleted": "A Ons Dados Programados Elementos Fluxo Controlado is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Ons Dados Programados Elementos Fluxo Controlado {{ id }}?"
+      },
+      "detail": {
+        "title": "Ons Dados Programados Elementos Fluxo Controlado"
+      },
+      "id": "ID",
+      "dinProgramacaodia": "Din Programacaodia",
+      "numPatamar": "Num Patamar",
+      "nomElementofluxocontrolado": "Nom Elementofluxocontrolado",
+      "dscElementofluxocontrolado": "Dsc Elementofluxocontrolado",
+      "tipTerminal": "Tip Terminal",
+      "codSubmercado": "Cod Submercado",
+      "valCarga": "Val Carga"
+    }
+  }
+}

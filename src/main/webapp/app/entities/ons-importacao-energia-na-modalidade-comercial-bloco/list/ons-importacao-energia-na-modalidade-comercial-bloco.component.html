@@ -1,0 +1,226 @@
+<div>
+  <h2 id="page-heading" data-cy="OnsImportacaoEnergiaNaModalidadeComercialBlocoHeading">
+    <span jhiTranslate="wattsUpEnergyApp.onsImportacaoEnergiaNaModalidadeComercialBloco.home.title"
+      >Ons Importacao Energia Na Modalidade Comercial Blocos</span
+    >
+
+    <div class="d-flex justify-content-end">
+      <button class="btn btn-info me-2" (click)="load()" [disabled]="isLoading">
+        <fa-icon icon="sync" [animation]="isLoading ? 'spin' : undefined"></fa-icon>
+        <span jhiTranslate="wattsUpEnergyApp.onsImportacaoEnergiaNaModalidadeComercialBloco.home.refreshListLabel">Atualizar lista</span>
+      </button>
+
+      <button
+        id="jh-create-entity"
+        data-cy="entityCreateButton"
+        class="btn btn-primary jh-create-entity create-ons-importacao-energia-na-modalidade-comercial-bloco"
+        [routerLink]="['/ons-importacao-energia-na-modalidade-comercial-bloco/new']"
+      >
+        <fa-icon icon="plus"></fa-icon>
+        <span class="hidden-sm-down" jhiTranslate="wattsUpEnergyApp.onsImportacaoEnergiaNaModalidadeComercialBloco.home.createLabel"
+          >Criar novo Ons Importacao Energia Na Modalidade Comercial Bloco</span
+        >
+      </button>
+    </div>
+  </h2>
+
+  <jhi-alert-error></jhi-alert-error>
+
+  <jhi-alert></jhi-alert>
+
+  <form name="searchForm" class="row row-cols-sm-auto align-items-center">
+    <div class="col-sm-12">
+      <div class="input-group w-100 mt-3">
+        <label
+          class="visually-hidden"
+          for="currentSearch"
+          jhiTranslate="wattsUpEnergyApp.onsImportacaoEnergiaNaModalidadeComercialBloco.home.search"
+          >Pesquisar por Ons Importacao Energia Na Modalidade Comercial Bloco</label
+        >
+        <input
+          type="text"
+          class="form-control"
+          [(ngModel)]="currentSearch"
+          id="currentSearch"
+          name="currentSearch"
+          placeholder="{{ 'wattsUpEnergyApp.onsImportacaoEnergiaNaModalidadeComercialBloco.home.search' | translate }}"
+        />
+
+        <button class="btn btn-info" (click)="search(currentSearch)">
+          <fa-icon icon="search"></fa-icon>
+        </button>
+
+        @if (currentSearch) {
+          <button class="btn btn-danger" (click)="search('')">
+            <fa-icon icon="trash-alt"></fa-icon>
+          </button>
+        }
+      </div>
+    </div>
+  </form>
+
+  @if (onsImportacaoEnergiaNaModalidadeComercialBlocos().length === 0) {
+    <div class="alert alert-warning" id="no-result">
+      <span jhiTranslate="wattsUpEnergyApp.onsImportacaoEnergiaNaModalidadeComercialBloco.home.notFound"
+        >Nenhum Ons Importacao Energia Na Modalidade Comercial Bloco encontrado</span
+      >
+    </div>
+  } @else {
+    <div class="table-responsive table-entities" id="entities">
+      <table class="table table-striped" aria-describedby="page-heading">
+        <thead>
+          <tr jhiSort [(sortState)]="sortState" (sortChange)="navigateToWithComponentValues($event)">
+            <th scope="col" jhiSortBy="id">
+              <div class="d-flex">
+                <span jhiTranslate="global.field.id">Código</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="nomPais">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsImportacaoEnergiaNaModalidadeComercialBloco.nomPais">Nom Pais</span>
+                @if (!currentSearch) {
+                  <fa-icon class="p-1" icon="sort"></fa-icon>
+                }
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="nomAgente">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsImportacaoEnergiaNaModalidadeComercialBloco.nomAgente">Nom Agente</span>
+                @if (!currentSearch) {
+                  <fa-icon class="p-1" icon="sort"></fa-icon>
+                }
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="nomBloco">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsImportacaoEnergiaNaModalidadeComercialBloco.nomBloco">Nom Bloco</span>
+                @if (!currentSearch) {
+                  <fa-icon class="p-1" icon="sort"></fa-icon>
+                }
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="codBloco">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsImportacaoEnergiaNaModalidadeComercialBloco.codBloco">Cod Bloco</span>
+                @if (!currentSearch) {
+                  <fa-icon class="p-1" icon="sort"></fa-icon>
+                }
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="dinInstante">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsImportacaoEnergiaNaModalidadeComercialBloco.dinInstante">Din Instante</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="valImportacaoprogramada">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsImportacaoEnergiaNaModalidadeComercialBloco.valImportacaoprogramada"
+                  >Val Importacaoprogramada</span
+                >
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="valImportacaodespachada">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsImportacaoEnergiaNaModalidadeComercialBloco.valImportacaodespachada"
+                  >Val Importacaodespachada</span
+                >
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="valImportacaoverificada">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsImportacaoEnergiaNaModalidadeComercialBloco.valImportacaoverificada"
+                  >Val Importacaoverificada</span
+                >
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="valPreco">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsImportacaoEnergiaNaModalidadeComercialBloco.valPreco">Val Preco</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (
+            onsImportacaoEnergiaNaModalidadeComercialBloco of onsImportacaoEnergiaNaModalidadeComercialBlocos();
+            track trackId(onsImportacaoEnergiaNaModalidadeComercialBloco)
+          ) {
+            <tr data-cy="entityTable">
+              <td>
+                <a
+                  [routerLink]="[
+                    '/ons-importacao-energia-na-modalidade-comercial-bloco',
+                    onsImportacaoEnergiaNaModalidadeComercialBloco.id,
+                    'view',
+                  ]"
+                  >{{ onsImportacaoEnergiaNaModalidadeComercialBloco.id }}</a
+                >
+              </td>
+              <td>{{ onsImportacaoEnergiaNaModalidadeComercialBloco.nomPais }}</td>
+              <td>{{ onsImportacaoEnergiaNaModalidadeComercialBloco.nomAgente }}</td>
+              <td>{{ onsImportacaoEnergiaNaModalidadeComercialBloco.nomBloco }}</td>
+              <td>{{ onsImportacaoEnergiaNaModalidadeComercialBloco.codBloco }}</td>
+              <td>{{ onsImportacaoEnergiaNaModalidadeComercialBloco.dinInstante | formatMediumDate }}</td>
+              <td>{{ onsImportacaoEnergiaNaModalidadeComercialBloco.valImportacaoprogramada }}</td>
+              <td>{{ onsImportacaoEnergiaNaModalidadeComercialBloco.valImportacaodespachada }}</td>
+              <td>{{ onsImportacaoEnergiaNaModalidadeComercialBloco.valImportacaoverificada }}</td>
+              <td>{{ onsImportacaoEnergiaNaModalidadeComercialBloco.valPreco }}</td>
+              <td class="text-end">
+                <div class="btn-group">
+                  <a
+                    [routerLink]="[
+                      '/ons-importacao-energia-na-modalidade-comercial-bloco',
+                      onsImportacaoEnergiaNaModalidadeComercialBloco.id,
+                      'view',
+                    ]"
+                    class="btn btn-info btn-sm"
+                    data-cy="entityDetailsButton"
+                  >
+                    <fa-icon icon="eye"></fa-icon>
+                    <span class="d-none d-md-inline" jhiTranslate="entity.action.view">Visualizar</span>
+                  </a>
+
+                  <a
+                    [routerLink]="[
+                      '/ons-importacao-energia-na-modalidade-comercial-bloco',
+                      onsImportacaoEnergiaNaModalidadeComercialBloco.id,
+                      'edit',
+                    ]"
+                    class="btn btn-primary btn-sm"
+                    data-cy="entityEditButton"
+                  >
+                    <fa-icon icon="pencil-alt"></fa-icon>
+                    <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Editar</span>
+                  </a>
+
+                  <button
+                    type="submit"
+                    (click)="delete(onsImportacaoEnergiaNaModalidadeComercialBloco)"
+                    class="btn btn-danger btn-sm"
+                    data-cy="entityDeleteButton"
+                  >
+                    <fa-icon icon="times"></fa-icon>
+                    <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Excluir</span>
+                  </button>
+                </div>
+              </td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+  }
+</div>

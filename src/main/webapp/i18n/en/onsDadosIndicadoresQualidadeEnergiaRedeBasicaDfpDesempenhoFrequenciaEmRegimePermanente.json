@@ -1,0 +1,34 @@
+{
+  "wattsUpEnergyApp": {
+    "onsDadosIndicadoresQualidadeEnergiaRedeBasicaDfpDesempenhoFrequenciaEmRegimePermanente": {
+      "home": {
+        "title": "Ons Dados Indicadores Qualidade Energia Rede Basica Dfp Desempenho Frequencia Em Regime Permanentes",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Ons Dados Indicadores Qualidade Energia Rede Basica Dfp Desempenho Frequencia Em Regime Permanente",
+        "createOrEditLabel": "Create or edit a Ons Dados Indicadores Qualidade Energia Rede Basica Dfp Desempenho Frequencia Em Regime Permanente",
+        "search": "Search for Ons Dados Indicadores Qualidade Energia Rede Basica Dfp Desempenho Frequencia Em Regime Permanente",
+        "notFound": "No Ons Dados Indicadores Qualidade Energia Rede Basica Dfp Desempenho Frequencia Em Regime Permanentes found"
+      },
+      "created": "A new Ons Dados Indicadores Qualidade Energia Rede Basica Dfp Desempenho Frequencia Em Regime Permanente is created with identifier {{ param }}",
+      "updated": "A Ons Dados Indicadores Qualidade Energia Rede Basica Dfp Desempenho Frequencia Em Regime Permanente is updated with identifier {{ param }}",
+      "deleted": "A Ons Dados Indicadores Qualidade Energia Rede Basica Dfp Desempenho Frequencia Em Regime Permanente is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Ons Dados Indicadores Qualidade Energia Rede Basica Dfp Desempenho Frequencia Em Regime Permanente {{ id }}?"
+      },
+      "detail": {
+        "title": "Ons Dados Indicadores Qualidade Energia Rede Basica Dfp Desempenho Frequencia Em Regime Permanente"
+      },
+      "id": "ID",
+      "idPeriodicidade": "Id Periodicidade",
+      "dinReferencia": "Din Referencia",
+      "numDesvioPermSobre": "Num Desvio Perm Sobre",
+      "numDesvioPermSub": "Num Desvio Perm Sub",
+      "numDesvioDistSobre": "Num Desvio Dist Sobre",
+      "numDesvioDistSub": "Num Desvio Dist Sub",
+      "numMinutos": "Num Minutos",
+      "numVioladodis": "Num Violadodis",
+      "numVioladoperm": "Num Violadoperm",
+      "valDfp": "Val Dfp"
+    }
+  }
+}

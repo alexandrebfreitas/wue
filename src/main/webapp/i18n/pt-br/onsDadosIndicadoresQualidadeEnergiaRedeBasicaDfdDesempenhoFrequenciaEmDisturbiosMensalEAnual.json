@@ -1,0 +1,29 @@
+{
+  "wattsUpEnergyApp": {
+    "onsDadosIndicadoresQualidadeEnergiaRedeBasicaDfdDesempenhoFrequenciaEmDisturbiosMensalEAnual": {
+      "home": {
+        "title": "Ons Dados Indicadores Qualidade Energia Rede Basica Dfd Desempenho Frequencia Em Disturbios Mensal E Anuals",
+        "refreshListLabel": "Atualizar lista",
+        "createLabel": "Criar novo Ons Dados Indicadores Qualidade Energia Rede Basica Dfd Desempenho Frequencia Em Disturbios Mensal E Anual",
+        "createOrEditLabel": "Criar ou editar Ons Dados Indicadores Qualidade Energia Rede Basica Dfd Desempenho Frequencia Em Disturbios Mensal E Anual",
+        "search": "Pesquisar por Ons Dados Indicadores Qualidade Energia Rede Basica Dfd Desempenho Frequencia Em Disturbios Mensal E Anual",
+        "notFound": "Nenhum Ons Dados Indicadores Qualidade Energia Rede Basica Dfd Desempenho Frequencia Em Disturbios Mensal E Anual encontrado"
+      },
+      "created": "Um novo Ons Dados Indicadores Qualidade Energia Rede Basica Dfd Desempenho Frequencia Em Disturbios Mensal E Anual foi criado com o identificador {{ param }}",
+      "updated": "Um Ons Dados Indicadores Qualidade Energia Rede Basica Dfd Desempenho Frequencia Em Disturbios Mensal E Anual foi atualizado com o identificador {{ param }}",
+      "deleted": "Um Ons Dados Indicadores Qualidade Energia Rede Basica Dfd Desempenho Frequencia Em Disturbios Mensal E Anual foi excluído com o identificador {{ param }}",
+      "delete": {
+        "question": "Tem certeza de que deseja excluir Ons Dados Indicadores Qualidade Energia Rede Basica Dfd Desempenho Frequencia Em Disturbios Mensal E Anual {{ id }}?"
+      },
+      "detail": {
+        "title": "Ons Dados Indicadores Qualidade Energia Rede Basica Dfd Desempenho Frequencia Em Disturbios Mensal E Anual"
+      },
+      "id": "ID",
+      "idPeriodicidade": "Id Periodicidade",
+      "dinReferencia": "Din Referencia",
+      "idFaixafrequencia": "Id Faixafrequencia",
+      "nomFaixafrequencia": "Nom Faixafrequencia",
+      "valDfd": "Val Dfd"
+    }
+  }
+}

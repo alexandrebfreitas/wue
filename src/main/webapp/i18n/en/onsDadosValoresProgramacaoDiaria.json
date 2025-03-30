@@ -1,0 +1,45 @@
+{
+  "wattsUpEnergyApp": {
+    "onsDadosValoresProgramacaoDiaria": {
+      "home": {
+        "title": "Ons Dados Valores Programacao Diarias",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Ons Dados Valores Programacao Diaria",
+        "createOrEditLabel": "Create or edit a Ons Dados Valores Programacao Diaria",
+        "search": "Search for Ons Dados Valores Programacao Diaria",
+        "notFound": "No Ons Dados Valores Programacao Diarias found"
+      },
+      "created": "A new Ons Dados Valores Programacao Diaria is created with identifier {{ param }}",
+      "updated": "A Ons Dados Valores Programacao Diaria is updated with identifier {{ param }}",
+      "deleted": "A Ons Dados Valores Programacao Diaria is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Ons Dados Valores Programacao Diaria {{ id }}?"
+      },
+      "detail": {
+        "title": "Ons Dados Valores Programacao Diaria"
+      },
+      "id": "ID",
+      "dinProgramacaodia": "Din Programacaodia",
+      "numPatamar": "Num Patamar",
+      "codExibicaousina": "Cod Exibicaousina",
+      "nomUsina": "Nom Usina",
+      "tipGeracao": "Tip Geracao",
+      "nomModalidadeoperacao": "Nom Modalidadeoperacao",
+      "idSubsistema": "Id Subsistema",
+      "nomSubsistema": "Nom Subsistema",
+      "idEstado": "Id Estado",
+      "nomEstado": "Nom Estado",
+      "valGeracaoprogramada": "Val Geracaoprogramada",
+      "valDisponibilidade": "Val Disponibilidade",
+      "valOrdemmerito": "Val Ordemmerito",
+      "valInflexibilidade": "Val Inflexibilidade",
+      "valUc": "Val Uc",
+      "valRazaoeletrica": "Val Razaoeletrica",
+      "valGeracaoenergetica": "Val Geracaoenergetica",
+      "valGesubgsub": "Val Gesubgsub",
+      "valExportacao": "Val Exportacao",
+      "valReposicaoexportacao": "Val Reposicaoexportacao",
+      "valFaltacombustivel": "Val Faltacombustivel"
+    }
+  }
+}

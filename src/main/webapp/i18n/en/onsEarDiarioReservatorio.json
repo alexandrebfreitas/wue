@@ -1,0 +1,42 @@
+{
+  "wattsUpEnergyApp": {
+    "onsEarDiarioReservatorio": {
+      "home": {
+        "title": "Ons Ear Diario Reservatorios",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Ons Ear Diario Reservatorio",
+        "createOrEditLabel": "Create or edit a Ons Ear Diario Reservatorio",
+        "search": "Search for Ons Ear Diario Reservatorio",
+        "notFound": "No Ons Ear Diario Reservatorios found"
+      },
+      "created": "A new Ons Ear Diario Reservatorio is created with identifier {{ param }}",
+      "updated": "A Ons Ear Diario Reservatorio is updated with identifier {{ param }}",
+      "deleted": "A Ons Ear Diario Reservatorio is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Ons Ear Diario Reservatorio {{ id }}?"
+      },
+      "detail": {
+        "title": "Ons Ear Diario Reservatorio"
+      },
+      "id": "ID",
+      "idSubsistemaJusante": "Id Subsistema Jusante",
+      "nomSubsistemaJusante": "Nom Subsistema Jusante",
+      "earData": "Ear Data",
+      "earReservatorioSubsistemaProprioMwmes": "Ear Reservatorio Subsistema Proprio Mwmes",
+      "earReservatorioSubsistemaJusanteMwmes": "Ear Reservatorio Subsistema Jusante Mwmes",
+      "earmaxReservatorioSubsistemaProprioMwmes": "Earmax Reservatorio Subsistema Proprio Mwmes",
+      "earmaxReservatorioSubsistemaJusanteMwmes": "Earmax Reservatorio Subsistema Jusante Mwmes",
+      "earReservatorioPercentual": "Ear Reservatorio Percentual",
+      "earTotalMwmes": "Ear Total Mwmes",
+      "earMaximaTotalMwmes": "Ear Maxima Total Mwmes",
+      "valContribearbacia": "Val Contribearbacia",
+      "valContribearmaxbacia": "Val Contribearmaxbacia",
+      "valContribearsubsistema": "Val Contribearsubsistema",
+      "valContribearmaxsubsistema": "Val Contribearmaxsubsistema",
+      "valContribearsubsistemajusante": "Val Contribearsubsistemajusante",
+      "valContribearmaxsubsistemajusante": "Val Contribearmaxsubsistemajusante",
+      "valContribearsin": "Val Contribearsin",
+      "valContribearmaxsin": "Val Contribearmaxsin"
+    }
+  }
+}

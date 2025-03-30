@@ -1,0 +1,174 @@
+<div>
+  <h2 id="page-heading" data-cy="OnsOfertasPrecoParaImportacaoHeading">
+    <span jhiTranslate="wattsUpEnergyApp.onsOfertasPrecoParaImportacao.home.title">Ons Ofertas Preco Para Importacaos</span>
+
+    <div class="d-flex justify-content-end">
+      <button class="btn btn-info me-2" (click)="load()" [disabled]="isLoading">
+        <fa-icon icon="sync" [animation]="isLoading ? 'spin' : undefined"></fa-icon>
+        <span jhiTranslate="wattsUpEnergyApp.onsOfertasPrecoParaImportacao.home.refreshListLabel">Atualizar lista</span>
+      </button>
+
+      <button
+        id="jh-create-entity"
+        data-cy="entityCreateButton"
+        class="btn btn-primary jh-create-entity create-ons-ofertas-preco-para-importacao"
+        [routerLink]="['/ons-ofertas-preco-para-importacao/new']"
+      >
+        <fa-icon icon="plus"></fa-icon>
+        <span class="hidden-sm-down" jhiTranslate="wattsUpEnergyApp.onsOfertasPrecoParaImportacao.home.createLabel"
+          >Criar novo Ons Ofertas Preco Para Importacao</span
+        >
+      </button>
+    </div>
+  </h2>
+
+  <jhi-alert-error></jhi-alert-error>
+
+  <jhi-alert></jhi-alert>
+
+  <form name="searchForm" class="row row-cols-sm-auto align-items-center">
+    <div class="col-sm-12">
+      <div class="input-group w-100 mt-3">
+        <label class="visually-hidden" for="currentSearch" jhiTranslate="wattsUpEnergyApp.onsOfertasPrecoParaImportacao.home.search"
+          >Pesquisar por Ons Ofertas Preco Para Importacao</label
+        >
+        <input
+          type="text"
+          class="form-control"
+          [(ngModel)]="currentSearch"
+          id="currentSearch"
+          name="currentSearch"
+          placeholder="{{ 'wattsUpEnergyApp.onsOfertasPrecoParaImportacao.home.search' | translate }}"
+        />
+
+        <button class="btn btn-info" (click)="search(currentSearch)">
+          <fa-icon icon="search"></fa-icon>
+        </button>
+
+        @if (currentSearch) {
+          <button class="btn btn-danger" (click)="search('')">
+            <fa-icon icon="trash-alt"></fa-icon>
+          </button>
+        }
+      </div>
+    </div>
+  </form>
+
+  @if (onsOfertasPrecoParaImportacaos().length === 0) {
+    <div class="alert alert-warning" id="no-result">
+      <span jhiTranslate="wattsUpEnergyApp.onsOfertasPrecoParaImportacao.home.notFound"
+        >Nenhum Ons Ofertas Preco Para Importacao encontrado</span
+      >
+    </div>
+  } @else {
+    <div class="table-responsive table-entities" id="entities">
+      <table class="table table-striped" aria-describedby="page-heading">
+        <thead>
+          <tr jhiSort [(sortState)]="sortState" (sortChange)="navigateToWithComponentValues($event)">
+            <th scope="col" jhiSortBy="id">
+              <div class="d-flex">
+                <span jhiTranslate="global.field.id">Código</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="nomPais">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsOfertasPrecoParaImportacao.nomPais">Nom Pais</span>
+                @if (!currentSearch) {
+                  <fa-icon class="p-1" icon="sort"></fa-icon>
+                }
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="nomAgente">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsOfertasPrecoParaImportacao.nomAgente">Nom Agente</span>
+                @if (!currentSearch) {
+                  <fa-icon class="p-1" icon="sort"></fa-icon>
+                }
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="nomBloco">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsOfertasPrecoParaImportacao.nomBloco">Nom Bloco</span>
+                @if (!currentSearch) {
+                  <fa-icon class="p-1" icon="sort"></fa-icon>
+                }
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="datIniciovalidade">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsOfertasPrecoParaImportacao.datIniciovalidade">Dat Iniciovalidade</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="datFimvalidade">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsOfertasPrecoParaImportacao.datFimvalidade">Dat Fimvalidade</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="valPreco">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsOfertasPrecoParaImportacao.valPreco">Val Preco</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (onsOfertasPrecoParaImportacao of onsOfertasPrecoParaImportacaos(); track trackId(onsOfertasPrecoParaImportacao)) {
+            <tr data-cy="entityTable">
+              <td>
+                <a [routerLink]="['/ons-ofertas-preco-para-importacao', onsOfertasPrecoParaImportacao.id, 'view']">{{
+                  onsOfertasPrecoParaImportacao.id
+                }}</a>
+              </td>
+              <td>{{ onsOfertasPrecoParaImportacao.nomPais }}</td>
+              <td>{{ onsOfertasPrecoParaImportacao.nomAgente }}</td>
+              <td>{{ onsOfertasPrecoParaImportacao.nomBloco }}</td>
+              <td>{{ onsOfertasPrecoParaImportacao.datIniciovalidade | formatMediumDate }}</td>
+              <td>{{ onsOfertasPrecoParaImportacao.datFimvalidade | formatMediumDate }}</td>
+              <td>{{ onsOfertasPrecoParaImportacao.valPreco }}</td>
+              <td class="text-end">
+                <div class="btn-group">
+                  <a
+                    [routerLink]="['/ons-ofertas-preco-para-importacao', onsOfertasPrecoParaImportacao.id, 'view']"
+                    class="btn btn-info btn-sm"
+                    data-cy="entityDetailsButton"
+                  >
+                    <fa-icon icon="eye"></fa-icon>
+                    <span class="d-none d-md-inline" jhiTranslate="entity.action.view">Visualizar</span>
+                  </a>
+
+                  <a
+                    [routerLink]="['/ons-ofertas-preco-para-importacao', onsOfertasPrecoParaImportacao.id, 'edit']"
+                    class="btn btn-primary btn-sm"
+                    data-cy="entityEditButton"
+                  >
+                    <fa-icon icon="pencil-alt"></fa-icon>
+                    <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Editar</span>
+                  </a>
+
+                  <button
+                    type="submit"
+                    (click)="delete(onsOfertasPrecoParaImportacao)"
+                    class="btn btn-danger btn-sm"
+                    data-cy="entityDeleteButton"
+                  >
+                    <fa-icon icon="times"></fa-icon>
+                    <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Excluir</span>
+                  </button>
+                </div>
+              </td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+  }
+</div>

@@ -1,0 +1,31 @@
+{
+  "wattsUpEnergyApp": {
+    "onsDadosHistoricoDespachoEnergiaJaneiro2021ASetembro2024": {
+      "home": {
+        "title": "Ons Dados Historico Despacho Energia Janeiro 2021 A Setembro 2024 S",
+        "refreshListLabel": "Atualizar lista",
+        "createLabel": "Criar novo Ons Dados Historico Despacho Energia Janeiro 2021 A Setembro 2024",
+        "createOrEditLabel": "Criar ou editar Ons Dados Historico Despacho Energia Janeiro 2021 A Setembro 2024",
+        "search": "Pesquisar por Ons Dados Historico Despacho Energia Janeiro 2021 A Setembro 2024",
+        "notFound": "Nenhum Ons Dados Historico Despacho Energia Janeiro 2021 A Setembro 2024 encontrado"
+      },
+      "created": "Um novo Ons Dados Historico Despacho Energia Janeiro 2021 A Setembro 2024 foi criado com o identificador {{ param }}",
+      "updated": "Um Ons Dados Historico Despacho Energia Janeiro 2021 A Setembro 2024 foi atualizado com o identificador {{ param }}",
+      "deleted": "Um Ons Dados Historico Despacho Energia Janeiro 2021 A Setembro 2024 foi excluído com o identificador {{ param }}",
+      "delete": {
+        "question": "Tem certeza de que deseja excluir Ons Dados Historico Despacho Energia Janeiro 2021 A Setembro 2024 {{ id }}?"
+      },
+      "detail": {
+        "title": "Ons Dados Historico Despacho Energia Janeiro 2021 A Setembro 2024"
+      },
+      "id": "ID",
+      "datPdp": "Dat Pdp",
+      "codSubmercado": "Cod Submercado",
+      "sglTipousina": "Sgl Tipousina",
+      "codUsinapdp": "Cod Usinapdp",
+      "nomUsinapdp": "Nom Usinapdp",
+      "numIntdespa": "Num Intdespa",
+      "valDespasup": "Val Despasup"
+    }
+  }
+}

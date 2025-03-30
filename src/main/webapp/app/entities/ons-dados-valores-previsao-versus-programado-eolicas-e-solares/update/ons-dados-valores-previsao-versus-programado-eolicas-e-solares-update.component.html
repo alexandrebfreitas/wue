@@ -1,0 +1,154 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <form name="editForm" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+      <h2
+        id="jhi-ons-dados-valores-previsao-versus-programado-eolicas-e-solares-heading"
+        data-cy="OnsDadosValoresPrevisaoVersusProgramadoEolicasESolaresCreateUpdateHeading"
+        jhiTranslate="wattsUpEnergyApp.onsDadosValoresPrevisaoVersusProgramadoEolicasESolares.home.createOrEditLabel"
+      >
+        Criar ou editar Ons Dados Valores Previsao Versus Programado Eolicas E Solares
+      </h2>
+
+      <div>
+        <jhi-alert-error></jhi-alert-error>
+
+        @if (editForm.controls.id.value !== null) {
+          <div class="mb-3">
+            <label
+              class="form-label"
+              for="field_id"
+              jhiTranslate="wattsUpEnergyApp.onsDadosValoresPrevisaoVersusProgramadoEolicasESolares.id"
+              >ID</label
+            >
+            <input type="number" class="form-control" name="id" id="field_id" data-cy="id" formControlName="id" [readonly]="true" />
+          </div>
+        }
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_datProgramacao"
+            jhiTranslate="wattsUpEnergyApp.onsDadosValoresPrevisaoVersusProgramadoEolicasESolares.datProgramacao"
+            >Dat Programacao</label
+          >
+          <div class="input-group">
+            <input
+              id="field_datProgramacao"
+              data-cy="datProgramacao"
+              type="text"
+              class="form-control"
+              name="datProgramacao"
+              ngbDatepicker
+              #datProgramacaoDp="ngbDatepicker"
+              formControlName="datProgramacao"
+            />
+            <button type="button" class="btn btn-secondary" (click)="datProgramacaoDp.toggle()">
+              <fa-icon icon="calendar-alt"></fa-icon>
+            </button>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_numPatamar"
+            jhiTranslate="wattsUpEnergyApp.onsDadosValoresPrevisaoVersusProgramadoEolicasESolares.numPatamar"
+            >Num Patamar</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="numPatamar"
+            id="field_numPatamar"
+            data-cy="numPatamar"
+            formControlName="numPatamar"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_codUsinapdp"
+            jhiTranslate="wattsUpEnergyApp.onsDadosValoresPrevisaoVersusProgramadoEolicasESolares.codUsinapdp"
+            >Cod Usinapdp</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="codUsinapdp"
+            id="field_codUsinapdp"
+            data-cy="codUsinapdp"
+            formControlName="codUsinapdp"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_nomUsinapdp"
+            jhiTranslate="wattsUpEnergyApp.onsDadosValoresPrevisaoVersusProgramadoEolicasESolares.nomUsinapdp"
+            >Nom Usinapdp</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="nomUsinapdp"
+            id="field_nomUsinapdp"
+            data-cy="nomUsinapdp"
+            formControlName="nomUsinapdp"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_valPrevisao"
+            jhiTranslate="wattsUpEnergyApp.onsDadosValoresPrevisaoVersusProgramadoEolicasESolares.valPrevisao"
+            >Val Previsao</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="valPrevisao"
+            id="field_valPrevisao"
+            data-cy="valPrevisao"
+            formControlName="valPrevisao"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_valProgramado"
+            jhiTranslate="wattsUpEnergyApp.onsDadosValoresPrevisaoVersusProgramadoEolicasESolares.valProgramado"
+            >Val Programado</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="valProgramado"
+            id="field_valProgramado"
+            data-cy="valProgramado"
+            formControlName="valProgramado"
+          />
+        </div>
+      </div>
+
+      <div>
+        <button type="button" id="cancel-save" data-cy="entityCreateCancelButton" class="btn btn-secondary" (click)="previousState()">
+          <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancelar</span>
+        </button>
+
+        <button
+          type="submit"
+          id="save-entity"
+          data-cy="entityCreateSaveButton"
+          [disabled]="editForm.invalid || isSaving"
+          class="btn btn-primary"
+        >
+          <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Salvar</span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

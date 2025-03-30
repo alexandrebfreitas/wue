@@ -1,0 +1,289 @@
+<div>
+  <h2 id="page-heading" data-cy="OnsDadosRestricaoOperacaoConstrainedoffUsinasEolicasHeading">
+    <span jhiTranslate="wattsUpEnergyApp.onsDadosRestricaoOperacaoConstrainedoffUsinasEolicas.home.title"
+      >Ons Dados Restricao Operacao Constrainedoff Usinas Eolicas</span
+    >
+
+    <div class="d-flex justify-content-end">
+      <button class="btn btn-info me-2" (click)="load()" [disabled]="isLoading">
+        <fa-icon icon="sync" [animation]="isLoading ? 'spin' : undefined"></fa-icon>
+        <span jhiTranslate="wattsUpEnergyApp.onsDadosRestricaoOperacaoConstrainedoffUsinasEolicas.home.refreshListLabel"
+          >Atualizar lista</span
+        >
+      </button>
+
+      <button
+        id="jh-create-entity"
+        data-cy="entityCreateButton"
+        class="btn btn-primary jh-create-entity create-ons-dados-restricao-operacao-constrainedoff-usinas-eolicas"
+        [routerLink]="['/ons-dados-restricao-operacao-constrainedoff-usinas-eolicas/new']"
+      >
+        <fa-icon icon="plus"></fa-icon>
+        <span class="hidden-sm-down" jhiTranslate="wattsUpEnergyApp.onsDadosRestricaoOperacaoConstrainedoffUsinasEolicas.home.createLabel"
+          >Criar novo Ons Dados Restricao Operacao Constrainedoff Usinas Eolicas</span
+        >
+      </button>
+    </div>
+  </h2>
+
+  <jhi-alert-error></jhi-alert-error>
+
+  <jhi-alert></jhi-alert>
+
+  <form name="searchForm" class="row row-cols-sm-auto align-items-center">
+    <div class="col-sm-12">
+      <div class="input-group w-100 mt-3">
+        <label
+          class="visually-hidden"
+          for="currentSearch"
+          jhiTranslate="wattsUpEnergyApp.onsDadosRestricaoOperacaoConstrainedoffUsinasEolicas.home.search"
+          >Pesquisar por Ons Dados Restricao Operacao Constrainedoff Usinas Eolicas</label
+        >
+        <input
+          type="text"
+          class="form-control"
+          [(ngModel)]="currentSearch"
+          id="currentSearch"
+          name="currentSearch"
+          placeholder="{{ 'wattsUpEnergyApp.onsDadosRestricaoOperacaoConstrainedoffUsinasEolicas.home.search' | translate }}"
+        />
+
+        <button class="btn btn-info" (click)="search(currentSearch)">
+          <fa-icon icon="search"></fa-icon>
+        </button>
+
+        @if (currentSearch) {
+          <button class="btn btn-danger" (click)="search('')">
+            <fa-icon icon="trash-alt"></fa-icon>
+          </button>
+        }
+      </div>
+    </div>
+  </form>
+
+  @if (onsDadosRestricaoOperacaoConstrainedoffUsinasEolicas().length === 0) {
+    <div class="alert alert-warning" id="no-result">
+      <span jhiTranslate="wattsUpEnergyApp.onsDadosRestricaoOperacaoConstrainedoffUsinasEolicas.home.notFound"
+        >Nenhum Ons Dados Restricao Operacao Constrainedoff Usinas Eolicas encontrado</span
+      >
+    </div>
+  } @else {
+    <div class="table-responsive table-entities" id="entities">
+      <table class="table table-striped" aria-describedby="page-heading">
+        <thead>
+          <tr jhiSort [(sortState)]="sortState" (sortChange)="navigateToWithComponentValues($event)">
+            <th scope="col" jhiSortBy="id">
+              <div class="d-flex">
+                <span jhiTranslate="global.field.id">Código</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="idSubsistema">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsDadosRestricaoOperacaoConstrainedoffUsinasEolicas.idSubsistema">Id Subsistema</span>
+                @if (!currentSearch) {
+                  <fa-icon class="p-1" icon="sort"></fa-icon>
+                }
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="nomSubsistema">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsDadosRestricaoOperacaoConstrainedoffUsinasEolicas.nomSubsistema"
+                  >Nom Subsistema</span
+                >
+                @if (!currentSearch) {
+                  <fa-icon class="p-1" icon="sort"></fa-icon>
+                }
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="idEstado">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsDadosRestricaoOperacaoConstrainedoffUsinasEolicas.idEstado">Id Estado</span>
+                @if (!currentSearch) {
+                  <fa-icon class="p-1" icon="sort"></fa-icon>
+                }
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="nomEstado">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsDadosRestricaoOperacaoConstrainedoffUsinasEolicas.nomEstado">Nom Estado</span>
+                @if (!currentSearch) {
+                  <fa-icon class="p-1" icon="sort"></fa-icon>
+                }
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="nomUsina">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsDadosRestricaoOperacaoConstrainedoffUsinasEolicas.nomUsina">Nom Usina</span>
+                @if (!currentSearch) {
+                  <fa-icon class="p-1" icon="sort"></fa-icon>
+                }
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="idOns">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsDadosRestricaoOperacaoConstrainedoffUsinasEolicas.idOns">Id Ons</span>
+                @if (!currentSearch) {
+                  <fa-icon class="p-1" icon="sort"></fa-icon>
+                }
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="ceg">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsDadosRestricaoOperacaoConstrainedoffUsinasEolicas.ceg">Ceg</span>
+                @if (!currentSearch) {
+                  <fa-icon class="p-1" icon="sort"></fa-icon>
+                }
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="dinInstante">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsDadosRestricaoOperacaoConstrainedoffUsinasEolicas.dinInstante">Din Instante</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="valGeracao">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsDadosRestricaoOperacaoConstrainedoffUsinasEolicas.valGeracao">Val Geracao</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="valGeracaolimitada">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsDadosRestricaoOperacaoConstrainedoffUsinasEolicas.valGeracaolimitada"
+                  >Val Geracaolimitada</span
+                >
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="valDisponibilidade">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsDadosRestricaoOperacaoConstrainedoffUsinasEolicas.valDisponibilidade"
+                  >Val Disponibilidade</span
+                >
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="valGeracaoreferencia">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsDadosRestricaoOperacaoConstrainedoffUsinasEolicas.valGeracaoreferencia"
+                  >Val Geracaoreferencia</span
+                >
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="valGeracaoreferenciafinal">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsDadosRestricaoOperacaoConstrainedoffUsinasEolicas.valGeracaoreferenciafinal"
+                  >Val Geracaoreferenciafinal</span
+                >
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="codRazaorestricao">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsDadosRestricaoOperacaoConstrainedoffUsinasEolicas.codRazaorestricao"
+                  >Cod Razaorestricao</span
+                >
+                @if (!currentSearch) {
+                  <fa-icon class="p-1" icon="sort"></fa-icon>
+                }
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="codOrigemrestricao">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsDadosRestricaoOperacaoConstrainedoffUsinasEolicas.codOrigemrestricao"
+                  >Cod Origemrestricao</span
+                >
+                @if (!currentSearch) {
+                  <fa-icon class="p-1" icon="sort"></fa-icon>
+                }
+              </div>
+            </th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (
+            onsDadosRestricaoOperacaoConstrainedoffUsinasEolicas of onsDadosRestricaoOperacaoConstrainedoffUsinasEolicas();
+            track trackId(onsDadosRestricaoOperacaoConstrainedoffUsinasEolicas)
+          ) {
+            <tr data-cy="entityTable">
+              <td>
+                <a
+                  [routerLink]="[
+                    '/ons-dados-restricao-operacao-constrainedoff-usinas-eolicas',
+                    onsDadosRestricaoOperacaoConstrainedoffUsinasEolicas.id,
+                    'view',
+                  ]"
+                  >{{ onsDadosRestricaoOperacaoConstrainedoffUsinasEolicas.id }}</a
+                >
+              </td>
+              <td>{{ onsDadosRestricaoOperacaoConstrainedoffUsinasEolicas.idSubsistema }}</td>
+              <td>{{ onsDadosRestricaoOperacaoConstrainedoffUsinasEolicas.nomSubsistema }}</td>
+              <td>{{ onsDadosRestricaoOperacaoConstrainedoffUsinasEolicas.idEstado }}</td>
+              <td>{{ onsDadosRestricaoOperacaoConstrainedoffUsinasEolicas.nomEstado }}</td>
+              <td>{{ onsDadosRestricaoOperacaoConstrainedoffUsinasEolicas.nomUsina }}</td>
+              <td>{{ onsDadosRestricaoOperacaoConstrainedoffUsinasEolicas.idOns }}</td>
+              <td>{{ onsDadosRestricaoOperacaoConstrainedoffUsinasEolicas.ceg }}</td>
+              <td>{{ onsDadosRestricaoOperacaoConstrainedoffUsinasEolicas.dinInstante | formatMediumDate }}</td>
+              <td>{{ onsDadosRestricaoOperacaoConstrainedoffUsinasEolicas.valGeracao }}</td>
+              <td>{{ onsDadosRestricaoOperacaoConstrainedoffUsinasEolicas.valGeracaolimitada }}</td>
+              <td>{{ onsDadosRestricaoOperacaoConstrainedoffUsinasEolicas.valDisponibilidade }}</td>
+              <td>{{ onsDadosRestricaoOperacaoConstrainedoffUsinasEolicas.valGeracaoreferencia }}</td>
+              <td>{{ onsDadosRestricaoOperacaoConstrainedoffUsinasEolicas.valGeracaoreferenciafinal }}</td>
+              <td>{{ onsDadosRestricaoOperacaoConstrainedoffUsinasEolicas.codRazaorestricao }}</td>
+              <td>{{ onsDadosRestricaoOperacaoConstrainedoffUsinasEolicas.codOrigemrestricao }}</td>
+              <td class="text-end">
+                <div class="btn-group">
+                  <a
+                    [routerLink]="[
+                      '/ons-dados-restricao-operacao-constrainedoff-usinas-eolicas',
+                      onsDadosRestricaoOperacaoConstrainedoffUsinasEolicas.id,
+                      'view',
+                    ]"
+                    class="btn btn-info btn-sm"
+                    data-cy="entityDetailsButton"
+                  >
+                    <fa-icon icon="eye"></fa-icon>
+                    <span class="d-none d-md-inline" jhiTranslate="entity.action.view">Visualizar</span>
+                  </a>
+
+                  <a
+                    [routerLink]="[
+                      '/ons-dados-restricao-operacao-constrainedoff-usinas-eolicas',
+                      onsDadosRestricaoOperacaoConstrainedoffUsinasEolicas.id,
+                      'edit',
+                    ]"
+                    class="btn btn-primary btn-sm"
+                    data-cy="entityEditButton"
+                  >
+                    <fa-icon icon="pencil-alt"></fa-icon>
+                    <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Editar</span>
+                  </a>
+
+                  <button
+                    type="submit"
+                    (click)="delete(onsDadosRestricaoOperacaoConstrainedoffUsinasEolicas)"
+                    class="btn btn-danger btn-sm"
+                    data-cy="entityDeleteButton"
+                  >
+                    <fa-icon icon="times"></fa-icon>
+                    <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Excluir</span>
+                  </button>
+                </div>
+              </td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+  }
+</div>

@@ -1,0 +1,229 @@
+<div>
+  <h2 id="page-heading" data-cy="OnsGeracaoUsinaEmBaseHorariaHeading">
+    <span jhiTranslate="wattsUpEnergyApp.onsGeracaoUsinaEmBaseHoraria.home.title">Ons Geracao Usina Em Base Horarias</span>
+
+    <div class="d-flex justify-content-end">
+      <button class="btn btn-info me-2" (click)="load()" [disabled]="isLoading">
+        <fa-icon icon="sync" [animation]="isLoading ? 'spin' : undefined"></fa-icon>
+        <span jhiTranslate="wattsUpEnergyApp.onsGeracaoUsinaEmBaseHoraria.home.refreshListLabel">Atualizar lista</span>
+      </button>
+
+      <button
+        id="jh-create-entity"
+        data-cy="entityCreateButton"
+        class="btn btn-primary jh-create-entity create-ons-geracao-usina-em-base-horaria"
+        [routerLink]="['/ons-geracao-usina-em-base-horaria/new']"
+      >
+        <fa-icon icon="plus"></fa-icon>
+        <span class="hidden-sm-down" jhiTranslate="wattsUpEnergyApp.onsGeracaoUsinaEmBaseHoraria.home.createLabel"
+          >Criar novo Ons Geracao Usina Em Base Horaria</span
+        >
+      </button>
+    </div>
+  </h2>
+
+  <jhi-alert-error></jhi-alert-error>
+
+  <jhi-alert></jhi-alert>
+
+  <form name="searchForm" class="row row-cols-sm-auto align-items-center">
+    <div class="col-sm-12">
+      <div class="input-group w-100 mt-3">
+        <label class="visually-hidden" for="currentSearch" jhiTranslate="wattsUpEnergyApp.onsGeracaoUsinaEmBaseHoraria.home.search"
+          >Pesquisar por Ons Geracao Usina Em Base Horaria</label
+        >
+        <input
+          type="text"
+          class="form-control"
+          [(ngModel)]="currentSearch"
+          id="currentSearch"
+          name="currentSearch"
+          placeholder="{{ 'wattsUpEnergyApp.onsGeracaoUsinaEmBaseHoraria.home.search' | translate }}"
+        />
+
+        <button class="btn btn-info" (click)="search(currentSearch)">
+          <fa-icon icon="search"></fa-icon>
+        </button>
+
+        @if (currentSearch) {
+          <button class="btn btn-danger" (click)="search('')">
+            <fa-icon icon="trash-alt"></fa-icon>
+          </button>
+        }
+      </div>
+    </div>
+  </form>
+
+  @if (onsGeracaoUsinaEmBaseHorarias().length === 0) {
+    <div class="alert alert-warning" id="no-result">
+      <span jhiTranslate="wattsUpEnergyApp.onsGeracaoUsinaEmBaseHoraria.home.notFound"
+        >Nenhum Ons Geracao Usina Em Base Horaria encontrado</span
+      >
+    </div>
+  } @else {
+    <div class="table-responsive table-entities" id="entities">
+      <table class="table table-striped" aria-describedby="page-heading">
+        <thead>
+          <tr jhiSort [(sortState)]="sortState" (sortChange)="navigateToWithComponentValues($event)">
+            <th scope="col" jhiSortBy="id">
+              <div class="d-flex">
+                <span jhiTranslate="global.field.id">Código</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="dinInstante">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsGeracaoUsinaEmBaseHoraria.dinInstante">Din Instante</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="idSubsistema">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsGeracaoUsinaEmBaseHoraria.idSubsistema">Id Subsistema</span>
+                @if (!currentSearch) {
+                  <fa-icon class="p-1" icon="sort"></fa-icon>
+                }
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="nomSubsistema">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsGeracaoUsinaEmBaseHoraria.nomSubsistema">Nom Subsistema</span>
+                @if (!currentSearch) {
+                  <fa-icon class="p-1" icon="sort"></fa-icon>
+                }
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="idEstado">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsGeracaoUsinaEmBaseHoraria.idEstado">Id Estado</span>
+                @if (!currentSearch) {
+                  <fa-icon class="p-1" icon="sort"></fa-icon>
+                }
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="nomEstado">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsGeracaoUsinaEmBaseHoraria.nomEstado">Nom Estado</span>
+                @if (!currentSearch) {
+                  <fa-icon class="p-1" icon="sort"></fa-icon>
+                }
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="codModalidadeoperacao">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsGeracaoUsinaEmBaseHoraria.codModalidadeoperacao">Cod Modalidadeoperacao</span>
+                @if (!currentSearch) {
+                  <fa-icon class="p-1" icon="sort"></fa-icon>
+                }
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="nomTipousina">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsGeracaoUsinaEmBaseHoraria.nomTipousina">Nom Tipousina</span>
+                @if (!currentSearch) {
+                  <fa-icon class="p-1" icon="sort"></fa-icon>
+                }
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="nomTipocombustivel">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsGeracaoUsinaEmBaseHoraria.nomTipocombustivel">Nom Tipocombustivel</span>
+                @if (!currentSearch) {
+                  <fa-icon class="p-1" icon="sort"></fa-icon>
+                }
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="nomUsina">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsGeracaoUsinaEmBaseHoraria.nomUsina">Nom Usina</span>
+                @if (!currentSearch) {
+                  <fa-icon class="p-1" icon="sort"></fa-icon>
+                }
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="idOns">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsGeracaoUsinaEmBaseHoraria.idOns">Id Ons</span>
+                @if (!currentSearch) {
+                  <fa-icon class="p-1" icon="sort"></fa-icon>
+                }
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="ceg">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsGeracaoUsinaEmBaseHoraria.ceg">Ceg</span>
+                @if (!currentSearch) {
+                  <fa-icon class="p-1" icon="sort"></fa-icon>
+                }
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="valGeracao">
+              <div class="d-flex">
+                <span jhiTranslate="wattsUpEnergyApp.onsGeracaoUsinaEmBaseHoraria.valGeracao">Val Geracao</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (onsGeracaoUsinaEmBaseHoraria of onsGeracaoUsinaEmBaseHorarias(); track trackId(onsGeracaoUsinaEmBaseHoraria)) {
+            <tr data-cy="entityTable">
+              <td>
+                <a [routerLink]="['/ons-geracao-usina-em-base-horaria', onsGeracaoUsinaEmBaseHoraria.id, 'view']">{{
+                  onsGeracaoUsinaEmBaseHoraria.id
+                }}</a>
+              </td>
+              <td>{{ onsGeracaoUsinaEmBaseHoraria.dinInstante | formatMediumDate }}</td>
+              <td>{{ onsGeracaoUsinaEmBaseHoraria.idSubsistema }}</td>
+              <td>{{ onsGeracaoUsinaEmBaseHoraria.nomSubsistema }}</td>
+              <td>{{ onsGeracaoUsinaEmBaseHoraria.idEstado }}</td>
+              <td>{{ onsGeracaoUsinaEmBaseHoraria.nomEstado }}</td>
+              <td>{{ onsGeracaoUsinaEmBaseHoraria.codModalidadeoperacao }}</td>
+              <td>{{ onsGeracaoUsinaEmBaseHoraria.nomTipousina }}</td>
+              <td>{{ onsGeracaoUsinaEmBaseHoraria.nomTipocombustivel }}</td>
+              <td>{{ onsGeracaoUsinaEmBaseHoraria.nomUsina }}</td>
+              <td>{{ onsGeracaoUsinaEmBaseHoraria.idOns }}</td>
+              <td>{{ onsGeracaoUsinaEmBaseHoraria.ceg }}</td>
+              <td>{{ onsGeracaoUsinaEmBaseHoraria.valGeracao }}</td>
+              <td class="text-end">
+                <div class="btn-group">
+                  <a
+                    [routerLink]="['/ons-geracao-usina-em-base-horaria', onsGeracaoUsinaEmBaseHoraria.id, 'view']"
+                    class="btn btn-info btn-sm"
+                    data-cy="entityDetailsButton"
+                  >
+                    <fa-icon icon="eye"></fa-icon>
+                    <span class="d-none d-md-inline" jhiTranslate="entity.action.view">Visualizar</span>
+                  </a>
+
+                  <a
+                    [routerLink]="['/ons-geracao-usina-em-base-horaria', onsGeracaoUsinaEmBaseHoraria.id, 'edit']"
+                    class="btn btn-primary btn-sm"
+                    data-cy="entityEditButton"
+                  >
+                    <fa-icon icon="pencil-alt"></fa-icon>
+                    <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Editar</span>
+                  </a>
+
+                  <button
+                    type="submit"
+                    (click)="delete(onsGeracaoUsinaEmBaseHoraria)"
+                    class="btn btn-danger btn-sm"
+                    data-cy="entityDeleteButton"
+                  >
+                    <fa-icon icon="times"></fa-icon>
+                    <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Excluir</span>
+                  </button>
+                </div>
+              </td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+  }
+</div>

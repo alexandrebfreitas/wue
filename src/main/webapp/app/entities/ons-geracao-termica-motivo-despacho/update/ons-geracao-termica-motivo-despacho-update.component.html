@@ -1,0 +1,708 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <form name="editForm" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+      <h2
+        id="jhi-ons-geracao-termica-motivo-despacho-heading"
+        data-cy="OnsGeracaoTermicaMotivoDespachoCreateUpdateHeading"
+        jhiTranslate="wattsUpEnergyApp.onsGeracaoTermicaMotivoDespacho.home.createOrEditLabel"
+      >
+        Criar ou editar Ons Geracao Termica Motivo Despacho
+      </h2>
+
+      <div>
+        <jhi-alert-error></jhi-alert-error>
+
+        @if (editForm.controls.id.value !== null) {
+          <div class="mb-3">
+            <label class="form-label" for="field_id" jhiTranslate="wattsUpEnergyApp.onsGeracaoTermicaMotivoDespacho.id">ID</label>
+            <input type="number" class="form-control" name="id" id="field_id" data-cy="id" formControlName="id" [readonly]="true" />
+          </div>
+        }
+
+        <div class="mb-3">
+          <label class="form-label" for="field_dinInstante" jhiTranslate="wattsUpEnergyApp.onsGeracaoTermicaMotivoDespacho.dinInstante"
+            >Din Instante</label
+          >
+          <div class="input-group">
+            <input
+              id="field_dinInstante"
+              data-cy="dinInstante"
+              type="text"
+              class="form-control"
+              name="dinInstante"
+              ngbDatepicker
+              #dinInstanteDp="ngbDatepicker"
+              formControlName="dinInstante"
+            />
+            <button type="button" class="btn btn-secondary" (click)="dinInstanteDp.toggle()">
+              <fa-icon icon="calendar-alt"></fa-icon>
+            </button>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_nomTipopatamar"
+            jhiTranslate="wattsUpEnergyApp.onsGeracaoTermicaMotivoDespacho.nomTipopatamar"
+            >Nom Tipopatamar</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="nomTipopatamar"
+            id="field_nomTipopatamar"
+            data-cy="nomTipopatamar"
+            formControlName="nomTipopatamar"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_idSubsistema" jhiTranslate="wattsUpEnergyApp.onsGeracaoTermicaMotivoDespacho.idSubsistema"
+            >Id Subsistema</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="idSubsistema"
+            id="field_idSubsistema"
+            data-cy="idSubsistema"
+            formControlName="idSubsistema"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_nomSubsistema" jhiTranslate="wattsUpEnergyApp.onsGeracaoTermicaMotivoDespacho.nomSubsistema"
+            >Nom Subsistema</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="nomSubsistema"
+            id="field_nomSubsistema"
+            data-cy="nomSubsistema"
+            formControlName="nomSubsistema"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_nomUsina" jhiTranslate="wattsUpEnergyApp.onsGeracaoTermicaMotivoDespacho.nomUsina"
+            >Nom Usina</label
+          >
+          <input type="text" class="form-control" name="nomUsina" id="field_nomUsina" data-cy="nomUsina" formControlName="nomUsina" />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_codUsinaplanejamento"
+            jhiTranslate="wattsUpEnergyApp.onsGeracaoTermicaMotivoDespacho.codUsinaplanejamento"
+            >Cod Usinaplanejamento</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="codUsinaplanejamento"
+            id="field_codUsinaplanejamento"
+            data-cy="codUsinaplanejamento"
+            formControlName="codUsinaplanejamento"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_ceg" jhiTranslate="wattsUpEnergyApp.onsGeracaoTermicaMotivoDespacho.ceg">Ceg</label>
+          <input type="text" class="form-control" name="ceg" id="field_ceg" data-cy="ceg" formControlName="ceg" />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_valProggeracao"
+            jhiTranslate="wattsUpEnergyApp.onsGeracaoTermicaMotivoDespacho.valProggeracao"
+            >Val Proggeracao</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="valProggeracao"
+            id="field_valProggeracao"
+            data-cy="valProggeracao"
+            formControlName="valProggeracao"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_valProgordemmerito"
+            jhiTranslate="wattsUpEnergyApp.onsGeracaoTermicaMotivoDespacho.valProgordemmerito"
+            >Val Progordemmerito</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="valProgordemmerito"
+            id="field_valProgordemmerito"
+            data-cy="valProgordemmerito"
+            formControlName="valProgordemmerito"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_valProgordemdemeritoref"
+            jhiTranslate="wattsUpEnergyApp.onsGeracaoTermicaMotivoDespacho.valProgordemdemeritoref"
+            >Val Progordemdemeritoref</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="valProgordemdemeritoref"
+            id="field_valProgordemdemeritoref"
+            data-cy="valProgordemdemeritoref"
+            formControlName="valProgordemdemeritoref"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_valProgordemdemeritoacimadainflex"
+            jhiTranslate="wattsUpEnergyApp.onsGeracaoTermicaMotivoDespacho.valProgordemdemeritoacimadainflex"
+            >Val Progordemdemeritoacimadainflex</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="valProgordemdemeritoacimadainflex"
+            id="field_valProgordemdemeritoacimadainflex"
+            data-cy="valProgordemdemeritoacimadainflex"
+            formControlName="valProgordemdemeritoacimadainflex"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_valProginflexibilidade"
+            jhiTranslate="wattsUpEnergyApp.onsGeracaoTermicaMotivoDespacho.valProginflexibilidade"
+            >Val Proginflexibilidade</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="valProginflexibilidade"
+            id="field_valProginflexibilidade"
+            data-cy="valProginflexibilidade"
+            formControlName="valProginflexibilidade"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_valProginflexembutmerito"
+            jhiTranslate="wattsUpEnergyApp.onsGeracaoTermicaMotivoDespacho.valProginflexembutmerito"
+            >Val Proginflexembutmerito</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="valProginflexembutmerito"
+            id="field_valProginflexembutmerito"
+            data-cy="valProginflexembutmerito"
+            formControlName="valProginflexembutmerito"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_valProginflexpura"
+            jhiTranslate="wattsUpEnergyApp.onsGeracaoTermicaMotivoDespacho.valProginflexpura"
+            >Val Proginflexpura</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="valProginflexpura"
+            id="field_valProginflexpura"
+            data-cy="valProginflexpura"
+            formControlName="valProginflexpura"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_valPrograzaoeletrica"
+            jhiTranslate="wattsUpEnergyApp.onsGeracaoTermicaMotivoDespacho.valPrograzaoeletrica"
+            >Val Prograzaoeletrica</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="valPrograzaoeletrica"
+            id="field_valPrograzaoeletrica"
+            data-cy="valPrograzaoeletrica"
+            formControlName="valPrograzaoeletrica"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_valProggarantiaenergetica"
+            jhiTranslate="wattsUpEnergyApp.onsGeracaoTermicaMotivoDespacho.valProggarantiaenergetica"
+            >Val Proggarantiaenergetica</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="valProggarantiaenergetica"
+            id="field_valProggarantiaenergetica"
+            data-cy="valProggarantiaenergetica"
+            formControlName="valProggarantiaenergetica"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_valProggfom" jhiTranslate="wattsUpEnergyApp.onsGeracaoTermicaMotivoDespacho.valProggfom"
+            >Val Proggfom</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="valProggfom"
+            id="field_valProggfom"
+            data-cy="valProggfom"
+            formControlName="valProggfom"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_valProgreposicaoperdas"
+            jhiTranslate="wattsUpEnergyApp.onsGeracaoTermicaMotivoDespacho.valProgreposicaoperdas"
+            >Val Progreposicaoperdas</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="valProgreposicaoperdas"
+            id="field_valProgreposicaoperdas"
+            data-cy="valProgreposicaoperdas"
+            formControlName="valProgreposicaoperdas"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_valProgexportacao"
+            jhiTranslate="wattsUpEnergyApp.onsGeracaoTermicaMotivoDespacho.valProgexportacao"
+            >Val Progexportacao</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="valProgexportacao"
+            id="field_valProgexportacao"
+            data-cy="valProgexportacao"
+            formControlName="valProgexportacao"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_valProgreservapotencia"
+            jhiTranslate="wattsUpEnergyApp.onsGeracaoTermicaMotivoDespacho.valProgreservapotencia"
+            >Val Progreservapotencia</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="valProgreservapotencia"
+            id="field_valProgreservapotencia"
+            data-cy="valProgreservapotencia"
+            formControlName="valProgreservapotencia"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_valProggsub" jhiTranslate="wattsUpEnergyApp.onsGeracaoTermicaMotivoDespacho.valProggsub"
+            >Val Proggsub</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="valProggsub"
+            id="field_valProggsub"
+            data-cy="valProggsub"
+            formControlName="valProggsub"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_valProgunitcommitment"
+            jhiTranslate="wattsUpEnergyApp.onsGeracaoTermicaMotivoDespacho.valProgunitcommitment"
+            >Val Progunitcommitment</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="valProgunitcommitment"
+            id="field_valProgunitcommitment"
+            data-cy="valProgunitcommitment"
+            formControlName="valProgunitcommitment"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_valProgconstrainedoff"
+            jhiTranslate="wattsUpEnergyApp.onsGeracaoTermicaMotivoDespacho.valProgconstrainedoff"
+            >Val Progconstrainedoff</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="valProgconstrainedoff"
+            id="field_valProgconstrainedoff"
+            data-cy="valProgconstrainedoff"
+            formControlName="valProgconstrainedoff"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_valProginflexibilidadedessem"
+            jhiTranslate="wattsUpEnergyApp.onsGeracaoTermicaMotivoDespacho.valProginflexibilidadedessem"
+            >Val Proginflexibilidadedessem</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="valProginflexibilidadedessem"
+            id="field_valProginflexibilidadedessem"
+            data-cy="valProginflexibilidadedessem"
+            formControlName="valProginflexibilidadedessem"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_valVerifgeracao"
+            jhiTranslate="wattsUpEnergyApp.onsGeracaoTermicaMotivoDespacho.valVerifgeracao"
+            >Val Verifgeracao</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="valVerifgeracao"
+            id="field_valVerifgeracao"
+            data-cy="valVerifgeracao"
+            formControlName="valVerifgeracao"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_valVerifordemmerito"
+            jhiTranslate="wattsUpEnergyApp.onsGeracaoTermicaMotivoDespacho.valVerifordemmerito"
+            >Val Verifordemmerito</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="valVerifordemmerito"
+            id="field_valVerifordemmerito"
+            data-cy="valVerifordemmerito"
+            formControlName="valVerifordemmerito"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_valVerifordemdemeritoacimadainflex"
+            jhiTranslate="wattsUpEnergyApp.onsGeracaoTermicaMotivoDespacho.valVerifordemdemeritoacimadainflex"
+            >Val Verifordemdemeritoacimadainflex</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="valVerifordemdemeritoacimadainflex"
+            id="field_valVerifordemdemeritoacimadainflex"
+            data-cy="valVerifordemdemeritoacimadainflex"
+            formControlName="valVerifordemdemeritoacimadainflex"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_valVerifinflexibilidade"
+            jhiTranslate="wattsUpEnergyApp.onsGeracaoTermicaMotivoDespacho.valVerifinflexibilidade"
+            >Val Verifinflexibilidade</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="valVerifinflexibilidade"
+            id="field_valVerifinflexibilidade"
+            data-cy="valVerifinflexibilidade"
+            formControlName="valVerifinflexibilidade"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_valVerifinflexembutmerito"
+            jhiTranslate="wattsUpEnergyApp.onsGeracaoTermicaMotivoDespacho.valVerifinflexembutmerito"
+            >Val Verifinflexembutmerito</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="valVerifinflexembutmerito"
+            id="field_valVerifinflexembutmerito"
+            data-cy="valVerifinflexembutmerito"
+            formControlName="valVerifinflexembutmerito"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_valVerifinflexpura"
+            jhiTranslate="wattsUpEnergyApp.onsGeracaoTermicaMotivoDespacho.valVerifinflexpura"
+            >Val Verifinflexpura</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="valVerifinflexpura"
+            id="field_valVerifinflexpura"
+            data-cy="valVerifinflexpura"
+            formControlName="valVerifinflexpura"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_valVerifrazaoeletrica"
+            jhiTranslate="wattsUpEnergyApp.onsGeracaoTermicaMotivoDespacho.valVerifrazaoeletrica"
+            >Val Verifrazaoeletrica</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="valVerifrazaoeletrica"
+            id="field_valVerifrazaoeletrica"
+            data-cy="valVerifrazaoeletrica"
+            formControlName="valVerifrazaoeletrica"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_valVerifgarantiaenergetica"
+            jhiTranslate="wattsUpEnergyApp.onsGeracaoTermicaMotivoDespacho.valVerifgarantiaenergetica"
+            >Val Verifgarantiaenergetica</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="valVerifgarantiaenergetica"
+            id="field_valVerifgarantiaenergetica"
+            data-cy="valVerifgarantiaenergetica"
+            formControlName="valVerifgarantiaenergetica"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_valVerifgfom" jhiTranslate="wattsUpEnergyApp.onsGeracaoTermicaMotivoDespacho.valVerifgfom"
+            >Val Verifgfom</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="valVerifgfom"
+            id="field_valVerifgfom"
+            data-cy="valVerifgfom"
+            formControlName="valVerifgfom"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_valVerifreposicaoperdas"
+            jhiTranslate="wattsUpEnergyApp.onsGeracaoTermicaMotivoDespacho.valVerifreposicaoperdas"
+            >Val Verifreposicaoperdas</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="valVerifreposicaoperdas"
+            id="field_valVerifreposicaoperdas"
+            data-cy="valVerifreposicaoperdas"
+            formControlName="valVerifreposicaoperdas"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_valVerifexportacao"
+            jhiTranslate="wattsUpEnergyApp.onsGeracaoTermicaMotivoDespacho.valVerifexportacao"
+            >Val Verifexportacao</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="valVerifexportacao"
+            id="field_valVerifexportacao"
+            data-cy="valVerifexportacao"
+            formControlName="valVerifexportacao"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_valFdexp" jhiTranslate="wattsUpEnergyApp.onsGeracaoTermicaMotivoDespacho.valFdexp"
+            >Val Fdexp</label
+          >
+          <input type="number" class="form-control" name="valFdexp" id="field_valFdexp" data-cy="valFdexp" formControlName="valFdexp" />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_valVerifreservapotencia"
+            jhiTranslate="wattsUpEnergyApp.onsGeracaoTermicaMotivoDespacho.valVerifreservapotencia"
+            >Val Verifreservapotencia</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="valVerifreservapotencia"
+            id="field_valVerifreservapotencia"
+            data-cy="valVerifreservapotencia"
+            formControlName="valVerifreservapotencia"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_valAtendsatisfatoriorpo"
+            jhiTranslate="wattsUpEnergyApp.onsGeracaoTermicaMotivoDespacho.valAtendsatisfatoriorpo"
+            >Val Atendsatisfatoriorpo</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="valAtendsatisfatoriorpo"
+            id="field_valAtendsatisfatoriorpo"
+            data-cy="valAtendsatisfatoriorpo"
+            formControlName="valAtendsatisfatoriorpo"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_valVerifgsub" jhiTranslate="wattsUpEnergyApp.onsGeracaoTermicaMotivoDespacho.valVerifgsub"
+            >Val Verifgsub</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="valVerifgsub"
+            id="field_valVerifgsub"
+            data-cy="valVerifgsub"
+            formControlName="valVerifgsub"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_valVerifunitcommitment"
+            jhiTranslate="wattsUpEnergyApp.onsGeracaoTermicaMotivoDespacho.valVerifunitcommitment"
+            >Val Verifunitcommitment</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="valVerifunitcommitment"
+            id="field_valVerifunitcommitment"
+            data-cy="valVerifunitcommitment"
+            formControlName="valVerifunitcommitment"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_valVerifconstrainedoff"
+            jhiTranslate="wattsUpEnergyApp.onsGeracaoTermicaMotivoDespacho.valVerifconstrainedoff"
+            >Val Verifconstrainedoff</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="valVerifconstrainedoff"
+            id="field_valVerifconstrainedoff"
+            data-cy="valVerifconstrainedoff"
+            formControlName="valVerifconstrainedoff"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_tipRestricaoeletrica"
+            jhiTranslate="wattsUpEnergyApp.onsGeracaoTermicaMotivoDespacho.tipRestricaoeletrica"
+            >Tip Restricaoeletrica</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="tipRestricaoeletrica"
+            id="field_tipRestricaoeletrica"
+            data-cy="tipRestricaoeletrica"
+            formControlName="tipRestricaoeletrica"
+          />
+        </div>
+      </div>
+
+      <div>
+        <button type="button" id="cancel-save" data-cy="entityCreateCancelButton" class="btn btn-secondary" (click)="previousState()">
+          <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancelar</span>
+        </button>
+
+        <button
+          type="submit"
+          id="save-entity"
+          data-cy="entityCreateSaveButton"
+          [disabled]="editForm.invalid || isSaving"
+          class="btn btn-primary"
+        >
+          <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Salvar</span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

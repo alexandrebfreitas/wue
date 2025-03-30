@@ -1,0 +1,51 @@
+{
+  "annotations": {
+    "changelogDate": "20250330013703"
+  },
+  "applications": "*",
+  "entityTableName": "OnsTable26",
+  "fields": [
+    {
+      "fieldName": "dscAgregacao",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "codCaracteristica",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "dscCaracteristica",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "idPeriodicidade",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "dinReferencia",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "valSm1",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "valSm2",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "valSm3",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "valSm4",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "valSm5",
+      "fieldType": "Double"
+    }
+  ],
+  "name": "OnsIndicadoresConfiabilidadeRedeBasicaSmSeveridadePerturbacoes",
+  "relationships": []
+}

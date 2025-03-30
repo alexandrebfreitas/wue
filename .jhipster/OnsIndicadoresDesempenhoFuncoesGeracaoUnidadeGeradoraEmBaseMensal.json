@@ -1,0 +1,91 @@
+{
+  "annotations": {
+    "changelogDate": "20250330013713"
+  },
+  "applications": "*",
+  "entityTableName": "OnsTable36",
+  "fields": [
+    {
+      "fieldName": "idSubsistema",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nomSubsistema",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "idEstado",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nomEstado",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nomModalidadeoperacao",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nomAgenteproprietario",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "idTipousina",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "idUsina",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nomUsina",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "ceg",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "codEquipamento",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "numUnidadegeradora",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nomUnidadegeradora",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "valPotencia",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "valDispf",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "valIndisppf",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "valIndispff",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "valDmdff",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "valFdff",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "valTdff",
+      "fieldType": "Double"
+    }
+  ],
+  "name": "OnsIndicadoresDesempenhoFuncoesGeracaoUnidadeGeradoraEmBaseMensal",
+  "relationships": []
+}

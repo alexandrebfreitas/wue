@@ -1,0 +1,34 @@
+{
+  "wattsUpEnergyApp": {
+    "onsIndicadoresConfiabilidadeRedeBasicaSmSeveridadePerturbacoes": {
+      "home": {
+        "title": "Ons Indicadores Confiabilidade Rede Basica Sm Severidade Perturbacoes",
+        "refreshListLabel": "Atualizar lista",
+        "createLabel": "Criar novo Ons Indicadores Confiabilidade Rede Basica Sm Severidade Perturbacoes",
+        "createOrEditLabel": "Criar ou editar Ons Indicadores Confiabilidade Rede Basica Sm Severidade Perturbacoes",
+        "search": "Pesquisar por Ons Indicadores Confiabilidade Rede Basica Sm Severidade Perturbacoes",
+        "notFound": "Nenhum Ons Indicadores Confiabilidade Rede Basica Sm Severidade Perturbacoes encontrado"
+      },
+      "created": "Um novo Ons Indicadores Confiabilidade Rede Basica Sm Severidade Perturbacoes foi criado com o identificador {{ param }}",
+      "updated": "Um Ons Indicadores Confiabilidade Rede Basica Sm Severidade Perturbacoes foi atualizado com o identificador {{ param }}",
+      "deleted": "Um Ons Indicadores Confiabilidade Rede Basica Sm Severidade Perturbacoes foi excluído com o identificador {{ param }}",
+      "delete": {
+        "question": "Tem certeza de que deseja excluir Ons Indicadores Confiabilidade Rede Basica Sm Severidade Perturbacoes {{ id }}?"
+      },
+      "detail": {
+        "title": "Ons Indicadores Confiabilidade Rede Basica Sm Severidade Perturbacoes"
+      },
+      "id": "ID",
+      "dscAgregacao": "Dsc Agregacao",
+      "codCaracteristica": "Cod Caracteristica",
+      "dscCaracteristica": "Dsc Caracteristica",
+      "idPeriodicidade": "Id Periodicidade",
+      "dinReferencia": "Din Referencia",
+      "valSm1": "Val Sm 1",
+      "valSm2": "Val Sm 2",
+      "valSm3": "Val Sm 3",
+      "valSm4": "Val Sm 4",
+      "valSm5": "Val Sm 5"
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "wattsUpEnergyApp": {
+    "onsImportacaoEnergiaNaModalidadeComercialBloco": {
+      "home": {
+        "title": "Ons Importacao Energia Na Modalidade Comercial Blocos",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Ons Importacao Energia Na Modalidade Comercial Bloco",
+        "createOrEditLabel": "Create or edit a Ons Importacao Energia Na Modalidade Comercial Bloco",
+        "search": "Search for Ons Importacao Energia Na Modalidade Comercial Bloco",
+        "notFound": "No Ons Importacao Energia Na Modalidade Comercial Blocos found"
+      },
+      "created": "A new Ons Importacao Energia Na Modalidade Comercial Bloco is created with identifier {{ param }}",
+      "updated": "A Ons Importacao Energia Na Modalidade Comercial Bloco is updated with identifier {{ param }}",
+      "deleted": "A Ons Importacao Energia Na Modalidade Comercial Bloco is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Ons Importacao Energia Na Modalidade Comercial Bloco {{ id }}?"
+      },
+      "detail": {
+        "title": "Ons Importacao Energia Na Modalidade Comercial Bloco"
+      },
+      "id": "ID",
+      "nomPais": "Nom Pais",
+      "nomAgente": "Nom Agente",
+      "nomBloco": "Nom Bloco",
+      "codBloco": "Cod Bloco",
+      "dinInstante": "Din Instante",
+      "valImportacaoprogramada": "Val Importacaoprogramada",
+      "valImportacaodespachada": "Val Importacaodespachada",
+      "valImportacaoverificada": "Val Importacaoverificada",
+      "valPreco": "Val Preco"
+    }
+  }
+}

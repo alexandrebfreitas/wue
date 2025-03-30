@@ -1,0 +1,340 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <form name="editForm" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+      <h2
+        id="jhi-ons-ear-diario-reservatorio-heading"
+        data-cy="OnsEarDiarioReservatorioCreateUpdateHeading"
+        jhiTranslate="wattsUpEnergyApp.onsEarDiarioReservatorio.home.createOrEditLabel"
+      >
+        Criar ou editar Ons Ear Diario Reservatorio
+      </h2>
+
+      <div>
+        <jhi-alert-error></jhi-alert-error>
+
+        @if (editForm.controls.id.value !== null) {
+          <div class="mb-3">
+            <label class="form-label" for="field_id" jhiTranslate="wattsUpEnergyApp.onsEarDiarioReservatorio.id">ID</label>
+            <input type="number" class="form-control" name="id" id="field_id" data-cy="id" formControlName="id" [readonly]="true" />
+          </div>
+        }
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_idSubsistemaJusante"
+            jhiTranslate="wattsUpEnergyApp.onsEarDiarioReservatorio.idSubsistemaJusante"
+            >Id Subsistema Jusante</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="idSubsistemaJusante"
+            id="field_idSubsistemaJusante"
+            data-cy="idSubsistemaJusante"
+            formControlName="idSubsistemaJusante"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_nomSubsistemaJusante"
+            jhiTranslate="wattsUpEnergyApp.onsEarDiarioReservatorio.nomSubsistemaJusante"
+            >Nom Subsistema Jusante</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="nomSubsistemaJusante"
+            id="field_nomSubsistemaJusante"
+            data-cy="nomSubsistemaJusante"
+            formControlName="nomSubsistemaJusante"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_earData" jhiTranslate="wattsUpEnergyApp.onsEarDiarioReservatorio.earData">Ear Data</label>
+          <div class="input-group">
+            <input
+              id="field_earData"
+              data-cy="earData"
+              type="text"
+              class="form-control"
+              name="earData"
+              ngbDatepicker
+              #earDataDp="ngbDatepicker"
+              formControlName="earData"
+            />
+            <button type="button" class="btn btn-secondary" (click)="earDataDp.toggle()"><fa-icon icon="calendar-alt"></fa-icon></button>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_earReservatorioSubsistemaProprioMwmes"
+            jhiTranslate="wattsUpEnergyApp.onsEarDiarioReservatorio.earReservatorioSubsistemaProprioMwmes"
+            >Ear Reservatorio Subsistema Proprio Mwmes</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="earReservatorioSubsistemaProprioMwmes"
+            id="field_earReservatorioSubsistemaProprioMwmes"
+            data-cy="earReservatorioSubsistemaProprioMwmes"
+            formControlName="earReservatorioSubsistemaProprioMwmes"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_earReservatorioSubsistemaJusanteMwmes"
+            jhiTranslate="wattsUpEnergyApp.onsEarDiarioReservatorio.earReservatorioSubsistemaJusanteMwmes"
+            >Ear Reservatorio Subsistema Jusante Mwmes</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="earReservatorioSubsistemaJusanteMwmes"
+            id="field_earReservatorioSubsistemaJusanteMwmes"
+            data-cy="earReservatorioSubsistemaJusanteMwmes"
+            formControlName="earReservatorioSubsistemaJusanteMwmes"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_earmaxReservatorioSubsistemaProprioMwmes"
+            jhiTranslate="wattsUpEnergyApp.onsEarDiarioReservatorio.earmaxReservatorioSubsistemaProprioMwmes"
+            >Earmax Reservatorio Subsistema Proprio Mwmes</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="earmaxReservatorioSubsistemaProprioMwmes"
+            id="field_earmaxReservatorioSubsistemaProprioMwmes"
+            data-cy="earmaxReservatorioSubsistemaProprioMwmes"
+            formControlName="earmaxReservatorioSubsistemaProprioMwmes"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_earmaxReservatorioSubsistemaJusanteMwmes"
+            jhiTranslate="wattsUpEnergyApp.onsEarDiarioReservatorio.earmaxReservatorioSubsistemaJusanteMwmes"
+            >Earmax Reservatorio Subsistema Jusante Mwmes</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="earmaxReservatorioSubsistemaJusanteMwmes"
+            id="field_earmaxReservatorioSubsistemaJusanteMwmes"
+            data-cy="earmaxReservatorioSubsistemaJusanteMwmes"
+            formControlName="earmaxReservatorioSubsistemaJusanteMwmes"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_earReservatorioPercentual"
+            jhiTranslate="wattsUpEnergyApp.onsEarDiarioReservatorio.earReservatorioPercentual"
+            >Ear Reservatorio Percentual</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="earReservatorioPercentual"
+            id="field_earReservatorioPercentual"
+            data-cy="earReservatorioPercentual"
+            formControlName="earReservatorioPercentual"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_earTotalMwmes" jhiTranslate="wattsUpEnergyApp.onsEarDiarioReservatorio.earTotalMwmes"
+            >Ear Total Mwmes</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="earTotalMwmes"
+            id="field_earTotalMwmes"
+            data-cy="earTotalMwmes"
+            formControlName="earTotalMwmes"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_earMaximaTotalMwmes"
+            jhiTranslate="wattsUpEnergyApp.onsEarDiarioReservatorio.earMaximaTotalMwmes"
+            >Ear Maxima Total Mwmes</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="earMaximaTotalMwmes"
+            id="field_earMaximaTotalMwmes"
+            data-cy="earMaximaTotalMwmes"
+            formControlName="earMaximaTotalMwmes"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_valContribearbacia"
+            jhiTranslate="wattsUpEnergyApp.onsEarDiarioReservatorio.valContribearbacia"
+            >Val Contribearbacia</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="valContribearbacia"
+            id="field_valContribearbacia"
+            data-cy="valContribearbacia"
+            formControlName="valContribearbacia"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_valContribearmaxbacia"
+            jhiTranslate="wattsUpEnergyApp.onsEarDiarioReservatorio.valContribearmaxbacia"
+            >Val Contribearmaxbacia</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="valContribearmaxbacia"
+            id="field_valContribearmaxbacia"
+            data-cy="valContribearmaxbacia"
+            formControlName="valContribearmaxbacia"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_valContribearsubsistema"
+            jhiTranslate="wattsUpEnergyApp.onsEarDiarioReservatorio.valContribearsubsistema"
+            >Val Contribearsubsistema</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="valContribearsubsistema"
+            id="field_valContribearsubsistema"
+            data-cy="valContribearsubsistema"
+            formControlName="valContribearsubsistema"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_valContribearmaxsubsistema"
+            jhiTranslate="wattsUpEnergyApp.onsEarDiarioReservatorio.valContribearmaxsubsistema"
+            >Val Contribearmaxsubsistema</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="valContribearmaxsubsistema"
+            id="field_valContribearmaxsubsistema"
+            data-cy="valContribearmaxsubsistema"
+            formControlName="valContribearmaxsubsistema"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_valContribearsubsistemajusante"
+            jhiTranslate="wattsUpEnergyApp.onsEarDiarioReservatorio.valContribearsubsistemajusante"
+            >Val Contribearsubsistemajusante</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="valContribearsubsistemajusante"
+            id="field_valContribearsubsistemajusante"
+            data-cy="valContribearsubsistemajusante"
+            formControlName="valContribearsubsistemajusante"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_valContribearmaxsubsistemajusante"
+            jhiTranslate="wattsUpEnergyApp.onsEarDiarioReservatorio.valContribearmaxsubsistemajusante"
+            >Val Contribearmaxsubsistemajusante</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="valContribearmaxsubsistemajusante"
+            id="field_valContribearmaxsubsistemajusante"
+            data-cy="valContribearmaxsubsistemajusante"
+            formControlName="valContribearmaxsubsistemajusante"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_valContribearsin" jhiTranslate="wattsUpEnergyApp.onsEarDiarioReservatorio.valContribearsin"
+            >Val Contribearsin</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="valContribearsin"
+            id="field_valContribearsin"
+            data-cy="valContribearsin"
+            formControlName="valContribearsin"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_valContribearmaxsin"
+            jhiTranslate="wattsUpEnergyApp.onsEarDiarioReservatorio.valContribearmaxsin"
+            >Val Contribearmaxsin</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="valContribearmaxsin"
+            id="field_valContribearmaxsin"
+            data-cy="valContribearmaxsin"
+            formControlName="valContribearmaxsin"
+          />
+        </div>
+      </div>
+
+      <div>
+        <button type="button" id="cancel-save" data-cy="entityCreateCancelButton" class="btn btn-secondary" (click)="previousState()">
+          <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancelar</span>
+        </button>
+
+        <button
+          type="submit"
+          id="save-entity"
+          data-cy="entityCreateSaveButton"
+          [disabled]="editForm.invalid || isSaving"
+          class="btn btn-primary"
+        >
+          <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Salvar</span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,30 @@
+{
+  "wattsUpEnergyApp": {
+    "onsIntercambiosEntreSubsistemas": {
+      "home": {
+        "title": "Ons Intercambios Entre Subsistemas",
+        "refreshListLabel": "Atualizar lista",
+        "createLabel": "Criar novo Ons Intercambios Entre Subsistemas",
+        "createOrEditLabel": "Criar ou editar Ons Intercambios Entre Subsistemas",
+        "search": "Pesquisar por Ons Intercambios Entre Subsistemas",
+        "notFound": "Nenhum Ons Intercambios Entre Subsistemas encontrado"
+      },
+      "created": "Um novo Ons Intercambios Entre Subsistemas foi criado com o identificador {{ param }}",
+      "updated": "Um Ons Intercambios Entre Subsistemas foi atualizado com o identificador {{ param }}",
+      "deleted": "Um Ons Intercambios Entre Subsistemas foi excluído com o identificador {{ param }}",
+      "delete": {
+        "question": "Tem certeza de que deseja excluir Ons Intercambios Entre Subsistemas {{ id }}?"
+      },
+      "detail": {
+        "title": "Ons Intercambios Entre Subsistemas"
+      },
+      "id": "ID",
+      "dinInstante": "Din Instante",
+      "idSubsistemaOrigem": "Id Subsistema Origem",
+      "nomSubsistemaOrigem": "Nom Subsistema Origem",
+      "idSubsistemaDestino": "Id Subsistema Destino",
+      "nomSubsistemaDestino": "Nom Subsistema Destino",
+      "valIntercambiomwmed": "Val Intercambiomwmed"
+    }
+  }
+}

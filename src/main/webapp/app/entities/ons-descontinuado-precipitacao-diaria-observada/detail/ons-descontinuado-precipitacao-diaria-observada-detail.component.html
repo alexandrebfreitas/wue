@@ -1,0 +1,58 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    @if (onsDescontinuadoPrecipitacaoDiariaObservada(); as onsDescontinuadoPrecipitacaoDiariaObservadaRef) {
+      <div>
+        <h2 data-cy="onsDescontinuadoPrecipitacaoDiariaObservadaDetailsHeading">
+          <span jhiTranslate="wattsUpEnergyApp.onsDescontinuadoPrecipitacaoDiariaObservada.detail.title"
+            >Ons Descontinuado Precipitacao Diaria Observada</span
+          >
+        </h2>
+
+        <hr />
+
+        <jhi-alert-error></jhi-alert-error>
+
+        <jhi-alert></jhi-alert>
+
+        <dl class="row-md jh-entity-details">
+          <dt><span jhiTranslate="global.field.id">Código</span></dt>
+          <dd>
+            <span>{{ onsDescontinuadoPrecipitacaoDiariaObservadaRef.id }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsDescontinuadoPrecipitacaoDiariaObservada.codEstacao">Cod Estacao</span></dt>
+          <dd>
+            <span>{{ onsDescontinuadoPrecipitacaoDiariaObservadaRef.codEstacao }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsDescontinuadoPrecipitacaoDiariaObservada.valLatitude">Val Latitude</span></dt>
+          <dd>
+            <span>{{ onsDescontinuadoPrecipitacaoDiariaObservadaRef.valLatitude }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsDescontinuadoPrecipitacaoDiariaObservada.valLongitude">Val Longitude</span></dt>
+          <dd>
+            <span>{{ onsDescontinuadoPrecipitacaoDiariaObservadaRef.valLongitude }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsDescontinuadoPrecipitacaoDiariaObservada.valMedida">Val Medida</span></dt>
+          <dd>
+            <span>{{ onsDescontinuadoPrecipitacaoDiariaObservadaRef.valMedida }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsDescontinuadoPrecipitacaoDiariaObservada.datObservada">Dat Observada</span></dt>
+          <dd>
+            <span>{{ onsDescontinuadoPrecipitacaoDiariaObservadaRef.datObservada | formatMediumDate }}</span>
+          </dd>
+        </dl>
+
+        <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+          <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Voltar</span>
+        </button>
+
+        <button
+          type="button"
+          [routerLink]="['/ons-descontinuado-precipitacao-diaria-observada', onsDescontinuadoPrecipitacaoDiariaObservadaRef.id, 'edit']"
+          class="btn btn-primary"
+        >
+          <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Editar</span>
+        </button>
+      </div>
+    }
+  </div>
+</div>

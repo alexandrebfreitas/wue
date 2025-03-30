@@ -1,0 +1,34 @@
+{
+  "wattsUpEnergyApp": {
+    "onsDadosIndicadoresCumprimentoProvidenciasEcpaEPcpa": {
+      "home": {
+        "title": "Ons Dados Indicadores Cumprimento Providencias Ecpa E Pcpas",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Ons Dados Indicadores Cumprimento Providencias Ecpa E Pcpa",
+        "createOrEditLabel": "Create or edit a Ons Dados Indicadores Cumprimento Providencias Ecpa E Pcpa",
+        "search": "Search for Ons Dados Indicadores Cumprimento Providencias Ecpa E Pcpa",
+        "notFound": "No Ons Dados Indicadores Cumprimento Providencias Ecpa E Pcpas found"
+      },
+      "created": "A new Ons Dados Indicadores Cumprimento Providencias Ecpa E Pcpa is created with identifier {{ param }}",
+      "updated": "A Ons Dados Indicadores Cumprimento Providencias Ecpa E Pcpa is updated with identifier {{ param }}",
+      "deleted": "A Ons Dados Indicadores Cumprimento Providencias Ecpa E Pcpa is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Ons Dados Indicadores Cumprimento Providencias Ecpa E Pcpa {{ id }}?"
+      },
+      "detail": {
+        "title": "Ons Dados Indicadores Cumprimento Providencias Ecpa E Pcpa"
+      },
+      "id": "ID",
+      "dscAgregacao": "Dsc Agregacao",
+      "dscCaracteristica": "Dsc Caracteristica",
+      "dinReferencia": "Din Referencia",
+      "numNprcConcluidas": "Num Nprc Concluidas",
+      "numNprpProgramadas": "Num Nprp Programadas",
+      "numNpratAtrasadas": "Num Nprat Atrasadas",
+      "numNpraAntecipadas": "Num Npra Antecipadas",
+      "numNprcpConcluidasPrazo": "Num Nprcp Concluidas Prazo",
+      "valEcpa": "Val Ecpa",
+      "valPcpa": "Val Pcpa"
+    }
+  }
+}

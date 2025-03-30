@@ -1,0 +1,37 @@
+{
+  "wattsUpEnergyApp": {
+    "onsDadosRelacionamentoEntreConjuntosEUsinas": {
+      "home": {
+        "title": "Ons Dados Relacionamento Entre Conjuntos E Usinas",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Ons Dados Relacionamento Entre Conjuntos E Usinas",
+        "createOrEditLabel": "Create or edit a Ons Dados Relacionamento Entre Conjuntos E Usinas",
+        "search": "Search for Ons Dados Relacionamento Entre Conjuntos E Usinas",
+        "notFound": "No Ons Dados Relacionamento Entre Conjuntos E Usinas found"
+      },
+      "created": "A new Ons Dados Relacionamento Entre Conjuntos E Usinas is created with identifier {{ param }}",
+      "updated": "A Ons Dados Relacionamento Entre Conjuntos E Usinas is updated with identifier {{ param }}",
+      "deleted": "A Ons Dados Relacionamento Entre Conjuntos E Usinas is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Ons Dados Relacionamento Entre Conjuntos E Usinas {{ id }}?"
+      },
+      "detail": {
+        "title": "Ons Dados Relacionamento Entre Conjuntos E Usinas"
+      },
+      "id": "ID",
+      "idSubsistema": "Id Subsistema",
+      "nomSubsistema": "Nom Subsistema",
+      "estadId": "Estad Id",
+      "nomEstado": "Nom Estado",
+      "idTipousina": "Id Tipousina",
+      "idConjuntousina": "Id Conjuntousina",
+      "idOnsConjunto": "Id Ons Conjunto",
+      "idOnsUsina": "Id Ons Usina",
+      "nomConjunto": "Nom Conjunto",
+      "nomUsina": "Nom Usina",
+      "ceg": "Ceg",
+      "datIniciorelacionamento": "Dat Iniciorelacionamento",
+      "datFimrelacionamento": "Dat Fimrelacionamento"
+    }
+  }
+}

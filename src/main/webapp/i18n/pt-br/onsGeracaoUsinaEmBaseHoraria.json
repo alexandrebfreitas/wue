@@ -1,0 +1,36 @@
+{
+  "wattsUpEnergyApp": {
+    "onsGeracaoUsinaEmBaseHoraria": {
+      "home": {
+        "title": "Ons Geracao Usina Em Base Horarias",
+        "refreshListLabel": "Atualizar lista",
+        "createLabel": "Criar novo Ons Geracao Usina Em Base Horaria",
+        "createOrEditLabel": "Criar ou editar Ons Geracao Usina Em Base Horaria",
+        "search": "Pesquisar por Ons Geracao Usina Em Base Horaria",
+        "notFound": "Nenhum Ons Geracao Usina Em Base Horaria encontrado"
+      },
+      "created": "Um novo Ons Geracao Usina Em Base Horaria foi criado com o identificador {{ param }}",
+      "updated": "Um Ons Geracao Usina Em Base Horaria foi atualizado com o identificador {{ param }}",
+      "deleted": "Um Ons Geracao Usina Em Base Horaria foi excluído com o identificador {{ param }}",
+      "delete": {
+        "question": "Tem certeza de que deseja excluir Ons Geracao Usina Em Base Horaria {{ id }}?"
+      },
+      "detail": {
+        "title": "Ons Geracao Usina Em Base Horaria"
+      },
+      "id": "ID",
+      "dinInstante": "Din Instante",
+      "idSubsistema": "Id Subsistema",
+      "nomSubsistema": "Nom Subsistema",
+      "idEstado": "Id Estado",
+      "nomEstado": "Nom Estado",
+      "codModalidadeoperacao": "Cod Modalidadeoperacao",
+      "nomTipousina": "Nom Tipousina",
+      "nomTipocombustivel": "Nom Tipocombustivel",
+      "nomUsina": "Nom Usina",
+      "idOns": "Id Ons",
+      "ceg": "Ceg",
+      "valGeracao": "Val Geracao"
+    }
+  }
+}

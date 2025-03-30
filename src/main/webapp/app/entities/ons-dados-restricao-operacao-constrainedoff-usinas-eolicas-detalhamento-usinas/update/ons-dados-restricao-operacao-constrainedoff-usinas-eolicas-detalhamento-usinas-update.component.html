@@ -1,0 +1,228 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <form name="editForm" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+      <h2
+        id="jhi-ons-dados-restricao-operacao-constrainedoff-usinas-eolicas-detalhamento-usinas-heading"
+        data-cy="OnsDadosRestricaoOperacaoConstrainedoffUsinasEolicasDetalhamentoUsinasCreateUpdateHeading"
+        jhiTranslate="wattsUpEnergyApp.onsDadosRestricaoOperacaoConstrainedoffUsinasEolicasDetalhamentoUsinas.home.createOrEditLabel"
+      >
+        Criar ou editar Ons Dados Restricao Operacao Constrainedoff Usinas Eolicas Detalhamento Usinas
+      </h2>
+
+      <div>
+        <jhi-alert-error></jhi-alert-error>
+
+        @if (editForm.controls.id.value !== null) {
+          <div class="mb-3">
+            <label
+              class="form-label"
+              for="field_id"
+              jhiTranslate="wattsUpEnergyApp.onsDadosRestricaoOperacaoConstrainedoffUsinasEolicasDetalhamentoUsinas.id"
+              >ID</label
+            >
+            <input type="number" class="form-control" name="id" id="field_id" data-cy="id" formControlName="id" [readonly]="true" />
+          </div>
+        }
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_idSubsistema"
+            jhiTranslate="wattsUpEnergyApp.onsDadosRestricaoOperacaoConstrainedoffUsinasEolicasDetalhamentoUsinas.idSubsistema"
+            >Id Subsistema</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="idSubsistema"
+            id="field_idSubsistema"
+            data-cy="idSubsistema"
+            formControlName="idSubsistema"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_nomModalidadeoperacao"
+            jhiTranslate="wattsUpEnergyApp.onsDadosRestricaoOperacaoConstrainedoffUsinasEolicasDetalhamentoUsinas.nomModalidadeoperacao"
+            >Nom Modalidadeoperacao</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="nomModalidadeoperacao"
+            id="field_nomModalidadeoperacao"
+            data-cy="nomModalidadeoperacao"
+            formControlName="nomModalidadeoperacao"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_idEstado"
+            jhiTranslate="wattsUpEnergyApp.onsDadosRestricaoOperacaoConstrainedoffUsinasEolicasDetalhamentoUsinas.idEstado"
+            >Id Estado</label
+          >
+          <input type="text" class="form-control" name="idEstado" id="field_idEstado" data-cy="idEstado" formControlName="idEstado" />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_nomConjuntousina"
+            jhiTranslate="wattsUpEnergyApp.onsDadosRestricaoOperacaoConstrainedoffUsinasEolicasDetalhamentoUsinas.nomConjuntousina"
+            >Nom Conjuntousina</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="nomConjuntousina"
+            id="field_nomConjuntousina"
+            data-cy="nomConjuntousina"
+            formControlName="nomConjuntousina"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_nomUsina"
+            jhiTranslate="wattsUpEnergyApp.onsDadosRestricaoOperacaoConstrainedoffUsinasEolicasDetalhamentoUsinas.nomUsina"
+            >Nom Usina</label
+          >
+          <input type="text" class="form-control" name="nomUsina" id="field_nomUsina" data-cy="nomUsina" formControlName="nomUsina" />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_dinInstante"
+            jhiTranslate="wattsUpEnergyApp.onsDadosRestricaoOperacaoConstrainedoffUsinasEolicasDetalhamentoUsinas.dinInstante"
+            >Din Instante</label
+          >
+          <div class="input-group">
+            <input
+              id="field_dinInstante"
+              data-cy="dinInstante"
+              type="text"
+              class="form-control"
+              name="dinInstante"
+              ngbDatepicker
+              #dinInstanteDp="ngbDatepicker"
+              formControlName="dinInstante"
+            />
+            <button type="button" class="btn btn-secondary" (click)="dinInstanteDp.toggle()">
+              <fa-icon icon="calendar-alt"></fa-icon>
+            </button>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_idOns"
+            jhiTranslate="wattsUpEnergyApp.onsDadosRestricaoOperacaoConstrainedoffUsinasEolicasDetalhamentoUsinas.idOns"
+            >Id Ons</label
+          >
+          <input type="text" class="form-control" name="idOns" id="field_idOns" data-cy="idOns" formControlName="idOns" />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_ceg"
+            jhiTranslate="wattsUpEnergyApp.onsDadosRestricaoOperacaoConstrainedoffUsinasEolicasDetalhamentoUsinas.ceg"
+            >Ceg</label
+          >
+          <input type="text" class="form-control" name="ceg" id="field_ceg" data-cy="ceg" formControlName="ceg" />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_valVentoverificado"
+            jhiTranslate="wattsUpEnergyApp.onsDadosRestricaoOperacaoConstrainedoffUsinasEolicasDetalhamentoUsinas.valVentoverificado"
+            >Val Ventoverificado</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="valVentoverificado"
+            id="field_valVentoverificado"
+            data-cy="valVentoverificado"
+            formControlName="valVentoverificado"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_flgDadoventoinvalido"
+            jhiTranslate="wattsUpEnergyApp.onsDadosRestricaoOperacaoConstrainedoffUsinasEolicasDetalhamentoUsinas.flgDadoventoinvalido"
+            >Flg Dadoventoinvalido</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="flgDadoventoinvalido"
+            id="field_flgDadoventoinvalido"
+            data-cy="flgDadoventoinvalido"
+            formControlName="flgDadoventoinvalido"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_valGeracaoestimada"
+            jhiTranslate="wattsUpEnergyApp.onsDadosRestricaoOperacaoConstrainedoffUsinasEolicasDetalhamentoUsinas.valGeracaoestimada"
+            >Val Geracaoestimada</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="valGeracaoestimada"
+            id="field_valGeracaoestimada"
+            data-cy="valGeracaoestimada"
+            formControlName="valGeracaoestimada"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_valGeracaoverificada"
+            jhiTranslate="wattsUpEnergyApp.onsDadosRestricaoOperacaoConstrainedoffUsinasEolicasDetalhamentoUsinas.valGeracaoverificada"
+            >Val Geracaoverificada</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="valGeracaoverificada"
+            id="field_valGeracaoverificada"
+            data-cy="valGeracaoverificada"
+            formControlName="valGeracaoverificada"
+          />
+        </div>
+      </div>
+
+      <div>
+        <button type="button" id="cancel-save" data-cy="entityCreateCancelButton" class="btn btn-secondary" (click)="previousState()">
+          <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancelar</span>
+        </button>
+
+        <button
+          type="submit"
+          id="save-entity"
+          data-cy="entityCreateSaveButton"
+          [disabled]="editForm.invalid || isSaving"
+          class="btn btn-primary"
+        >
+          <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Salvar</span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

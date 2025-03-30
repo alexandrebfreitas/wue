@@ -1,0 +1,39 @@
+{
+  "annotations": {
+    "changelogDate": "20250330013653"
+  },
+  "applications": "*",
+  "entityTableName": "OnsTable16",
+  "fields": [
+    {
+      "fieldName": "codTipoagregacao",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "idPeriodicidade",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nomAgregacao",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "dinReferencia",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "numTransformadoresoperacao",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "numTransformadoresviolados",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "valCcat",
+      "fieldType": "Double"
+    }
+  ],
+  "name": "OnsDadosIndicadoresConfiabilidadeRedeBasicaCcatControleCarregamentoTransformadores",
+  "relationships": []
+}

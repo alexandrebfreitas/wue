@@ -1,0 +1,125 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    @if (
+      onsIndicadoresConfiabilidadeRedeBasicaCiperCargaInterrompidaPerturbacoes();
+      as onsIndicadoresConfiabilidadeRedeBasicaCiperCargaInterrompidaPerturbacoesRef
+    ) {
+      <div>
+        <h2 data-cy="onsIndicadoresConfiabilidadeRedeBasicaCiperCargaInterrompidaPerturbacoesDetailsHeading">
+          <span jhiTranslate="wattsUpEnergyApp.onsIndicadoresConfiabilidadeRedeBasicaCiperCargaInterrompidaPerturbacoes.detail.title"
+            >Ons Indicadores Confiabilidade Rede Basica Ciper Carga Interrompida Perturbacoes</span
+          >
+        </h2>
+
+        <hr />
+
+        <jhi-alert-error></jhi-alert-error>
+
+        <jhi-alert></jhi-alert>
+
+        <dl class="row-md jh-entity-details">
+          <dt><span jhiTranslate="global.field.id">Código</span></dt>
+          <dd>
+            <span>{{ onsIndicadoresConfiabilidadeRedeBasicaCiperCargaInterrompidaPerturbacoesRef.id }}</span>
+          </dd>
+          <dt>
+            <span jhiTranslate="wattsUpEnergyApp.onsIndicadoresConfiabilidadeRedeBasicaCiperCargaInterrompidaPerturbacoes.dscAgregacao"
+              >Dsc Agregacao</span
+            >
+          </dt>
+          <dd>
+            <span>{{ onsIndicadoresConfiabilidadeRedeBasicaCiperCargaInterrompidaPerturbacoesRef.dscAgregacao }}</span>
+          </dd>
+          <dt>
+            <span jhiTranslate="wattsUpEnergyApp.onsIndicadoresConfiabilidadeRedeBasicaCiperCargaInterrompidaPerturbacoes.codCaracteristica"
+              >Cod Caracteristica</span
+            >
+          </dt>
+          <dd>
+            <span>{{ onsIndicadoresConfiabilidadeRedeBasicaCiperCargaInterrompidaPerturbacoesRef.codCaracteristica }}</span>
+          </dd>
+          <dt>
+            <span jhiTranslate="wattsUpEnergyApp.onsIndicadoresConfiabilidadeRedeBasicaCiperCargaInterrompidaPerturbacoes.dscCaracteristica"
+              >Dsc Caracteristica</span
+            >
+          </dt>
+          <dd>
+            <span>{{ onsIndicadoresConfiabilidadeRedeBasicaCiperCargaInterrompidaPerturbacoesRef.dscCaracteristica }}</span>
+          </dd>
+          <dt>
+            <span jhiTranslate="wattsUpEnergyApp.onsIndicadoresConfiabilidadeRedeBasicaCiperCargaInterrompidaPerturbacoes.idPeriodicidade"
+              >Id Periodicidade</span
+            >
+          </dt>
+          <dd>
+            <span>{{ onsIndicadoresConfiabilidadeRedeBasicaCiperCargaInterrompidaPerturbacoesRef.idPeriodicidade }}</span>
+          </dd>
+          <dt>
+            <span jhiTranslate="wattsUpEnergyApp.onsIndicadoresConfiabilidadeRedeBasicaCiperCargaInterrompidaPerturbacoes.dinReferencia"
+              >Din Referencia</span
+            >
+          </dt>
+          <dd>
+            <span>{{ onsIndicadoresConfiabilidadeRedeBasicaCiperCargaInterrompidaPerturbacoesRef.dinReferencia | formatMediumDate }}</span>
+          </dd>
+          <dt>
+            <span jhiTranslate="wattsUpEnergyApp.onsIndicadoresConfiabilidadeRedeBasicaCiperCargaInterrompidaPerturbacoes.valCiper1"
+              >Val Ciper 1</span
+            >
+          </dt>
+          <dd>
+            <span>{{ onsIndicadoresConfiabilidadeRedeBasicaCiperCargaInterrompidaPerturbacoesRef.valCiper1 }}</span>
+          </dd>
+          <dt>
+            <span jhiTranslate="wattsUpEnergyApp.onsIndicadoresConfiabilidadeRedeBasicaCiperCargaInterrompidaPerturbacoes.valCiper2"
+              >Val Ciper 2</span
+            >
+          </dt>
+          <dd>
+            <span>{{ onsIndicadoresConfiabilidadeRedeBasicaCiperCargaInterrompidaPerturbacoesRef.valCiper2 }}</span>
+          </dd>
+          <dt>
+            <span jhiTranslate="wattsUpEnergyApp.onsIndicadoresConfiabilidadeRedeBasicaCiperCargaInterrompidaPerturbacoes.valCiper3"
+              >Val Ciper 3</span
+            >
+          </dt>
+          <dd>
+            <span>{{ onsIndicadoresConfiabilidadeRedeBasicaCiperCargaInterrompidaPerturbacoesRef.valCiper3 }}</span>
+          </dd>
+          <dt>
+            <span jhiTranslate="wattsUpEnergyApp.onsIndicadoresConfiabilidadeRedeBasicaCiperCargaInterrompidaPerturbacoes.valCiper4"
+              >Val Ciper 4</span
+            >
+          </dt>
+          <dd>
+            <span>{{ onsIndicadoresConfiabilidadeRedeBasicaCiperCargaInterrompidaPerturbacoesRef.valCiper4 }}</span>
+          </dd>
+          <dt>
+            <span jhiTranslate="wattsUpEnergyApp.onsIndicadoresConfiabilidadeRedeBasicaCiperCargaInterrompidaPerturbacoes.valCiper5"
+              >Val Ciper 5</span
+            >
+          </dt>
+          <dd>
+            <span>{{ onsIndicadoresConfiabilidadeRedeBasicaCiperCargaInterrompidaPerturbacoesRef.valCiper5 }}</span>
+          </dd>
+        </dl>
+
+        <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+          <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Voltar</span>
+        </button>
+
+        <button
+          type="button"
+          [routerLink]="[
+            '/ons-indicadores-confiabilidade-rede-basica-ciper-carga-interrompida-perturbacoes',
+            onsIndicadoresConfiabilidadeRedeBasicaCiperCargaInterrompidaPerturbacoesRef.id,
+            'edit',
+          ]"
+          class="btn btn-primary"
+        >
+          <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Editar</span>
+        </button>
+      </div>
+    }
+  </div>
+</div>

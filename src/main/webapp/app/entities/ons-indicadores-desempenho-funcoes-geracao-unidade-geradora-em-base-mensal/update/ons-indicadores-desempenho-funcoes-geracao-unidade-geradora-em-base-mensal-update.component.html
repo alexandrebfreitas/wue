@@ -1,0 +1,322 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <form name="editForm" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+      <h2
+        id="jhi-ons-indicadores-desempenho-funcoes-geracao-unidade-geradora-em-base-mensal-heading"
+        data-cy="OnsIndicadoresDesempenhoFuncoesGeracaoUnidadeGeradoraEmBaseMensalCreateUpdateHeading"
+        jhiTranslate="wattsUpEnergyApp.onsIndicadoresDesempenhoFuncoesGeracaoUnidadeGeradoraEmBaseMensal.home.createOrEditLabel"
+      >
+        Criar ou editar Ons Indicadores Desempenho Funcoes Geracao Unidade Geradora Em Base Mensal
+      </h2>
+
+      <div>
+        <jhi-alert-error></jhi-alert-error>
+
+        @if (editForm.controls.id.value !== null) {
+          <div class="mb-3">
+            <label
+              class="form-label"
+              for="field_id"
+              jhiTranslate="wattsUpEnergyApp.onsIndicadoresDesempenhoFuncoesGeracaoUnidadeGeradoraEmBaseMensal.id"
+              >ID</label
+            >
+            <input type="number" class="form-control" name="id" id="field_id" data-cy="id" formControlName="id" [readonly]="true" />
+          </div>
+        }
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_idSubsistema"
+            jhiTranslate="wattsUpEnergyApp.onsIndicadoresDesempenhoFuncoesGeracaoUnidadeGeradoraEmBaseMensal.idSubsistema"
+            >Id Subsistema</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="idSubsistema"
+            id="field_idSubsistema"
+            data-cy="idSubsistema"
+            formControlName="idSubsistema"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_nomSubsistema"
+            jhiTranslate="wattsUpEnergyApp.onsIndicadoresDesempenhoFuncoesGeracaoUnidadeGeradoraEmBaseMensal.nomSubsistema"
+            >Nom Subsistema</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="nomSubsistema"
+            id="field_nomSubsistema"
+            data-cy="nomSubsistema"
+            formControlName="nomSubsistema"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_idEstado"
+            jhiTranslate="wattsUpEnergyApp.onsIndicadoresDesempenhoFuncoesGeracaoUnidadeGeradoraEmBaseMensal.idEstado"
+            >Id Estado</label
+          >
+          <input type="text" class="form-control" name="idEstado" id="field_idEstado" data-cy="idEstado" formControlName="idEstado" />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_nomEstado"
+            jhiTranslate="wattsUpEnergyApp.onsIndicadoresDesempenhoFuncoesGeracaoUnidadeGeradoraEmBaseMensal.nomEstado"
+            >Nom Estado</label
+          >
+          <input type="text" class="form-control" name="nomEstado" id="field_nomEstado" data-cy="nomEstado" formControlName="nomEstado" />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_nomModalidadeoperacao"
+            jhiTranslate="wattsUpEnergyApp.onsIndicadoresDesempenhoFuncoesGeracaoUnidadeGeradoraEmBaseMensal.nomModalidadeoperacao"
+            >Nom Modalidadeoperacao</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="nomModalidadeoperacao"
+            id="field_nomModalidadeoperacao"
+            data-cy="nomModalidadeoperacao"
+            formControlName="nomModalidadeoperacao"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_nomAgenteproprietario"
+            jhiTranslate="wattsUpEnergyApp.onsIndicadoresDesempenhoFuncoesGeracaoUnidadeGeradoraEmBaseMensal.nomAgenteproprietario"
+            >Nom Agenteproprietario</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="nomAgenteproprietario"
+            id="field_nomAgenteproprietario"
+            data-cy="nomAgenteproprietario"
+            formControlName="nomAgenteproprietario"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_idTipousina"
+            jhiTranslate="wattsUpEnergyApp.onsIndicadoresDesempenhoFuncoesGeracaoUnidadeGeradoraEmBaseMensal.idTipousina"
+            >Id Tipousina</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="idTipousina"
+            id="field_idTipousina"
+            data-cy="idTipousina"
+            formControlName="idTipousina"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_idUsina"
+            jhiTranslate="wattsUpEnergyApp.onsIndicadoresDesempenhoFuncoesGeracaoUnidadeGeradoraEmBaseMensal.idUsina"
+            >Id Usina</label
+          >
+          <input type="text" class="form-control" name="idUsina" id="field_idUsina" data-cy="idUsina" formControlName="idUsina" />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_nomUsina"
+            jhiTranslate="wattsUpEnergyApp.onsIndicadoresDesempenhoFuncoesGeracaoUnidadeGeradoraEmBaseMensal.nomUsina"
+            >Nom Usina</label
+          >
+          <input type="text" class="form-control" name="nomUsina" id="field_nomUsina" data-cy="nomUsina" formControlName="nomUsina" />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_ceg"
+            jhiTranslate="wattsUpEnergyApp.onsIndicadoresDesempenhoFuncoesGeracaoUnidadeGeradoraEmBaseMensal.ceg"
+            >Ceg</label
+          >
+          <input type="text" class="form-control" name="ceg" id="field_ceg" data-cy="ceg" formControlName="ceg" />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_codEquipamento"
+            jhiTranslate="wattsUpEnergyApp.onsIndicadoresDesempenhoFuncoesGeracaoUnidadeGeradoraEmBaseMensal.codEquipamento"
+            >Cod Equipamento</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="codEquipamento"
+            id="field_codEquipamento"
+            data-cy="codEquipamento"
+            formControlName="codEquipamento"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_numUnidadegeradora"
+            jhiTranslate="wattsUpEnergyApp.onsIndicadoresDesempenhoFuncoesGeracaoUnidadeGeradoraEmBaseMensal.numUnidadegeradora"
+            >Num Unidadegeradora</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="numUnidadegeradora"
+            id="field_numUnidadegeradora"
+            data-cy="numUnidadegeradora"
+            formControlName="numUnidadegeradora"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_nomUnidadegeradora"
+            jhiTranslate="wattsUpEnergyApp.onsIndicadoresDesempenhoFuncoesGeracaoUnidadeGeradoraEmBaseMensal.nomUnidadegeradora"
+            >Nom Unidadegeradora</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="nomUnidadegeradora"
+            id="field_nomUnidadegeradora"
+            data-cy="nomUnidadegeradora"
+            formControlName="nomUnidadegeradora"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_valPotencia"
+            jhiTranslate="wattsUpEnergyApp.onsIndicadoresDesempenhoFuncoesGeracaoUnidadeGeradoraEmBaseMensal.valPotencia"
+            >Val Potencia</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="valPotencia"
+            id="field_valPotencia"
+            data-cy="valPotencia"
+            formControlName="valPotencia"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_valDispf"
+            jhiTranslate="wattsUpEnergyApp.onsIndicadoresDesempenhoFuncoesGeracaoUnidadeGeradoraEmBaseMensal.valDispf"
+            >Val Dispf</label
+          >
+          <input type="number" class="form-control" name="valDispf" id="field_valDispf" data-cy="valDispf" formControlName="valDispf" />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_valIndisppf"
+            jhiTranslate="wattsUpEnergyApp.onsIndicadoresDesempenhoFuncoesGeracaoUnidadeGeradoraEmBaseMensal.valIndisppf"
+            >Val Indisppf</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="valIndisppf"
+            id="field_valIndisppf"
+            data-cy="valIndisppf"
+            formControlName="valIndisppf"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_valIndispff"
+            jhiTranslate="wattsUpEnergyApp.onsIndicadoresDesempenhoFuncoesGeracaoUnidadeGeradoraEmBaseMensal.valIndispff"
+            >Val Indispff</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="valIndispff"
+            id="field_valIndispff"
+            data-cy="valIndispff"
+            formControlName="valIndispff"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_valDmdff"
+            jhiTranslate="wattsUpEnergyApp.onsIndicadoresDesempenhoFuncoesGeracaoUnidadeGeradoraEmBaseMensal.valDmdff"
+            >Val Dmdff</label
+          >
+          <input type="number" class="form-control" name="valDmdff" id="field_valDmdff" data-cy="valDmdff" formControlName="valDmdff" />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_valFdff"
+            jhiTranslate="wattsUpEnergyApp.onsIndicadoresDesempenhoFuncoesGeracaoUnidadeGeradoraEmBaseMensal.valFdff"
+            >Val Fdff</label
+          >
+          <input type="number" class="form-control" name="valFdff" id="field_valFdff" data-cy="valFdff" formControlName="valFdff" />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_valTdff"
+            jhiTranslate="wattsUpEnergyApp.onsIndicadoresDesempenhoFuncoesGeracaoUnidadeGeradoraEmBaseMensal.valTdff"
+            >Val Tdff</label
+          >
+          <input type="number" class="form-control" name="valTdff" id="field_valTdff" data-cy="valTdff" formControlName="valTdff" />
+        </div>
+      </div>
+
+      <div>
+        <button type="button" id="cancel-save" data-cy="entityCreateCancelButton" class="btn btn-secondary" (click)="previousState()">
+          <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancelar</span>
+        </button>
+
+        <button
+          type="submit"
+          id="save-entity"
+          data-cy="entityCreateSaveButton"
+          [disabled]="editForm.invalid || isSaving"
+          class="btn btn-primary"
+        >
+          <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Salvar</span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

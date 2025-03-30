@@ -1,0 +1,88 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    @if (onsReservatorios(); as onsReservatoriosRef) {
+      <div>
+        <h2 data-cy="onsReservatoriosDetailsHeading">
+          <span jhiTranslate="wattsUpEnergyApp.onsReservatorios.detail.title">Ons Reservatorios</span>
+        </h2>
+
+        <hr />
+
+        <jhi-alert-error></jhi-alert-error>
+
+        <jhi-alert></jhi-alert>
+
+        <dl class="row-md jh-entity-details">
+          <dt><span jhiTranslate="global.field.id">Código</span></dt>
+          <dd>
+            <span>{{ onsReservatoriosRef.id }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsReservatorios.nomRee">Nom Ree</span></dt>
+          <dd>
+            <span>{{ onsReservatoriosRef.nomRee }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsReservatorios.datEntrada">Dat Entrada</span></dt>
+          <dd>
+            <span>{{ onsReservatoriosRef.datEntrada | formatMediumDate }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsReservatorios.valCotamaxima">Val Cotamaxima</span></dt>
+          <dd>
+            <span>{{ onsReservatoriosRef.valCotamaxima }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsReservatorios.valCotaminima">Val Cotaminima</span></dt>
+          <dd>
+            <span>{{ onsReservatoriosRef.valCotaminima }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsReservatorios.valVolmax">Val Volmax</span></dt>
+          <dd>
+            <span>{{ onsReservatoriosRef.valVolmax }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsReservatorios.valVolmin">Val Volmin</span></dt>
+          <dd>
+            <span>{{ onsReservatoriosRef.valVolmin }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsReservatorios.valVolutiltot">Val Volutiltot</span></dt>
+          <dd>
+            <span>{{ onsReservatoriosRef.valVolutiltot }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsReservatorios.valProdutibilidadeespecifica">Val Produtibilidadeespecifica</span></dt>
+          <dd>
+            <span>{{ onsReservatoriosRef.valProdutibilidadeespecifica }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsReservatorios.valProdutividade65volutil">Val Produtividade 65 Volutil</span></dt>
+          <dd>
+            <span>{{ onsReservatoriosRef.valProdutividade65volutil }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsReservatorios.valTipoperda">Val Tipoperda</span></dt>
+          <dd>
+            <span>{{ onsReservatoriosRef.valTipoperda }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsReservatorios.valPerda">Val Perda</span></dt>
+          <dd>
+            <span>{{ onsReservatoriosRef.valPerda }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsReservatorios.valLatitude">Val Latitude</span></dt>
+          <dd>
+            <span>{{ onsReservatoriosRef.valLatitude }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsReservatorios.valLongitude">Val Longitude</span></dt>
+          <dd>
+            <span>{{ onsReservatoriosRef.valLongitude }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsReservatorios.idReservatorio">Id Reservatorio</span></dt>
+          <dd>
+            <span>{{ onsReservatoriosRef.idReservatorio }}</span>
+          </dd>
+        </dl>
+
+        <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+          <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Voltar</span>
+        </button>
+
+        <button type="button" [routerLink]="['/ons-reservatorios', onsReservatoriosRef.id, 'edit']" class="btn btn-primary">
+          <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Editar</span>
+        </button>
+      </div>
+    }
+  </div>
+</div>

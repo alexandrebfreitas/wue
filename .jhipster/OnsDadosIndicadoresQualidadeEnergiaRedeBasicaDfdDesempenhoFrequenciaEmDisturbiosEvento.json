@@ -1,0 +1,39 @@
+{
+  "annotations": {
+    "changelogDate": "20250330013657"
+  },
+  "applications": "*",
+  "entityTableName": "OnsTable20",
+  "fields": [
+    {
+      "fieldName": "dinReferencia",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "dinIniciodesviofreq",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "dinFimdesviofreq",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "idFaixafrequencia",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nomFaixafrequencia",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "valDfd",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "valFreqmaxmin",
+      "fieldType": "Double"
+    }
+  ],
+  "name": "OnsDadosIndicadoresQualidadeEnergiaRedeBasicaDfdDesempenhoFrequenciaEmDisturbiosEvento",
+  "relationships": []
+}

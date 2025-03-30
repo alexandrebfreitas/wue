@@ -1,0 +1,86 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    @if (onsDadosHidraulicosReservatorioBaseHoraria(); as onsDadosHidraulicosReservatorioBaseHorariaRef) {
+      <div>
+        <h2 data-cy="onsDadosHidraulicosReservatorioBaseHorariaDetailsHeading">
+          <span jhiTranslate="wattsUpEnergyApp.onsDadosHidraulicosReservatorioBaseHoraria.detail.title"
+            >Ons Dados Hidraulicos Reservatorio Base Horaria</span
+          >
+        </h2>
+
+        <hr />
+
+        <jhi-alert-error></jhi-alert-error>
+
+        <jhi-alert></jhi-alert>
+
+        <dl class="row-md jh-entity-details">
+          <dt><span jhiTranslate="global.field.id">Código</span></dt>
+          <dd>
+            <span>{{ onsDadosHidraulicosReservatorioBaseHorariaRef.id }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsDadosHidraulicosReservatorioBaseHoraria.valVolumeutil">Val Volumeutil</span></dt>
+          <dd>
+            <span>{{ onsDadosHidraulicosReservatorioBaseHorariaRef.valVolumeutil }}</span>
+          </dd>
+          <dt>
+            <span jhiTranslate="wattsUpEnergyApp.onsDadosHidraulicosReservatorioBaseHoraria.valVazaoafluente">Val Vazaoafluente</span>
+          </dt>
+          <dd>
+            <span>{{ onsDadosHidraulicosReservatorioBaseHorariaRef.valVazaoafluente }}</span>
+          </dd>
+          <dt>
+            <span jhiTranslate="wattsUpEnergyApp.onsDadosHidraulicosReservatorioBaseHoraria.valVazaodefluente">Val Vazaodefluente</span>
+          </dt>
+          <dd>
+            <span>{{ onsDadosHidraulicosReservatorioBaseHorariaRef.valVazaodefluente }}</span>
+          </dd>
+          <dt>
+            <span jhiTranslate="wattsUpEnergyApp.onsDadosHidraulicosReservatorioBaseHoraria.valVazaoturbinada">Val Vazaoturbinada</span>
+          </dt>
+          <dd>
+            <span>{{ onsDadosHidraulicosReservatorioBaseHorariaRef.valVazaoturbinada }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsDadosHidraulicosReservatorioBaseHoraria.valVazaovertida">Val Vazaovertida</span></dt>
+          <dd>
+            <span>{{ onsDadosHidraulicosReservatorioBaseHorariaRef.valVazaovertida }}</span>
+          </dd>
+          <dt>
+            <span jhiTranslate="wattsUpEnergyApp.onsDadosHidraulicosReservatorioBaseHoraria.valVazaooutrasestruturas"
+              >Val Vazaooutrasestruturas</span
+            >
+          </dt>
+          <dd>
+            <span>{{ onsDadosHidraulicosReservatorioBaseHorariaRef.valVazaooutrasestruturas }}</span>
+          </dd>
+          <dt>
+            <span jhiTranslate="wattsUpEnergyApp.onsDadosHidraulicosReservatorioBaseHoraria.valVazaotransferida">Val Vazaotransferida</span>
+          </dt>
+          <dd>
+            <span>{{ onsDadosHidraulicosReservatorioBaseHorariaRef.valVazaotransferida }}</span>
+          </dd>
+          <dt>
+            <span jhiTranslate="wattsUpEnergyApp.onsDadosHidraulicosReservatorioBaseHoraria.valVazaovertidanaoturbinavel"
+              >Val Vazaovertidanaoturbinavel</span
+            >
+          </dt>
+          <dd>
+            <span>{{ onsDadosHidraulicosReservatorioBaseHorariaRef.valVazaovertidanaoturbinavel }}</span>
+          </dd>
+        </dl>
+
+        <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+          <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Voltar</span>
+        </button>
+
+        <button
+          type="button"
+          [routerLink]="['/ons-dados-hidraulicos-reservatorio-base-horaria', onsDadosHidraulicosReservatorioBaseHorariaRef.id, 'edit']"
+          class="btn btn-primary"
+        >
+          <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Editar</span>
+        </button>
+      </div>
+    }
+  </div>
+</div>

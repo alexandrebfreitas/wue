@@ -1,0 +1,36 @@
+{
+  "wattsUpEnergyApp": {
+    "onsDadosRestricaoOperacaoConstrainedoffUsinasFotovoltaicasDetalhamentoUsinas": {
+      "home": {
+        "title": "Ons Dados Restricao Operacao Constrainedoff Usinas Fotovoltaicas Detalhamento Usinas",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Ons Dados Restricao Operacao Constrainedoff Usinas Fotovoltaicas Detalhamento Usinas",
+        "createOrEditLabel": "Create or edit a Ons Dados Restricao Operacao Constrainedoff Usinas Fotovoltaicas Detalhamento Usinas",
+        "search": "Search for Ons Dados Restricao Operacao Constrainedoff Usinas Fotovoltaicas Detalhamento Usinas",
+        "notFound": "No Ons Dados Restricao Operacao Constrainedoff Usinas Fotovoltaicas Detalhamento Usinas found"
+      },
+      "created": "A new Ons Dados Restricao Operacao Constrainedoff Usinas Fotovoltaicas Detalhamento Usinas is created with identifier {{ param }}",
+      "updated": "A Ons Dados Restricao Operacao Constrainedoff Usinas Fotovoltaicas Detalhamento Usinas is updated with identifier {{ param }}",
+      "deleted": "A Ons Dados Restricao Operacao Constrainedoff Usinas Fotovoltaicas Detalhamento Usinas is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Ons Dados Restricao Operacao Constrainedoff Usinas Fotovoltaicas Detalhamento Usinas {{ id }}?"
+      },
+      "detail": {
+        "title": "Ons Dados Restricao Operacao Constrainedoff Usinas Fotovoltaicas Detalhamento Usinas"
+      },
+      "id": "ID",
+      "idSubsistema": "Id Subsistema",
+      "nomModalidadeoperacao": "Nom Modalidadeoperacao",
+      "idEstado": "Id Estado",
+      "nomConjuntousina": "Nom Conjuntousina",
+      "nomUsina": "Nom Usina",
+      "dinInstante": "Din Instante",
+      "idOns": "Id Ons",
+      "ceg": "Ceg",
+      "valIrradianciaverificado": "Val Irradianciaverificado",
+      "flgDadoirradianciainvalido": "Flg Dadoirradianciainvalido",
+      "valGeracaoestimada": "Val Geracaoestimada",
+      "valGeracaoverificada": "Val Geracaoverificada"
+    }
+  }
+}

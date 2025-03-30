@@ -1,0 +1,31 @@
+{
+  "annotations": {
+    "changelogDate": "20250330013725"
+  },
+  "applications": "*",
+  "entityTableName": "OnsTable48",
+  "fields": [
+    {
+      "fieldName": "idPeriodicidade",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "dinReferencia",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "idFaixafrequencia",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nomFaixafrequencia",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "valDfd",
+      "fieldType": "Double"
+    }
+  ],
+  "name": "OnsDadosIndicadoresQualidadeEnergiaRedeBasicaDfdDesempenhoFrequenciaEmDisturbiosMensalEAnual",
+  "relationships": []
+}

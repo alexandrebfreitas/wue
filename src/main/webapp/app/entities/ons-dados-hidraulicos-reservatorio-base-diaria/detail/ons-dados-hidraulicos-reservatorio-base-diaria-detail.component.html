@@ -1,0 +1,116 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    @if (onsDadosHidraulicosReservatorioBaseDiaria(); as onsDadosHidraulicosReservatorioBaseDiariaRef) {
+      <div>
+        <h2 data-cy="onsDadosHidraulicosReservatorioBaseDiariaDetailsHeading">
+          <span jhiTranslate="wattsUpEnergyApp.onsDadosHidraulicosReservatorioBaseDiaria.detail.title"
+            >Ons Dados Hidraulicos Reservatorio Base Diaria</span
+          >
+        </h2>
+
+        <hr />
+
+        <jhi-alert-error></jhi-alert-error>
+
+        <jhi-alert></jhi-alert>
+
+        <dl class="row-md jh-entity-details">
+          <dt><span jhiTranslate="global.field.id">Código</span></dt>
+          <dd>
+            <span>{{ onsDadosHidraulicosReservatorioBaseDiariaRef.id }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsDadosHidraulicosReservatorioBaseDiaria.valNivelmontante">Val Nivelmontante</span></dt>
+          <dd>
+            <span>{{ onsDadosHidraulicosReservatorioBaseDiariaRef.valNivelmontante }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsDadosHidraulicosReservatorioBaseDiaria.valNiveljusante">Val Niveljusante</span></dt>
+          <dd>
+            <span>{{ onsDadosHidraulicosReservatorioBaseDiariaRef.valNiveljusante }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsDadosHidraulicosReservatorioBaseDiaria.valVolumeutilcon">Val Volumeutilcon</span></dt>
+          <dd>
+            <span>{{ onsDadosHidraulicosReservatorioBaseDiariaRef.valVolumeutilcon }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsDadosHidraulicosReservatorioBaseDiaria.valVazaoafluente">Val Vazaoafluente</span></dt>
+          <dd>
+            <span>{{ onsDadosHidraulicosReservatorioBaseDiariaRef.valVazaoafluente }}</span>
+          </dd>
+          <dt>
+            <span jhiTranslate="wattsUpEnergyApp.onsDadosHidraulicosReservatorioBaseDiaria.valVazaoturbinada">Val Vazaoturbinada</span>
+          </dt>
+          <dd>
+            <span>{{ onsDadosHidraulicosReservatorioBaseDiariaRef.valVazaoturbinada }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsDadosHidraulicosReservatorioBaseDiaria.valVazaovertida">Val Vazaovertida</span></dt>
+          <dd>
+            <span>{{ onsDadosHidraulicosReservatorioBaseDiariaRef.valVazaovertida }}</span>
+          </dd>
+          <dt>
+            <span jhiTranslate="wattsUpEnergyApp.onsDadosHidraulicosReservatorioBaseDiaria.valVazaooutrasestruturas"
+              >Val Vazaooutrasestruturas</span
+            >
+          </dt>
+          <dd>
+            <span>{{ onsDadosHidraulicosReservatorioBaseDiariaRef.valVazaooutrasestruturas }}</span>
+          </dd>
+          <dt>
+            <span jhiTranslate="wattsUpEnergyApp.onsDadosHidraulicosReservatorioBaseDiaria.valVazaodefluente">Val Vazaodefluente</span>
+          </dt>
+          <dd>
+            <span>{{ onsDadosHidraulicosReservatorioBaseDiariaRef.valVazaodefluente }}</span>
+          </dd>
+          <dt>
+            <span jhiTranslate="wattsUpEnergyApp.onsDadosHidraulicosReservatorioBaseDiaria.valVazaotransferida">Val Vazaotransferida</span>
+          </dt>
+          <dd>
+            <span>{{ onsDadosHidraulicosReservatorioBaseDiariaRef.valVazaotransferida }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.onsDadosHidraulicosReservatorioBaseDiaria.valVazaonatural">Val Vazaonatural</span></dt>
+          <dd>
+            <span>{{ onsDadosHidraulicosReservatorioBaseDiariaRef.valVazaonatural }}</span>
+          </dd>
+          <dt>
+            <span jhiTranslate="wattsUpEnergyApp.onsDadosHidraulicosReservatorioBaseDiaria.valVazaoartificial">Val Vazaoartificial</span>
+          </dt>
+          <dd>
+            <span>{{ onsDadosHidraulicosReservatorioBaseDiariaRef.valVazaoartificial }}</span>
+          </dd>
+          <dt>
+            <span jhiTranslate="wattsUpEnergyApp.onsDadosHidraulicosReservatorioBaseDiaria.valVazaoincremental">Val Vazaoincremental</span>
+          </dt>
+          <dd>
+            <span>{{ onsDadosHidraulicosReservatorioBaseDiariaRef.valVazaoincremental }}</span>
+          </dd>
+          <dt>
+            <span jhiTranslate="wattsUpEnergyApp.onsDadosHidraulicosReservatorioBaseDiaria.valVazaoevaporacaoliquida"
+              >Val Vazaoevaporacaoliquida</span
+            >
+          </dt>
+          <dd>
+            <span>{{ onsDadosHidraulicosReservatorioBaseDiariaRef.valVazaoevaporacaoliquida }}</span>
+          </dd>
+          <dt>
+            <span jhiTranslate="wattsUpEnergyApp.onsDadosHidraulicosReservatorioBaseDiaria.valVazaousoconsuntivo"
+              >Val Vazaousoconsuntivo</span
+            >
+          </dt>
+          <dd>
+            <span>{{ onsDadosHidraulicosReservatorioBaseDiariaRef.valVazaousoconsuntivo }}</span>
+          </dd>
+        </dl>
+
+        <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+          <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Voltar</span>
+        </button>
+
+        <button
+          type="button"
+          [routerLink]="['/ons-dados-hidraulicos-reservatorio-base-diaria', onsDadosHidraulicosReservatorioBaseDiariaRef.id, 'edit']"
+          class="btn btn-primary"
+        >
+          <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Editar</span>
+        </button>
+      </div>
+    }
+  </div>
+</div>
